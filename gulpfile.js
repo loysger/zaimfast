@@ -47,11 +47,10 @@ function server() {
   gulp.watch('src/html/**/*.html', gulp.series(html, reload));
 }
 
-var build = gulp.series(clean, gulp.parallel(html));
-exports.build = build;
+exports.build = gulp.series(clean, gulp.parallel(html));
+exports.live = gulp.series(exports.build, server);
+exports.clean = gulp.series(clean);
 
-var live = gulp.series(build, server);
-exports.live = live;
 
 // function css() {
 //   let postcssPlugins = [autoprefixer()];

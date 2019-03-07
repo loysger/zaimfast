@@ -35,5 +35,9 @@
   "browserslist": [
     "last 2 versions"
   ],
-  "scripts": {}
+  "scripts": {
+    "live": "gulp live",
+    "build": "gulp build",
+    "clean": "gulp clean"
+  }
 }
