@@ -1,132 +1,116 @@
-"use strict";
+'use strict';
 
-const { src, dest, watch, series, parallel } = require("gulp");
-const rename = require("gulp-rename");
-const sass = require("gulp-sass");
-const plumber = require("gulp-plumber");
-const postcss = require("gulp-postcss");
-const posthtml = require("gulp-posthtml");
-const htmlmin = require("gulp-htmlmin");
-const include = require("posthtml-include");
-const autoprefixer = require("autoprefixer");
-const del = require("del");
-const csso = require("gulp-csso");
-const imagemin = require("gulp-imagemin");
-const browsersync = require("browser-sync").create();
-const uglify = require("gulp-uglify");
-const cssDeclarationSorter = require("css-declaration-sorter");
-const postcssScss = require("postcss-scss");
+const gulp = require('gulp');
+const browsersync = require('browser-sync').create();
+const posthtml = require('gulp-posthtml');
+const htmlmin = require('gulp-htmlmin');
+const include = require('posthtml-include');
+const del = require('del');
+// const rename = require('gulp-rename');
+// const sass = require('gulp-sass');
+// const plumber = require('gulp-plumber');
+// const postcss = require('gulp-postcss');
+// const autoprefixer = require('autoprefixer');
+// const csso = require('gulp-csso');
+// const imagemin = require('gulp-imagemin');
+// const uglify = require('gulp-uglify');
+// const cssDeclarationSorter = require('css-declaration-sorter');
+// const postcssScss = require('postcss-scss');
+
+const buldPath = 'build/';
 
 function clean() {
-  return del("build/");
-}
-
-function css() {
-  let postcssPlugins = [autoprefixer()];
-  return src("src/scss/style.scss")
-    .pipe(plumber())
-    .pipe(sass())
-    .pipe(postcss(postcssPlugins))
-    .pipe(csso())
-    .pipe(
-      rename({
-        suffix: ".min"
-      })
-    )
-    .pipe(dest("build/css"))
-    .pipe(browsersync.stream());
-}
-
-function sortScss() {
-  let postcssPlugins = [cssDeclarationSorter({ order: "smacss" })];
-  return src("src/scss/block/*.scss")
-    .pipe(postcss(postcssPlugins, { parser: postcssScss }))
-    .pipe(dest("src/scss/block/"));
+  return del(buldPath);
 }
 
 function html() {
-  return src(["src/html/**/*.html", "!src/html/components/*"])
-    .pipe(posthtml([include({ root: "./src/html/components" })]))
+  return gulp
+    .src(['src/html/**/*.html', '!src/html/components/*'])
+    .pipe(posthtml([include({ root: './src/html/components' })]))
     .pipe(htmlmin({ collapseWhitespace: true }))
-    .pipe(dest("build/"));
+    .pipe(gulp.dest(buldPath));
 }
 
-function js() {
-  return src("src/js/**/*.js")
-    .pipe(plumber())
-    .pipe(uglify())
-    .pipe(
-      rename({
-        suffix: ".min"
-      })
-    )
-    .pipe(dest("build/js/"));
-}
-
-function font() {
-  return src("src/font/**/*.{woff,woff2}").pipe(dest("build/fonts/"));
-}
-
-function webp() {
-  return src("src/img/webp/**/*.webp").pipe(dest("build/img/webp"));
-}
-
-function img() {
-  return src(["src/img/**/*.{png,jpg,svg}"])
-    .pipe(
-      imagemin([
-        imagemin.gifsicle({ interlaced: true }),
-        imagemin.jpegtran({ progressive: true }),
-        imagemin.optipng({ optimizationLevel: 3 }),
-        imagemin.svgo({})
-      ])
-    )
-    .pipe(dest("build/img"));
-}
-
-function favicon() {
-  return src("src/img/**/favicon.png")
-    .pipe(imagemin([imagemin.optipng({ optimizationLevel: 3 })]))
-    .pipe(dest("build/"));
-}
-
-function reload(done) {
+function reload() {
   browsersync.reload();
-  done();
 }
 
 function server() {
   browsersync.init({
-    server: "build/",
+    server: 'build/',
     notify: false,
     open: true,
     cors: true,
     ui: false
   });
 
-  const watchCss = watch(["src/scss/**/*.scss"]);
-  watch(["src/scss/**/*.scss"]);
-  watchCss.on("all", function() {
-    watchCss.unwatch(["src/scss/**/*.scss"]);
-    series(sortScss, css);
-    watchCss.add(["src/scss/**/*.scss"]);
-  });
-
-  watch("src/html/**/*.html", series(html, reload));
-  watch("src/js/**/*.js", series(js, reload));
-  watch("src/img/**/*.{png,jpg,svg}", series(img, reload));
-  watch("src/img/webp/**/*.webp", series(webp, reload));
+  gulp.watch('src/html/**/*.html', gulp.series(html, reload));
 }
 
-var build = series(clean, parallel(html, js, font, img, webp, favicon, css));
+var build = gulp.series(clean, gulp.parallel(html));
 exports.build = build;
 
-var live = server;
+var live = gulp.series(build, server);
 exports.live = live;
 
-var cleanAndLive = series(build, server);
-exports.cleanAndLive = cleanAndLive;
+// function css() {
+//   let postcssPlugins = [autoprefixer()];
+//   return src("src/scss/style.scss")
+//     .pipe(plumber())
+//     .pipe(sass())
+//     .pipe(postcss(postcssPlugins))
+//     .pipe(csso())
+//     .pipe(
+//       rename({
+//         suffix: ".min"
+//       })
+//     )
+//     .pipe(dest("build/css"))
+//     .pipe(browsersync.stream());
+// }
 
-exports.clean = clean;
+// function sortScss() {
+//   let postcssPlugins = [cssDeclarationSorter({ order: "smacss" })];
+//   return src("src/scss/block/*.scss")
+//     .pipe(postcss(postcssPlugins, { parser: postcssScss }))
+//     .pipe(dest("src/scss/block/"));
+// }
 
-// exports.test = sortScss;
+// function js() {
+//   return src("src/js/**/*.js")
+//     .pipe(plumber())
+//     .pipe(uglify())
+//     .pipe(
+//       rename({
+//         suffix: ".min"
+//       })
+//     )
+//     .pipe(dest("build/js/"));
+// }
+
+// function font() {
+//   return src("src/font/**/*.{woff,woff2}").pipe(dest("build/fonts/"));
+// }
+
+// function webp() {
+//   return src("src/img/webp/**/*.webp").pipe(dest("build/img/webp"));
+// }
+
+// function img() {
+//   return src(["src/img/**/*.{png,jpg,svg}"])
+//     .pipe(
+//       imagemin([
+//         imagemin.gifsicle({ interlaced: true }),
+//         imagemin.jpegtran({ progressive: true }),
+//         imagemin.optipng({ optimizationLevel: 3 }),
+//         imagemin.svgo({})
+//       ])
+//     )
+//     .pipe(dest("build/img"));
+// }
+
+// function favicon() {
+//   return src("src/img/**/favicon.png")
+//     .pipe(imagemin([imagemin.optipng({ optimizationLevel: 3 })]))
+//     .pipe(dest("build/"));
+// }
