@@ -1,115 +1,79 @@
 'use strict';
 
+// Load plugins
 const gulp = require('gulp');
-const browsersync = require('browser-sync').create();
-const posthtml = require('gulp-posthtml');
-const htmlmin = require('gulp-htmlmin');
-const include = require('posthtml-include');
-const del = require('del');
-// const rename = require('gulp-rename');
-// const sass = require('gulp-sass');
-// const plumber = require('gulp-plumber');
-// const postcss = require('gulp-postcss');
-// const autoprefixer = require('autoprefixer');
-// const csso = require('gulp-csso');
-// const imagemin = require('gulp-imagemin');
-// const uglify = require('gulp-uglify');
-// const cssDeclarationSorter = require('css-declaration-sorter');
-// const postcssScss = require('postcss-scss');
+const rename = require("gulp-rename");
+const sass = require("gulp-sass");
+const plumber = require("gulp-plumber");
+const postcss = require("gulp-postcss");
+const posthtml = require("gulp-posthtml");
+const htmlmin = require("gulp-htmlmin");
+const include = require("posthtml-include");
+const autoprefixer = require("autoprefixer");
+const del = require("del");
+const csso = require("gulp-csso");
+const imagemin = require("gulp-imagemin");
+const browsersync = require("browser-sync").create();
+const uglify = require("gulp-uglify");
+const cssDeclarationSorter = require("css-declaration-sorter");
+const postcssScss = require("postcss-scss");
 
-const buldPath = 'build/';
-
-function clean() {
-  return del(buldPath);
-}
-
-function html() {
-  return gulp
-    .src(['src/html/**/*.html', '!src/html/components/*'])
-    .pipe(posthtml([include({ root: './src/html/components' })]))
-    .pipe(htmlmin({ collapseWhitespace: true }))
-    .pipe(gulp.dest(buldPath));
-}
-
-function reload() {
-  browsersync.reload();
-}
-
-function server() {
+// BrowserSync
+function browserSync(done) {
   browsersync.init({
-    server: 'build/',
-    notify: false,
-    open: true,
-    cors: true,
-    ui: false
+    server: {
+      baseDir: './build/'
+    },
+    port: 3000
   });
-
-  gulp.watch('src/html/**/*.html', gulp.series(html, reload));
+  done();
 }
 
-exports.build = gulp.series(clean, gulp.parallel(html));
-exports.live = gulp.series(exports.build, server);
-exports.clean = gulp.series(clean);
+// BrowserSync Reload
+function browserSyncReload(done) {
+  browsersync.reload();
+  done();
+}
 
+// Clean assets
+function clean() {
+  return del(['./build/']);
+}
 
-// function css() {
-//   let postcssPlugins = [autoprefixer()];
-//   return src("src/scss/style.scss")
-//     .pipe(plumber())
-//     .pipe(sass())
-//     .pipe(postcss(postcssPlugins))
-//     .pipe(csso())
-//     .pipe(
-//       rename({
-//         suffix: ".min"
-//       })
-//     )
-//     .pipe(dest("build/css"))
-//     .pipe(browsersync.stream());
-// }
+// Watch files
+function watchFiles() {
+  gulp.watch('./src/html/**/*.html', gulp.series(html, browserSyncReload));
+  gulp.watch('./src/scss/**/*.scss', gulp.series(css));
+}
 
-// function sortScss() {
-//   let postcssPlugins = [cssDeclarationSorter({ order: "smacss" })];
-//   return src("src/scss/block/*.scss")
-//     .pipe(postcss(postcssPlugins, { parser: postcssScss }))
-//     .pipe(dest("src/scss/block/"));
-// }
+// HTML
+function html() {
+  return gulp.src('./src/html/*.html').pipe(gulp.dest('./build/'));
+}
 
-// function js() {
-//   return src("src/js/**/*.js")
-//     .pipe(plumber())
-//     .pipe(uglify())
-//     .pipe(
-//       rename({
-//         suffix: ".min"
-//       })
-//     )
-//     .pipe(dest("build/js/"));
-// }
+// CSS
+function css() {
+  let postcssPlugins = [autoprefixer()];
+  return gulp.src("./src/scss/style.scss")
+    .pipe(plumber())
+    .pipe(sass())
+    .pipe(postcss(postcssPlugins))
+    .pipe(csso())
+    .pipe(
+      rename({
+        suffix: ".min"
+      })
+    )
+    .pipe(gulp.dest("./build/css"))
+    .pipe(browsersync.stream());
+}
 
-// function font() {
-//   return src("src/font/**/*.{woff,woff2}").pipe(dest("build/fonts/"));
-// }
+// define complex tasks
+const build = gulp.series(clean, html, css);
+const watch = gulp.parallel(watchFiles, browserSync);
 
-// function webp() {
-//   return src("src/img/webp/**/*.webp").pipe(dest("build/img/webp"));
-// }
-
-// function img() {
-//   return src(["src/img/**/*.{png,jpg,svg}"])
-//     .pipe(
-//       imagemin([
-//         imagemin.gifsicle({ interlaced: true }),
-//         imagemin.jpegtran({ progressive: true }),
-//         imagemin.optipng({ optimizationLevel: 3 }),
-//         imagemin.svgo({})
-//       ])
-//     )
-//     .pipe(dest("build/img"));
-// }
-
-// function favicon() {
-//   return src("src/img/**/favicon.png")
-//     .pipe(imagemin([imagemin.optipng({ optimizationLevel: 3 })]))
-//     .pipe(dest("build/"));
-// }
+// export tasks
+exports.clean = clean;
+exports.build = build;
+exports.watch = watch;
+exports.default = build;

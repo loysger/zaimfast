@@ -1,0 +1,16 @@
+.main-navigation {
+  padding: $padding;
+}
+
+.main-navigation__top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.main-navigation__item {
+  padding-top: 11px;
+  padding-bottom: 14px;
+  line-height: 35px;
+  border-bottom: 1px solid #cfcece;
+}

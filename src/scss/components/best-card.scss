@@ -1,0 +1,10 @@
+.best-card {
+  width: 280px;
+  flex-shrink: 0;
+  height: 100%;
+  background-color: white;
+  margin: 0 20px;
+  padding: 20px;
+  border: 1px solid $border-color;
+  border-radius: 3px;
+}
