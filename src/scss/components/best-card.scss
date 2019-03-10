@@ -8,3 +8,37 @@
   border: 1px solid $border-color;
   border-radius: 3px;
 }
+
+.best-card__top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.best-card__description {
+  font-size: 12px;
+}
+
+.best-card__content {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 700;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.best-card__sub {
+  font-size: 12px;
+  font-weight: normal;
+  text-transform: lowercase;
+}
+
+.best-card__purchase {
+  background-color: $main-color;
+  color: white;
+  font-weight: 700;
+
+  &:active {
+    color: white;
+  }
+}
