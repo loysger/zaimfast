@@ -1,0 +1,31 @@
+.articles {
+  padding: 20px $padding;
+}
+
+.articles__heading {
+  margin-bottom: 20px;
+}
+
+.articles__item {
+  margin-bottom: 20px;
+}
+
+.articles__link {
+  display: flex;
+  align-items: flex-start;
+}
+
+.articles__img {
+  width: 120px;
+  height: 70px;
+  margin-right: 15px;
+  border-radius: 4px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.articles__news-heading {
+  font-weight: 700;
+  color: $text-color;
+  margin: 0;
+}

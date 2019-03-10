@@ -1,0 +1,38 @@
+.partners {
+  padding: 30px $padding;
+  background-color: $bg-color;
+  overflow: hidden;
+}
+
+.partners__heading {
+  margin-bottom: 20px;
+}
+
+.partners__list-wrap {
+  margin-left: -$padding;
+  width: 100vw;
+  overflow: hidden;
+  overflow-x: scroll;
+  margin-bottom: 20px;
+}
+
+.partners__list {
+  padding: 0 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 760px;
+}
+
+.partners__item {
+  border: 1px solid $border-color;
+  border-radius: 3px;
+  display: flex;
+  flex-shrink: 0;
+  width: 120px;
+  height: 80px;
+  margin-left: -1px;
+  margin-top: -1px;
+}

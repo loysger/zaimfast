@@ -1,0 +1,16 @@
+.footer-menu__list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footer-menu__item {
+  margin-bottom: 10px;
+
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
+
+  &:hover {
+    color: $text-accent-color;
+  }
+}

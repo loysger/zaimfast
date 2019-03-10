@@ -1,0 +1,27 @@
+.footer {
+  padding: 20px 30px 0;
+  color: rgb(140, 140, 140);
+  font-size: 12px;
+}
+
+.footer__social-container {
+  margin-left: -30px;
+  width: 100vw;
+}
+
+.footer__social {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 20px;
+  border-top: 1px solid $border-color;
+  border-bottom: 1px solid $border-color;
+}
+
+.footer__logo {
+  flex-shrink: 0;
+  display: flex;
+}
+
+.footer__menu {
+  margin: 30px 0;
+}
