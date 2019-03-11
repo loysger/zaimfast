@@ -12,9 +12,9 @@ const include = require('posthtml-include');
 const autoprefixer = require('autoprefixer');
 const del = require('del');
 const csso = require('gulp-csso');
-const imagemin = require('gulp-imagemin');
 const browsersync = require('browser-sync').create();
 const uglify = require('gulp-uglify');
+const imagemin = require('gulp-imagemin');
 const cssDeclarationSorter = require('css-declaration-sorter');
 const postcssScss = require('postcss-scss');
 
@@ -53,12 +53,23 @@ function watchFiles() {
 
 // HTML
 function html() {
-  return gulp.src('./src/html/*.html').pipe(gulp.dest('./build/'));
+  return gulp.src(["./src/html/**/*.html", "!./src/html/components/*"])
+  .pipe(posthtml([include({ root: "./src/html/components/" })]))
+  .pipe(htmlmin({ collapseWhitespace: true }))
+  .pipe(gulp.dest('./build/'));
 }
 
 // JS
 function js() {
-  return gulp.src('./src/js/*.js').pipe(gulp.dest('./build/js/'));
+  return gulp.src('./src/js/*.js')
+  .pipe(plumber())
+  .pipe(uglify())
+  .pipe(
+    rename({
+      suffix: ".min"
+    })
+  )
+  .pipe(gulp.dest('./build/js/'));
 }
 
 // CSS
