@@ -1,23 +1,23 @@
 .best {
   padding: 30px $padding;
-  background-color: rgb(235, 240, 243);
   overflow: hidden;
+  background-color: rgb(235, 240, 243);
 }
 
 .best__list {
+  display: flex;
   position: relative;
   width: 100vw;
-  margin-left: -$padding;
   margin-top: 20px;
   margin-bottom: 20px;
-  display: flex;
+  margin-left: -$padding;
   overflow-x: scroll;
   overflow-y: hidden;
 
   &::after {
-    content: '';
     display: block;
     padding-left: 1px;
     background-color: transparent;
+    content: '';
   }
 }

@@ -1,12 +1,12 @@
 .best-card {
-  width: 280px;
   flex-shrink: 0;
+  width: 280px;
   height: 100%;
-  background-color: white;
   margin: 0 20px;
   padding: 20px;
   border: 1px solid $border-color;
   border-radius: 3px;
+  background-color: white;
 }
 
 .best-card__top {
@@ -22,8 +22,8 @@
 .best-card__content {
   display: flex;
   justify-content: space-between;
-  font-weight: 700;
   font-size: 20px;
+  font-weight: 700;
   text-transform: uppercase;
 }
 

@@ -1,9 +1,9 @@
 .header__top {
   display: flex;
-  justify-content: space-between;
-  padding: 0 $padding;
   align-items: center;
+  justify-content: space-between;
   height: 50px;
+  padding: 0 $padding;
 }
 
 .header__logo {
@@ -11,9 +11,9 @@
 }
 
 .header__burger {
-  border: none;
   width: 20px;
   height: 15px;
+  border: none;
   background: linear-gradient(
     to bottom,
     black 1px,
