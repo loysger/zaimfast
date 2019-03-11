@@ -14,9 +14,9 @@ const del = require('del');
 const csso = require('gulp-csso');
 const browsersync = require('browser-sync').create();
 const uglify = require('gulp-uglify');
-const imagemin = require('gulp-imagemin');
 const cssDeclarationSorter = require('css-declaration-sorter');
 const postcssScss = require('postcss-scss');
+// const imagemin = require('gulp-imagemin');
 
 // BrowserSync
 function browserSync(done) {
@@ -49,6 +49,13 @@ function watchFiles() {
   gulp.watch('./src/html/**/*.html', gulp.series(html, browserSyncReload));
   gulp.watch('./src/scss/**/*.scss', gulp.series(css));
   gulp.watch('./src/js/**/*.js', gulp.series(js));
+}
+
+function sortScss() {
+  let postcssPlugins = [cssDeclarationSorter({ order: "smacss" })];
+  return gulp.src("./src/scss/components/*.scss")
+    .pipe(postcss(postcssPlugins, { parser: postcssScss }))
+    .pipe(gulp.dest("./src/scss/components/"));
 }
 
 // HTML
@@ -96,6 +103,7 @@ const watch = gulp.parallel(watchFiles, browserSync);
 
 // export tasks
 exports.clean = clean;
+exports.sort = sortScss;
 exports.build = build;
 exports.watch = watch;
 exports.default = build;
