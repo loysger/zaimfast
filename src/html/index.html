@@ -1,8 +1,45 @@
 <!DOCTYPE html>
 <html lang="ru-RU">
-  <include src="./head.html"></include>
+  <head>
+    <include src="./head.html"></include>
+    <title>Главная страница | Zaimfast</title>
+  </head>
   <body class="page">
-    <include src="./header.html"></include>
+    <header class="page__header header">
+      <div class="header__container">
+        <h1 class="heading-1 hidden">Zaimfast</h1>
+        <div class="header__top">
+          <a class="header__logo logo">
+            <img src="https://via.placeholder.com/167x30" alt="Логотип сайта" />
+          </a>
+          <button class="header__burger">
+            <span class="hidden">Показать меню</span>
+          </button>
+        </div>
+        <nav class="header__navigation main-navigation no-display">
+          <div class="main-navigation__top">
+            <h2 class="heading-2 main-navigation__heading">Меню</h2>
+            <button class="main-navigation__close">
+              <span class="hidden">Закрыть меню</span>
+            </button>
+          </div>
+          <ul class="main-navigation__list">
+            <li class="main-navigation__item">
+              <a href="./zaymi.html" class="heading-3">Займы онлайн</a>
+            </li>
+            <li class="main-navigation__item">
+              <a href="#" class="heading-3">Страховки</a>
+            </li>
+            <li class="main-navigation__item">
+              <a href="#" class="heading-3">Банки</a>
+            </li>
+            <li class="main-navigation__item">
+              <a href="#" class="heading-3">Страховые компании</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
     <main>
       <section class="help">
         <h2 class="hidden">Zaimfast.ru</h2>

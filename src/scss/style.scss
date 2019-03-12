@@ -58,6 +58,7 @@ input[type="radio"].visually-hidden {
 // iports
 @import "./components/heading.scss";
 @import "./components/button.scss";
+@import "./components/slider.scss";
 
 @import "./components/header.scss";
 @import "./components/help.scss";
@@ -72,3 +73,8 @@ input[type="radio"].visually-hidden {
 @import "./components/social.scss";
 @import "./components/footer-menu.scss";
 @import "./components/copy.scss";
+
+//zaymi.html
+@import "./components/filters.scss";
+@import "./components/offers.scss";
+@import "./components/offer-card.scss";
