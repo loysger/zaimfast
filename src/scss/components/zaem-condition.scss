@@ -1,0 +1,79 @@
+.zaem-condition {
+  padding: 20px $padding;
+}
+
+.zaem-condition__table {
+  margin-top: 20px;
+  color: $text-color;
+  font-size: 14px;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.zaem-condition__table tr {
+  display: flex;
+  flex-direction: column;
+}
+
+.zaem-condition__table td {
+  display: flex;
+  padding: 0;
+}
+
+.zaem-condition__table td:focus {
+  outline: none;
+}
+
+.zaem-condition__table td:last-of-type {
+  padding-left: 15px;
+  padding-bottom: 10px;
+  margin-bottom: 5px;
+  padding-top: 5px;
+}
+
+.zaem-condition__table td:first-of-type {
+  font-weight: 700;
+  position: relative;
+  margin-bottom: 5px;
+  border: 1px solid $main-color;
+  border-radius: 4px;
+  background-color: $main-color;
+  color: white;
+  padding: 5px 30px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    display: block;
+    border: 6px solid white;
+    border-bottom: none;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    width: 0;
+    height: 0;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+  }
+}
+
+.zaem-condition__table td:first-of-type:focus::before {
+  border-top: none;
+  border-bottom: 6px solid white;
+}
+
+.zaem-condition__table td:not(:focus) + td {
+  display: none;
+}
+
+.zaem-condition__table td:first-of-type:focus {
+  margin-bottom: 0;
+  border-radius: 4px 4px 0 0;
+}
+
+.zaem-condition__table td:first-of-type:focus + td {
+  border: 1px solid rgba($color: $main-color, $alpha: 0.3);
+  border-top: none;
+  border-radius: 0 0 4px 4px;
+  background-color: rgba($color: $main-color, $alpha: 0.1)
+}
