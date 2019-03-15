@@ -59,13 +59,74 @@
               <span class="zaem-card__prop-name">Ставка в день</span>
             </p>
             <p class="zaem-card__prop">
-              <span class="zaem-card__prop-text">3 000 - 30 000 ₽</span>
+              <span class="zaem-card__prop-text"
+                ><span class="calc-amount-value">3 000</span> ₽</span
+              >
               <span class="zaem-card__prop-name">Сумма</span>
             </p>
             <p class="zaem-card__prop">
-              <span class="zaem-card__prop-text">1-365 дней</span>
+              <span class="zaem-card__prop-text"
+                ><span class="calc-days-value">10</span> дней</span
+              >
               <span class="zaem-card__prop-name">Срок</span>
             </p>
+            <p class="zaem-card__prop">
+              <span class="zaem-card__prop-text"
+                ><span class="calc-overcharge-value">10</span> ₽</span
+              >
+              <span class="zaem-card__prop-name">Переплата</span>
+            </p>
+          </div>
+          <div class="zaem__calc calc">
+            <h3 class="calc__heading heading-4">Рассчитать заем</h3>
+            <div class="calc__amount">
+              <label class="calc__label" for="calc-amount"
+                >Введите сумму займа, руб.</label
+              >
+              <input
+                class="calc__input"
+                id="calc-amount"
+                name="amount"
+                type="number"
+                value="3000"
+                maxlength="10"
+                minlength="4"
+                min="1000"
+                max="1000000"
+              />
+              <div class="calc__slider slider">
+                <div class="slider__conteiner">
+                  <div class="slider__lenght">
+                    <div class="slider__depth"></div>
+                    <div class="slider__pin"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="calc__days">
+              <label class="calc__label" for="calc-days"
+                >Введите кол-во дней</label
+              >
+              <input
+                class="calc__input"
+                id="calc-days"
+                name="days"
+                type="number"
+                value="10"
+                maxlength="3"
+                minlength="1"
+                min="1"
+                max="365"
+              />
+              <div class="calc__slider slider">
+                <div class="slider__conteiner">
+                  <div class="slider__lenght">
+                    <div class="slider__depth"></div>
+                    <div class="slider__pin"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
           <a class="zaem-card__go button" href="#">Оформить</a>
         </div>
@@ -94,20 +155,60 @@
           </tr>
         </table>
       </section>
+      <section class="zaem-about">
+        <h2 class="zaem-about__heading heading-3">О предложении</h2>
+        <div class="zaem-about__content">
+          <p class="zaem-about__text">
+            ООО МФК «Е заем» одна из самых надежных и популярных компаний на
+            микрофинансовом рынке. Организация работает с 2013 года и предлагает
+            кредитование для физических лиц на привлекательных условиях. По
+            многим независимым рейтингам именно микрофинансовая компания Ezaem
+            является Первой среди самых доступных МФО для населения. Именно на
+            Е-заем приходится более 20% всех выдаваемых онлайн-займов. Филиалы
+            организации работают в восьми странах: Дания, Чехия, Польша, Латвия,
+            Грузия, Россия, Мексика и Испания.
+          </p>
+          <p class="zaem-about__text">
+            Главное отличие данной компании от конкурентов – предоставление
+            первого займа под 0% годовых для всех.
+          </p>
+          <p class="zaem-about__text">
+            Возьмите сумму, которая не превышает 15 000 рублей, погасите заем в
+            установленный срок, вернув ровно столько же денег, сколько брали
+            изначально, без выплаты процентов за пользование денежными
+            средствами.
+          </p>
+          <div>
+            <h2 class="zaem-about__heading heading-3">
+              Приимущества Ezaem
+            </h2>
+            <ul class="list">
+              <li class="list__item">Возраст от 21 года</li>
+              <li class="list__item">
+                Постоянная регистрация и проживание на территории РФ
+              </li>
+              <li class="list__item">Наличие действующего паспорта</li>
+              <li class="list__item">Наличие банковской именной карты</li>
+              <li class="list__item">Регулярные доходы.</li>
+            </ul>
+          </div>
+        </div>
+        <button class="zaem-about__more">Показать больше</button>
+      </section>
       <section class="zaem-condition">
         <h2 class="zaem-condition__heading heading-3">Условия</h2>
         <table class="zaem-condition__table">
           <tbody>
-            <tr>
-              <td tabindex="0">
+            <tr class="zaem-condition__item zaem-condition__item--closed">
+              <td>
                 Рассмотрение заявки
               </td>
               <td>
                 до 20 минут
               </td>
             </tr>
-            <tr>
-              <td tabindex="0">Пролонгация</td>
+            <tr class="zaem-condition__item">
+              <td>Пролонгация</td>
               <td>
                 Договор займа можно продлить на период от 7 до 30 дней, оплатив
                 только проценты за фактическое количество дней пользования
@@ -115,8 +216,8 @@
                 пролонгации договора микрозайма.
               </td>
             </tr>
-            <tr>
-              <td tabindex="0">Штрафы</td>
+            <tr class="zaem-condition__item">
+              <td>Штрафы</td>
               <td>
                 В случае просрочки платежа более 16-ти дней взыскиваются пени в
                 размере: в период ненадлежащего исполнения обязательств по
@@ -128,38 +229,28 @@
                 от непогашенной суммы займа.
               </td>
             </tr>
-            <tr>
-              <td tabindex="0">Место заключения договора</td>
+            <tr class="zaem-condition__item">
+              <td>Место заключения договора</td>
               <td>онлайн в офисе</td>
             </tr>
-            <tr>
-              <td tabindex="0">Выдача кредита</td>
+            <tr class="zaem-condition__item">
+              <td>Выдача кредита</td>
               <td>банковская карта</td>
             </tr>
           </tbody>
         </table>
       </section>
-      <section class="zaem-about">
-        <h2 class="hidden">О предложении</h2>
-        <p class="zaem-about__text">
-          ООО МФК «Е заем» одна из самых надежных и популярных компаний на
-          микрофинансовом рынке. Организация работает с 2013 года и предлагает
-          кредитование для физических лиц на привлекательных условиях. По многим
-          независимым рейтингам именно микрофинансовая компания Ezaem является
-          Первой среди самых доступных МФО для населения. Именно на Е-заем
-          приходится более 20% всех выдаваемых онлайн-займов. Филиалы
-          организации работают в восьми странах: Дания, Чехия, Польша, Латвия,
-          Грузия, Россия, Мексика и Испания.
-        </p>
-        <p class="zaem-about__text">
-          Главное отличие данной компании от конкурентов – предоставление
-          первого займа под 0% годовых для всех.
-        </p>
-        <p class="zaem-about__text">
-          Возьмите сумму, которая не превышает 15 000 рублей, погасите заем в
-          установленный срок, вернув ровно столько же денег, сколько брали
-          изначально, без выплаты процентов за пользование денежными средствами.
-        </p>
+      <section class="zaem-borrower">
+        <h2 class="zaem-borrower__heading heading-3">Требования к заемщику</h2>
+        <ul class="list">
+          <li class="list__item">Возраст от 21 года</li>
+          <li class="list__item">
+            Постоянная регистрация и проживание на территории РФ
+          </li>
+          <li class="list__item">Наличие действующего паспорта</li>
+          <li class="list__item">Наличие банковской именной карты</li>
+          <li class="list__item">Регулярные доходы.</li>
+        </ul>
       </section>
     </main>
     <include src="./footer.html"></include>

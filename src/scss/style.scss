@@ -59,6 +59,7 @@ input[type="radio"].visually-hidden {
 @import "./components/heading.scss";
 @import "./components/button.scss";
 @import "./components/slider.scss";
+@import "./components/list-component.scss";
 
 @import "./components/header.scss";
 @import "./components/help.scss";
@@ -85,3 +86,5 @@ input[type="radio"].visually-hidden {
 @import "./components/zaem-card.scss";
 @import "./components/zaem-about.scss";
 @import "./components/zaem-condition.scss";
+@import "./components/zaem-borrower.scss";
+@import "./components/calc.scss";
