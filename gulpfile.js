@@ -25,6 +25,7 @@ function browserSync(done) {
       baseDir: './build/'
     },
     notify: false,
+    ghostMode: false,
     open: true,
     cors: true,
     ui: false,
