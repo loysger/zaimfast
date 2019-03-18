@@ -1,0 +1,28 @@
+.news-filter {
+  overflow-x: scroll;
+  border-bottom: 1px solid $border-color;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.news-filter__list {
+  display: flex;
+  width: auto;
+}
+
+.news-filter__item {
+  flex-shrink: 0;
+  margin: 0 10px 2px;
+}
+
+.news-filter__link {
+  border-bottom: 1px solid transparent;
+  display: flex;
+  padding: 15px 0;
+  word-wrap: none;
+}
+
+.news-filter__link--current {
+  border-bottom: 2px solid rgb(96, 203, 85);
+  color: rgb(96, 203, 85);
+}

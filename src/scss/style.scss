@@ -17,6 +17,7 @@ body {
   padding: 0;
   font-family: 'Open Sans', Arial, Helvetica, sans-serif;
   overflow-x: hidden;
+  font-size: 14px;
 }
 
 img {
@@ -88,3 +89,11 @@ input[type="radio"].visually-hidden {
 @import "./components/zaem-condition.scss";
 @import "./components/zaem-borrower.scss";
 @import "./components/calc.scss";
+
+// news
+@import "./components/news-page.scss";
+@import "./components/news-filter.scss";
+@import "./components/news-item.scss";
+
+//mfo-page
+@import "./components/page-mfo.scss";

@@ -1,0 +1,40 @@
+.news-page {
+  padding: 0 $padding;
+  margin-bottom: -20px;
+}
+
+.news-page__text-wrapper {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.news-page__text {
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.news-page__text-more {
+  border: none;
+  background: none;
+  color: $main-color;
+  padding: 0;
+}
+
+.news-page__text-wrapper--closed {
+  & .news-page__text {
+    overflow: hidden;
+    height: 50px;
+    position: relative;
+
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to top, white, transparent);
+    }
+  }
+}
