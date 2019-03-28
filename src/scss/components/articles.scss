@@ -1,31 +1,124 @@
 .articles {
   padding: 20px $padding;
+
+  @include media-desktop {
+    padding: 20px $padding-ds;
+  }
+}
+
+.articles__container {
+  @include media-desktop {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: $max-width;
+    margin: 0 auto;
+  }
 }
 
 .articles__heading {
   margin-bottom: 20px;
+
+  @include media-desktop {
+    order: -1;
+    margin-right: auto;
+    font-size: 30px;
+  }
+}
+
+.articles__list {
+  @include media-desktop {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
 }
 
 .articles__item {
   margin-bottom: 20px;
+
+  @include media-desktop {
+    display: flex;
+  }
 }
 
 .articles__link {
   display: flex;
   align-items: flex-start;
+
+  @include media-desktop {
+    flex-wrap: wrap;
+    height: auto;
+    flex-direction: column;
+  }
 }
 
 .articles__img {
+  display: flex;
   flex-shrink: 0;
   width: 120px;
   height: 70px;
   margin-right: 15px;
   overflow: hidden;
   border-radius: 4px;
+
+  @include media-desktop {
+    order: -1;
+    display: block;
+    position: relative;
+    width: 220px;
+    height: 140px;
+    margin: 0;
+    margin-bottom: 10px;
+  }
+}
+
+.articles__img img {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: auto;
+  height: 100%;
+  display: block;
+  transition-duration: 0.3s;
+
+  .articles__link:hover & {
+    height: 120%;
+    transition-duration: 0.3s;
+  }
 }
 
 .articles__news-heading {
   margin: 0;
   color: $text-color;
   font-weight: 700;
+
+  @include media-desktop {
+    order: -1;
+  }
+}
+
+.articles__more {
+  @include media-desktop {
+    order: -1;
+    width: fit-content;
+    border: none;
+    background-color: transparent;
+    color: $main-color;
+    text-transform: capitalize;
+    transition-duration: 0.3;
+
+    &:hover {
+      box-shadow: none;
+      color: darken($color: $main-color, $amount: 5);
+      transition-duration: 0.3;
+    }
+
+    &:active {
+      top: 0;
+      box-shadow: none;
+      color: darken($color: $main-color, $amount: 30);
+    }
+  }
 }

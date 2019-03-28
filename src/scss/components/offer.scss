@@ -1,11 +1,25 @@
 .offer {
   margin-bottom: 20px;
   padding: 0 $padding;
+  @include media-desktop {
+    padding: 0 $padding-ds;
+  }
+}
+
+.offer__container {
+  @include media-desktop {
+    max-width: $max-width;
+    margin: 0 auto;
+  }
 }
 
 .offer__heading {
   margin-bottom: 10px;
   padding: 10px 0;
+
+  @include media-desktop {
+    display: none;
+  }
 }
 
 .offer__name {
@@ -19,6 +33,11 @@
   flex-wrap: wrap;
   justify-content: center;
   width: 100%;
+
+  @include media-desktop {
+    max-width: 945px;
+    margin: 0 auto;
+  }
 }
 
 .offer__item {
@@ -35,4 +54,38 @@
   overflow: hidden;
   border: 1px solid $border-color;
   border-radius: 2px;
+
+  @include media-desktop {
+    max-width: 315px;
+    height: 72px;
+    padding: 0 20px 0 70px;
+    font-size: 16px;
+    transition-duration: 0.3s;
+    position: relative;
+
+    &:hover {
+      box-shadow: 0 0 20px 0 rgba(0,0,0,.2);
+    }
+  }
+}
+
+.offer__icon {
+  @include media-desktop {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 70px;
+    height: 100%;
+    display: block;
+    background-color: rgba(0,0,0,.2);
+  }
+}
+
+.offer__link {
+  @include media-desktop {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
 }

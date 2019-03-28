@@ -7,12 +7,30 @@
   height: 100vh;
   padding: $padding;
   background-color: white;
+
+  @include media-desktop {
+    display: flex !important;
+    height: auto;
+    position: relative;
+    padding: 0;
+    width: auto;
+  }
 }
 
 .main-navigation__top {
   display: flex;
   justify-content: space-between;
   margin-bottom: 15px;
+
+  @include media-desktop {
+    display: none;
+  }
+}
+
+.main-navigation__list {
+  @include media-desktop {
+    display: flex;
+  }
 }
 
 .main-navigation__item {
@@ -20,6 +38,27 @@
   padding-bottom: 14px;
   border-bottom: 1px solid #cfcece;
   line-height: 35px;
+
+  @include media-desktop {
+    border: none;
+
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+}
+
+.main-navigation__item a {
+  @include media-desktop {
+    font-size: 14px;
+    font-weight: 400;
+    transition-duration: 0.3s;
+
+    &:hover {
+      color: $main-color;
+      transition-duration: 0.3s;
+    }
+  }
 }
 
 .main-navigation__close {

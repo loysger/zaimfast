@@ -1,6 +1,23 @@
 .social {
   display: flex;
   width: 100%;
+
+  @include media-desktop {
+    width: fit-content;
+    align-items: center;
+  }
+}
+
+.social__heading {
+  display: none;
+
+  @include media-desktop {
+    display: block;
+    margin: 0;
+    margin-right: 20px;
+    font-size: 14px;
+    min-width: 260px;
+  }
 }
 
 .social__list {
@@ -21,6 +38,15 @@
   overflow: hidden;
   border: 1px solid $border-color;
   border-radius: 50%;
+
+  @include media-desktop {
+    width: 36px;
+    height: 36px;
+
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
 }
 
 .social__item a {

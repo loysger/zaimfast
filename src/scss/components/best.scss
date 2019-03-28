@@ -2,6 +2,29 @@
   padding: 30px $padding;
   overflow: hidden;
   background-color: rgb(235, 240, 243);
+
+  @include media-desktop {
+    overflow: unset;
+    padding: 30px $padding-ds;
+  }
+}
+
+.best__container {
+  @include media-desktop {
+    max-width: $max-width;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.best__heading {
+  @include media-desktop {
+    font-size: 30px;
+    width: fit-content;
+    order: -1;
+    margin-right: auto;
+  }
 }
 
 .best__list {
@@ -19,5 +42,41 @@
     padding-left: 1px;
     background-color: transparent;
     content: '';
+  }
+
+  @include media-desktop {
+    width: 100%;
+    margin: 20px 0;
+    overflow: unset;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    &::after {
+      display: none;
+    }
+  }
+}
+
+.best__more {
+  @include media-desktop {
+    order: -1;
+    width: fit-content;
+    border: none;
+    background-color: transparent;
+    color: $main-color;
+    text-transform: capitalize;
+    transition-duration: 0.3;
+
+    &:hover {
+      box-shadow: none;
+      color: darken($color: $main-color, $amount: 5);
+      transition-duration: 0.3;
+    }
+
+    &:active {
+      top: 0;
+      box-shadow: none;
+      color: darken($color: $main-color, $amount: 30);
+    }
   }
 }

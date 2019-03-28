@@ -7,6 +7,11 @@
   border: 1px solid $border-color;
   border-radius: 3px;
   background-color: white;
+
+  @include media-desktop {
+    height: auto;
+    margin: 0 10px 10px;
+  }
 }
 
 .best-card__top {
