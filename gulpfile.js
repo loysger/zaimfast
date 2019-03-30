@@ -16,6 +16,7 @@ const browsersync = require('browser-sync').create();
 const uglify = require('gulp-uglify');
 const cssDeclarationSorter = require('css-declaration-sorter');
 const postcssScss = require('postcss-scss');
+const sourcemaps = require('gulp-sourcemaps');
 // const imagemin = require('gulp-imagemin');
 
 // BrowserSync
@@ -53,31 +54,36 @@ function watchFiles() {
 }
 
 function sortScss() {
-  let postcssPlugins = [cssDeclarationSorter({ order: "smacss" })];
-  return gulp.src("./src/scss/components/*.scss")
+  let postcssPlugins = [cssDeclarationSorter({ order: 'smacss' })];
+  return gulp
+    .src('./src/scss/components/*.scss')
     .pipe(postcss(postcssPlugins, { parser: postcssScss }))
-    .pipe(gulp.dest("./src/scss/components/"));
+    .pipe(gulp.dest('./src/scss/components/'));
 }
 
 // HTML
 function html() {
-  return gulp.src(["./src/html/**/*.html", "!./src/html/components/*"])
-  .pipe(posthtml([include({ root: "./src/html/components/" })]))
-  .pipe(htmlmin({ collapseWhitespace: true }))
-  .pipe(gulp.dest('./build/'));
+  return gulp
+    .src(['./src/html/**/*.html', '!./src/html/components/*'])
+    .pipe(posthtml([include({ root: './src/html/components/' })]))
+    .pipe(htmlmin({ collapseWhitespace: true }))
+    .pipe(gulp.dest('./build/'));
 }
 
 // JS
 function js() {
-  return gulp.src('./src/js/*.js')
-  .pipe(plumber())
-  .pipe(uglify())
-  .pipe(
-    rename({
-      suffix: ".min"
-    })
-  )
-  .pipe(gulp.dest('./build/js/'));
+  return gulp
+    .src('./src/js/*.js')
+    .pipe(plumber())
+    .pipe(sourcemaps.init())
+    .pipe(uglify())
+    .pipe(
+      rename({
+        suffix: '.min'
+      })
+    )
+    .pipe(sourcemaps.write('./maps'))
+    .pipe(gulp.dest('./build/js/'));
 }
 
 // CSS
@@ -86,7 +92,8 @@ function css() {
   return gulp
     .src('./src/scss/style.scss')
     .pipe(plumber())
-    .pipe(sass())
+    .pipe(sourcemaps.init())
+    .pipe(sass().on('error', sass.logError))
     .pipe(postcss(postcssPlugins))
     .pipe(csso())
     .pipe(
@@ -94,6 +101,7 @@ function css() {
         suffix: '.min'
       })
     )
+    .pipe(sourcemaps.write('./maps'))
     .pipe(gulp.dest('./build/css'))
     .pipe(browsersync.stream());
 }
