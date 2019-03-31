@@ -1,6 +1,6 @@
 .info {
-  color: $text-color;
   padding: 0 $padding;
+  color: $text-color;
 }
 
 .info__heading {
@@ -8,6 +8,6 @@
 }
 
 .info__text {
-  line-height: 1.4;
   font-size: 12px;
+  line-height: 1.4;
 }

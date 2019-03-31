@@ -1,9 +1,9 @@
 .help {
+  margin-bottom: 20px;
+  padding: $padding;
   background-color: $main-color;
   color: white;
   font-size: 14px;
-  padding: $padding;
-  margin-bottom: 20px;
 
   @include media-desktop {
     padding: 0 $padding-ds;
@@ -13,27 +13,27 @@
 .help__container {
   @include media-desktop {
     display: flex;
+    align-items: center;
+    justify-content: space-around;
     max-width: $max-width;
     margin: 0 auto;
     padding-top: 20px;
     padding-bottom: 20px;
-    align-items: center;
-    justify-content: space-around;
   }
 }
 
 .help__img-container {
+  flex-shrink: 0;
   width: 100px;
   height: 100px;
-  background-color: $border-color;
-  flex-shrink: 0;
   margin: 0 auto 20px;
+  background-color: $border-color;
 
   @include media-desktop {
-    margin: 0;
     order: 1;
     width: 400px;
     height: 360px;
+    margin: 0;
   }
 }
 
@@ -41,25 +41,25 @@
   font-weight: 400;
 
   @include media-desktop {
-    font-weight: 400;
     display: block;
-    font-size: 32px;
-    margin-bottom: 10px;
     width: fit-content;
+    margin-bottom: 10px;
+    font-size: 32px;
+    font-weight: 400;
   }
 }
 
 .help__text {
   margin: 0;
-  // padding: 0 30px;
+  /* padding: 0 30px;*/
   font-size: 16px;
   line-height: 1.5;
   text-align: center;
 
   @include media-desktop {
-    margin-right: 20px;
-    text-align: left;
-    font-size: 18px;
     max-width: 480px;
+    margin-right: 20px;
+    font-size: 18px;
+    text-align: left;
   }
 }

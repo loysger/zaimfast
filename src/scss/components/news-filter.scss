@@ -1,8 +1,8 @@
 .news-filter {
+  position: relative;
+  margin-bottom: 20px;
   overflow-x: scroll;
   border-bottom: 1px solid $border-color;
-  margin-bottom: 20px;
-  position: relative;
 }
 
 .news-filter__list {
@@ -16,10 +16,10 @@
 }
 
 .news-filter__link {
-  border-bottom: 1px solid transparent;
+  word-wrap: none;
   display: flex;
   padding: 15px 0;
-  word-wrap: none;
+  border-bottom: 1px solid transparent;
 }
 
 .news-filter__link--current {

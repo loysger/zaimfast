@@ -39,6 +39,7 @@
   "scripts": {
     "live": "gulp live",
     "build": "gulp build",
-    "clean": "gulp clean"
+    "clean": "gulp clean",
+    "sort-scss": "gulp sort"
   }
 }

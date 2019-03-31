@@ -3,11 +3,11 @@
 }
 
 .zaem-condition__table {
+  width: 100%;
   margin-top: 20px;
+  border-collapse: collapse;
   color: $text-color;
   font-size: 14px;
-  border-collapse: collapse;
-  width: 100%;
 }
 
 .zaem-condition__table tr {
@@ -21,10 +21,10 @@
 }
 
 .zaem-condition__item td:last-of-type {
-  padding-left: 15px;
-  padding-bottom: 10px;
   margin-bottom: 5px;
   padding-top: 5px;
+  padding-bottom: 10px;
+  padding-left: 15px;
   border: 1px solid rgba($color: $main-color, $alpha: 0.3);
   border-top: none;
   border-radius: 0 0 4px 4px;
@@ -32,34 +32,34 @@
 }
 
 .zaem-condition__item td:first-of-type {
-  font-weight: 700;
   position: relative;
   margin-bottom: 0;
+  padding: 5px 30px;
   border: 1px solid $main-color;
   border-radius: 4px 4px 0 0;
   background-color: $main-color;
   color: white;
-  padding: 5px 30px;
+  font-weight: 700;
 
   &::before {
-    content: '';
-    position: absolute;
     display: block;
-    border: 6px solid white;
-    border-top: none;
-    border-left-color: transparent;
-    border-right-color: transparent;
-    width: 0;
-    height: 0;
+    position: absolute;
     top: 50%;
     left: 10px;
+    width: 0;
+    height: 0;
     transform: translateY(-50%);
+    border: 6px solid white;
+    border-top: none;
+    border-right-color: transparent;
+    border-left-color: transparent;
+    content: '';
   }
 }
 
 .zaem-condition__item--closed td:first-of-type::before {
-  border-bottom: none;
   border-top: 6px solid white;
+  border-bottom: none;
 }
 
 .zaem-condition__item--closed td:last-of-type {

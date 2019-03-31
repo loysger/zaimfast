@@ -37,11 +37,11 @@
   }
 
   @include media-desktop {
-    overflow: unset;
+    flex-wrap: wrap;
+    justify-content: center;
     width: 100%;
     margin: 0;
-    justify-content: center;
-    flex-wrap: wrap;
+    overflow: unset;
 
     &::after {
       display: none;

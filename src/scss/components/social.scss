@@ -3,8 +3,8 @@
   width: 100%;
 
   @include media-desktop {
-    width: fit-content;
     align-items: center;
+    width: fit-content;
   }
 }
 
@@ -13,10 +13,10 @@
 
   @include media-desktop {
     display: block;
+    min-width: 260px;
     margin: 0;
     margin-right: 20px;
     font-size: 14px;
-    min-width: 260px;
   }
 }
 

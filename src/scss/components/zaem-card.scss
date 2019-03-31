@@ -11,15 +11,15 @@
 }
 
 .zaem-card__name {
-  margin: 0;
   display: flex;
   flex-direction: column;
+  margin: 0;
 }
 
 .zaem-card__name a {
   color: $text-accent-color;
-  font-weight: 700;
   font-size: 14px;
+  font-weight: 700;
 }
 
 .zaem-card__comp {
@@ -27,22 +27,22 @@
 }
 
 .zaem-card__img {
-  flex-shrink: 0;
   display: flex;
+  flex-shrink: 0;
 }
 
 .zaem-card__contain {
   display: flex;
-  margin: 10px 0;
-  border-bottom: 2px solid $border-color;
-  padding-bottom: 15px;
   justify-content: space-between;
+  margin: 10px 0;
+  padding-bottom: 15px;
+  border-bottom: 2px solid $border-color;
 }
 
 .zaem-card__prop {
-  margin: 0;
   display: flex;
   flex-direction: column;
+  margin: 0;
 }
 
 .zaem-card__prop:not(:last-child) {
@@ -56,14 +56,14 @@
 
 .zaem-card__prop-name {
   margin-top: 0.7em;
-  font-size: 12px;
   color: $text-color-a-0_8;
+  font-size: 12px;
   text-align: center;
 }
 
 .zaem-card__about {
-  font-size: 12px;
   margin-bottom: 15px;
+  font-size: 12px;
 }
 
 .zaem-card__about-item {
@@ -71,16 +71,16 @@
 }
 
 .zaem-card__about-more {
-  font-size: 14px;
-  color: $text-accent-color;
   margin-top: 15px;
   margin-bottom: 15px;
+  color: $text-accent-color;
+  font-size: 14px;
   cursor: pointer;
 }
 
 .zaem-card__go {
   width: 100%;
-  background-color: rgb(13, 209, 73);
   border-color: rgb(13, 209, 73);
+  background-color: rgb(13, 209, 73);
   color: white;
 }

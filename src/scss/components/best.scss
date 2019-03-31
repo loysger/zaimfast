@@ -4,26 +4,26 @@
   background-color: rgb(235, 240, 243);
 
   @include media-desktop {
-    overflow: unset;
     padding: 30px $padding-ds;
+    overflow: unset;
   }
 }
 
 .best__container {
   @include media-desktop {
-    max-width: $max-width;
-    margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
+    max-width: $max-width;
+    margin: 0 auto;
   }
 }
 
 .best__heading {
   @include media-desktop {
-    font-size: 30px;
-    width: fit-content;
     order: -1;
+    width: fit-content;
     margin-right: auto;
+    font-size: 30px;
   }
 }
 
@@ -45,11 +45,11 @@
   }
 
   @include media-desktop {
+    flex-wrap: wrap;
+    justify-content: space-between;
     width: 100%;
     margin: 20px 0;
     overflow: unset;
-    justify-content: space-between;
-    flex-wrap: wrap;
 
     &::after {
       display: none;

@@ -1,17 +1,17 @@
 .page-mfo {
   & .offer-card__contain {
     justify-content: space-around;
-    // text-align: center;
+    /* text-align: center;*/
   }
 }
 
 .page-mfo__more {
-  border: 0;
-  background: none;
-  padding: 10px 0;
   width: 100%;
+  padding: 10px 0;
+  border: 0;
   border-top: 1px solid $border-color;
   border-bottom: 1px solid $border-color;
+  background: none;
   transition-duration: 0.3s;
 
   &:focus, &:active {

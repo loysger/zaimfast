@@ -10,10 +10,10 @@
 
   @include media-desktop {
     display: flex !important;
-    height: auto;
     position: relative;
-    padding: 0;
     width: auto;
+    height: auto;
+    padding: 0;
   }
 }
 
