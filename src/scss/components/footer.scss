@@ -4,7 +4,13 @@
   font-size: 12px;
 
   @include media-desktop {
-    padding: 20px 0 0;
+    padding: 0;
+  }
+}
+
+.footer--colored {
+  @include media-desktop {
+    background-color: $bg-color;
   }
 }
 

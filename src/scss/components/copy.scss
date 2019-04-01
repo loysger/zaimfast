@@ -1,6 +1,10 @@
 .copy {
   margin: 0;
-  margin-bottom: 20px;
+  padding-bottom: 20px;
   font-size: 12px;
   line-height: 1.3;
+
+  @include media-desktop {
+    margin: 0;
+  }
 }

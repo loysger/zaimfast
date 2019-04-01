@@ -1,13 +1,31 @@
 .info {
   padding: 0 $padding;
   color: $text-color;
+
+  @include media-desktop {
+    padding: 20px 20px;
+    background-color: white;
+    margin-top: 20px;
+  }
 }
 
 .info__heading {
   font-size: 16px;
+
+  @include media-desktop {
+    font-size: 18px;
+  }
 }
 
 .info__text {
   font-size: 12px;
   line-height: 1.4;
+
+  @include media-desktop {
+    font-size: 14px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
 }

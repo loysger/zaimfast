@@ -26,4 +26,12 @@
   &:not(:last-child) {
     margin-bottom: 5px;
   }
+
+  @include media-desktop {
+    font-size: 14px;
+
+    &::before {
+      top: 10px;
+    }
+  }
 }

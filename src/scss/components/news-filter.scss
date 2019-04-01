@@ -3,6 +3,10 @@
   margin-bottom: 20px;
   overflow-x: scroll;
   border-bottom: 1px solid $border-color;
+
+  @include media-desktop {
+    overflow: unset;
+  }
 }
 
 .news-filter__list {
@@ -13,6 +17,10 @@
 .news-filter__item {
   flex-shrink: 0;
   margin: 0 10px 2px;
+
+  @include media-desktop {
+    margin: 0 10px;
+  }
 }
 
 .news-filter__link {
@@ -20,9 +28,22 @@
   display: flex;
   padding: 15px 0;
   border-bottom: 1px solid transparent;
-}
 
-.news-filter__link--current {
-  border-bottom: 2px solid rgb(96, 203, 85);
-  color: rgb(96, 203, 85);
+  &:hover {
+    color: $main-color;
+  }
+
+  &--current {
+    &:hover {
+      color: rgb(96, 203, 85);
+      cursor: default;
+    }
+
+    border-bottom: 3px solid rgb(96, 203, 85);
+    color: rgb(96, 203, 85);
+  }
+
+  @include media-desktop {
+    font-size: 16px;
+  }
 }

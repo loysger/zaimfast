@@ -2,6 +2,28 @@
   padding: 15px $padding;
   border-top: 1px solid $border-color;
   color: $text-color;
+
+  @include media-desktop {
+    background-color: white;
+    transition-duration: 0.3s;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    border-top: none;
+    // border-bottom: 1px solid $border-color;
+
+    &:hover {
+      box-shadow: 0 2px 11.84px 4.16px rgba(0, 0, 0, 0.2);
+      z-index: 2;
+      transition-duration: 0.3s;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
 }
 
 .offer-card__number {
@@ -24,6 +46,13 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @include media-desktop {
+    margin-right: 30px;
+    margin-bottom: 10px;
+    flex-direction: column;
+    justify-content: space-between;
+  }
 }
 
 .offer-card__name {
@@ -32,12 +61,20 @@
   margin: 0;
   margin-right: auto;
   margin-left: 10px;
-}
 
-.offer-card__name a {
-  color: $text-accent-color;
-  font-size: 14px;
-  font-weight: 700;
+  & a {
+    color: $text-accent-color;
+    font-size: 14px;
+    font-weight: 700;
+
+    @include media-desktop {
+      font-size: 12px;
+    }
+  }
+
+  @include media-desktop {
+    width: 100%;
+  }
 }
 
 .offer-card__comp {
@@ -45,7 +82,15 @@
 }
 
 .offer-card__img {
+  display: flex;
   flex-shrink: 0;
+
+  @include media-desktop {
+    order: -1;
+    width: 150px;
+    height: 50px;
+    margin-bottom: 10px;
+  }
 }
 
 .offer-card__contain {
@@ -53,12 +98,28 @@
   margin: 10px 0;
   padding-bottom: 15px;
   border-bottom: 2px solid $border-color;
+
+  @include media-desktop {
+    flex-grow: 1;
+    border: none;
+    padding-right: 125px;
+    padding-bottom: 0;
+    margin-bottom: 30px;
+  }
 }
 
 .offer-card__prop {
   display: flex;
   flex-direction: column;
   margin: 0;
+
+  @include media-desktop {
+    flex-grow: 1;
+
+    &:nth-child(1n) {
+      text-align: center;
+    }
+  }
 }
 
 .offer-card__prop:not(:last-child) {
@@ -78,6 +139,36 @@
 .offer-card__about {
   margin-bottom: 15px;
   font-size: 12px;
+
+  &--closed {
+    & li:nth-child(2) {
+      max-height: 20px;
+      overflow: hidden;
+      position: relative;
+      &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to top, white, transparent);
+      }
+    }
+
+    & li:not(:last-child):not(:first-child):not(:nth-child(2)) {
+      display: none;
+    }
+  }
+
+  @include media-desktop {
+    width: 100%;
+    // border-top: 1px solid $border-color;
+    padding-top: 10px;
+    font-size: 14px;
+    margin-bottom: 0;
+  }
 }
 
 .offer-card__about-item {
@@ -90,6 +181,10 @@
   color: $text-accent-color;
   font-size: 14px;
   cursor: pointer;
+
+  @include media-desktop {
+    margin-bottom: 0;
+  }
 }
 
 .offer-card__go {
@@ -97,4 +192,11 @@
   border-color: rgb(13, 209, 73);
   background-color: rgb(13, 209, 73);
   color: white;
+
+  @include media-desktop {
+    position: absolute;
+    top: 25px;
+    right: 20px;
+    width: 110px;
+  }
 }

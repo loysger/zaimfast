@@ -3,3 +3,14 @@
     @content;
   }
 }
+
+@mixin link {
+  color: $text-color;
+  font-size: 14px;
+  transition-duration: 0.3s;
+
+  &:hover {
+    color: $main-color;
+    transition-duration: 0.3s;
+  }
+}

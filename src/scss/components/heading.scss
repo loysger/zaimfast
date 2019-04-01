@@ -17,6 +17,10 @@
   color: $text-color;
   font-size: 16px;
   font-weight: 700;
+
+  @include media-desktop {
+    font-size: 18px;
+  }
 }
 
 .heading-4 {
@@ -24,4 +28,8 @@
   color: $text-color;
   font-size: 14px;
   font-weight: 700;
+
+  @include media-desktop {
+    font-size: 16px;
+  }
 }

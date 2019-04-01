@@ -6,4 +6,8 @@
   font-size: 14px;
   line-height: 1.5;
   text-align: center;
+
+  @include media-desktop {
+    padding: 20px 50px;
+  }
 }

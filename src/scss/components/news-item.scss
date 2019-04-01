@@ -2,11 +2,24 @@
   margin-top: 20px;
   padding-bottom: 20px;
   border-bottom: 1px solid $border-color;
+
+  @include media-desktop {
+    width: calc(50% - 10px);
+
+    &:nth-last-child(2), &:nth-last-child(3) {
+      border-bottom: none;
+    }
+  }
 }
 
 .news-item__link {
   display: flex;
   align-items: center;
+
+  @include media-desktop {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 
 .news-item__preview {
@@ -23,6 +36,34 @@
     width: auto;
     height: 100%;
   }
+
+  .news-item--first & {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+
+  @include media-desktop {
+    width: 100%;
+    padding-bottom: 56.25%;
+    position: relative;
+    margin-bottom: 10px;
+
+    & img {
+      height: 100%;
+      width: auto;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      transition-duration: 0.3s;
+    }
+
+    &:hover img {
+      height: 120%;
+      transition-duration: 0.3s;
+    }
+  }
 }
 
 .news-item__heading {
@@ -35,19 +76,23 @@
 .news-item__heading-span {
   display: none;
   color: $text-color-a-0_5;
+
+  @include media-desktop {
+    display: block;
+  }
 }
 
 .news-item--first {
   & .news-item__link {
     display: block;
   }
-  & .news-item__preview  {
-    width: 100%;
-    height: auto;
-    margin-bottom: 10px;
-  }
+
   & .news-item__heading-span {
     display: block;
+  }
+
+  @include media-desktop {
+    width: 100%;
   }
 }
 
@@ -58,14 +103,24 @@
   width: 100vw;
   margin-top: -1px;
   margin-left: -$padding;
-  padding: 0;;
+  padding: 0;
   border-top: 1px solid $border-color;
   border-bottom: 1px solid $border-color;
   transition-duration: 0.3s;
 
-  &:active, &:focus {
+  &:hover, &:active, &:focus {
     background-color: $main-color;
     color: white;
     transition-duration: 0.3s;
+    cursor: pointer;
+  }
+
+  @include media-desktop {
+    position: absolute;
+    bottom: 1px;
+    left: -20px;
+    margin: 0;
+    width: calc(100% + 40px);
+    border-top: 1px solid $border-color;
   }
 }
