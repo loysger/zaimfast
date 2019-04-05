@@ -26,6 +26,7 @@
     "gulp-sass": "^4.0.2",
     "gulp-sourcemaps": "^2.6.5",
     "gulp-uglify": "^3.0.1",
+    "htmlhint": "^0.11.0",
     "postcss-scss": "^2.0.0",
     "postcss-svgo": "^4.0.1",
     "posthtml-include": "^1.2.0",
