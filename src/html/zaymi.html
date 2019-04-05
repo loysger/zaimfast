@@ -1,422 +1,387 @@
 <!DOCTYPE html>
 <html lang="ru-RU">
-  <head>
-    <include src="./head.html"></include>
-    <title>Займы онлайн | Zaimfast</title>
-  </head>
-  <body class="page">
-    <header class="page__header header">
-      <div class="header__container">
-        <h1 class="heading-1 hidden">Займы онлайн</h1>
-        <div class="header__top">
-          <a class="header__logo logo" href="/index.html">
-            <img src="https://via.placeholder.com/167x30" alt="Логотип сайта" />
-          </a>
-          <button class="header__burger">
-            <span class="hidden">Показать меню</span>
+
+<head>
+  <include src="./head.html"></include>
+  <title>Займы онлайн | Zaimfast</title>
+</head>
+
+<body class="page">
+  <header class="page__header header">
+    <div class="header__container">
+      <h1 class="heading-1 hidden">Займы онлайн</h1>
+      <div class="header__top">
+        <a class="header__logo logo" href="/index.html">
+          <img src="https://via.placeholder.com/167x30" alt="Логотип сайта" />
+        </a>
+        <button class="header__burger">
+          <span class="hidden">Показать меню</span>
+        </button>
+      </div>
+      <nav class="header__navigation main-navigation no-display">
+        <div class="main-navigation__top">
+          <h2 class="heading-2 main-navigation__heading">Меню</h2>
+          <button class="main-navigation__close">
+            <span class="hidden">Закрыть меню</span>
           </button>
         </div>
-        <nav class="header__navigation main-navigation no-display">
-          <div class="main-navigation__top">
-            <h2 class="heading-2 main-navigation__heading">Меню</h2>
-            <button class="main-navigation__close">
-              <span class="hidden">Закрыть меню</span>
-            </button>
+        <ul class="main-navigation__list">
+          <li class="main-navigation__item">
+            <a href="#" class="heading-3">Деньги</a>
+          </li>
+          <li class="main-navigation__item">
+            <a href="#" class="heading-3">Страховки</a>
+          </li>
+          <li class="main-navigation__item">
+            <a href="#" class="heading-3">Банки</a>
+          </li>
+          <li class="main-navigation__item">
+            <a href="#" class="heading-3">Страховые компании</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main class="page-content page-content--zaymi">
+    <div class="page-content__wrap">
+      <div class="page-wrap">
+        <section class="filters" style="display: none;">
+          <h2 class="hidden">Подобрать условия</h2>
+          <fieldset class="filters__fieldset">
+            <legend class="filters__name">
+              <p class="filters__place">
+                Микрозаймы
+                <span class="filters__city">в Москве</span>
+              </p>
+            </legend>
+            <div class="filters__filter">
+              <label class="filters__label" for="filter-amount">Введите сумму займа, руб.</label>
+              <input class="filters__input" id="filter-amount" name="amount" type="number" value="3000" maxlength="10"
+                minlength="4" min="1000" max="1000000" />
+              <div class="slider">
+                <div class="slider__conteiner">
+                  <div class="slider__lenght">
+                    <div class="slider__depth"></div>
+                    <div class="slider__pin"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="filters__filter">
+              <label class="filters__label" for="filter-period">Срок, дней</label>
+              <input class="filters__input" id="filter-period" name="period" type="number" value="3" maxlength="3"
+                minlength="1" min="1" max="365" />
+              <div class="slider">
+                <div class="slider__conteiner">
+                  <div class="slider__lenght">
+                    <div class="slider__depth"></div>
+                    <div class="slider__pin"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+        </section>
+        <section class="offers">
+          <div class="offers__container">
+            <h2 class="hidden">Предложения</h2>
+            <p class="offers__caption">
+              Займы онлайн - большая экономия времени! Оформляйте займы из
+              любой точки РФ. Не нужно стоять в очередях, искать поручителя.
+              Выберите условия, отправьте заявку через интернет и получите
+              деньги на выгодных условиях!
+            </p>
+            <ul class="offers__list">
+              <li class="offers__item offer-card">
+                <div class="offer-card__top">
+                  <p class="offer-card__name">
+                    <a href="#">«Потребительский»</a>
+                    <!-- <span class="offer-card__comp">Смсфинанс</span> -->
+                  </p>
+                  <div class="offer-card__img">
+                    <img src="https://via.placeholder.com/50x50" alt="alt" />
+                  </div>
+                </div>
+                <div class="offer-card__contain">
+                  <p class="offer-card__prop">
+                    <span class="offer-card__prop-text">0,00%</span>
+                    <span class="offer-card__prop-name">Ставка в день</span>
+                  </p>
+                  <p class="offer-card__prop">
+                    <span class="offer-card__prop-text">3 000 - 30 000 ₽</span>
+                    <span class="offer-card__prop-name">Сумма</span>
+                  </p>
+                  <p class="offer-card__prop">
+                    <span class="offer-card__prop-text">1-365 дней</span>
+                    <span class="offer-card__prop-name">Срок</span>
+                  </p>
+                </div>
+                <ul class="offer-card__about offer-card__about--closed">
+                  <li class="offer-card__about-item">
+                    Возраст заемщика: от 18 лет
+                  </li>
+                  <li class="offer-card__about-item">
+                    Получение займа: банковская карта, qiwi кошелек, платёжные
+                    системы, яндекс.деньги, банковский счет
+                  </li>
+                  <li class="offer-card__about-item">
+                    Погашение: в конце срока
+                  </li>
+                  <li class="offer-card__about-item">Пролонгация</li>
+                  <li class="offer-card__about-item">Отсрочка</li>
+                  <li class="offer-card__about-item">Штрафы</li>
+                  <li class="offer-card__about-item">
+                    Место заключения договора: онлайн
+                  </li>
+                  <li class="offer-card__about-more">Подробнее</li>
+                </ul>
+                <a class="offer-card__go button" href="/mfo/ezaem.html">Перейти</a>
+              </li>
+              <li class="offers__item offer-card">
+                <div class="offer-card__top">
+                  <p class="offer-card__name">
+                    <a href="#">«Потребительский»</a>
+                    <!-- <span class="offer-card__comp">Смсфинанс</span> -->
+                  </p>
+                  <div class="offer-card__img">
+                    <img src="https://via.placeholder.com/50x50" alt="alt" />
+                  </div>
+                </div>
+                <div class="offer-card__contain">
+                  <p class="offer-card__prop">
+                    <span class="offer-card__prop-text">0,00%</span>
+                    <span class="offer-card__prop-name">Ставка в день</span>
+                  </p>
+                  <p class="offer-card__prop">
+                    <span class="offer-card__prop-text">3 000 - 30 000 ₽</span>
+                    <span class="offer-card__prop-name">Сумма</span>
+                  </p>
+                  <p class="offer-card__prop">
+                    <span class="offer-card__prop-text">1-365 дней</span>
+                    <span class="offer-card__prop-name">Срок</span>
+                  </p>
+                </div>
+                <ul class="offer-card__about offer-card__about--closed">
+                  <li class="offer-card__about-item">
+                    Возраст заемщика: от 18 лет
+                  </li>
+                  <li class="offer-card__about-item">
+                    Получение займа: банковская карта, qiwi кошелек, платёжные
+                    системы, яндекс.деньги, банковский счет
+                  </li>
+                  <li class="offer-card__about-item">
+                    Погашение: в конце срока
+                  </li>
+                  <li class="offer-card__about-item">Пролонгация</li>
+                  <li class="offer-card__about-item">Отсрочка</li>
+                  <li class="offer-card__about-item">Штрафы</li>
+                  <li class="offer-card__about-item">
+                    Место заключения договора: онлайн
+                  </li>
+                  <li class="offer-card__about-more">Подробнее</li>
+                </ul>
+                <a class="offer-card__go button" href="/mfo/ezaem.html">Перейти</a>
+              </li>
+              <li class="offers__item offer-card">
+                <div class="offer-card__top">
+                  <p class="offer-card__name">
+                    <a href="#">«Потребительский»</a>
+                    <!-- <span class="offer-card__comp">Смсфинанс</span> -->
+                  </p>
+                  <div class="offer-card__img">
+                    <img src="https://via.placeholder.com/50x50" alt="alt" />
+                  </div>
+                </div>
+                <div class="offer-card__contain">
+                  <p class="offer-card__prop">
+                    <span class="offer-card__prop-text">0,00%</span>
+                    <span class="offer-card__prop-name">Ставка в день</span>
+                  </p>
+                  <p class="offer-card__prop">
+                    <span class="offer-card__prop-text">3 000 - 30 000 ₽</span>
+                    <span class="offer-card__prop-name">Сумма</span>
+                  </p>
+                  <p class="offer-card__prop">
+                    <span class="offer-card__prop-text">1-365 дней</span>
+                    <span class="offer-card__prop-name">Срок</span>
+                  </p>
+                </div>
+                <ul class="offer-card__about offer-card__about--closed">
+                  <li class="offer-card__about-item">
+                    Возраст заемщика: от 18 лет
+                  </li>
+                  <li class="offer-card__about-item">
+                    Получение займа: банковская карта, qiwi кошелек, платёжные
+                    системы, яндекс.деньги, банковский счет
+                  </li>
+                  <li class="offer-card__about-item">
+                    Погашение: в конце срока
+                  </li>
+                  <li class="offer-card__about-item">Пролонгация</li>
+                  <li class="offer-card__about-item">Отсрочка</li>
+                  <li class="offer-card__about-item">Штрафы</li>
+                  <li class="offer-card__about-item">
+                    Место заключения договора: онлайн
+                  </li>
+                  <li class="offer-card__about-more">Подробнее</li>
+                </ul>
+                <a class="offer-card__go button" href="/mfo/ezaem.html">Перейти</a>
+              </li>
+              <li class="offers__item offer-card">
+                <div class="offer-card__top">
+                  <p class="offer-card__name">
+                    <a href="#">«Потребительский»</a>
+                    <!-- <span class="offer-card__comp">Смсфинанс</span> -->
+                  </p>
+                  <div class="offer-card__img">
+                    <img src="https://via.placeholder.com/50x50" alt="alt" />
+                  </div>
+                </div>
+                <div class="offer-card__contain">
+                  <p class="offer-card__prop">
+                    <span class="offer-card__prop-text">0,00%</span>
+                    <span class="offer-card__prop-name">Ставка в день</span>
+                  </p>
+                  <p class="offer-card__prop">
+                    <span class="offer-card__prop-text">3 000 - 30 000 ₽</span>
+                    <span class="offer-card__prop-name">Сумма</span>
+                  </p>
+                  <p class="offer-card__prop">
+                    <span class="offer-card__prop-text">1-365 дней</span>
+                    <span class="offer-card__prop-name">Срок</span>
+                  </p>
+                </div>
+                <ul class="offer-card__about offer-card__about--closed">
+                  <li class="offer-card__about-item">
+                    Возраст заемщика: от 18 лет
+                  </li>
+                  <li class="offer-card__about-item">
+                    Получение займа: банковская карта, qiwi кошелек, платёжные
+                    системы, яндекс.деньги, банковский счет
+                  </li>
+                  <li class="offer-card__about-item">
+                    Погашение: в конце срока
+                  </li>
+                  <li class="offer-card__about-item">Пролонгация</li>
+                  <li class="offer-card__about-item">Отсрочка</li>
+                  <li class="offer-card__about-item">Штрафы</li>
+                  <li class="offer-card__about-item">
+                    Место заключения договора: онлайн
+                  </li>
+                  <li class="offer-card__about-more">Подробнее</li>
+                </ul>
+                <a class="offer-card__go button" href="/mfo/ezaem.html">Перейти</a>
+              </li>
+            </ul>
           </div>
-          <ul class="main-navigation__list">
-            <li class="main-navigation__item">
-              <a href="#" class="heading-3">Деньги</a>
+        </section>
+        <section class="info">
+          <h2 class="hidden">
+            Займы онлайн - легкий способ занять деньги срочно через интернет
+          </h2>
+          <p class="info__text">
+            Почти у каждого гражданина РФ рано или поздно бывают экстренные
+            ситуации, когда нужны срочно деньги. В банках процесс оформления
+            занимает много времени. В такой ситуации выручают займы онлайн!
+          </p>
+          <p class="info__text">
+            Мгновенные займы онлайн легко помогут вам преодолеть финансовые
+            трудности. Для оформления вам нужно иметь паспорт, выход в
+            интернет, найти подходящие условия и пару минут для заполнения
+            заявки онлайн.
+          </p>
+          <h3 class="info__heading">
+            Микрозаем онлайн - это круглосуточная выдача денег
+          </h3>
+          <p class="info__text">
+            Наш сервис подобрал самые надежные и популярные займы в РФ,
+            большинство из них работают круглосуточно 24/7, без выходных.
+          </p>
+          <p class="info__text">
+            С нами легко сможете получить займ онлайн срочно, в любое время
+            суток. Достаточно оформить заявку, подождать 15 минут, получить
+            одобрение и в ближайшие часы получить деньги на любую для вас
+            удобную платежную систему (На карту, Золотая корона, Qiwi,
+            contact, Yandex.money или банковский счет).
+          </p>
+          <h3 class="info__heading">
+            Есть три основных требования для получения займа онлайн:
+          </h3>
+          <ul class="info__list list">
+            <li class="info__text info__item list__item">
+              Человек должен проживать в РФ
             </li>
-            <li class="main-navigation__item">
-              <a href="#" class="heading-3">Страховки</a>
+            <li class="info__text info__item list__item">
+              Возраст обращения от 18 лет
             </li>
-            <li class="main-navigation__item">
-              <a href="#" class="heading-3">Банки</a>
-            </li>
-            <li class="main-navigation__item">
-              <a href="#" class="heading-3">Страховые компании</a>
+            <li class="info__text info__item list__item">
+              Документ, подтверждающий личность (Паспорт)
             </li>
           </ul>
-        </nav>
+          <p class="info__text">
+            Есть и другие требования, в зависимости в какую МФО вы обращаетесь
+          </p>
+          <h3 class="info__heading">Основные условия микрозаймов онлайн</h3>
+          <ul class="info__list list">
+            <li class="info__text info__item list__item">
+              Займы онлайн дают деньги сроком от 1 до 45 дней
+            </li>
+            <li class="info__text info__item list__item">
+              Процент рассчитывается индивидуально, в среднем составляет от 2%
+              в день
+            </li>
+            <li class="info__text info__item list__item">
+              Микрозаем онлайн можно взять на любые нужды, суммой от 1000 до
+              30000 рублей
+            </li>
+          </ul>
+          <h3 class="info__heading">Преимущества</h3>
+          <p class="info__text">
+            Мы индивидуально подошли к каждой микрофинансовой компании,
+            отобрали надежные и проверенные МФО.
+          </p>
+          <ul class="info__list list">
+            <li class="info__text info__item list__item">
+              Нет скрытых комиссий
+            </li>
+            <li class="info__text info__item list__item">
+              Удобно просматривать и сравнивать условия
+            </li>
+            <li class="info__text info__item list__item">
+              Гарантирована защита персональных данных
+            </li>
+            <li class="info__text info__item list__item">
+              Максимально просто, интуитивно понятно
+            </li>
+          </ul>
+          <p class="info__text">
+            Выбирайте выгодные условия, оформляйте заявку, получайте деньги,
+            наслаждайтесь процессом получения микрозаймов онлайн!
+          </p>
+        </section>
       </div>
-    </header>
-    <main class="page-content page-content--zaymi">
-      <div class="page-content__wrap">
-        <div class="page-wrap">
-          <section class="filters" style="display: none;">
-            <h2 class="hidden">Подобрать условия</h2>
-            <fieldset class="filters__fieldset">
-              <legend class="filters__name">
-                <p class="filters__place">
-                  Микрозаймы
-                  <span class="filters__city">в Москве</span>
-                </p>
-              </legend>
-              <div class="filters__filter">
-                <label class="filters__label" for="filter-amount"
-                  >Введите сумму займа, руб.</label
-                >
-                <input
-                  class="filters__input"
-                  id="filter-amount"
-                  name="amount"
-                  type="number"
-                  value="3000"
-                  maxlength="10"
-                  minlength="4"
-                  min="1000"
-                  max="1000000"
-                />
-                <div class="slider">
-                  <div class="slider__conteiner">
-                    <div class="slider__lenght">
-                      <div class="slider__depth"></div>
-                      <div class="slider__pin"></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="filters__filter">
-                <label class="filters__label" for="filter-period"
-                  >Срок, дней</label
-                >
-                <input
-                  class="filters__input"
-                  id="filter-period"
-                  name="period"
-                  type="number"
-                  value="3"
-                  maxlength="3"
-                  minlength="1"
-                  min="1"
-                  max="365"
-                />
-                <div class="slider">
-                  <div class="slider__conteiner">
-                    <div class="slider__lenght">
-                      <div class="slider__depth"></div>
-                      <div class="slider__pin"></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </fieldset>
-          </section>
-          <section class="offers">
-            <div class="offers__container">
-              <h2 class="hidden">Предложения</h2>
-              <p class="offers__caption">
-                Займы онлайн - большая экономия времени! Оформляйте займы из
-                любой точки РФ. Не нужно стоять в очередях, искать поручителя.
-                Выберите условия, отправьте заявку через интернет и получите
-                деньги на выгодных условиях!
-              </p>
-              <ul class="offers__list">
-                <li class="offers__item offer-card">
-                  <div class="offer-card__top">
-                    <p class="offer-card__name">
-                      <a href="#">«Потребительский»</a>
-                      <!-- <span class="offer-card__comp">Смсфинанс</span> -->
-                    </p>
-                    <div class="offer-card__img">
-                      <img src="https://via.placeholder.com/50x50" alt="alt" />
-                    </div>
-                  </div>
-                  <div class="offer-card__contain">
-                    <p class="offer-card__prop">
-                      <span class="offer-card__prop-text">0,00%</span>
-                      <span class="offer-card__prop-name">Ставка в день</span>
-                    </p>
-                    <p class="offer-card__prop">
-                      <span class="offer-card__prop-text"
-                        >3 000 - 30 000 ₽</span
-                      >
-                      <span class="offer-card__prop-name">Сумма</span>
-                    </p>
-                    <p class="offer-card__prop">
-                      <span class="offer-card__prop-text">1-365 дней</span>
-                      <span class="offer-card__prop-name">Срок</span>
-                    </p>
-                  </div>
-                  <ul class="offer-card__about offer-card__about--closed">
-                    <li class="offer-card__about-item">
-                      Возраст заемщика: от 18 лет
-                    </li>
-                    <li class="offer-card__about-item">
-                      Получение займа: банковская карта, qiwi кошелек, платёжные
-                      системы, яндекс.деньги, банковский счет
-                    </li>
-                    <li class="offer-card__about-item">
-                      Погашение: в конце срока
-                    </li>
-                    <li class="offer-card__about-item">Пролонгация</li>
-                    <li class="offer-card__about-item">Отсрочка</li>
-                    <li class="offer-card__about-item">Штрафы</li>
-                    <li class="offer-card__about-item">
-                      Место заключения договора: онлайн
-                    </li>
-                    <li class="offer-card__about-more">Подробнее</li>
-                  </ul>
-                  <a class="offer-card__go button" href="/mfo/ezaem.html"
-                    >Перейти</a
-                  >
-                </li>
-                <li class="offers__item offer-card">
-                  <div class="offer-card__top">
-                    <p class="offer-card__name">
-                      <a href="#">«Потребительский»</a>
-                      <!-- <span class="offer-card__comp">Смсфинанс</span> -->
-                    </p>
-                    <div class="offer-card__img">
-                      <img src="https://via.placeholder.com/50x50" alt="alt" />
-                    </div>
-                  </div>
-                  <div class="offer-card__contain">
-                    <p class="offer-card__prop">
-                      <span class="offer-card__prop-text">0,00%</span>
-                      <span class="offer-card__prop-name">Ставка в день</span>
-                    </p>
-                    <p class="offer-card__prop">
-                      <span class="offer-card__prop-text"
-                        >3 000 - 30 000 ₽</span
-                      >
-                      <span class="offer-card__prop-name">Сумма</span>
-                    </p>
-                    <p class="offer-card__prop">
-                      <span class="offer-card__prop-text">1-365 дней</span>
-                      <span class="offer-card__prop-name">Срок</span>
-                    </p>
-                  </div>
-                  <ul class="offer-card__about offer-card__about--closed">
-                    <li class="offer-card__about-item">
-                      Возраст заемщика: от 18 лет
-                    </li>
-                    <li class="offer-card__about-item">
-                      Получение займа: банковская карта, qiwi кошелек, платёжные
-                      системы, яндекс.деньги, банковский счет
-                    </li>
-                    <li class="offer-card__about-item">
-                      Погашение: в конце срока
-                    </li>
-                    <li class="offer-card__about-item">Пролонгация</li>
-                    <li class="offer-card__about-item">Отсрочка</li>
-                    <li class="offer-card__about-item">Штрафы</li>
-                    <li class="offer-card__about-item">
-                      Место заключения договора: онлайн
-                    </li>
-                    <li class="offer-card__about-more">Подробнее</li>
-                  </ul>
-                  <a class="offer-card__go button" href="/mfo/ezaem.html"
-                    >Перейти</a
-                  >
-                </li>
-                <li class="offers__item offer-card">
-                  <div class="offer-card__top">
-                    <p class="offer-card__name">
-                      <a href="#">«Потребительский»</a>
-                      <!-- <span class="offer-card__comp">Смсфинанс</span> -->
-                    </p>
-                    <div class="offer-card__img">
-                      <img src="https://via.placeholder.com/50x50" alt="alt" />
-                    </div>
-                  </div>
-                  <div class="offer-card__contain">
-                    <p class="offer-card__prop">
-                      <span class="offer-card__prop-text">0,00%</span>
-                      <span class="offer-card__prop-name">Ставка в день</span>
-                    </p>
-                    <p class="offer-card__prop">
-                      <span class="offer-card__prop-text"
-                        >3 000 - 30 000 ₽</span
-                      >
-                      <span class="offer-card__prop-name">Сумма</span>
-                    </p>
-                    <p class="offer-card__prop">
-                      <span class="offer-card__prop-text">1-365 дней</span>
-                      <span class="offer-card__prop-name">Срок</span>
-                    </p>
-                  </div>
-                  <ul class="offer-card__about offer-card__about--closed">
-                    <li class="offer-card__about-item">
-                      Возраст заемщика: от 18 лет
-                    </li>
-                    <li class="offer-card__about-item">
-                      Получение займа: банковская карта, qiwi кошелек, платёжные
-                      системы, яндекс.деньги, банковский счет
-                    </li>
-                    <li class="offer-card__about-item">
-                      Погашение: в конце срока
-                    </li>
-                    <li class="offer-card__about-item">Пролонгация</li>
-                    <li class="offer-card__about-item">Отсрочка</li>
-                    <li class="offer-card__about-item">Штрафы</li>
-                    <li class="offer-card__about-item">
-                      Место заключения договора: онлайн
-                    </li>
-                    <li class="offer-card__about-more">Подробнее</li>
-                  </ul>
-                  <a class="offer-card__go button" href="/mfo/ezaem.html"
-                    >Перейти</a
-                  >
-                </li>
-                <li class="offers__item offer-card">
-                  <div class="offer-card__top">
-                    <p class="offer-card__name">
-                      <a href="#">«Потребительский»</a>
-                      <!-- <span class="offer-card__comp">Смсфинанс</span> -->
-                    </p>
-                    <div class="offer-card__img">
-                      <img src="https://via.placeholder.com/50x50" alt="alt" />
-                    </div>
-                  </div>
-                  <div class="offer-card__contain">
-                    <p class="offer-card__prop">
-                      <span class="offer-card__prop-text">0,00%</span>
-                      <span class="offer-card__prop-name">Ставка в день</span>
-                    </p>
-                    <p class="offer-card__prop">
-                      <span class="offer-card__prop-text"
-                        >3 000 - 30 000 ₽</span
-                      >
-                      <span class="offer-card__prop-name">Сумма</span>
-                    </p>
-                    <p class="offer-card__prop">
-                      <span class="offer-card__prop-text">1-365 дней</span>
-                      <span class="offer-card__prop-name">Срок</span>
-                    </p>
-                  </div>
-                  <ul class="offer-card__about offer-card__about--closed">
-                    <li class="offer-card__about-item">
-                      Возраст заемщика: от 18 лет
-                    </li>
-                    <li class="offer-card__about-item">
-                      Получение займа: банковская карта, qiwi кошелек, платёжные
-                      системы, яндекс.деньги, банковский счет
-                    </li>
-                    <li class="offer-card__about-item">
-                      Погашение: в конце срока
-                    </li>
-                    <li class="offer-card__about-item">Пролонгация</li>
-                    <li class="offer-card__about-item">Отсрочка</li>
-                    <li class="offer-card__about-item">Штрафы</li>
-                    <li class="offer-card__about-item">
-                      Место заключения договора: онлайн
-                    </li>
-                    <li class="offer-card__about-more">Подробнее</li>
-                  </ul>
-                  <a class="offer-card__go button" href="/mfo/ezaem.html"
-                    >Перейти</a
-                  >
-                </li>
-              </ul>
-            </div>
-          </section>
-          <section class="info">
-            <h2 class="hidden">
-              Займы онлайн - легкий способ занять деньги срочно через интернет
-            </h2>
-            <p class="info__text">
-              Почти у каждого гражданина РФ рано или поздно бывают экстренные
-              ситуации, когда нужны срочно деньги. В банках процесс оформления
-              занимает много времени. В такой ситуации выручают займы онлайн!
-            </p>
-            <p class="info__text">
-              Мгновенные займы онлайн легко помогут вам преодолеть финансовые
-              трудности. Для оформления вам нужно иметь паспорт, выход в
-              интернет, найти подходящие условия и пару минут для заполнения
-              заявки онлайн.
-            </p>
-            <h3 class="info__heading">
-              Микрозаем онлайн - это круглосуточная выдача денег
-            </h3>
-            <p class="info__text">
-              Наш сервис подобрал самые надежные и популярные займы в РФ,
-              большинство из них работают круглосуточно 24/7, без выходных.
-            </p>
-            <p class="info__text">
-              С нами легко сможете получить займ онлайн срочно, в любое время
-              суток. Достаточно оформить заявку, подождать 15 минут, получить
-              одобрение и в ближайшие часы получить деньги на любую для вас
-              удобную платежную систему (На карту, Золотая корона, Qiwi,
-              contact, Yandex.money или банковский счет).
-            </p>
-            <h3 class="info__heading">
-              Есть три основных требования для получения займа онлайн:
-            </h3>
-            <ul class="info__list list">
-              <li class="info__text info__item list__item">
-                Человек должен проживать в РФ
-              </li>
-              <li class="info__text info__item list__item">
-                Возраст обращения от 18 лет
-              </li>
-              <li class="info__text info__item list__item">
-                Документ, подтверждающий личность (Паспорт)
-              </li>
+      <div class="aside-wrap">
+        <aside>
+          <section class="aside-menu">
+            <h2 class="aside-menu__heading">Подбор займов</h2>
+            <ul class="aside-menu__list">
+              <li class="aside-menu__item"><a href="#">На карту</a></li>
+              <li class="aside-menu__item"><a href="#">На карту</a></li>
+              <li class="aside-menu__item"><a href="#">На карту</a></li>
+              <li class="aside-menu__item"><a href="#">На карту</a></li>
+              <li class="aside-menu__item"><a href="#">На карту</a></li>
+              <li class="aside-menu__item"><a href="#">На карту</a></li>
+              <li class="aside-menu__item"><a href="#">На карту</a></li>
             </ul>
-            <p class="info__text">
-              Есть и другие требования, в зависимости в какую МФО вы обращаетесь
-            </p>
-            <h3 class="info__heading">Основные условия микрозаймов онлайн</h3>
-            <ul class="info__list list">
-              <li class="info__text info__item list__item">
-                Займы онлайн дают деньги сроком от 1 до 45 дней
-              </li>
-              <li class="info__text info__item list__item">
-                Процент рассчитывается индивидуально, в среднем составляет от 2%
-                в день
-              </li>
-              <li class="info__text info__item list__item">
-                Микрозаем онлайн можно взять на любые нужды, суммой от 1000 до
-                30000 рублей
-              </li>
-            </ul>
-            <h3 class="info__heading">Преимущества</h3>
-            <p class="info__text">
-              Мы индивидуально подошли к каждой микрофинансовой компании,
-              отобрали надежные и проверенные МФО.
-            </p>
-            <ul class="info__list list">
-              <li class="info__text info__item list__item">
-                Нет скрытых комиссий
-              </li>
-              <li class="info__text info__item list__item">
-                Удобно просматривать и сравнивать условия
-              </li>
-              <li class="info__text info__item list__item">
-                Гарантирована защита персональных данных
-              </li>
-              <li class="info__text info__item list__item">
-                Максимально просто, интуитивно понятно
-              </li>
-            </ul>
-            <p class="info__text">
-              Выбирайте выгодные условия, оформляйте заявку, получайте деньги,
-              наслаждайтесь процессом получения микрозаймов онлайн!
-            </p>
           </section>
-        </div>
-        <div class="aside-wrap">
-          <aside>
-            <section class="aside-menu">
-              <h2 class="aside-menu__heading">Подбор займов</h2>
-              <ul class="aside-menu__list">
-                <li class="aside-menu__item"><a href="#">На карту</a></li>
-                <li class="aside-menu__item"><a href="#">На карту</a></li>
-                <li class="aside-menu__item"><a href="#">На карту</a></li>
-                <li class="aside-menu__item"><a href="#">На карту</a></li>
-                <li class="aside-menu__item"><a href="#">На карту</a></li>
-                <li class="aside-menu__item"><a href="#">На карту</a></li>
-                <li class="aside-menu__item"><a href="#">На карту</a></li>
-              </ul>
-            </section>
-          </aside>
-        </div>
+        </aside>
       </div>
-    </main>
-    <footer class="page__footer footer">
-      <include src="./footer.html"></include>
-    </footer>
-    <include src="./scripts.html"></include>
-  </body>
+    </div>
+  </main>
+  <footer class="page__footer footer">
+    <include src="./footer.html"></include>
+  </footer>
+  <include src="./scripts.html"></include>
+</body>
+
 </html>
