@@ -34,13 +34,13 @@
   }
 
   &--current {
+
+    border-bottom: 3px solid rgb(96, 203, 85);
+    color: rgb(96, 203, 85);
     &:hover {
       color: rgb(96, 203, 85);
       cursor: default;
     }
-
-    border-bottom: 3px solid rgb(96, 203, 85);
-    color: rgb(96, 203, 85);
   }
 
   @include media-desktop {

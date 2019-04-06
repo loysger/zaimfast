@@ -3,9 +3,9 @@
   color: $text-color;
 
   @include media-desktop {
+    margin-top: 20px;
     padding: 20px 20px;
     background-color: white;
-    margin-top: 20px;
   }
 }
 

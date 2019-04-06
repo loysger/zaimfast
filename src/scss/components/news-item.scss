@@ -44,17 +44,17 @@
   }
 
   @include media-desktop {
-    width: 100%;
-    padding-bottom: 56.25%;
     position: relative;
+    width: 100%;
     margin-bottom: 10px;
+    padding-bottom: 56.25%;
 
     & img {
-      height: 100%;
-      width: auto;
       position: absolute;
       top: 50%;
       left: 50%;
+      width: auto;
+      height: 100%;
       transform: translate(-50%, -50%);
       transition-duration: 0.3s;
     }
@@ -111,16 +111,16 @@
   &:hover, &:active, &:focus {
     background-color: $main-color;
     color: white;
-    transition-duration: 0.3s;
     cursor: pointer;
+    transition-duration: 0.3s;
   }
 
   @include media-desktop {
     position: absolute;
     bottom: 1px;
     left: -20px;
-    margin: 0;
     width: calc(100% + 40px);
+    margin: 0;
     border-top: 1px solid $border-color;
   }
 }

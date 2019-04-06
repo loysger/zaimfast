@@ -3,19 +3,19 @@
   padding: 0 $padding;
 
   @include media-desktop {
-    background-color: white;
-    padding-top: 5px;
     margin-bottom: 0;
+    padding-top: 5px;
     padding-bottom: 20px;
+    background-color: white;
   }
 }
 
 .news-page__list {
   @include media-desktop {
     display: flex;
+    position: relative;
     flex-wrap: wrap;
     justify-content: space-between;
-    position: relative;
     padding-bottom: 46px;
   }
 }
