@@ -1,9 +1,9 @@
-.page-mfo {
-  & .offer-card__contain {
-    justify-content: space-around;
-    /* text-align: center;*/
-  }
-}
+// .page-mfo {
+//   & .offer-card__contain {
+//     justify-content: space-around;
+//     /* text-align: center;*/
+//   }
+// }
 
 .page-mfo__more {
   width: 100%;
@@ -13,10 +13,20 @@
   border-bottom: 1px solid $border-color;
   background: none;
   transition-duration: 0.3s;
+  background-color: white;
 
-  &:focus, &:active {
+  &:hover {
     background-color: $main-color;
     color: white;
     transition-duration: 0.3s;
+    cursor: pointer;
+    border-color: $main-color;
+  }
+
+  &:focus, &:active {
+    background-color: darken($color: $main-color, $amount: 5);
+    color: white;
+    transition-duration: 0.3s;
+    border-color: darken($color: $main-color, $amount: 5);
   }
 }

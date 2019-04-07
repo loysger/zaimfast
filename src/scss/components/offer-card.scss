@@ -23,6 +23,10 @@
     &:not(:last-child) {
       margin-bottom: 10px;
     }
+
+    &--rating {
+      padding-left: 250px;
+    }
   }
 }
 
@@ -40,6 +44,21 @@
   border: 2px solid $border-color;
   border-radius: 50%;
   color: $text-color;
+  background-color: white;
+
+  @include media-desktop {
+    .offer-card--rating & {
+      width: 20px;
+      height: 20px;
+      font-weight: 700;
+      color: $text-color-a-0_8;
+      order: -1;
+      cursor: default;
+      position: absolute;
+      top: 5px;
+      left: 6px;
+    }
+  }
 }
 
 .offer-card__top {
@@ -52,6 +71,17 @@
     justify-content: space-between;
     margin-right: 30px;
     margin-bottom: 10px;
+
+    .offer-card--rating & {
+      margin: 0;
+      flex-direction: row;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      overflow: hidden;
+      width: 250px;
+    }
   }
 }
 
@@ -62,6 +92,10 @@
   margin-right: auto;
   margin-left: 10px;
 
+  @include media-desktop {
+    width: 100%;
+  }
+
   & a {
     color: $text-accent-color;
     font-size: 14px;
@@ -69,11 +103,17 @@
 
     @include media-desktop {
       font-size: 12px;
-    }
-  }
 
-  @include media-desktop {
-    width: 100%;
+      .offer-card--rating & {
+        font-size: 14px;
+        color: transparent;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+    }
   }
 }
 
@@ -90,6 +130,23 @@
     width: 150px;
     height: 50px;
     margin-bottom: 10px;
+
+    .offer-card--rating & {
+      width: 100%;
+      height: 100%;
+      margin-bottom: 0;
+
+      &::after {
+        content: '';
+        display: flex;
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 33%;
+        background: linear-gradient(to left, white, transparent);
+      }
+    }
   }
 }
 
@@ -105,6 +162,11 @@
     padding-right: 125px;
     padding-bottom: 0;
     border: none;
+
+    .offer-card--rating & {
+      margin: 0;
+      padding-right: 145px;
+    }
   }
 }
 
@@ -128,12 +190,24 @@
 
 .offer-card__prop-text {
   font-size: 14px;
+
+  @include media-desktop {
+    .offer-card--rating & {
+      font-size: 16px;
+    }
+  }
 }
 
 .offer-card__prop-name {
   margin-top: 0.7em;
   color: $text-color-a-0_8;
   font-size: 12px;
+
+  @include media-desktop {
+    .offer-card--rating & {
+      font-size: 14px;
+    }
+  }
 }
 
 .offer-card__about {
@@ -198,5 +272,18 @@
     top: 25px;
     right: 20px;
     width: 110px;
+
+    &:active {
+      top: 25px;
+    }
+
+    .offer-card--rating & {
+      width: 140px;
+      top: 18px;
+
+      &:active {
+        top: 18px;
+      }
+    }
   }
 }

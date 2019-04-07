@@ -1,9 +1,17 @@
 .calc {
   margin: 15px 0 20px;
+
+  @include media-desktop {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 .calc__heading {
   margin-bottom: 10px;
+  @include media-desktop {
+    width: 100%;
+  }
 }
 
 .calc__input {
@@ -12,6 +20,10 @@
   color: $text-color;
   font-size: 20px;
   font-weight: 400;
+
+  @include media-desktop {
+    width: 100%;
+  }
 }
 
 .calc__label {
@@ -19,4 +31,21 @@
   margin-bottom: 10px;
   color: $text-color-a-0_8;
   font-size: 12px;
+
+  @include media-desktop {
+    font-size: 14px;
+  }
+}
+
+.calc__amount {
+  @include media-desktop {
+    flex-grow: 1;
+    margin-right: 30px;
+  }
+}
+
+.calc__days {
+  @include media-desktop {
+    flex-grow: 1;
+  }
 }

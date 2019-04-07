@@ -1,5 +1,11 @@
 .zaem-borrower {
   padding: 0 $padding;
+
+  @include media-desktop {
+    padding-bottom: 30px;
+    padding-left: $padding-ds;
+    padding-right: $padding-ds;
+  }
 }
 
 .zaem-borrower__heading {

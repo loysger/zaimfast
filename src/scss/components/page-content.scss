@@ -32,6 +32,35 @@
   }
 }
 
+.page-content--mfo-page {
+  @include media-desktop {
+    background-color: $bg-color;
+  }
+
+  .aside-wrap {
+    display: none;
+  }
+
+  .page-content__wrap {
+    @include media-desktop {
+      display: flex;
+      max-width: $max-width;
+      margin: 0 auto;
+      padding: 0 $padding-ds;
+      padding-top: 30px;
+
+      .page-wrap {
+        margin-right: 20px;
+        background-color: white;
+      }
+
+      .aside-wrap {
+        display: flex;
+      }
+    }
+  }
+}
+
 .page-content--news {
   @include media-desktop {
     background-color: $bg-color;

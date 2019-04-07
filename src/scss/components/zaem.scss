@@ -1,3 +1,9 @@
+.zaem__calc {
+  @include media-desktop {
+    width: 100%;
+  }
+}
+
 .zaem__table {
   display: flex;
   width: auto;
@@ -5,6 +11,11 @@
   border-collapse: collapse;
   color: $text-color;
   font-size: 12px;
+
+  @include media-desktop {
+    margin: 0 $padding-ds;
+    font-size: 14px;
+  }
 }
 
 .zaem__table tbody {
@@ -13,6 +24,10 @@
   width: 100%;
   max-width: 728px;
   margin: 0 auto;
+
+  @include media-desktop {
+    max-width: none;
+  }
 }
 
 .zaem__table tr {

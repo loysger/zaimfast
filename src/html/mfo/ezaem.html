@@ -42,120 +42,182 @@
       </nav>
     </div>
   </header>
-  <main>
-    <section class="zaem">
-      <h2 class="hidden">Ezaem</h2>
-      <div class="zaem-card">
-        <div class="zaem-card__top">
-          <p class="zaem-card__name">
-            <a href="#">EZaem</a>
-            <!-- <span class="zaem-card__comp">Смсфинанс</span> -->
-          </p>
-          <div class="zaem-card__img">
-            <img src="https://via.placeholder.com/150x50" alt="alt" />
-          </div>
-        </div>
-        <div class="zaem-card__contain">
-          <p class="zaem-card__prop">
-            <span class="zaem-card__prop-text">0,00%</span>
-            <span class="zaem-card__prop-name">Ставка в день</span>
-          </p>
-          <p class="zaem-card__prop">
-            <span class="zaem-card__prop-text"><span class="calc-amount-value">3 000</span> ₽</span>
-            <span class="zaem-card__prop-name">Сумма</span>
-          </p>
-          <p class="zaem-card__prop">
-            <span class="zaem-card__prop-text"><span class="calc-days-value">10</span> дней</span>
-            <span class="zaem-card__prop-name">Срок</span>
-          </p>
-          <p class="zaem-card__prop">
-            <span class="zaem-card__prop-text"><span class="calc-overcharge-value">10</span> ₽</span>
-            <span class="zaem-card__prop-name">Переплата</span>
-          </p>
-        </div>
-        <div class="zaem__calc calc">
-          <h3 class="calc__heading heading-4">Рассчитать заем</h3>
-          <div class="calc__amount">
-            <label class="calc__label" for="calc-amount">Введите сумму займа, руб.</label>
-            <input class="calc__input" id="calc-amount" name="amount" type="number" value="3000" maxlength="10"
-              minlength="4" min="1000" max="1000000" />
-            <div class="calc__slider slider">
-              <div class="slider__conteiner">
-                <div class="slider__lenght">
-                  <div class="slider__depth"></div>
-                  <div class="slider__pin"></div>
+  <main class="page-content page-content--mfo-page">
+    <div class="page-content__wrap">
+      <div class="page-wrap">
+        <section class="zaem">
+          <h2 class="hidden">Ezaem</h2>
+          <div class="zaem-card">
+            <div class="zaem-card__top">
+              <p class="zaem-card__name">
+                <a href="#">EZaem</a>
+                <!-- <span class="zaem-card__comp">Смсфинанс</span> -->
+              </p>
+              <div class="zaem-card__img">
+                <img src="https://via.placeholder.com/150x50" alt="alt" />
+              </div>
+            </div>
+            <div class="zaem-card__contain">
+              <p class="zaem-card__prop">
+                <span class="zaem-card__prop-text">0,00%</span>
+                <span class="zaem-card__prop-name">Ставка в день</span>
+              </p>
+              <p class="zaem-card__prop">
+                <span class="zaem-card__prop-text"><span class="calc-amount-value">3 000</span> ₽</span>
+                <span class="zaem-card__prop-name">Сумма</span>
+              </p>
+              <p class="zaem-card__prop">
+                <span class="zaem-card__prop-text"><span class="calc-days-value">10</span> дней</span>
+                <span class="zaem-card__prop-name">Срок</span>
+              </p>
+              <p class="zaem-card__prop">
+                <span class="zaem-card__prop-text"><span class="calc-overcharge-value">10</span> ₽</span>
+                <span class="zaem-card__prop-name">Переплата</span>
+              </p>
+            </div>
+            <div class="zaem__calc calc">
+              <h3 class="calc__heading heading-4">Рассчитать заем</h3>
+              <div class="calc__amount">
+                <label class="calc__label" for="calc-amount">Введите сумму займа, руб.</label>
+                <input class="calc__input" id="calc-amount" name="amount" type="number" value="3000" maxlength="10"
+                  minlength="4" min="1000" max="1000000" />
+                <div class="calc__slider slider">
+                  <div class="slider__conteiner">
+                    <div class="slider__lenght">
+                      <div class="slider__depth"></div>
+                      <div class="slider__pin"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="calc__days">
+                <label class="calc__label" for="calc-days">Введите кол-во дней</label>
+                <input class="calc__input" id="calc-days" name="days" type="number" value="10" maxlength="3" minlength="1"
+                  min="1" max="365" />
+                <div class="calc__slider slider">
+                  <div class="slider__conteiner">
+                    <div class="slider__lenght">
+                      <div class="slider__depth"></div>
+                      <div class="slider__pin"></div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
+            <a class="zaem-card__go button" href="#">Оформить</a>
           </div>
-          <div class="calc__days">
-            <label class="calc__label" for="calc-days">Введите кол-во дней</label>
-            <input class="calc__input" id="calc-days" name="days" type="number" value="10" maxlength="3" minlength="1"
-              min="1" max="365" />
-            <div class="calc__slider slider">
-              <div class="slider__conteiner">
-                <div class="slider__lenght">
-                  <div class="slider__depth"></div>
-                  <div class="slider__pin"></div>
-                </div>
-              </div>
+          <table class="zaem__table">
+            <tr>
+              <td>Веб-сайт:</td>
+              <td>ezaem.ru</td>
+            </tr>
+            <tr>
+              <td>
+                Номер свидетельства
+              </td>
+              <td>2120177002022</td>
+            </tr>
+            <tr>
+              <td>Головной офис</td>
+              <td>630055 г. Новосибирск Каинская заимка АПК–1</td>
+            </tr>
+            <tr>
+              <td>Номер телефонов горячей линии</td>
+              <td>8 (800) 333-27-57</td>
+            </tr>
+            <tr>
+              <td>Официальный сайт</td>
+              <td>www.smsfinance.ru</td>
+            </tr>
+          </table>
+        </section>
+        <section class="zaem-about">
+          <h2 class="zaem-about__heading heading-3">О предложении</h2>
+          <div class="zaem-about__content">
+            <p class="zaem-about__text">
+              ООО МФК «Е заем» одна из самых надежных и популярных компаний на
+              микрофинансовом рынке. Организация работает с 2013 года и предлагает
+              кредитование для физических лиц на привлекательных условиях. По
+              многим независимым рейтингам именно микрофинансовая компания Ezaem
+              является Первой среди самых доступных МФО для населения. Именно на
+              Е-заем приходится более 20% всех выдаваемых онлайн-займов. Филиалы
+              организации работают в восьми странах: Дания, Чехия, Польша, Латвия,
+              Грузия, Россия, Мексика и Испания.
+            </p>
+            <p class="zaem-about__text">
+              Главное отличие данной компании от конкурентов – предоставление
+              первого займа под 0% годовых для всех.
+            </p>
+            <p class="zaem-about__text">
+              Возьмите сумму, которая не превышает 15 000 рублей, погасите заем в
+              установленный срок, вернув ровно столько же денег, сколько брали
+              изначально, без выплаты процентов за пользование денежными
+              средствами.
+            </p>
+            <div>
+              <h2 class="zaem-about__heading heading-3">
+                Приимущества Ezaem
+              </h2>
+              <ul class="list">
+                <li class="list__item">Возраст от 21 года</li>
+                <li class="list__item">
+                  Постоянная регистрация и проживание на территории РФ
+                </li>
+                <li class="list__item">Наличие действующего паспорта</li>
+                <li class="list__item">Наличие банковской именной карты</li>
+                <li class="list__item">Регулярные доходы.</li>
+              </ul>
             </div>
           </div>
-        </div>
-        <a class="zaem-card__go button" href="#">Оформить</a>
-      </div>
-      <table class="zaem__table">
-        <tr>
-          <td>Веб-сайт:</td>
-          <td>ezaem.ru</td>
-        </tr>
-        <tr>
-          <td>
-            Номер свидетельства
-          </td>
-          <td>2120177002022</td>
-        </tr>
-        <tr>
-          <td>Головной офис</td>
-          <td>630055 г. Новосибирск Каинская заимка АПК–1</td>
-        </tr>
-        <tr>
-          <td>Номер телефонов горячей линии</td>
-          <td>8 (800) 333-27-57</td>
-        </tr>
-        <tr>
-          <td>Официальный сайт</td>
-          <td>www.smsfinance.ru</td>
-        </tr>
-      </table>
-    </section>
-    <section class="zaem-about">
-      <h2 class="zaem-about__heading heading-3">О предложении</h2>
-      <div class="zaem-about__content">
-        <p class="zaem-about__text">
-          ООО МФК «Е заем» одна из самых надежных и популярных компаний на
-          микрофинансовом рынке. Организация работает с 2013 года и предлагает
-          кредитование для физических лиц на привлекательных условиях. По
-          многим независимым рейтингам именно микрофинансовая компания Ezaem
-          является Первой среди самых доступных МФО для населения. Именно на
-          Е-заем приходится более 20% всех выдаваемых онлайн-займов. Филиалы
-          организации работают в восьми странах: Дания, Чехия, Польша, Латвия,
-          Грузия, Россия, Мексика и Испания.
-        </p>
-        <p class="zaem-about__text">
-          Главное отличие данной компании от конкурентов – предоставление
-          первого займа под 0% годовых для всех.
-        </p>
-        <p class="zaem-about__text">
-          Возьмите сумму, которая не превышает 15 000 рублей, погасите заем в
-          установленный срок, вернув ровно столько же денег, сколько брали
-          изначально, без выплаты процентов за пользование денежными
-          средствами.
-        </p>
-        <div>
-          <h2 class="zaem-about__heading heading-3">
-            Приимущества Ezaem
-          </h2>
+          <button class="zaem-about__more">Показать больше</button>
+        </section>
+        <section class="zaem-condition">
+          <h2 class="zaem-condition__heading heading-3">Условия</h2>
+          <table class="zaem-condition__table">
+            <tbody>
+              <tr class="zaem-condition__item zaem-condition__item--closed">
+                <td>
+                  Рассмотрение заявки
+                </td>
+                <td>
+                  до 20 минут
+                </td>
+              </tr>
+              <tr class="zaem-condition__item">
+                <td>Пролонгация</td>
+                <td>
+                  Договор займа можно продлить на период от 7 до 30 дней, оплатив
+                  только проценты за фактическое количество дней пользования
+                  займом на момент заключения дополнительного соглашения о
+                  пролонгации договора микрозайма.
+                </td>
+              </tr>
+              <tr class="zaem-condition__item">
+                <td>Штрафы</td>
+                <td>
+                  В случае просрочки платежа более 16-ти дней взыскиваются пени в
+                  размере: в период ненадлежащего исполнения обязательств по
+                  договору потребительского микрозайма одновременно с начислением
+                  процентов неустойка составляет до 20% годовых от непогашенной
+                  суммы займа; со дня прекращения начисления процентов в период
+                  ненадлежащего исполнения обязательств по договору
+                  потребительского микрозайма неустойка составляет до 0,01% в день
+                  от непогашенной суммы займа.
+                </td>
+              </tr>
+              <tr class="zaem-condition__item">
+                <td>Место заключения договора</td>
+                <td>онлайн в офисе</td>
+              </tr>
+              <tr class="zaem-condition__item">
+                <td>Выдача кредита</td>
+                <td>банковская карта</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+        <section class="zaem-borrower">
+          <h2 class="zaem-borrower__heading heading-3">Требования к заемщику</h2>
           <ul class="list">
             <li class="list__item">Возраст от 21 года</li>
             <li class="list__item">
@@ -165,67 +227,25 @@
             <li class="list__item">Наличие банковской именной карты</li>
             <li class="list__item">Регулярные доходы.</li>
           </ul>
-        </div>
+        </section>
       </div>
-      <button class="zaem-about__more">Показать больше</button>
-    </section>
-    <section class="zaem-condition">
-      <h2 class="zaem-condition__heading heading-3">Условия</h2>
-      <table class="zaem-condition__table">
-        <tbody>
-          <tr class="zaem-condition__item zaem-condition__item--closed">
-            <td>
-              Рассмотрение заявки
-            </td>
-            <td>
-              до 20 минут
-            </td>
-          </tr>
-          <tr class="zaem-condition__item">
-            <td>Пролонгация</td>
-            <td>
-              Договор займа можно продлить на период от 7 до 30 дней, оплатив
-              только проценты за фактическое количество дней пользования
-              займом на момент заключения дополнительного соглашения о
-              пролонгации договора микрозайма.
-            </td>
-          </tr>
-          <tr class="zaem-condition__item">
-            <td>Штрафы</td>
-            <td>
-              В случае просрочки платежа более 16-ти дней взыскиваются пени в
-              размере: в период ненадлежащего исполнения обязательств по
-              договору потребительского микрозайма одновременно с начислением
-              процентов неустойка составляет до 20% годовых от непогашенной
-              суммы займа; со дня прекращения начисления процентов в период
-              ненадлежащего исполнения обязательств по договору
-              потребительского микрозайма неустойка составляет до 0,01% в день
-              от непогашенной суммы займа.
-            </td>
-          </tr>
-          <tr class="zaem-condition__item">
-            <td>Место заключения договора</td>
-            <td>онлайн в офисе</td>
-          </tr>
-          <tr class="zaem-condition__item">
-            <td>Выдача кредита</td>
-            <td>банковская карта</td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
-    <section class="zaem-borrower">
-      <h2 class="zaem-borrower__heading heading-3">Требования к заемщику</h2>
-      <ul class="list">
-        <li class="list__item">Возраст от 21 года</li>
-        <li class="list__item">
-          Постоянная регистрация и проживание на территории РФ
-        </li>
-        <li class="list__item">Наличие действующего паспорта</li>
-        <li class="list__item">Наличие банковской именной карты</li>
-        <li class="list__item">Регулярные доходы.</li>
-      </ul>
-    </section>
+      <div class="aside-wrap">
+        <aside>
+          <section class="aside-menu">
+            <h2 class="aside-menu__heading">Подбор займов</h2>
+            <ul class="aside-menu__list">
+              <li class="aside-menu__item"><a href="#">На карту</a></li>
+              <li class="aside-menu__item"><a href="#">На карту</a></li>
+              <li class="aside-menu__item"><a href="#">На карту</a></li>
+              <li class="aside-menu__item"><a href="#">На карту</a></li>
+              <li class="aside-menu__item"><a href="#">На карту</a></li>
+              <li class="aside-menu__item"><a href="#">На карту</a></li>
+              <li class="aside-menu__item"><a href="#">На карту</a></li>
+            </ul>
+          </section>
+        </aside>
+      </div>
+    </div>
   </main>
   <footer class="page__footer footer">
     <include src="./footer.html"></include>

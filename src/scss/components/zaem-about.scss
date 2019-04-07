@@ -1,26 +1,39 @@
 .zaem-about {
   padding: 20px $padding 0;
+
+  &--closed .zaem-about__content {
+    position: relative;
+    height: 5.5em;
+    overflow: hidden;
+
+    &::after {
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to top, white, transparent 50%, transparent);
+      content: '';
+    }
+
+    @include media-desktop {
+      height: auto;
+      overflow: unset;
+
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+  @include media-desktop {
+    padding: 20px $padding-ds 0;
+  }
 }
 
 .zaem-about__heading {
   margin-bottom: 16px;
-}
-
-.zaem-about--closed .zaem-about__content {
-  position: relative;
-  height: 5.5em;
-  overflow: hidden;
-
-  &::after {
-    display: block;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to top, white, transparent 50%, transparent);
-    content: '';
-  }
 }
 
 .zaem-about__text {
@@ -36,4 +49,10 @@
   border: none;
   background: none;
   color: $main-color;
+
+  @include media-desktop {
+    .zaem-about--closed & {
+      display: none;
+    }
+  }
 }
