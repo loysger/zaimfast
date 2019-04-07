@@ -73,6 +73,8 @@
 }
 
 .partners__link {
+  background-color: white;
+
   @include media-desktop {
     display: flex;
     align-items: center;

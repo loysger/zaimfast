@@ -49,6 +49,7 @@ function clean() {
 // Watch files
 function watchFiles() {
   gulp.watch('./src/html/**/*.html', gulp.series(html, browserSyncReload));
+  gulp.watch('./src/img/**/*', gulp.series(img));
   gulp.watch('./src/scss/**/*.scss', gulp.series(css));
   gulp.watch('./src/js/**/*.js', gulp.series(js));
 }
@@ -106,8 +107,15 @@ function css() {
     .pipe(browsersync.stream());
 }
 
+// img
+function img() {
+  return gulp
+    .src('./src/img/**/*')
+    .pipe(gulp.dest('./build/img/'))
+}
+
 // define complex tasks
-const build = gulp.series(clean, html, css, js);
+const build = gulp.series(clean, img, html, css, js);
 const watch = gulp.parallel(watchFiles, browserSync);
 
 // export tasks
