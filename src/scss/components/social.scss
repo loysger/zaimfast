@@ -36,8 +36,27 @@
   width: 30px;
   height: 30px;
   overflow: hidden;
-  border: 1px solid $border-color;
+  border: 1px solid darken($color: $border-color, $amount: 20);
   border-radius: 50%;
+
+  &:hover,
+  &:focus {
+    border: 1px solid darken($color: $border-color, $amount: 50);
+
+    & svg path,
+    & svg circle {
+      fill: darken($color: $border-color, $amount: 50);
+  }
+  }
+
+  &:active {
+    border: 1px solid darken($color: $border-color, $amount: 5);
+
+    & svg path,
+    & svg circle {
+      fill: darken($color: $border-color, $amount: 5);
+  }
+  }
 
   @include media-desktop {
     width: 36px;
@@ -47,12 +66,17 @@
       margin-right: 20px;
     }
   }
-}
 
-.social__item a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
+  & a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+  }
+
+  & svg path,
+  & svg circle {
+    fill: darken($color: $border-color, $amount: 20);
+  }
 }
