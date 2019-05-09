@@ -8,8 +8,22 @@
   padding: $padding;
   background-color: white;
 
+  &--closed {
+    display: none;
+  }
+
+  .no-js & {
+    display: block;
+    position: relative;
+    height: auto;
+  }
+
   @include media-desktop {
-    display: flex !important;
+    &--closed {
+      display: unset;
+    }
+
+    display: flex;
     position: relative;
     width: auto;
     height: auto;
@@ -69,6 +83,10 @@
   border: 1px solid $border-color;
   border-radius: 50%;
   background: none;
+
+  .no-js & {
+    display: none;
+  }
 
   &::before {
     display: block;

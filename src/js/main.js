@@ -7,12 +7,12 @@ try {
     var closeButton = document.querySelector('.main-navigation__close');
 
     var closePopUp = function() {
-      menu.classList.add('no-display');
+      menu.classList.add('main-navigation--closed');
       closeButton.removeEventListener('click', closePopUp);
     };
 
     burger.addEventListener('click', function() {
-      menu.classList.remove('no-display');
+      menu.classList.remove('main-navigation--closed');
       closeButton.addEventListener('click', closePopUp);
     });
   })();

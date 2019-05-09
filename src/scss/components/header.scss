@@ -48,6 +48,10 @@
     black 14px
   );
 
+  .no-js & {
+    display: none;
+  }
+
   @include media-desktop {
     display: none;
   }

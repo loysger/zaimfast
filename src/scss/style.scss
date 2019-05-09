@@ -1,7 +1,7 @@
 @charset "utf-8";
-@import "normalize.scss";
-@import "mixin.scss";
-@import "variables.scss";
+@import 'normalize.scss';
+@import 'mixin.scss';
+@import 'variables.scss';
 
 html {
   box-sizing: border-box;
@@ -20,6 +20,17 @@ body {
   overflow-x: hidden;
   font-size: 14px;
   min-width: 320px;
+
+  .no-js & {
+    &::before {
+      content: 'У вас отключен JavaScript требуеый для нормального функционированияя нашего сайта';
+      display: block;
+      width: 100%;
+      text-align: center;
+      padding: 10px 5px;
+      background-color: #f8fc0098;
+    }
+  }
 }
 
 img {
@@ -40,8 +51,8 @@ ul {
 }
 
 .hidden:not(:focus):not(:active),
-input[type="checkbox"].visually-hidden,
-input[type="radio"].visually-hidden {
+input[type='checkbox'].visually-hidden,
+input[type='radio'].visually-hidden {
   position: absolute;
   bottom: 0;
   margin: -1px;
@@ -59,45 +70,45 @@ input[type="radio"].visually-hidden {
 }
 
 // iports
-@import "./components/heading.scss";
-@import "./components/button.scss";
-@import "./components/slider.scss";
-@import "./components/list-component.scss";
-@import "./components/page-content.scss";
+@import './components/heading.scss';
+@import './components/button.scss';
+@import './components/slider.scss';
+@import './components/list-component.scss';
+@import './components/page-content.scss';
 
-@import "./components/header.scss";
-@import "./components/help.scss";
-@import "./components/main-navigation.scss";
-@import "./components/offer.scss";
-@import "./components/best.scss";
-@import "./components/best-card.scss";
-@import "./components/partners.scss";
-@import "./components/articles.scss";
-@import "./components/why.scss";
-@import "./components/footer.scss";
-@import "./components/social.scss";
-@import "./components/footer-menu.scss";
-@import "./components/copy.scss";
+@import './components/header.scss';
+@import './components/help.scss';
+@import './components/main-navigation.scss';
+@import './components/offer.scss';
+@import './components/best.scss';
+@import './components/best-card.scss';
+@import './components/partners.scss';
+@import './components/articles.scss';
+@import './components/why.scss';
+@import './components/footer.scss';
+@import './components/social.scss';
+@import './components/footer-menu.scss';
+@import './components/copy.scss';
 
 //zaymi.html
-@import "./components/filters.scss";
-@import "./components/offers.scss";
-@import "./components/offer-card.scss";
-@import "./components/info.scss";
-@import "./components/aside-menu.scss";
+@import './components/filters.scss';
+@import './components/offers.scss';
+@import './components/offer-card.scss';
+@import './components/info.scss';
+@import './components/aside-menu.scss';
 
 //mfo
-@import "./components/zaem.scss";
-@import "./components/zaem-card.scss";
-@import "./components/zaem-about.scss";
-@import "./components/zaem-condition.scss";
-@import "./components/zaem-borrower.scss";
-@import "./components/calc.scss";
+@import './components/zaem.scss';
+@import './components/zaem-card.scss';
+@import './components/zaem-about.scss';
+@import './components/zaem-condition.scss';
+@import './components/zaem-borrower.scss';
+@import './components/calc.scss';
 
 // news
-@import "./components/news-page.scss";
-@import "./components/news-filter.scss";
-@import "./components/news-item.scss";
+@import './components/news-page.scss';
+@import './components/news-filter.scss';
+@import './components/news-item.scss';
 
 //mfo-page
-@import "./components/page-mfo.scss";
+@import './components/page-mfo.scss';
