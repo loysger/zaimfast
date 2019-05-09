@@ -118,9 +118,13 @@ function img() {
 const build = gulp.series(clean, img, html, css, js);
 const watch = gulp.parallel(watchFiles, browserSync);
 
+const live = gulp.series(build, watch);
+
 // export tasks
-exports.clean = clean;
-exports.sort = sortScss;
+exports.default = live;
+exports.live = live;
+
 exports.build = build;
 exports.watch = watch;
-exports.default = build;
+
+exports.sort = sortScss;

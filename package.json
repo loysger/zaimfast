@@ -41,7 +41,7 @@
   "scripts": {
     "live": "gulp live",
     "build": "gulp build",
-    "clean": "gulp clean",
+    "watch": "gulp watch",
     "sort-scss": "gulp sort"
   }
 }
