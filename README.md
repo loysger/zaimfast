@@ -4,7 +4,7 @@
 
 - [Node.js](http://nodejs.org)
 - [Yarn](https://yarnpkg.com/)
-- [Gulp Command Line Utility](http://gulpjs.com) Для установки ввести в консоли `yarn\npm install --global gulp-cli`
+- [Gulp Command Line Utility](http://gulpjs.com) Для установки ввести в консоли `yarn add --global gulp-cli` или `npm install --global gulp-cli`
 
 ## Быстры старт
 
