@@ -21,14 +21,14 @@
 }
 
 .best-card__text {
-  min-width: 100px;
   display: none;
-  justify-content: flex-start;
   align-items: center;
+  justify-content: flex-start;
+  min-width: 100px;
 }
 
 .best-card__img-container {
-  // margin-left: 10px;
+  /* margin-left: 10px;*/
   display: flex;
   align-items: center;
   justify-content: center;
@@ -41,8 +41,8 @@
 }
 
 .best-card__description {
-  font-size: 12px;
   margin-bottom: 0;
+  font-size: 12px;
 }
 
 .best-card__content {

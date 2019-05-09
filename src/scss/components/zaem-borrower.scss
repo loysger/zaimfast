@@ -2,9 +2,9 @@
   padding: 0 $padding;
 
   @include media-desktop {
+    padding-right: $padding-ds;
     padding-bottom: 30px;
     padding-left: $padding-ds;
-    padding-right: $padding-ds;
   }
 }
 
