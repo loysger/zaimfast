@@ -66,10 +66,10 @@
   }
 
   @include media-desktop {
-    border-radius: 0;
-    cursor: default;
 
     padding: 5px 10px;
+    border-radius: 0;
+    cursor: default;
 
     &::before {
       display: none;
@@ -95,7 +95,7 @@
   border-radius: 4px;
 
   @include media-desktop {
-    border-radius: 0;
     margin-bottom: 0;
+    border-radius: 0;
   }
 }
