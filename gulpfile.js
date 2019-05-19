@@ -10,13 +10,13 @@ const posthtml = require('gulp-posthtml');
 const include = require('posthtml-include');
 const autoprefixer = require('autoprefixer');
 const del = require('del');
-const csso = require('gulp-csso');
 const browsersync = require('browser-sync').create();
-const uglify = require('gulp-uglify');
 const cssDeclarationSorter = require('css-declaration-sorter');
 const postcssScss = require('postcss-scss');
 const sourcemaps = require('gulp-sourcemaps');
 const handlebars = require('gulp-hb');
+// const csso = require('gulp-csso');
+// const uglify = require('gulp-uglify');
 // const htmlmin = require('gulp-htmlmin');
 // const imagemin = require('gulp-imagemin');
 
@@ -44,12 +44,12 @@ function browserSyncReload(done) {
 
 // Clean assets
 function clean() {
-  return del(['./build/']);
+  return del('./build');
 }
 
 // Watch files
 function watchFiles() {
-  gulp.watch('./src/html/**/*.html', gulp.series(html, browserSyncReload));
+  gulp.watch('./src/html/**/*.{html,json,hbs}', gulp.series(html, browserSyncReload));
   gulp.watch('./src/img/**/*', gulp.series(img));
   gulp.watch('./src/scss/**/*.scss', gulp.series(css));
   gulp.watch('./src/js/**/*.js', gulp.series(js));
@@ -67,7 +67,7 @@ function sortScss() {
 function html() {
   return (
     gulp
-      .src(['./src/html/**/*.html', '!./src/html/components/*'])
+      .src(['./src/html/pages/**/*.hbs'])
       .pipe(posthtml([include({ root: './src/html/components/' })]))
       .pipe(
         handlebars()
@@ -76,6 +76,9 @@ function html() {
           .data('./src/html/data/**/*.{js,json}')
       )
       // .pipe(htmlmin({ collapseWhitespace: true }))
+      .pipe(rename({
+        extname: '.html'
+      }))
       .pipe(gulp.dest('./build/'))
   );
 }
@@ -86,7 +89,7 @@ function js() {
     .src('./src/js/*.js')
     .pipe(plumber())
     .pipe(sourcemaps.init())
-    .pipe(uglify())
+    // .pipe(uglify())
     .pipe(
       rename({
         suffix: '.min'
@@ -105,7 +108,7 @@ function css() {
     .pipe(sourcemaps.init())
     .pipe(sass().on('error', sass.logError))
     .pipe(postcss(postcssPlugins))
-    .pipe(csso())
+    // .pipe(csso())
     .pipe(
       rename({
         suffix: '.min'
@@ -122,7 +125,7 @@ function img() {
 }
 
 // define complex tasks
-const build = gulp.series(clean, img, html, css, js);
+const build = gulp.series(clean, gulp.parallel(img, html, css, js));
 const watch = gulp.parallel(watchFiles, browserSync);
 
 const live = gulp.series(build, watch);
