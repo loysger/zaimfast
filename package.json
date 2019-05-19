@@ -17,6 +17,7 @@
     "eslint-plugin-standard": "^4.0.0",
     "gulp": "^4.0.0",
     "gulp-csso": "^3.0.1",
+    "gulp-hb": "^8.0.0",
     "gulp-htmlmin": "^5.0.1",
     "gulp-imagemin": "^5.0.3",
     "gulp-plumber": "^1.2.1",

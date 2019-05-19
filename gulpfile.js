@@ -7,7 +7,6 @@ const sass = require('gulp-sass');
 const plumber = require('gulp-plumber');
 const postcss = require('gulp-postcss');
 const posthtml = require('gulp-posthtml');
-const htmlmin = require('gulp-htmlmin');
 const include = require('posthtml-include');
 const autoprefixer = require('autoprefixer');
 const del = require('del');
@@ -17,6 +16,8 @@ const uglify = require('gulp-uglify');
 const cssDeclarationSorter = require('css-declaration-sorter');
 const postcssScss = require('postcss-scss');
 const sourcemaps = require('gulp-sourcemaps');
+const handlebars = require('gulp-hb');
+// const htmlmin = require('gulp-htmlmin');
 // const imagemin = require('gulp-imagemin');
 
 // BrowserSync
@@ -64,11 +65,19 @@ function sortScss() {
 
 // HTML
 function html() {
-  return gulp
-    .src(['./src/html/**/*.html', '!./src/html/components/*'])
-    .pipe(posthtml([include({ root: './src/html/components/' })]))
-    .pipe(htmlmin({ collapseWhitespace: true }))
-    .pipe(gulp.dest('./build/'));
+  return (
+    gulp
+      .src(['./src/html/**/*.html', '!./src/html/components/*'])
+      .pipe(posthtml([include({ root: './src/html/components/' })]))
+      .pipe(
+        handlebars()
+          .partials('./src/html/partials/**/*.hbs')
+          .helpers('./src/html/helpers/*.js')
+          .data('./src/html/data/**/*.{js,json}')
+      )
+      // .pipe(htmlmin({ collapseWhitespace: true }))
+      .pipe(gulp.dest('./build/'))
+  );
 }
 
 // JS
@@ -109,9 +118,7 @@ function css() {
 
 // img
 function img() {
-  return gulp
-    .src('./src/img/**/*')
-    .pipe(gulp.dest('./build/img/'))
+  return gulp.src('./src/img/**/*').pipe(gulp.dest('./build/img/'));
 }
 
 // define complex tasks
