@@ -1,12 +1,12 @@
-<!DOCTYPE html>
-<html class="no-js" lang="ru-RU">
 
-<head>
-  <include src="./head.html"></include>
-  <title>Займы онлайн | Zaimfast</title>
-</head>
+{{#extend "common-page"}}
 
-<body class="page">
+{{#content "header"}}
+{{> head title="Займы онлайн"}}
+{{/content}}
+
+
+{{#content "content"}}
   <header class="page__header header">
     <div class="header__container">
       <h1 class="heading-1 hidden">Займы онлайн</h1>
@@ -253,7 +253,7 @@
                 </div>
                 <ul class="offer-card__about offer-card__about--closed">
                   <li class="offer-card__about-item">
-                    Действует акция: При каждом последующем одобрении кредита возрастает скидка на 10%. 
+                    Действует акция: При каждом последующем одобрении кредита возрастает скидка на 10%.
                   </li>
                   <li class="offer-card__about-item">
                     Получение займа: банковская карта, qiwi кошелек, платёжные
@@ -1728,10 +1728,6 @@
       </div>
     </div>
   </main>
-  <footer class="page__footer footer">
-    <include src="./footer.html"></include>
-  </footer>
-  <include src="./scripts.html"></include>
-</body>
+{{/content}}
 
-</html>
+{{/extend}}

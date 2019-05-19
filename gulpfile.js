@@ -6,8 +6,6 @@ const rename = require('gulp-rename');
 const sass = require('gulp-sass');
 const plumber = require('gulp-plumber');
 const postcss = require('gulp-postcss');
-const posthtml = require('gulp-posthtml');
-const include = require('posthtml-include');
 const autoprefixer = require('autoprefixer');
 const del = require('del');
 const browsersync = require('browser-sync').create();
@@ -15,6 +13,8 @@ const cssDeclarationSorter = require('css-declaration-sorter');
 const postcssScss = require('postcss-scss');
 const sourcemaps = require('gulp-sourcemaps');
 const handlebars = require('gulp-hb');
+// const posthtml = require('gulp-posthtml');
+// const include = require('posthtml-include');
 // const csso = require('gulp-csso');
 // const uglify = require('gulp-uglify');
 // const htmlmin = require('gulp-htmlmin');
@@ -68,7 +68,7 @@ function html() {
   return (
     gulp
       .src(['./src/html/pages/**/*.hbs'])
-      .pipe(posthtml([include({ root: './src/html/components/' })]))
+      // .pipe(posthtml([include({ root: './src/html/components/' })]))
       .pipe(
         handlebars() // {debug: true}
           .partials('./src/html/partials/components/*.hbs')

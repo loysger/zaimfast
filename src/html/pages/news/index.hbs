@@ -1,12 +1,12 @@
-<!DOCTYPE html>
-<html class="no-js" lang="ru-RU">
 
-<head>
-  <include src="./head.html"></include>
-  <title>Новости | Zaimfast</title>
-</head>
+{{#extend "common-page"}}
 
-<body class="page">
+{{#content "header"}}
+{{> head title="Новости"}}
+{{/content}}
+
+
+{{#content "content"}}
   <header class="page__header header">
     <div class="header__container">
       <h1 class="heading-1 hidden">Zaimfast</h1>
@@ -180,10 +180,6 @@
       </div>
     </div>
   </main>
-  <footer class="page__footer footer">
-    <include src="./footer.html"></include>
-  </footer>
-  <include src="./scripts.html"></include>
-</body>
+{{/content}}
 
-</html>
+{{/extend}}
