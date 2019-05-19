@@ -3174,16 +3174,6 @@ gulp-csso@^3.0.1:
     plugin-error "^0.1.2"
     vinyl-sourcemaps-apply "^0.2.1"
 
-gulp-handlebars@^5.0.2:
-  version "5.0.2"
-  resolved "https://registry.yarnpkg.com/gulp-handlebars/-/gulp-handlebars-5.0.2.tgz#86febe005569b0612b081c2f8826a7fe67aaa912"
-  integrity sha512-23+3YLWmQmLZfhMRIH4PZJaDenTI7C1RXHysV3J/pGiV/m5cypODLzGS7RUCzYtK7fzHaNpiEyygQxR6PdkrIg==
-  dependencies:
-    handlebars "^4.0.0"
-    plugin-error "^0.1.2"
-    replace-ext "^1.0.0"
-    through2 "^2.0.3"
-
 gulp-hb@^8.0.0:
   version "8.0.0"
   resolved "https://registry.yarnpkg.com/gulp-hb/-/gulp-hb-8.0.0.tgz#f6ea35be4befc9c27008d45d5b2aeb9d70bb4d4f"
@@ -3324,6 +3314,11 @@ gulplog@^1.0.0:
   dependencies:
     glogg "^1.0.0"
 
+handlebars-layouts@^3.1.4:
+  version "3.1.4"
+  resolved "https://registry.yarnpkg.com/handlebars-layouts/-/handlebars-layouts-3.1.4.tgz#26b3beb931b4b877dfbf7e6feaf4058ee6228b02"
+  integrity sha1-JrO+uTG0uHffv35v6vQFjuYiiwI=
+
 handlebars-wax@^6.1.0:
   version "6.1.0"
   resolved "https://registry.yarnpkg.com/handlebars-wax/-/handlebars-wax-6.1.0.tgz#9d9a899e6c67b946c7742ce1b7d1bf58f2ba1722"
@@ -3332,7 +3327,7 @@ handlebars-wax@^6.1.0:
     object-assign "^4.1.1"
     require-glob "^3.2.0"
 
-handlebars@^4.0.0, handlebars@^4.1.0:
+handlebars@^4.1.0:
   version "4.1.2"
   resolved "https://registry.yarnpkg.com/handlebars/-/handlebars-4.1.2.tgz#b6b37c1ced0306b221e094fc7aca3ec23b131b67"
   integrity sha512-nvfrjqvt9xQ8Z/w0ijewdD/vvWDTOweBUm96NTr66Wfvo1mJenBLwcYmPs3TIBP5ruzYGD7Hx/DaM9RmhroGPw==
