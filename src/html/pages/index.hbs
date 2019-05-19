@@ -1,4 +1,3 @@
-
 {{#extend "common-page"}}
 
 {{#content "header"}}
@@ -24,78 +23,16 @@
     <div class="offer__container">
       <h2 class="offer__heading heading-2">Наши предложения</h2>
       <ul class="offer__list">
-        <li class="offer__item">
-          <a href="#" class="offer__link">
+        {{#each offers}}
+        <li class="offer__item offer__item--{{this.title}}">
+          <a href="{{this.link}}" class="offer__link">
             <span class="offer__icon">
-              <img src="/img/offers/cards.svg" alt="Банковская карта" width="48" height="48">
+              <img src="{{this.img}}" alt="{{this.name}}" width="48" height="48">
             </span>
-            <p class="offer__name">Банковская карта</p>
+            <p class="offer__name">{{this.name}}</p>
           </a>
         </li>
-        <li class="offer__item">
-          <a href="#" class="offer__link">
-            <span class="offer__icon">
-              <img src="/img/offers/bankblue.svg" alt="Банковский счет" width="48" height="48">
-            </span>
-            <p class="offer__name">Банковский счет</p>
-          </a>
-        </li>
-        <li class="offer__item">
-          <a href="#" class="offer__link">
-            <span class="offer__icon">
-              <img src="/img/offers/get-qiwi.svg" alt="Qiwi кошелек" width="48" height="48">
-            </span>
-            <p class="offer__name">Qiwi кошелек</p>
-          </a>
-        </li>
-        <li class="offer__item">
-          <a href="#" class="offer__link">
-            <span class="offer__icon">
-              <img src="/img/offers/contact.svg" alt="Contact" width="48" height="48">
-            </span>
-            <p class="offer__name">Contact</p>
-          </a>
-        </li>
-        <li class="offer__item">
-          <a href="#" class="offer__link">
-            <span class="offer__icon">
-              <img src="/img/offers/get-yandex.svg" alt="Yandex.деньги" width="48" height="48">
-            </span>
-            <p class="offer__name">Yandex.деньги</p>
-          </a>
-        </li>
-        <li class="offer__item">
-          <a href="#" class="offer__link">
-            <span class="offer__icon offer__icon--unistream">
-              <img src="/img/offers/logo-unistream.svg" alt="Юнистрим" width="48" height="48">
-            </span>
-            <p class="offer__name">Юнистрим</p>
-          </a>
-        </li>
-        <li class="offer__item">
-          <a href="#" class="offer__link">
-            <span class="offer__icon">
-              <img src="/img/offers/logo-zk.svg" alt="Золотая корона" width="48" height="48">
-            </span>
-            <p class="offer__name">Золотая корона</p>
-          </a>
-        </li>
-        <li class="offer__item">
-          <a href="#" class="offer__link">
-            <span class="offer__icon">
-              <img src="/img/offers/gosuslugi.svg" alt="Госуслуги" width="48" height="48">
-            </span>
-            <p class="offer__name">Госуслуги</p>
-          </a>
-        </li>
-        <li class="offer__item">
-          <a href="#" class="offer__link">
-            <span class="offer__icon">
-              <img src="/img/offers/logosber.svg" alt="Сбербанк" width="48" height="48">
-            </span>
-            <p class="offer__name">Сбербанк</p>
-          </a>
-        </li>
+        {{/each}}
       </ul>
     </div>
   </section>
@@ -235,81 +172,13 @@
       <h2 class="heading-2 partners__heading">Наши партнеры</h2>
       <div class="partners__list-wrap">
         <ul class="partners__list">
-          <li class="partners__item">
-            <a href="#" class="partners__link">
-              <img class="partners__img" src="/img/partners/centrofinans.png" alt="centrofinans" />
+          {{#each partners}}
+          <li class="partners__item partners__item--{{this.title}}">
+            <a href="{{this.link}}" class="partners__link">
+              <img class="partners__img" src="{{this.img}}" alt="{{this.name}}" />
             </a>
           </li>
-          <li class="partners__item">
-            <a href="#" class="partners__link">
-              <img class="partners__img" src="/img/partners/denga.png" alt="denga" />
-            </a>
-          </li>
-          <li class="partners__item">
-            <a href="#" class="partners__link">
-              <img class="partners__img" src="/img/partners/dozarplati.png" alt="dozarplati" />
-            </a>
-          </li>
-          <li class="partners__item">
-            <a href="#" class="partners__link">
-              <img class="partners__img" src="/img/partners/ekapusta.png" alt="ekapusta" />
-            </a>
-          </li>
-          <li class="partners__item">
-            <a href="#" class="partners__link">
-              <img class="partners__img" src="/img/partners/ezaem.png" alt="ezaem" />
-            </a>
-          </li>
-          <li class="partners__item">
-            <a href="#" class="partners__link">
-              <img class="partners__img" src="/img/partners/ferratum.png" alt="ferratum" />
-            </a>
-          </li>
-          <li class="partners__item">
-            <a href="#" class="partners__link">
-              <img class="partners__img" src="/img/partners/finspin.png" alt="finspin" />
-            </a>
-          </li>
-          <li class="partners__item">
-            <a href="#" class="partners__link">
-              <img class="partners__img" src="/img/partners/glavfinans.png" alt="glavfinans" />
-            </a>
-          </li>
-          <li class="partners__item">
-            <a href="#" class="partners__link">
-              <img class="partners__img" src="/img/partners/konga.png" alt="konga" />
-            </a>
-          </li>
-          <li class="partners__item">
-            <a href="#" class="partners__link">
-              <img class="partners__img" src="/img/partners/kredito24.png" alt="kredito24" />
-            </a>
-          </li>
-          <li class="partners__item">
-            <a href="#" class="partners__link">
-              <img class="partners__img" src="/img/partners/limezime.png" alt="limezime" />
-            </a>
-          </li>
-          <li class="partners__item">
-            <a href="#" class="partners__link">
-              <img class="partners__img" src="/img/partners/lovizaim.png" alt="lovizaim" />
-            </a>
-          </li>
-          <li class="partners__item">
-            <a href="#" class="partners__link">
-              <img class="partners__img" src="/img/partners/metrokredit.png" alt="metrokredit" />
-            </a>
-          </li>
-          <li class="partners__item">
-            <a href="#" class="partners__link">
-              <img class="partners__img" src="/img/partners/migone.png" alt="migone" />
-            </a>
-          </li>
-          <li class="partners__item">
-            <a href="#" class="partners__link">
-              <img class="partners__img" src="/img/partners/moneyman.png" alt="moneyman" />
-            </a>
-          </li>
+          {{/each}}
         </ul>
       </div>
       <a class="partners__more button" href="#">Все партнеры</a>
