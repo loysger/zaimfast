@@ -1,11 +1,7 @@
 module.exports = {
-  list: function(items, options) {
-    var out = "<ul>";
+  isSamePage: function(context, options) {
+    console.log(context);
 
-    for(var i=0, l=items.length; i<l; i++) {
-      out = out + "<li>" + options.fn(items[i]) + "</li>";
-    }
-
-    return out + "</ul>";
+    return true;
   }
 };

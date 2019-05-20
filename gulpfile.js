@@ -49,7 +49,7 @@ function clean() {
 
 // Watch files
 function watchFiles() {
-  gulp.watch('./src/html/**/*.{html,json,hbs}', gulp.series(html, browserSyncReload));
+  gulp.watch('./src/html/**/*.{html,json,hbs,js}', gulp.series(html, browserSyncReload));
   gulp.watch('./src/img/**/*', gulp.series(img));
   gulp.watch('./src/scss/**/*.scss', gulp.series(css));
   gulp.watch('./src/js/**/*.js', gulp.series(js));
@@ -77,9 +77,11 @@ function html() {
           .data('./src/html/data/**/*.{js,json}')
       )
       // .pipe(htmlmin({ collapseWhitespace: true }))
-      .pipe(rename({
-        extname: '.html'
-      }))
+      .pipe(
+        rename({
+          extname: '.html'
+        })
+      )
       .pipe(gulp.dest('./build/'))
   );
 }
