@@ -70,7 +70,7 @@ function html() {
       .src(['./src/html/pages/**/*.hbs'])
       // .pipe(posthtml([include({ root: './src/html/components/' })]))
       .pipe(
-        handlebars({debug: true}) // {debug: true}
+        handlebars() // {debug: true}
           .partials('./src/html/partials/components/*.hbs')
           .partials('./src/html/partials/layouts/*.hbs')
           .helpers('./src/html/helpers/*.js')
