@@ -1,4 +1,3 @@
-
 {{#extend "common-page"}}
 
 {{#content "header"}}
@@ -8,1692 +7,1700 @@
 
 {{#content "content"}}
 {{> page-header}}
-  <main class="page-content page-content--zaymi">
-    <div class="page-content__wrap">
-      <div class="page-wrap">
-        <section class="filters" style="display: none;">
-          <h2 class="hidden">Подобрать условия</h2>
-          <fieldset class="filters__fieldset">
-            <legend class="filters__name">
-              <p class="filters__place">
-                Микрозаймы
-                <span class="filters__city">в Москве</span>
-              </p>
-            </legend>
-            <div class="filters__filter">
-              <label class="filters__label" for="filter-amount">Введите сумму займа, руб.</label>
-              <input class="filters__input" id="filter-amount" name="amount" type="number" value="3000" maxlength="10"
-                minlength="4" min="1000" max="1000000" />
-              <div class="slider">
-                <div class="slider__conteiner">
-                  <div class="slider__lenght">
-                    <div class="slider__depth"></div>
-                    <div class="slider__pin"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="filters__filter">
-              <label class="filters__label" for="filter-period">Срок, дней</label>
-              <input class="filters__input" id="filter-period" name="period" type="number" value="3" maxlength="3"
-                minlength="1" min="1" max="365" />
-              <div class="slider">
-                <div class="slider__conteiner">
-                  <div class="slider__lenght">
-                    <div class="slider__depth"></div>
-                    <div class="slider__pin"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </fieldset>
-        </section>
-        <section class="offers">
-          <div class="offers__container">
-            <h2 class="hidden">Предложения</h2>
-            <p class="offers__caption">
-              Займы онлайн - большая экономия времени! Оформляйте займы из
-              любой точки РФ. Не нужно стоять в очередях, искать поручителя.
-              Выберите условия, отправьте заявку через интернет и получите
-              деньги на выгодных условиях!
+<main class="page-content page-content--zaymi">
+  <div class="page-content__wrap">
+    <div class="page-wrap">
+      <section class="filters" style="display: none;">
+        <h2 class="hidden">Подобрать условия</h2>
+        <fieldset class="filters__fieldset">
+          <legend class="filters__name">
+            <p class="filters__place">
+              Микрозаймы
+              <span class="filters__city">в Москве</span>
             </p>
-            <ul class="offers__list">
-              <li class="offers__item offer-card">
-                <div class="offer-card__top">
-                  <p class="offer-card__name">
-                    <a href="/mfo/creditplus">Кредит Плюс / CreditPlus </a>
-                    <!-- <span class="offer-card__comp">Смсфинанс</span> -->
-                  </p>
-                  <div class="offer-card__img">
-                    <img src="/img/partners/creditplus.png" alt="alt" />
-                  </div>
-                </div>
-                <div class="offer-card__contain">
-                  <p class="offer-card__prop">
-                    <span class="offer-card__prop-text">от 0,00 - до 1,5 %</span>
-                    <span class="offer-card__prop-name">Ставка в день</span>
-                  </p>
-                  <p class="offer-card__prop">
-                    <span class="offer-card__prop-text"> от 1 000 - до 30 000 ₽</span>
-                    <span class="offer-card__prop-name">Сумма</span>
-                  </p>
-                  <p class="offer-card__prop">
-                    <span class="offer-card__prop-text">от 5 - до 30 дней</span>
-                    <span class="offer-card__prop-name">Срок</span>
-                  </p>
-                </div>
-                <ul class="offer-card__about offer-card__about--closed">
-                  <li class="offer-card__about-item">
-                    Действует акция: Новым клиентам беспроцентный займ до 30 дней.
-                  </li>
-                  <li class="offer-card__about-item">
-                    Получение займа: банковская карта, qiwi кошелек, платёжные
-                    системы, яндекс.деньги, банковский счет
-                  </li>
-                  <li class="offer-card__about-item">
-                    Погашение: в конце срока
-                  </li>
-                  <li class="offer-card__about-item">Пролонгация</li>
-                  <li class="offer-card__about-item">Отсрочка</li>
-                  <li class="offer-card__about-item">Штрафы</li>
-                  <li class="offer-card__about-item">
-                    Место заключения договора: онлайн
-                  </li>
-                  <li class="offer-card__about-more">Подробнее</li>
-                </ul>
-                <a class="offer-card__go button" href="https://pxl.leads.su/click/c8888bf66de05bc8f3bb3eb495cc98bd">Перейти</a>
-              </li>
-              <li class="offers__item offer-card">
-                <div class="offer-card__top">
-                  <p class="offer-card__name">
-                    <a href="/mfo/ezaem"> Езаем / Ezaem</a>
-                    <!-- <span class="offer-card__comp">Смсфинанс</span> -->
-                  </p>
-                  <div class="offer-card__img">
-                    <img src="/img/partners/ezaem.png" alt="alt" />
-                  </div>
-                </div>
-                <div class="offer-card__contain">
-                  <p class="offer-card__prop">
-                    <span class="offer-card__prop-text">от 0,00 - до 1,5 %</span>
-                    <span class="offer-card__prop-name">Ставка в день</span>
-                  </p>
-                  <p class="offer-card__prop">
-                    <span class="offer-card__prop-text">от 2 000 - до 30 000 ₽</span>
-                    <span class="offer-card__prop-name">Сумма</span>
-                  </p>
-                  <p class="offer-card__prop">
-                    <span class="offer-card__prop-text">от 5 - до 30 дней</span>
-                    <span class="offer-card__prop-name">Срок</span>
-                  </p>
-                </div>
-                <ul class="offer-card__about offer-card__about--closed">
-                  <li class="offer-card__about-item">
-                    Действует акция: Первый заем в данной компании под 0%.
-                  </li>
-                  <li class="offer-card__about-item">
-                    Получение займа: банковская карта, qiwi кошелек, платёжные
-                    системы, яндекс.деньги, банковский счет
-                  </li>
-                  <li class="offer-card__about-item">
-                    Погашение: в конце срока
-                  </li>
-                  <li class="offer-card__about-item">Пролонгация</li>
-                  <li class="offer-card__about-item">Отсрочка</li>
-                  <li class="offer-card__about-item">Штрафы</li>
-                  <li class="offer-card__about-item">
-                    Место заключения договора: онлайн
-                  </li>
-                  <li class="offer-card__about-more">Подробнее</li>
-                </ul>
-                <a class="offer-card__go button" href="https://trkleads.ru/click/30c7c441bb47a285dc6086de2df46861">Перейти</a>
-              </li>
-              <li class="offers__item offer-card">
-                <div class="offer-card__top">
-                  <p class="offer-card__name">
-                    <a href="/mfo/zaymer">Займер / Zaymer</a>
-                    <!-- <span class="offer-card__comp">Смсфинанс</span> -->
-                  </p>
-                  <div class="offer-card__img">
-                    <img src="/img/partners/zaymer.png" alt="alt" />
-                  </div>
-                </div>
-                <div class="offer-card__contain">
-                  <p class="offer-card__prop">
-                    <span class="offer-card__prop-text">от 0,76 –  до 1,5 %</span>
-                    <span class="offer-card__prop-name">Ставка в день</span>
-                  </p>
-                  <p class="offer-card__prop">
-                    <span class="offer-card__prop-text">от 2 000 – до 30 000 ₽</span>
-                    <span class="offer-card__prop-name">Сумма</span>
-                  </p>
-                  <p class="offer-card__prop">
-                    <span class="offer-card__prop-text">от 7 – до 30 дней</span>
-                    <span class="offer-card__prop-name">Срок</span>
-                  </p>
-                </div>
-                <ul class="offer-card__about offer-card__about--closed">
-                  <li class="offer-card__about-item">
-                    Робот одобряет с любой кредитной историей, процент одобрения высокий.
-                  </li>
-                  <li class="offer-card__about-item">
-                    Получение займа: банковская карта, qiwi кошелек, платёжные
-                    системы, яндекс.деньги, банковский счет
-                  </li>
-                  <li class="offer-card__about-item">
-                    Погашение: в конце срока
-                  </li>
-                  <li class="offer-card__about-item">Пролонгация</li>
-                  <li class="offer-card__about-item">Отсрочка</li>
-                  <li class="offer-card__about-item">Штрафы</li>
-                  <li class="offer-card__about-item">
-                    Место заключения договора: онлайн
-                  </li>
-                  <li class="offer-card__about-more">Подробнее</li>
-                </ul>
-                <a class="offer-card__go button" href="https://trkleads.ru/click/6383a2927ebea44f68492733d79dbfcd">Перейти</a>
-              </li>
-              <li class="offers__item offer-card">
-                <div class="offer-card__top">
-                  <p class="offer-card__name">
-                    <a href="/mfo/konga">Конга / Konga</a>
-                    <!-- <span class="offer-card__comp">Смсфинанс</span> -->
-                  </p>
-                  <div class="offer-card__img">
-                    <img src="/img/partners/konga.png" alt="alt" />
-                  </div>
-                </div>
-                <div class="offer-card__contain">
-                  <p class="offer-card__prop">
-                    <span class="offer-card__prop-text">от 0,00 - до 1,5%</span>
-                    <span class="offer-card__prop-name">Ставка в день</span>
-                  </p>
-                  <p class="offer-card__prop">
-                    <span class="offer-card__prop-text">от 2 000 - 70 000 ₽</span>
-                    <span class="offer-card__prop-name">Сумма</span>
-                  </p>
-                  <p class="offer-card__prop">
-                    <span class="offer-card__prop-text">от 16 - до 168 дней</span>
-                    <span class="offer-card__prop-name">Срок</span>
-                  </p>
-                </div>
-                <ul class="offer-card__about offer-card__about--closed">
-                  <li class="offer-card__about-item">
-                    Действует акция: При каждом последующем одобрении кредита возрастает скидка на 10%.
-                  </li>
-                  <li class="offer-card__about-item">
-                    Получение займа: банковская карта, qiwi кошелек, платёжные
-                    системы, яндекс.деньги, банковский счет
-                  </li>
-                  <li class="offer-card__about-item">
-                    Погашение: в конце срока
-                  </li>
-                  <li class="offer-card__about-item">Пролонгация</li>
-                  <li class="offer-card__about-item">Отсрочка</li>
-                  <li class="offer-card__about-item">Штрафы</li>
-                  <li class="offer-card__about-item">
-                    Место заключения договора: онлайн
-                  </li>
-                  <li class="offer-card__about-more">Подробнее</li>
-                </ul>
-                <a class="offer-card__go button" href="https://trkleads.ru/click/c7096eb8ca9111e2029b9d1a91c2a83f">Перейти</a>
-              </li>
-              <li class="offers__item offer-card">
-                <div class="offer-card__top">
-                  <p class="offer-card__name">
-                    <a href="/mfo/bistrodengi">Быстроденьги / bistrodengi</a>
-                    <!-- <span class="offer-card__comp">Смсфинанс</span> -->
-                  </p>
-                  <div class="offer-card__img">
-                    <img src="/img/partners/bistrodengi.png" alt="alt" />
-                  </div>
-                </div>
-                <div class="offer-card__contain">
-                  <p class="offer-card__prop">
-                    <span class="offer-card__prop-text">от 0,00 - до 1,5 %</span>
-                    <span class="offer-card__prop-name">Ставка в день</span>
-                  </p>
-                  <p class="offer-card__prop">
-                    <span class="offer-card__prop-text">от 1 000 - до 30 000 ₽</span>
-                    <span class="offer-card__prop-name">Сумма</span>
-                  </p>
-                  <p class="offer-card__prop">
-                    <span class="offer-card__prop-text">от 7 - до 30 дней</span>
-                    <span class="offer-card__prop-name">Срок</span>
-                  </p>
-                </div>
-                <ul class="offer-card__about offer-card__about--closed">
-                  <li class="offer-card__about-item">
-                    Действует акция: Первые 3 дня проценты не идут, начинают идти с 4 дня.
-                  </li>
-                  <li class="offer-card__about-item">
-                    Получение займа: банковская карта, qiwi кошелек, платёжные
-                    системы, яндекс.деньги, банковский счет
-                  </li>
-                  <li class="offer-card__about-item">
-                    Погашение: в конце срока
-                  </li>
-                  <li class="offer-card__about-item">Пролонгация</li>
-                  <li class="offer-card__about-item">Отсрочка</li>
-                  <li class="offer-card__about-item">Штрафы</li>
-                  <li class="offer-card__about-item">
-                    Место заключения договора: онлайн
-                  </li>
-                  <li class="offer-card__about-more">Подробнее</li>
-                </ul>
-                <a class="offer-card__go button" href="https://pxl.leads.su/click/8e0dba7edcdf186baedce22701db0742">Перейти</a>
-              </li>
-              <li class="offers__item offer-card">
-                <div class="offer-card__top">
-                  <p class="offer-card__name">
-                    <a href="/mfo/ekapusta">еКапуста / eKapusta</a>
-                    <!-- <span class="offer-card__comp">Смсфинанс</span> -->
-                  </p>
-                  <div class="offer-card__img">
-                    <img src="/img/partners/ekapusta.png" alt="alt" />
-                  </div>
-                </div>
-                <div class="offer-card__contain">
-                  <p class="offer-card__prop">
-                    <span class="offer-card__prop-text">от 0,00 - до 1,4 %</span>
-                    <span class="offer-card__prop-name">Ставка в день</span>
-                  </p>
-                  <p class="offer-card__prop">
-                    <span class="offer-card__prop-text">от 100 - 30 000 ₽</span>
-                    <span class="offer-card__prop-name">Сумма</span>
-                  </p>
-                  <p class="offer-card__prop">
-                    <span class="offer-card__prop-text">от 7 - до 21 дней</span>
-                    <span class="offer-card__prop-name">Срок</span>
-                  </p>
-                </div>
-                <ul class="offer-card__about offer-card__about--closed">
-                  <li class="offer-card__about-item">
-                    Действует акция: Бесплатный заем при условии погашения кредита в срок.
-                  </li>
-                  <li class="offer-card__about-item">
-                    Получение займа: банковская карта, qiwi кошелек, платёжные
-                    системы, яндекс.деньги, банковский счет
-                  </li>
-                  <li class="offer-card__about-item">
-                    Погашение: в конце срока
-                  </li>
-                  <li class="offer-card__about-item">Пролонгация</li>
-                  <li class="offer-card__about-item">Отсрочка</li>
-                  <li class="offer-card__about-item">Штрафы</li>
-                  <li class="offer-card__about-item">
-                    Место заключения договора: онлайн
-                  </li>
-                  <li class="offer-card__about-more">Подробнее</li>
-                </ul>
-                <a class="offer-card__go button" href="https://go.leadgid.ru/aff_c?offer_id=1658&aff_id=27131">Перейти</a>
-              </li>
-              <li class="offers__item offer-card">
-                <div class="offer-card__top">
-                  <p class="offer-card__name">
-                    <a href="/mfo/platiza">Платиза / Platiza</a>
-                    <!-- <span class="offer-card__comp">Смсфинанс</span> -->
-                  </p>
-                  <div class="offer-card__img">
-                    <img src="/img/partners/platiza.png" alt="alt" />
-                  </div>
-                </div>
-                <div class="offer-card__contain">
-                  <p class="offer-card__prop">
-                    <span class="offer-card__prop-text">до 1,5%</span>
-                    <span class="offer-card__prop-name">Ставка в день</span>
-                  </p>
-                  <p class="offer-card__prop">
-                    <span class="offer-card__prop-text">от 3 000 - до 30 000 ₽</span>
-                    <span class="offer-card__prop-name">Сумма</span>
-                  </p>
-                  <p class="offer-card__prop">
-                    <span class="offer-card__prop-text">от 5 - до 30 дней</span>
-                    <span class="offer-card__prop-name">Срок</span>
-                  </p>
-                </div>
-                <ul class="offer-card__about offer-card__about--closed">
-                  <li class="offer-card__about-item">
-                    При обращении нужен только паспорт, есть возможность получить одобрение с плохой кредитной историей.
-                  </li>
-                  <li class="offer-card__about-item">
-                    Получение займа: банковская карта, qiwi кошелек, платёжные
-                    системы, яндекс.деньги, банковский счет
-                  </li>
-                  <li class="offer-card__about-item">
-                    Погашение: в конце срока
-                  </li>
-                  <li class="offer-card__about-item">Пролонгация</li>
-                  <li class="offer-card__about-item">Отсрочка</li>
-                  <li class="offer-card__about-item">Штрафы</li>
-                  <li class="offer-card__about-item">
-                    Место заключения договора: онлайн
-                  </li>
-                  <li class="offer-card__about-more">Подробнее</li>
-                </ul>
-                <a class="offer-card__go button" href="https://trkleads.ru/click/def1851521f14ce2c9892a3b17d933f4">Перейти</a>
-              </li>
-              <li class="offers__item offer-card">
-                <div class="offer-card__top">
-                  <p class="offer-card__name">
-                    <a href="/mfo/webbankir">Веббанкир / Webbankir</a>
-                    <!-- <span class="offer-card__comp">Смсфинанс</span> -->
-                  </p>
-                  <div class="offer-card__img">
-                    <img src="/img/partners/webbankir.png" alt="alt" />
-                  </div>
-                </div>
-                <div class="offer-card__contain">
-                  <p class="offer-card__prop">
-                    <span class="offer-card__prop-text">от 1,2 - до 1,5 %</span>
-                    <span class="offer-card__prop-name">Ставка в день</span>
-                  </p>
-                  <p class="offer-card__prop">
-                    <span class="offer-card__prop-text">от 1 000 - до 15 000 ₽</span>
-                    <span class="offer-card__prop-name">Сумма</span>
-                  </p>
-                  <p class="offer-card__prop">
-                    <span class="offer-card__prop-text">от 5 - до 30 дней</span>
-                    <span class="offer-card__prop-name">Срок</span>
-                  </p>
-                </div>
-                <ul class="offer-card__about offer-card__about--closed">
-                  <li class="offer-card__about-item">
-                    Минимальный пакет документов, нужны только ваши паспортные данные
-                  </li>
-                  <li class="offer-card__about-item">
-                    Получение займа: банковская карта, qiwi кошелек, платёжные
-                    системы, яндекс.деньги, банковский счет
-                  </li>
-                  <li class="offer-card__about-item">
-                    Погашение: в конце срока
-                  </li>
-                  <li class="offer-card__about-item">Пролонгация</li>
-                  <li class="offer-card__about-item">Отсрочка</li>
-                  <li class="offer-card__about-item">Штрафы</li>
-                  <li class="offer-card__about-item">
-                    Место заключения договора: онлайн
-                  </li>
-                  <li class="offer-card__about-more">Подробнее</li>
-                </ul>
-                <a class="offer-card__go button" href="https://trkleads.ru/click/9932f0192c73230486b9163bdb4da161">Перейти</a>
-              </li>
-              <li class="offers__item offer-card">
-                <div class="offer-card__top">
-                  <p class="offer-card__name">
-                    <a href="/mfo/turbozaim">Турбозайм / Turbozaim</a>
-                    <!-- <span class="offer-card__comp">Смсфинанс</span> -->
-                  </p>
-                  <div class="offer-card__img">
-                    <img src="/img/partners/turbozaim.png" alt="alt" />
-                  </div>
-                </div>
-                <div class="offer-card__contain">
-                  <p class="offer-card__prop">
-                    <span class="offer-card__prop-text">от 0,6 - до 1,6 %</span>
-                    <span class="offer-card__prop-name">Ставка в день</span>
-                  </p>
-                  <p class="offer-card__prop">
-                    <span class="offer-card__prop-text">от 3 000 - до 15 000 ₽</span>
-                    <span class="offer-card__prop-name">Сумма</span>
-                  </p>
-                  <p class="offer-card__prop">
-                    <span class="offer-card__prop-text">от 7 - до 30 дней</span>
-                    <span class="offer-card__prop-name">Срок</span>
-                  </p>
-                </div>
-                <ul class="offer-card__about offer-card__about--closed">
-                  <li class="offer-card__about-item">
-                    Высокий процент одобрения, можно получить деньги даже без кредитной истории.
-                  </li>
-                  <li class="offer-card__about-item">
-                    Получение займа: банковская карта, qiwi кошелек, платёжные
-                    системы, яндекс.деньги, банковский счет
-                  </li>
-                  <li class="offer-card__about-item">
-                    Погашение: в конце срока
-                  </li>
-                  <li class="offer-card__about-item">Пролонгация</li>
-                  <li class="offer-card__about-item">Отсрочка</li>
-                  <li class="offer-card__about-item">Штрафы</li>
-                  <li class="offer-card__about-item">
-                    Место заключения договора: онлайн
-                  </li>
-                  <li class="offer-card__about-more">Подробнее</li>
-                </ul>
-                <a class="offer-card__go button" href="https://trkleads.ru/click/ca772e9be7f56b9cddc41f4f7b49cef7">Перейти</a>
-              </li>
-              <li class="offers__item offer-card">
-                <div class="offer-card__top">
-                  <p class="offer-card__name">
-                    <a href="/mfo/greenmoney">ГринМани / Green Money</a>
-                    <!-- <span class="offer-card__comp">Смсфинанс</span> -->
-                  </p>
-                  <div class="offer-card__img">
-                    <img src="/img/partners/greenmoney.png" alt="alt" />
-                  </div>
-                </div>
-                <div class="offer-card__contain">
-                  <p class="offer-card__prop">
-                    <span class="offer-card__prop-text">от 0,95 - до 1,06 %</span>
-                    <span class="offer-card__prop-name">Ставка в день</span>
-                  </p>
-                  <p class="offer-card__prop">
-                    <span class="offer-card__prop-text">от 3 000 - до 25 000 ₽</span>
-                    <span class="offer-card__prop-name">Сумма</span>
-                  </p>
-                  <p class="offer-card__prop">
-                    <span class="offer-card__prop-text">от 31 - до 40 дней</span>
-                    <span class="offer-card__prop-name">Срок</span>
-                  </p>
-                </div>
-                <ul class="offer-card__about offer-card__about--closed">
-                  <li class="offer-card__about-item">
-                    Низкий % ставка, Выдают вне зависимости от места проживания.
-                  </li>
-                  <li class="offer-card__about-item">
-                    Получение займа: банковская карта, qiwi кошелек, платёжные
-                    системы, яндекс.деньги, банковский счет
-                  </li>
-                  <li class="offer-card__about-item">
-                    Погашение: в конце срока
-                  </li>
-                  <li class="offer-card__about-item">Пролонгация</li>
-                  <li class="offer-card__about-item">Отсрочка</li>
-                  <li class="offer-card__about-item">Штрафы</li>
-                  <li class="offer-card__about-item">
-                    Место заключения договора: онлайн
-                  </li>
-                  <li class="offer-card__about-more">Подробнее</li>
-                </ul>
-                <a class="offer-card__go button" href="https://pxl.leads.su/click/a3ee0d56c78324f801cef67884aeb771">Перейти</a>
-              </li>
-              <li class="offers__item offer-card">
-                <div class="offer-card__top">
-                  <p class="offer-card__name">
-                    <a href="/mfo/smartcredit">Смарткредит / SmartCredit</a>
-                    <!-- <span class="offer-card__comp">Смсфинанс</span> -->
-                  </p>
-                  <div class="offer-card__img">
-                    <img src="/img/partners/smartcredit.png" alt="alt" />
-                  </div>
-                </div>
-                <div class="offer-card__contain">
-                  <p class="offer-card__prop">
-                    <span class="offer-card__prop-text">от 1,1 - до 1,5 %</span>
-                    <span class="offer-card__prop-name">Ставка в день</span>
-                  </p>
-                  <p class="offer-card__prop">
-                    <span class="offer-card__prop-text">от 2 000 - до 15 000 ₽</span>
-                    <span class="offer-card__prop-name">Сумма</span>
-                  </p>
-                  <p class="offer-card__prop">
-                    <span class="offer-card__prop-text">от 5 - до 30 дней</span>
-                    <span class="offer-card__prop-name">Срок</span>
-                  </p>
-                </div>
-                <ul class="offer-card__about offer-card__about--closed">
-                  <li class="offer-card__about-item">
-                    Компания работает круглосуточно, быстрое рассмотрение заявок.
-                  </li>
-                  <li class="offer-card__about-item">
-                    Получение займа: банковская карта, qiwi кошелек, платёжные
-                    системы, яндекс.деньги, банковский счет
-                  </li>
-                  <li class="offer-card__about-item">
-                    Погашение: в конце срока
-                  </li>
-                  <li class="offer-card__about-item">Пролонгация</li>
-                  <li class="offer-card__about-item">Отсрочка</li>
-                  <li class="offer-card__about-item">Штрафы</li>
-                  <li class="offer-card__about-item">
-                    Место заключения договора: онлайн
-                  </li>
-                  <li class="offer-card__about-more">Подробнее</li>
-                </ul>
-                <a class="offer-card__go button" href="https://trkleads.ru/click/d5a148511c5469e8296b0071f35d4ca4">Перейти</a>
-              </li>
-              <li class="offers__item offer-card">
-                <div class="offer-card__top">
-                  <p class="offer-card__name">
-                    <a href="/mfo/payps">Pay P.S.</a>
-                    <!-- <span class="offer-card__comp">Смсфинанс</span> -->
-                  </p>
-                  <div class="offer-card__img">
-                    <img src="/img/partners/payps.png" alt="alt" />
-                  </div>
-                </div>
-                <div class="offer-card__contain">
-                  <p class="offer-card__prop">
-                    <span class="offer-card__prop-text">от 0,00 - 1.5 %</span>
-                    <span class="offer-card__prop-name">Ставка в день</span>
-                  </p>
-                  <p class="offer-card__prop">
-                    <span class="offer-card__prop-text">от 4 000 - до 30 000 ₽</span>
-                    <span class="offer-card__prop-name">Сумма</span>
-                  </p>
-                  <p class="offer-card__prop">
-                    <span class="offer-card__prop-text">от 6 - до 30 дней</span>
-                    <span class="offer-card__prop-name">Срок</span>
-                  </p>
-                </div>
-                <ul class="offer-card__about offer-card__about--closed">
-                  <li class="offer-card__about-item">
-                    Действует акция: первые 5 дней бесплатно.
-                  </li>
-                  <li class="offer-card__about-item">
-                    Получение займа: банковская карта, qiwi кошелек, платёжные
-                    системы, яндекс.деньги, банковский счет
-                  </li>
-                  <li class="offer-card__about-item">
-                    Погашение: в конце срока
-                  </li>
-                  <li class="offer-card__about-item">Пролонгация</li>
-                  <li class="offer-card__about-item">Отсрочка</li>
-                  <li class="offer-card__about-item">Штрафы</li>
-                  <li class="offer-card__about-item">
-                    Место заключения договора: онлайн
-                  </li>
-                  <li class="offer-card__about-more">Подробнее</li>
-                </ul>
-                <a class="offer-card__go button" href="https://go.leadgid.ru/aff_c?offer_id=1260&aff_id=27131">Перейти</a>
-              </li>
-              <li class="offers__item offer-card">
-                <div class="offer-card__top">
-                  <p class="offer-card__name">
-                    <a href="/mfo/migone">MigONE</a>
-                    <!-- <span class="offer-card__comp">Смсфинанс</span> -->
-                  </p>
-                  <div class="offer-card__img">
-                    <img src="/img/partners/migone.png" alt="alt" />
-                  </div>
-                </div>
-                <div class="offer-card__contain">
-                  <p class="offer-card__prop">
-                    <span class="offer-card__prop-text">от 0,00 - 2,2 %</span>
-                    <span class="offer-card__prop-name">Ставка в день</span>
-                  </p>
-                  <p class="offer-card__prop">
-                    <span class="offer-card__prop-text">от 3 000 - до 15 000 ₽</span>
-                    <span class="offer-card__prop-name">Сумма</span>
-                  </p>
-                  <p class="offer-card__prop">
-                    <span class="offer-card__prop-text">от 3 - до 29 дней</span>
-                    <span class="offer-card__prop-name">Срок</span>
-                  </p>
-                </div>
-                <ul class="offer-card__about offer-card__about--closed">
-                  <li class="offer-card__about-item">
-                    Действует акция: заем для новых клиентов под 0 %.
-                  </li>
-                  <li class="offer-card__about-item">
-                    Получение займа: банковская карта, qiwi кошелек, платёжные
-                    системы, яндекс.деньги, банковский счет
-                  </li>
-                  <li class="offer-card__about-item">
-                    Погашение: в конце срока
-                  </li>
-                  <li class="offer-card__about-item">Пролонгация</li>
-                  <li class="offer-card__about-item">Отсрочка</li>
-                  <li class="offer-card__about-item">Штрафы</li>
-                  <li class="offer-card__about-item">
-                    Место заключения договора: онлайн
-                  </li>
-                  <li class="offer-card__about-more">Подробнее</li>
-                </ul>
-                <a class="offer-card__go button" href="https://pxl.leads.su/click/981ce912bed394b479aa70f217aafaec">Перейти</a>
-              </li>
-              <li class="offers__item offer-card">
-                <div class="offer-card__top">
-                  <p class="offer-card__name">
-                    <a href="/mfo/migcredit">МигКредит / MigCredit</a>
-                    <!-- <span class="offer-card__comp">Смсфинанс</span> -->
-                  </p>
-                  <div class="offer-card__img">
-                    <img src="/img/partners/migkredit.png" alt="alt" />
-                  </div>
-                </div>
-                <div class="offer-card__contain">
-                  <p class="offer-card__prop">
-                    <span class="offer-card__prop-text">от 0,08 - до 1,5 %</span>
-                    <span class="offer-card__prop-name">Ставка в день</span>
-                  </p>
-                  <p class="offer-card__prop">
-                    <span class="offer-card__prop-text">от 3 000 - до 98 000 ₽</span>
-                    <span class="offer-card__prop-name">Сумма</span>
-                  </p>
-                  <p class="offer-card__prop">
-                    <span class="offer-card__prop-text">от 3 - до 336 дней</span>
-                    <span class="offer-card__prop-name">Срок</span>
-                  </p>
-                </div>
-                <ul class="offer-card__about offer-card__about--closed">
-                  <li class="offer-card__about-item">
-                    Главная особенность - большие суммы на длительный срок.
-                  </li>
-                  <li class="offer-card__about-item">
-                    Получение займа: банковская карта, qiwi кошелек, платёжные
-                    системы, яндекс.деньги, банковский счет
-                  </li>
-                  <li class="offer-card__about-item">
-                    Погашение: в конце срока
-                  </li>
-                  <li class="offer-card__about-item">Пролонгация</li>
-                  <li class="offer-card__about-item">Отсрочка</li>
-                  <li class="offer-card__about-item">Штрафы</li>
-                  <li class="offer-card__about-item">
-                    Место заключения договора: онлайн
-                  </li>
-                  <li class="offer-card__about-more">Подробнее</li>
-                </ul>
-                <a class="offer-card__go button" href="https://trkleads.ru/click/2f0d030493a9dc43f25dc08351cfb15a">Перейти</a>
-              </li>
-              <li class="offers__item offer-card">
-                <div class="offer-card__top">
-                  <p class="offer-card__name">
-                    <a href="/mfo/oneclickmoney">OneClickMoney</a>
-                    <!-- <span class="offer-card__comp">Смсфинанс</span> -->
-                  </p>
-                  <div class="offer-card__img">
-                    <img src="/img/partners/oneclickmoney.png" alt="alt" />
-                  </div>
-                </div>
-                <div class="offer-card__contain">
-                  <p class="offer-card__prop">
-                    <span class="offer-card__prop-text">от 1,5 - до 2,2 %</span>
-                    <span class="offer-card__prop-name">Ставка в день</span>
-                  </p>
-                  <p class="offer-card__prop">
-                    <span class="offer-card__prop-text">от 500 - до 30 000 ₽</span>
-                    <span class="offer-card__prop-name">Сумма</span>
-                  </p>
-                  <p class="offer-card__prop">
-                    <span class="offer-card__prop-text">от 6 - до 21 дней</span>
-                    <span class="offer-card__prop-name">Срок</span>
-                  </p>
-                </div>
-                <ul class="offer-card__about offer-card__about--closed">
-                  <li class="offer-card__about-item">
-                    Большой выбор способов получения денег, есть возможность получить на не именную карту.
-                  </li>
-                  <li class="offer-card__about-item">
-                    Получение займа: банковская карта, qiwi кошелек, платёжные
-                    системы, яндекс.деньги, банковский счет
-                  </li>
-                  <li class="offer-card__about-item">
-                    Погашение: в конце срока
-                  </li>
-                  <li class="offer-card__about-item">Пролонгация</li>
-                  <li class="offer-card__about-item">Отсрочка</li>
-                  <li class="offer-card__about-item">Штрафы</li>
-                  <li class="offer-card__about-item">
-                    Место заключения договора: онлайн
-                  </li>
-                  <li class="offer-card__about-more">Подробнее</li>
-                </ul>
-                <a class="offer-card__go button" href="https://pxl.leads.su/click/1c54fee09969043263f0899be6317ee2">Перейти</a>
-              </li>
-              <li class="offers__item offer-card">
-                <div class="offer-card__top">
-                  <p class="offer-card__name">
-                    <a href="/mfo/kredito24">Кредито24 / Kredito24</a>
-                    <!-- <span class="offer-card__comp">Смсфинанс</span> -->
-                  </p>
-                  <div class="offer-card__img">
-                    <img src="/img/partners/kredito24.png" alt="alt" />
-                  </div>
-                </div>
-                <div class="offer-card__contain">
-                  <p class="offer-card__prop">
-                    <span class="offer-card__prop-text">до 1,5 %</span>
-                    <span class="offer-card__prop-name">Ставка в день</span>
-                  </p>
-                  <p class="offer-card__prop">
-                    <span class="offer-card__prop-text">от 2 000 - до 15 000 ₽</span>
-                    <span class="offer-card__prop-name">Сумма</span>
-                  </p>
-                  <p class="offer-card__prop">
-                    <span class="offer-card__prop-text">от 16 - до 30 дней</span>
-                    <span class="offer-card__prop-name">Срок</span>
-                  </p>
-                </div>
-                <ul class="offer-card__about offer-card__about--closed">
-                  <li class="offer-card__about-item">
-                    Все условия прозрачны. Есть возможность исправит КИ.
-                  </li>
-                  <li class="offer-card__about-item">
-                    Получение займа: банковская карта, qiwi кошелек, платёжные
-                    системы, яндекс.деньги, банковский счет
-                  </li>
-                  <li class="offer-card__about-item">
-                    Погашение: в конце срока
-                  </li>
-                  <li class="offer-card__about-item">Пролонгация</li>
-                  <li class="offer-card__about-item">Отсрочка</li>
-                  <li class="offer-card__about-item">Штрафы</li>
-                  <li class="offer-card__about-item">
-                    Место заключения договора: онлайн
-                  </li>
-                  <li class="offer-card__about-more">Подробнее</li>
-                </ul>
-                <a class="offer-card__go button" href="https://trkleads.ru/click/d9ffde18b4c4acdc18601f7efdad24b4">Перейти</a>
-              </li>
-              <li class="offers__item offer-card">
-                <div class="offer-card__top">
-                  <p class="offer-card__name">
-                    <a href="/mfo/onzaem">Onzaem</a>
-                    <!-- <span class="offer-card__comp">Смсфинанс</span> -->
-                  </p>
-                  <div class="offer-card__img">
-                    <img src="/img/partners/onzaem.png" alt="alt" />
-                  </div>
-                </div>
-                <div class="offer-card__contain">
-                  <p class="offer-card__prop">
-                    <span class="offer-card__prop-text">до 1,5 %</span>
-                    <span class="offer-card__prop-name">Ставка в день</span>
-                  </p>
-                  <p class="offer-card__prop">
-                    <span class="offer-card__prop-text">от 2 000 - до 10 000 ₽</span>
-                    <span class="offer-card__prop-name">Сумма</span>
-                  </p>
-                  <p class="offer-card__prop">
-                    <span class="offer-card__prop-text">от 5 - до 30 дней</span>
-                    <span class="offer-card__prop-name">Срок</span>
-                  </p>
-                </div>
-                <ul class="offer-card__about offer-card__about--closed">
-                  <li class="offer-card__about-item">
-                    На рынке не так давно. новым клиентам большие суммы не одобряют.
-                  </li>
-                  <li class="offer-card__about-item">
-                    Получение займа: банковская карта, qiwi кошелек, платёжные
-                    системы, яндекс.деньги, банковский счет
-                  </li>
-                  <li class="offer-card__about-item">
-                    Погашение: в конце срока
-                  </li>
-                  <li class="offer-card__about-item">Пролонгация</li>
-                  <li class="offer-card__about-item">Отсрочка</li>
-                  <li class="offer-card__about-item">Штрафы</li>
-                  <li class="offer-card__about-item">
-                    Место заключения договора: онлайн
-                  </li>
-                  <li class="offer-card__about-more">Подробнее</li>
-                </ul>
-                <a class="offer-card__go button" href="https://go.leadgid.ru/aff_c?offer_id=3465&aff_id=27131">Перейти</a>
-              </li>
-              <li class="offers__item offer-card">
-                <div class="offer-card__top">
-                  <p class="offer-card__name">
-                    <a href="/mfo/webzaim">Веб-займ / Web-zaim</a>
-                    <!-- <span class="offer-card__comp">Смсфинанс</span> -->
-                  </p>
-                  <div class="offer-card__img">
-                    <img src="/img/partners/webzaim.png" alt="alt" />
-                  </div>
-                </div>
-                <div class="offer-card__contain">
-                  <p class="offer-card__prop">
-                    <span class="offer-card__prop-text">от 0,6 - до 1,5 %</span>
-                    <span class="offer-card__prop-name">Ставка в день</span>
-                  </p>
-                  <p class="offer-card__prop">
-                    <span class="offer-card__prop-text">от 1 500 - до 30 000 ₽</span>
-                    <span class="offer-card__prop-name">Сумма</span>
-                  </p>
-                  <p class="offer-card__prop">
-                    <span class="offer-card__prop-text">от 5 - до 30 дней</span>
-                    <span class="offer-card__prop-name">Срок</span>
-                  </p>
-                </div>
-                <ul class="offer-card__about offer-card__about--closed">
-                  <li class="offer-card__about-item">
-                    Действует акция: Процентная ставка на 50 % снижена.
-                  </li>
-                  <li class="offer-card__about-item">
-                    Получение займа: банковская карта, qiwi кошелек, платёжные
-                    системы, яндекс.деньги, банковский счет
-                  </li>
-                  <li class="offer-card__about-item">
-                    Погашение: в конце срока
-                  </li>
-                  <li class="offer-card__about-item">Пролонгация</li>
-                  <li class="offer-card__about-item">Отсрочка</li>
-                  <li class="offer-card__about-item">Штрафы</li>
-                  <li class="offer-card__about-item">
-                    Место заключения договора: онлайн
-                  </li>
-                  <li class="offer-card__about-more">Подробнее</li>
-                </ul>
-                <a class="offer-card__go button" href="https://pxl.leads.su/click/ace8a65167f3375fdec688ca49580d9c">Перейти</a>
-              </li>
-              <li class="offers__item offer-card">
-                <div class="offer-card__top">
-                  <p class="offer-card__name">
-                    <a href="/mfo/moneza">Монеза / Moneza</a>
-                    <!-- <span class="offer-card__comp">Смсфинанс</span> -->
-                  </p>
-                  <div class="offer-card__img">
-                    <img src="/img/partners/moneza.png" alt="alt" />
-                  </div>
-                </div>
-                <div class="offer-card__contain">
-                  <p class="offer-card__prop">
-                    <span class="offer-card__prop-text">от 0,00 - до 1,5 %</span>
-                    <span class="offer-card__prop-name">Ставка в день</span>
-                  </p>
-                  <p class="offer-card__prop">
-                    <span class="offer-card__prop-text">от 2 000 - до 30 000 ₽</span>
-                    <span class="offer-card__prop-name">Сумма</span>
-                  </p>
-                  <p class="offer-card__prop">
-                    <span class="offer-card__prop-text">от 5 - до 30 дней</span>
-                    <span class="offer-card__prop-name">Срок</span>
-                  </p>
-                </div>
-                <ul class="offer-card__about offer-card__about--closed">
-                  <li class="offer-card__about-item">
-                    Действует акция: Заем под 0% на 30 дней
-                  </li>
-                  <li class="offer-card__about-item">
-                    Получение займа: банковская карта, qiwi кошелек, платёжные
-                    системы, яндекс.деньги, банковский счет
-                  </li>
-                  <li class="offer-card__about-item">
-                    Погашение: в конце срока
-                  </li>
-                  <li class="offer-card__about-item">Пролонгация</li>
-                  <li class="offer-card__about-item">Отсрочка</li>
-                  <li class="offer-card__about-item">Штрафы</li>
-                  <li class="offer-card__about-item">
-                    Место заключения договора: онлайн
-                  </li>
-                  <li class="offer-card__about-more">Подробнее</li>
-                </ul>
-                <a class="offer-card__go button" href="https://pxl.leads.su/click/9aa65613282ed520a94f7a4185a19da5">Перейти</a>
-              </li>
-              <li class="offers__item offer-card">
-                <div class="offer-card__top">
-                  <p class="offer-card__name">
-                    <a href="/mfo/microklad">Микроклад</a>
-                    <!-- <span class="offer-card__comp">Смсфинанс</span> -->
-                  </p>
-                  <div class="offer-card__img">
-                    <img src="/img/partners/microklad.png" alt="alt" />
-                  </div>
-                </div>
-                <div class="offer-card__contain">
-                  <p class="offer-card__prop">
-                    <span class="offer-card__prop-text">от 1,00 %</span>
-                    <span class="offer-card__prop-name">Ставка в день</span>
-                  </p>
-                  <p class="offer-card__prop">
-                    <span class="offer-card__prop-text">от 1 000 - до 30 000 ₽</span>
-                    <span class="offer-card__prop-name">Сумма</span>
-                  </p>
-                  <p class="offer-card__prop">
-                    <span class="offer-card__prop-text">от 7 - до 30 дней</span>
-                    <span class="offer-card__prop-name">Срок</span>
-                  </p>
-                </div>
-                <ul class="offer-card__about offer-card__about--closed">
-                  <li class="offer-card__about-item">
-                    Работают по всей России. При каждом последующем обращении процентная ставка снижается.
-                  </li>
-                  <li class="offer-card__about-item">
-                    Получение займа: банковская карта, qiwi кошелек, платёжные
-                    системы, яндекс.деньги, банковский счет
-                  </li>
-                  <li class="offer-card__about-item">
-                    Погашение: в конце срока
-                  </li>
-                  <li class="offer-card__about-item">Пролонгация</li>
-                  <li class="offer-card__about-item">Отсрочка</li>
-                  <li class="offer-card__about-item">Штрафы</li>
-                  <li class="offer-card__about-item">
-                    Место заключения договора: онлайн
-                  </li>
-                  <li class="offer-card__about-more">Подробнее</li>
-                </ul>
-                <a class="offer-card__go button" href="https://pxl.leads.su/click/d6eddff3f6b13ff93f84fd169682da5b">Перейти</a>
-              </li>
-              <li class="offers__item offer-card">
-                <div class="offer-card__top">
-                  <p class="offer-card__name">
-                    <a href="/mfo/online-zaim">ONLINE-ZAIM</a>
-                    <!-- <span class="offer-card__comp">Смсфинанс</span> -->
-                  </p>
-                  <div class="offer-card__img">
-                    <img src="/img/partners/onlinezaim.png" alt="alt" />
-                  </div>
-                </div>
-                <div class="offer-card__contain">
-                  <p class="offer-card__prop">
-                    <span class="offer-card__prop-text">от 0,25 - до 1,5 %</span>
-                    <span class="offer-card__prop-name">Ставка в день</span>
-                  </p>
-                  <p class="offer-card__prop">
-                    <span class="offer-card__prop-text">от 1 000 - до 30 000 ₽</span>
-                    <span class="offer-card__prop-name">Сумма</span>
-                  </p>
-                  <p class="offer-card__prop">
-                    <span class="offer-card__prop-text">от 6 - до 25 дней</span>
-                    <span class="offer-card__prop-name">Срок</span>
-                  </p>
-                </div>
-                <ul class="offer-card__about offer-card__about--closed">
-                  <li class="offer-card__about-item">
-                    Первый заем можно взять до 10 000 ₽ со сниженым %.
-                  </li>
-                  <li class="offer-card__about-item">
-                    Получение займа: банковская карта, qiwi кошелек, платёжные
-                    системы, яндекс.деньги, банковский счет
-                  </li>
-                  <li class="offer-card__about-item">
-                    Погашение: в конце срока
-                  </li>
-                  <li class="offer-card__about-item">Пролонгация</li>
-                  <li class="offer-card__about-item">Отсрочка</li>
-                  <li class="offer-card__about-item">Штрафы</li>
-                  <li class="offer-card__about-item">
-                    Место заключения договора: онлайн
-                  </li>
-                  <li class="offer-card__about-more">Подробнее</li>
-                </ul>
-                <a class="offer-card__go button" href="https://trkleads.ru/click/d0cfdd80c78531a71f105d73c8128dd8">Перейти</a>
-              </li>
-              <li class="offers__item offer-card">
-                <div class="offer-card__top">
-                  <p class="offer-card__name">
-                    <a href="/mfo/womoney">Womoney</a>
-                    <!-- <span class="offer-card__comp">Смсфинанс</span> -->
-                  </p>
-                  <div class="offer-card__img">
-                    <img src="/img/partners/womoney.png" alt="alt" />
-                  </div>
-                </div>
-                <div class="offer-card__contain">
-                  <p class="offer-card__prop">
-                    <span class="offer-card__prop-text">от 0,25 - до 1,5 %</span>
-                    <span class="offer-card__prop-name">Ставка в день</span>
-                  </p>
-                  <p class="offer-card__prop">
-                    <span class="offer-card__prop-text">от 1 000 - до 30 000 ₽</span>
-                    <span class="offer-card__prop-name">Сумма</span>
-                  </p>
-                  <p class="offer-card__prop">
-                    <span class="offer-card__prop-text">от 6 - до 25 дней</span>
-                    <span class="offer-card__prop-name">Срок</span>
-                  </p>
-                </div>
-                <ul class="offer-card__about offer-card__about--closed">
-                  <li class="offer-card__about-item">
-                    До 10 000 ₽ процент снижен.
-                  </li>
-                  <li class="offer-card__about-item">
-                    Получение займа: банковская карта, qiwi кошелек, платёжные
-                    системы, яндекс.деньги, банковский счет
-                  </li>
-                  <li class="offer-card__about-item">
-                    Погашение: в конце срока
-                  </li>
-                  <li class="offer-card__about-item">Пролонгация</li>
-                  <li class="offer-card__about-item">Отсрочка</li>
-                  <li class="offer-card__about-item">Штрафы</li>
-                  <li class="offer-card__about-item">
-                    Место заключения договора: онлайн
-                  </li>
-                  <li class="offer-card__about-more">Подробнее</li>
-                </ul>
-                <a class="offer-card__go button" href="https://pxl.leads.su/click/88b9a3ff6465aa2ba9b335368492c274">Перейти</a>
-              </li>
-              <li class="offers__item offer-card">
-                <div class="offer-card__top">
-                  <p class="offer-card__name">
-                    <a href="/mfo/zaimon">ZAIMON</a>
-                    <!-- <span class="offer-card__comp">Смсфинанс</span> -->
-                  </p>
-                  <div class="offer-card__img">
-                    <img src="/img/partners/zaimon.png" alt="alt" />
-                  </div>
-                </div>
-                <div class="offer-card__contain">
-                  <p class="offer-card__prop">
-                    <span class="offer-card__prop-text">от 1,00 - до 1,5 %</span>
-                    <span class="offer-card__prop-name">Ставка в день</span>
-                  </p>
-                  <p class="offer-card__prop">
-                    <span class="offer-card__prop-text">от 3 500 - до 30 000 ₽</span>
-                    <span class="offer-card__prop-name">Сумма</span>
-                  </p>
-                  <p class="offer-card__prop">
-                    <span class="offer-card__prop-text">от 6 - до 25 дней</span>
-                    <span class="offer-card__prop-name">Срок</span>
-                  </p>
-                </div>
-                <ul class="offer-card__about offer-card__about--closed">
-                  <li class="offer-card__about-item">
-                    Быстрая выдача денег. Работают по всей РФ.
-                  </li>
-                  <li class="offer-card__about-item">
-                    Получение займа: банковская карта, qiwi кошелек, платёжные
-                    системы, яндекс.деньги, банковский счет
-                  </li>
-                  <li class="offer-card__about-item">
-                    Погашение: в конце срока
-                  </li>
-                  <li class="offer-card__about-item">Пролонгация</li>
-                  <li class="offer-card__about-item">Отсрочка</li>
-                  <li class="offer-card__about-item">Штрафы</li>
-                  <li class="offer-card__about-item">
-                    Место заключения договора: онлайн
-                  </li>
-                  <li class="offer-card__about-more">Подробнее</li>
-                </ul>
-                <a class="offer-card__go button" href="https://pxl.leads.su/click/a0d1dbaec56fe63b8fec6e3a3654eb52">Перейти</a>
-              </li>
-              <li class="offers__item offer-card">
-                <div class="offer-card__top">
-                  <p class="offer-card__name">
-                    <a href="/mfo/zaymigo">Займиго / Zaymigo</a>
-                    <!-- <span class="offer-card__comp">Смсфинанс</span> -->
-                  </p>
-                  <div class="offer-card__img">
-                    <img src="/img/partners/zaymigo.png" alt="alt" />
-                  </div>
-                </div>
-                <div class="offer-card__contain">
-                  <p class="offer-card__prop">
-                    <span class="offer-card__prop-text">от 0,49 - до 1,5 %</span>
-                    <span class="offer-card__prop-name">Ставка в день</span>
-                  </p>
-                  <p class="offer-card__prop">
-                    <span class="offer-card__prop-text">от 1 000 - до 30 000 ₽</span>
-                    <span class="offer-card__prop-name">Сумма</span>
-                  </p>
-                  <p class="offer-card__prop">
-                    <span class="offer-card__prop-text">от 1 - до 140 дней</span>
-                    <span class="offer-card__prop-name">Срок</span>
-                  </p>
-                </div>
-                <ul class="offer-card__about offer-card__about--closed">
-                  <li class="offer-card__about-item">
-                    Работают по Рф. Есть специальные условия для новых клиентов!
-                  </li>
-                  <li class="offer-card__about-item">
-                    Получение займа: банковская карта, qiwi кошелек, платёжные
-                    системы, яндекс.деньги, банковский счет
-                  </li>
-                  <li class="offer-card__about-item">
-                    Погашение: в конце срока
-                  </li>
-                  <li class="offer-card__about-item">Пролонгация</li>
-                  <li class="offer-card__about-item">Отсрочка</li>
-                  <li class="offer-card__about-item">Штрафы</li>
-                  <li class="offer-card__about-item">
-                    Место заключения договора: онлайн
-                  </li>
-                  <li class="offer-card__about-more">Подробнее</li>
-                </ul>
-                <a class="offer-card__go button" href="https://trkleads.ru/click/3e9b887188304b82850bec1fb8ea0e84">Перейти</a>
-              </li>
-              <li class="offers__item offer-card">
-                <div class="offer-card__top">
-                  <p class="offer-card__name">
-                    <a href="/mfo/fastmoney">Fastmoney / Фастмани</a>
-                    <!-- <span class="offer-card__comp">Смсфинанс</span> -->
-                  </p>
-                  <div class="offer-card__img">
-                    <img src="/img/partners/fastmoney.png" alt="alt" />
-                  </div>
-                </div>
-                <div class="offer-card__contain">
-                  <p class="offer-card__prop">
-                    <span class="offer-card__prop-text">до 1,5 %</span>
-                    <span class="offer-card__prop-name">Ставка в день</span>
-                  </p>
-                  <p class="offer-card__prop">
-                    <span class="offer-card__prop-text">от 3 000 - до 30 000 ₽</span>
-                    <span class="offer-card__prop-name">Сумма</span>
-                  </p>
-                  <p class="offer-card__prop">
-                    <span class="offer-card__prop-text">от 7 - до 30 дней</span>
-                    <span class="offer-card__prop-name">Срок</span>
-                  </p>
-                </div>
-                <ul class="offer-card__about offer-card__about--closed">
-                  <li class="offer-card__about-item">
-                    Работают 24/7. Есть возможность исправить Ваш кредитный Рейтинг.
-                  </li>
-                  <li class="offer-card__about-item">
-                    Получение займа: банковская карта, qiwi кошелек, платёжные
-                    системы, яндекс.деньги, банковский счет
-                  </li>
-                  <li class="offer-card__about-item">
-                    Погашение: в конце срока
-                  </li>
-                  <li class="offer-card__about-item">Пролонгация</li>
-                  <li class="offer-card__about-item">Отсрочка</li>
-                  <li class="offer-card__about-item">Штрафы</li>
-                  <li class="offer-card__about-item">
-                    Место заключения договора: онлайн
-                  </li>
-                  <li class="offer-card__about-more">Подробнее</li>
-                </ul>
-                <a class="offer-card__go button" href="https://go.leadgid.ru/aff_c?offer_id=4029&aff_id=27131">Перейти</a>
-              </li>
-              <li class="offers__item offer-card">
-                <div class="offer-card__top">
-                  <p class="offer-card__name">
-                    <a href="/mfo/dozarplati">До зарплаты</a>
-                    <!-- <span class="offer-card__comp">Смсфинанс</span> -->
-                  </p>
-                  <div class="offer-card__img">
-                    <img src="/img/partners/dozarplati.png" alt="alt" />
-                  </div>
-                </div>
-                <div class="offer-card__contain">
-                  <p class="offer-card__prop">
-                    <span class="offer-card__prop-text">от 0,5 - до 1,5 %</span>
-                    <span class="offer-card__prop-name">Ставка в день</span>
-                  </p>
-                  <p class="offer-card__prop">
-                    <span class="offer-card__prop-text">от 2 000 - до 1 000 000 ₽</span>
-                    <span class="offer-card__prop-name">Сумма</span>
-                  </p>
-                  <p class="offer-card__prop">
-                    <span class="offer-card__prop-text">от 7 - до 365 дней</span>
-                    <span class="offer-card__prop-name">Срок</span>
-                  </p>
-                </div>
-                <ul class="offer-card__about offer-card__about--closed">
-                  <li class="offer-card__about-item">
-                    Действует акция: под 0 % для новых клиентов.
-                  </li>
-                  <li class="offer-card__about-item">
-                    Получение займа: банковская карта, qiwi кошелек, платёжные
-                    системы, яндекс.деньги, банковский счет
-                  </li>
-                  <li class="offer-card__about-item">
-                    Погашение: в конце срока
-                  </li>
-                  <li class="offer-card__about-item">Пролонгация</li>
-                  <li class="offer-card__about-item">Отсрочка</li>
-                  <li class="offer-card__about-item">Штрафы</li>
-                  <li class="offer-card__about-item">
-                    Место заключения договора: онлайн
-                  </li>
-                  <li class="offer-card__about-more">Подробнее</li>
-                </ul>
-                <a class="offer-card__go button" href="https://pxl.leads.su/click/4218127ec62113f16fc4fe3a7b9b553c">Перейти</a>
-              </li>
-              <li class="offers__item offer-card">
-                <div class="offer-card__top">
-                  <p class="offer-card__name">
-                    <a href="/mfo/zheldorzaim">Желдорзайм</a>
-                    <!-- <span class="offer-card__comp">Смсфинанс</span> -->
-                  </p>
-                  <div class="offer-card__img">
-                    <img src="/img/partners/zheldorzaim.png" alt="alt" />
-                  </div>
-                </div>
-                <div class="offer-card__contain">
-                  <p class="offer-card__prop">
-                    <span class="offer-card__prop-text">от 15,50 %</span>
-                    <span class="offer-card__prop-name">Ставка в день</span>
-                  </p>
-                  <p class="offer-card__prop">
-                    <span class="offer-card__prop-text">от 10 000 - до 50 000 ₽</span>
-                    <span class="offer-card__prop-name">Сумма</span>
-                  </p>
-                  <p class="offer-card__prop">
-                    <span class="offer-card__prop-text">от 2 - до 8 месяц</span>
-                    <span class="offer-card__prop-name">Срок</span>
-                  </p>
-                </div>
-                <ul class="offer-card__about offer-card__about--closed">
-                  <li class="offer-card__about-item">
-                    Быстрый заем денег для железнодорожников.
-                  </li>
-                  <li class="offer-card__about-item">
-                    Получение займа: банковская карта, qiwi кошелек, платёжные
-                    системы, яндекс.деньги, банковский счет
-                  </li>
-                  <li class="offer-card__about-item">
-                    Погашение: в конце срока
-                  </li>
-                  <li class="offer-card__about-item">Пролонгация</li>
-                  <li class="offer-card__about-item">Отсрочка</li>
-                  <li class="offer-card__about-item">Штрафы</li>
-                  <li class="offer-card__about-item">
-                    Место заключения договора: онлайн
-                  </li>
-                  <li class="offer-card__about-more">Подробнее</li>
-                </ul>
-                <a class="offer-card__go button" href="https://go.leadgid.ru/aff_c?offer_id=2815&aff_id=27131">Перейти</a>
-              </li>
-              <li class="offers__item offer-card">
-                <div class="offer-card__top">
-                  <p class="offer-card__name">
-                    <a href="/mfo/carmoney">CarMoney / Кармани</a>
-                    <!-- <span class="offer-card__comp">Смсфинанс</span> -->
-                  </p>
-                  <div class="offer-card__img">
-                    <img src="/img/partners/carmoney.png" alt="alt" />
-                  </div>
-                </div>
-                <div class="offer-card__contain">
-                  <p class="offer-card__prop">
-                    <span class="offer-card__prop-text">от 2,50 - до 8,5 %</span>
-                    <span class="offer-card__prop-name">Ставка в день</span>
-                  </p>
-                  <p class="offer-card__prop">
-                    <span class="offer-card__prop-text">от 50 000 - до 1 000 000 ₽</span>
-                    <span class="offer-card__prop-name">Сумма</span>
-                  </p>
-                  <p class="offer-card__prop">
-                    <span class="offer-card__prop-text">от 24 - до 60 месяцев</span>
-                    <span class="offer-card__prop-name">Срок</span>
-                  </p>
-                </div>
-                <ul class="offer-card__about offer-card__about--closed">
-                  <li class="offer-card__about-item">
-                    Крупная компания, дают под залог ПТС. Минимум документов, без проверок.
-                  </li>
-                  <li class="offer-card__about-item">
-                    Получение займа: банковская карта, qiwi кошелек, платёжные
-                    системы, яндекс.деньги, банковский счет
-                  </li>
-                  <li class="offer-card__about-item">
-                    Погашение: в конце срока
-                  </li>
-                  <li class="offer-card__about-item">Пролонгация</li>
-                  <li class="offer-card__about-item">Отсрочка</li>
-                  <li class="offer-card__about-item">Штрафы</li>
-                  <li class="offer-card__about-item">
-                    Место заключения договора: онлайн
-                  </li>
-                  <li class="offer-card__about-more">Подробнее</li>
-                </ul>
-                <a class="offer-card__go button" href="https://go.leadgid.ru/aff_c?offer_id=2729&aff_id=27131">Перейти</a>
-              </li>
-              <li class="offers__item offer-card">
-                <div class="offer-card__top">
-                  <p class="offer-card__name">
-                    <a href="/mfo/glavfinans">ГлавФинанс / Glavfinans</a>
-                    <!-- <span class="offer-card__comp">Смсфинанс</span> -->
-                  </p>
-                  <div class="offer-card__img">
-                    <img src="/img/partners/glavfinans.png" alt="alt" />
-                  </div>
-                </div>
-                <div class="offer-card__contain">
-                  <p class="offer-card__prop">
-                    <span class="offer-card__prop-text">от 0,65 - до 1,5 %</span>
-                    <span class="offer-card__prop-name">Ставка в день</span>
-                  </p>
-                  <p class="offer-card__prop">
-                    <span class="offer-card__prop-text">от 3 000 - до 100 000 ₽</span>
-                    <span class="offer-card__prop-name">Сумма</span>
-                  </p>
-                  <p class="offer-card__prop">
-                    <span class="offer-card__prop-text">от 8 - до 98 дней</span>
-                    <span class="offer-card__prop-name">Срок</span>
-                  </p>
-                </div>
-                <ul class="offer-card__about offer-card__about--closed">
-                  <li class="offer-card__about-item">
-                    Работают по всей России, выдают на карту, без лишних справок.
-                  </li>
-                  <li class="offer-card__about-item">
-                    Получение займа: банковская карта, qiwi кошелек, платёжные
-                    системы, яндекс.деньги, банковский счет
-                  </li>
-                  <li class="offer-card__about-item">
-                    Погашение: в конце срока
-                  </li>
-                  <li class="offer-card__about-item">Пролонгация</li>
-                  <li class="offer-card__about-item">Отсрочка</li>
-                  <li class="offer-card__about-item">Штрафы</li>
-                  <li class="offer-card__about-item">
-                    Место заключения договора: онлайн
-                  </li>
-                  <li class="offer-card__about-more">Подробнее</li>
-                </ul>
-                <a class="offer-card__go button" href="https://pxl.leads.su/click/d3a9737991b473de50d32fe95cb8d68e">Перейти</a>
-              </li>
-              <li class="offers__item offer-card">
-                <div class="offer-card__top">
-                  <p class="offer-card__name">
-                    <a href="/mfo/minifinance">Минифинанс / Minifinance</a>
-                    <!-- <span class="offer-card__comp">Смсфинанс</span> -->
-                  </p>
-                  <div class="offer-card__img">
-                    <img src="/img/partners/minifinans.png" alt="alt" />
-                  </div>
-                </div>
-                <div class="offer-card__contain">
-                  <p class="offer-card__prop">
-                    <span class="offer-card__prop-text">от 1,00 - до 1,5 %</span>
-                    <span class="offer-card__prop-name">Ставка в день</span>
-                  </p>
-                  <p class="offer-card__prop">
-                    <span class="offer-card__prop-text">от 1 000 - до 30 000 ₽</span>
-                    <span class="offer-card__prop-name">Сумма</span>
-                  </p>
-                  <p class="offer-card__prop">
-                    <span class="offer-card__prop-text">от 1 - до 365 дней</span>
-                    <span class="offer-card__prop-name">Срок</span>
-                  </p>
-                </div>
-                <ul class="offer-card__about offer-card__about--closed">
-                  <li class="offer-card__about-item">
-                    Получить можно на карту в несколько кликов, без справок и поручителей.
-                  </li>
-                  <li class="offer-card__about-item">
-                    Получение займа: банковская карта, qiwi кошелек, платёжные
-                    системы, яндекс.деньги, банковский счет
-                  </li>
-                  <li class="offer-card__about-item">
-                    Погашение: в конце срока
-                  </li>
-                  <li class="offer-card__about-item">Пролонгация</li>
-                  <li class="offer-card__about-item">Отсрочка</li>
-                  <li class="offer-card__about-item">Штрафы</li>
-                  <li class="offer-card__about-item">
-                    Место заключения договора: онлайн
-                  </li>
-                  <li class="offer-card__about-more">Подробнее</li>
-                </ul>
-                <a class="offer-card__go button" href="https://go.leadgid.ru/aff_c?offer_id=2693&aff_id=27131">Перейти</a>
-              </li>
-              <li class="offers__item offer-card">
-                <div class="offer-card__top">
-                  <p class="offer-card__name">
-                    <a href="/mfo/srochnodengi">Срочноденьги</a>
-                    <!-- <span class="offer-card__comp">Смсфинанс</span> -->
-                  </p>
-                  <div class="offer-card__img">
-                    <img src="/img/partners/srochnodengi.png" alt="alt" />
-                  </div>
-                </div>
-                <div class="offer-card__contain">
-                  <p class="offer-card__prop">
-                    <span class="offer-card__prop-text">до 1,5 %</span>
-                    <span class="offer-card__prop-name">Ставка в день</span>
-                  </p>
-                  <p class="offer-card__prop">
-                    <span class="offer-card__prop-text">от 1 000 - до 100 000 ₽</span>
-                    <span class="offer-card__prop-name">Сумма</span>
-                  </p>
-                  <p class="offer-card__prop">
-                    <span class="offer-card__prop-text">от 1 - до 180 дней</span>
-                    <span class="offer-card__prop-name">Срок</span>
-                  </p>
-                </div>
-                <ul class="offer-card__about offer-card__about--closed">
-                  <li class="offer-card__about-item">
-                    Без справок о доходах. Работают по всей РФ онлайн.
-                  </li>
-                  <li class="offer-card__about-item">
-                    Получение займа: банковская карта, qiwi кошелек, платёжные
-                    системы, яндекс.деньги, банковский счет
-                  </li>
-                  <li class="offer-card__about-item">
-                    Погашение: в конце срока
-                  </li>
-                  <li class="offer-card__about-item">Пролонгация</li>
-                  <li class="offer-card__about-item">Отсрочка</li>
-                  <li class="offer-card__about-item">Штрафы</li>
-                  <li class="offer-card__about-item">
-                    Место заключения договора: онлайн
-                  </li>
-                  <li class="offer-card__about-more">Подробнее</li>
-                </ul>
-                <a class="offer-card__go button" href="https://go.leadgid.ru/aff_c?offer_id=3235&aff_id=27131">Перейти</a>
-              </li>
-              <li class="offers__item offer-card">
-                <div class="offer-card__top">
-                  <p class="offer-card__name">
-                    <a href="/mfo/prunto">Finspin</a>
-                    <!-- <span class="offer-card__comp">Смсфинанс</span> -->
-                  </p>
-                  <div class="offer-card__img">
-                    <img src="/img/partners/finspin.png" alt="alt" />
-                  </div>
-                </div>
-                <div class="offer-card__contain">
-                  <p class="offer-card__prop">
-                    <span class="offer-card__prop-text">от 0,9 - до 2 %</span>
-                    <span class="offer-card__prop-name">Ставка в день</span>
-                  </p>
-                  <p class="offer-card__prop">
-                    <span class="offer-card__prop-text">от 1 000 - до 30 000 ₽</span>
-                    <span class="offer-card__prop-name">Сумма</span>
-                  </p>
-                  <p class="offer-card__prop">
-                    <span class="offer-card__prop-text">от 6 - до 30 дней</span>
-                    <span class="offer-card__prop-name">Срок</span>
-                  </p>
-                </div>
-                <ul class="offer-card__about offer-card__about--closed">
-                  <li class="offer-card__about-item">
-                    Сервис по подбору займа и карты.
-                  </li>
-                  <li class="offer-card__about-item">
-                    Получение займа: банковская карта, qiwi кошелек, платёжные
-                    системы, яндекс.деньги, банковский счет
-                  </li>
-                  <li class="offer-card__about-item">
-                    Погашение: в конце срока
-                  </li>
-                  <li class="offer-card__about-item">Пролонгация</li>
-                  <li class="offer-card__about-item">Отсрочка</li>
-                  <li class="offer-card__about-item">Штрафы</li>
-                  <li class="offer-card__about-item">
-                    Место заключения договора: онлайн
-                  </li>
-                  <li class="offer-card__about-more">Подробнее</li>
-                </ul>
-                <a class="offer-card__go button" href="https://go.leadgid.ru/aff_c?offer_id=3419&aff_id=27131">Перейти</a>
-              </li>
-              <li class="offers__item offer-card">
-                <div class="offer-card__top">
-                  <p class="offer-card__name">
-                    <a href="/mfo/optimazaim">OptimaZaim</a>
-                    <!-- <span class="offer-card__comp">Смсфинанс</span> -->
-                  </p>
-                  <div class="offer-card__img">
-                    <img src="/img/partners/optimazaim.png" alt="alt" />
-                  </div>
-                </div>
-                <div class="offer-card__contain">
-                  <p class="offer-card__prop">
-                    <span class="offer-card__prop-text">от 0,9 - до 2 %</span>
-                    <span class="offer-card__prop-name">Ставка в день</span>
-                  </p>
-                  <p class="offer-card__prop">
-                    <span class="offer-card__prop-text">от 1 000 - до 80 000 ₽</span>
-                    <span class="offer-card__prop-name">Сумма</span>
-                  </p>
-                  <p class="offer-card__prop">
-                    <span class="offer-card__prop-text">от 1 - до 365 дней</span>
-                    <span class="offer-card__prop-name">Срок</span>
-                  </p>
-                </div>
-                <ul class="offer-card__about offer-card__about--closed">
-                  <li class="offer-card__about-item">
-                    Большая вероятность одобрения. На большие суммы может понадобиться доп. документы
-                  </li>
-                  <li class="offer-card__about-item">
-                    Получение займа: банковская карта, qiwi кошелек, платёжные
-                    системы, яндекс.деньги, банковский счет
-                  </li>
-                  <li class="offer-card__about-item">
-                    Погашение: в конце срока
-                  </li>
-                  <li class="offer-card__about-item">Пролонгация</li>
-                  <li class="offer-card__about-item">Отсрочка</li>
-                  <li class="offer-card__about-item">Штрафы</li>
-                  <li class="offer-card__about-item">
-                    Место заключения договора: онлайн
-                  </li>
-                  <li class="offer-card__about-more">Подробнее</li>
-                </ul>
-                <a class="offer-card__go button" href="https://go.leadgid.ru/aff_c?offer_id=3207&aff_id=27131">Перейти</a>
-              </li>
-              <li class="offers__item offer-card">
-                <div class="offer-card__top">
-                  <p class="offer-card__name">
-                    <a href="/mfo/zaimco">ZaimCo</a>
-                    <!-- <span class="offer-card__comp">Смсфинанс</span> -->
-                  </p>
-                  <div class="offer-card__img">
-                    <img src="/img/partners/zaimco.png" alt="alt" />
-                  </div>
-                </div>
-                <div class="offer-card__contain">
-                  <p class="offer-card__prop">
-                    <span class="offer-card__prop-text">от 0,9 - до 2 %</span>
-                    <span class="offer-card__prop-name">Ставка в день</span>
-                  </p>
-                  <p class="offer-card__prop">
-                    <span class="offer-card__prop-text">от 1 000 - до 80 000 ₽</span>
-                    <span class="offer-card__prop-name">Сумма</span>
-                  </p>
-                  <p class="offer-card__prop">
-                    <span class="offer-card__prop-text">от 1 - до 365 дней</span>
-                    <span class="offer-card__prop-name">Срок</span>
-                  </p>
-                </div>
-                <ul class="offer-card__about offer-card__about--closed">
-                  <li class="offer-card__about-item">
-                    Простые этапы для получения. Нужно Регистрироваться на сайте.
-                  </li>
-                  <li class="offer-card__about-item">
-                    Получение займа: банковская карта, qiwi кошелек, платёжные
-                    системы, яндекс.деньги, банковский счет
-                  </li>
-                  <li class="offer-card__about-item">
-                    Погашение: в конце срока
-                  </li>
-                  <li class="offer-card__about-item">Пролонгация</li>
-                  <li class="offer-card__about-item">Отсрочка</li>
-                  <li class="offer-card__about-item">Штрафы</li>
-                  <li class="offer-card__about-item">
-                    Место заключения договора: онлайн
-                  </li>
-                  <li class="offer-card__about-more">Подробнее</li>
-                </ul>
-                <a class="offer-card__go button" href="https://go.leadgid.ru/aff_c?offer_id=3209&aff_id=27131">Перейти</a>
-              </li>
-            </ul>
+          </legend>
+          <div class="filters__filter">
+            <label class="filters__label" for="filter-amount">Введите сумму займа, руб.</label>
+            <input class="filters__input" id="filter-amount" name="amount" type="number" value="3000" maxlength="10"
+              minlength="4" min="1000" max="1000000" />
+            <div class="slider">
+              <div class="slider__conteiner">
+                <div class="slider__lenght">
+                  <div class="slider__depth"></div>
+                  <div class="slider__pin"></div>
+                </div>
+              </div>
+            </div>
           </div>
-        </section>
-        <section class="info">
-          <h2 class="hidden">
-            Займы онлайн - легкий способ занять деньги срочно через интернет
-          </h2>
-          <p class="info__text">
-            Почти у каждого гражданина РФ рано или поздно бывают экстренные
-            ситуации, когда нужны срочно деньги. В банках процесс оформления
-            занимает много времени. В такой ситуации выручают займы онлайн!
+          <div class="filters__filter">
+            <label class="filters__label" for="filter-period">Срок, дней</label>
+            <input class="filters__input" id="filter-period" name="period" type="number" value="3" maxlength="3"
+              minlength="1" min="1" max="365" />
+            <div class="slider">
+              <div class="slider__conteiner">
+                <div class="slider__lenght">
+                  <div class="slider__depth"></div>
+                  <div class="slider__pin"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+      </section>
+      <section class="offers">
+        <div class="offers__container">
+          <h2 class="hidden">Предложения</h2>
+          <p class="offers__caption">
+            Займы онлайн - большая экономия времени! Оформляйте займы из
+            любой точки РФ. Не нужно стоять в очередях, искать поручителя.
+            Выберите условия, отправьте заявку через интернет и получите
+            деньги на выгодных условиях!
           </p>
-          <p class="info__text">
-            Мгновенные займы онлайн легко помогут вам преодолеть финансовые
-            трудности. Для оформления вам нужно иметь паспорт, выход в
-            интернет, найти подходящие условия и пару минут для заполнения
-            заявки онлайн.
-          </p>
-          <h3 class="info__heading">
-            Микрозаем онлайн - это круглосуточная выдача денег
-          </h3>
-          <p class="info__text">
-            Наш сервис подобрал самые надежные и популярные займы в РФ,
-            большинство из них работают круглосуточно 24/7, без выходных.
-          </p>
-          <p class="info__text">
-            С нами легко сможете получить займ онлайн срочно, в любое время
-            суток. Достаточно оформить заявку, подождать 15 минут, получить
-            одобрение и в ближайшие часы получить деньги на любую для вас
-            удобную платежную систему (На карту, Золотая корона, Qiwi,
-            contact, Yandex.money или банковский счет).
-          </p>
-          <h3 class="info__heading">
-            Есть три основных требования для получения займа онлайн:
-          </h3>
-          <ul class="info__list list">
-            <li class="info__text info__item list__item">
-              Человек должен проживать в РФ
+          <ul class="offers__list">
+            <li class="offers__item offer-card">
+              <div class="offer-card__top">
+                <p class="offer-card__name">
+                  <a href="/mfo/creditplus">Кредит Плюс / CreditPlus </a>
+                  <!-- <span class="offer-card__comp">Смсфинанс</span> -->
+                </p>
+                <div class="offer-card__img">
+                  <img src="/img/partners/creditplus.png" alt="alt" />
+                </div>
+              </div>
+              <div class="offer-card__contain">
+                <p class="offer-card__prop">
+                  <span class="offer-card__prop-text">от 0,00 - до 1,5 %</span>
+                  <span class="offer-card__prop-name">Ставка в день</span>
+                </p>
+                <p class="offer-card__prop">
+                  <span class="offer-card__prop-text"> от 1 000 - до 30 000 ₽</span>
+                  <span class="offer-card__prop-name">Сумма</span>
+                </p>
+                <p class="offer-card__prop">
+                  <span class="offer-card__prop-text">от 5 - до 30 дней</span>
+                  <span class="offer-card__prop-name">Срок</span>
+                </p>
+              </div>
+              <ul class="offer-card__about offer-card__about--closed">
+                <li class="offer-card__about-item">
+                  Действует акция: Новым клиентам беспроцентный займ до 30 дней.
+                </li>
+                <li class="offer-card__about-item">
+                  Получение займа: банковская карта, qiwi кошелек, платёжные
+                  системы, яндекс.деньги, банковский счет
+                </li>
+                <li class="offer-card__about-item">
+                  Погашение: в конце срока
+                </li>
+                <li class="offer-card__about-item">Пролонгация</li>
+                <li class="offer-card__about-item">Отсрочка</li>
+                <li class="offer-card__about-item">Штрафы</li>
+                <li class="offer-card__about-item">
+                  Место заключения договора: онлайн
+                </li>
+                <li class="offer-card__about-more">Подробнее</li>
+              </ul>
+              <a class="offer-card__go button"
+                href="https://pxl.leads.su/click/c8888bf66de05bc8f3bb3eb495cc98bd">Перейти</a>
             </li>
-            <li class="info__text info__item list__item">
-              Возраст обращения от 18 лет
+            <li class="offers__item offer-card">
+              <div class="offer-card__top">
+                <p class="offer-card__name">
+                  <a href="/mfo/ezaem"> Езаем / Ezaem</a>
+                  <!-- <span class="offer-card__comp">Смсфинанс</span> -->
+                </p>
+                <div class="offer-card__img">
+                  <img src="/img/partners/ezaem.png" alt="alt" />
+                </div>
+              </div>
+              <div class="offer-card__contain">
+                <p class="offer-card__prop">
+                  <span class="offer-card__prop-text">от 0,00 - до 1,5 %</span>
+                  <span class="offer-card__prop-name">Ставка в день</span>
+                </p>
+                <p class="offer-card__prop">
+                  <span class="offer-card__prop-text">от 2 000 - до 30 000 ₽</span>
+                  <span class="offer-card__prop-name">Сумма</span>
+                </p>
+                <p class="offer-card__prop">
+                  <span class="offer-card__prop-text">от 5 - до 30 дней</span>
+                  <span class="offer-card__prop-name">Срок</span>
+                </p>
+              </div>
+              <ul class="offer-card__about offer-card__about--closed">
+                <li class="offer-card__about-item">
+                  Действует акция: Первый заем в данной компании под 0%.
+                </li>
+                <li class="offer-card__about-item">
+                  Получение займа: банковская карта, qiwi кошелек, платёжные
+                  системы, яндекс.деньги, банковский счет
+                </li>
+                <li class="offer-card__about-item">
+                  Погашение: в конце срока
+                </li>
+                <li class="offer-card__about-item">Пролонгация</li>
+                <li class="offer-card__about-item">Отсрочка</li>
+                <li class="offer-card__about-item">Штрафы</li>
+                <li class="offer-card__about-item">
+                  Место заключения договора: онлайн
+                </li>
+                <li class="offer-card__about-more">Подробнее</li>
+              </ul>
+              <a class="offer-card__go button"
+                href="https://trkleads.ru/click/30c7c441bb47a285dc6086de2df46861">Перейти</a>
             </li>
-            <li class="info__text info__item list__item">
-              Документ, подтверждающий личность (Паспорт)
+            <li class="offers__item offer-card">
+              <div class="offer-card__top">
+                <p class="offer-card__name">
+                  <a href="/mfo/zaymer">Займер / Zaymer</a>
+                  <!-- <span class="offer-card__comp">Смсфинанс</span> -->
+                </p>
+                <div class="offer-card__img">
+                  <img src="/img/partners/zaymer.png" alt="alt" />
+                </div>
+              </div>
+              <div class="offer-card__contain">
+                <p class="offer-card__prop">
+                  <span class="offer-card__prop-text">от 0,76 – до 1,5 %</span>
+                  <span class="offer-card__prop-name">Ставка в день</span>
+                </p>
+                <p class="offer-card__prop">
+                  <span class="offer-card__prop-text">от 2 000 – до 30 000 ₽</span>
+                  <span class="offer-card__prop-name">Сумма</span>
+                </p>
+                <p class="offer-card__prop">
+                  <span class="offer-card__prop-text">от 7 – до 30 дней</span>
+                  <span class="offer-card__prop-name">Срок</span>
+                </p>
+              </div>
+              <ul class="offer-card__about offer-card__about--closed">
+                <li class="offer-card__about-item">
+                  Робот одобряет с любой кредитной историей, процент одобрения высокий.
+                </li>
+                <li class="offer-card__about-item">
+                  Получение займа: банковская карта, qiwi кошелек, платёжные
+                  системы, яндекс.деньги, банковский счет
+                </li>
+                <li class="offer-card__about-item">
+                  Погашение: в конце срока
+                </li>
+                <li class="offer-card__about-item">Пролонгация</li>
+                <li class="offer-card__about-item">Отсрочка</li>
+                <li class="offer-card__about-item">Штрафы</li>
+                <li class="offer-card__about-item">
+                  Место заключения договора: онлайн
+                </li>
+                <li class="offer-card__about-more">Подробнее</li>
+              </ul>
+              <a class="offer-card__go button"
+                href="https://trkleads.ru/click/6383a2927ebea44f68492733d79dbfcd">Перейти</a>
+            </li>
+            <li class="offers__item offer-card">
+              <div class="offer-card__top">
+                <p class="offer-card__name">
+                  <a href="/mfo/konga">Конга / Konga</a>
+                  <!-- <span class="offer-card__comp">Смсфинанс</span> -->
+                </p>
+                <div class="offer-card__img">
+                  <img src="/img/partners/konga.png" alt="alt" />
+                </div>
+              </div>
+              <div class="offer-card__contain">
+                <p class="offer-card__prop">
+                  <span class="offer-card__prop-text">от 0,00 - до 1,5%</span>
+                  <span class="offer-card__prop-name">Ставка в день</span>
+                </p>
+                <p class="offer-card__prop">
+                  <span class="offer-card__prop-text">от 2 000 - 70 000 ₽</span>
+                  <span class="offer-card__prop-name">Сумма</span>
+                </p>
+                <p class="offer-card__prop">
+                  <span class="offer-card__prop-text">от 16 - до 168 дней</span>
+                  <span class="offer-card__prop-name">Срок</span>
+                </p>
+              </div>
+              <ul class="offer-card__about offer-card__about--closed">
+                <li class="offer-card__about-item">
+                  Действует акция: При каждом последующем одобрении кредита возрастает скидка на 10%.
+                </li>
+                <li class="offer-card__about-item">
+                  Получение займа: банковская карта, qiwi кошелек, платёжные
+                  системы, яндекс.деньги, банковский счет
+                </li>
+                <li class="offer-card__about-item">
+                  Погашение: в конце срока
+                </li>
+                <li class="offer-card__about-item">Пролонгация</li>
+                <li class="offer-card__about-item">Отсрочка</li>
+                <li class="offer-card__about-item">Штрафы</li>
+                <li class="offer-card__about-item">
+                  Место заключения договора: онлайн
+                </li>
+                <li class="offer-card__about-more">Подробнее</li>
+              </ul>
+              <a class="offer-card__go button"
+                href="https://trkleads.ru/click/c7096eb8ca9111e2029b9d1a91c2a83f">Перейти</a>
+            </li>
+            <li class="offers__item offer-card">
+              <div class="offer-card__top">
+                <p class="offer-card__name">
+                  <a href="/mfo/bistrodengi">Быстроденьги / bistrodengi</a>
+                  <!-- <span class="offer-card__comp">Смсфинанс</span> -->
+                </p>
+                <div class="offer-card__img">
+                  <img src="/img/partners/bistrodengi.png" alt="alt" />
+                </div>
+              </div>
+              <div class="offer-card__contain">
+                <p class="offer-card__prop">
+                  <span class="offer-card__prop-text">от 0,00 - до 1,5 %</span>
+                  <span class="offer-card__prop-name">Ставка в день</span>
+                </p>
+                <p class="offer-card__prop">
+                  <span class="offer-card__prop-text">от 1 000 - до 30 000 ₽</span>
+                  <span class="offer-card__prop-name">Сумма</span>
+                </p>
+                <p class="offer-card__prop">
+                  <span class="offer-card__prop-text">от 7 - до 30 дней</span>
+                  <span class="offer-card__prop-name">Срок</span>
+                </p>
+              </div>
+              <ul class="offer-card__about offer-card__about--closed">
+                <li class="offer-card__about-item">
+                  Действует акция: Первые 3 дня проценты не идут, начинают идти с 4 дня.
+                </li>
+                <li class="offer-card__about-item">
+                  Получение займа: банковская карта, qiwi кошелек, платёжные
+                  системы, яндекс.деньги, банковский счет
+                </li>
+                <li class="offer-card__about-item">
+                  Погашение: в конце срока
+                </li>
+                <li class="offer-card__about-item">Пролонгация</li>
+                <li class="offer-card__about-item">Отсрочка</li>
+                <li class="offer-card__about-item">Штрафы</li>
+                <li class="offer-card__about-item">
+                  Место заключения договора: онлайн
+                </li>
+                <li class="offer-card__about-more">Подробнее</li>
+              </ul>
+              <a class="offer-card__go button"
+                href="https://pxl.leads.su/click/8e0dba7edcdf186baedce22701db0742">Перейти</a>
+            </li>
+            <li class="offers__item offer-card">
+              <div class="offer-card__top">
+                <p class="offer-card__name">
+                  <a href="/mfo/ekapusta">еКапуста / eKapusta</a>
+                  <!-- <span class="offer-card__comp">Смсфинанс</span> -->
+                </p>
+                <div class="offer-card__img">
+                  <img src="/img/partners/ekapusta.png" alt="alt" />
+                </div>
+              </div>
+              <div class="offer-card__contain">
+                <p class="offer-card__prop">
+                  <span class="offer-card__prop-text">от 0,00 - до 1,4 %</span>
+                  <span class="offer-card__prop-name">Ставка в день</span>
+                </p>
+                <p class="offer-card__prop">
+                  <span class="offer-card__prop-text">от 100 - 30 000 ₽</span>
+                  <span class="offer-card__prop-name">Сумма</span>
+                </p>
+                <p class="offer-card__prop">
+                  <span class="offer-card__prop-text">от 7 - до 21 дней</span>
+                  <span class="offer-card__prop-name">Срок</span>
+                </p>
+              </div>
+              <ul class="offer-card__about offer-card__about--closed">
+                <li class="offer-card__about-item">
+                  Действует акция: Бесплатный заем при условии погашения кредита в срок.
+                </li>
+                <li class="offer-card__about-item">
+                  Получение займа: банковская карта, qiwi кошелек, платёжные
+                  системы, яндекс.деньги, банковский счет
+                </li>
+                <li class="offer-card__about-item">
+                  Погашение: в конце срока
+                </li>
+                <li class="offer-card__about-item">Пролонгация</li>
+                <li class="offer-card__about-item">Отсрочка</li>
+                <li class="offer-card__about-item">Штрафы</li>
+                <li class="offer-card__about-item">
+                  Место заключения договора: онлайн
+                </li>
+                <li class="offer-card__about-more">Подробнее</li>
+              </ul>
+              <a class="offer-card__go button" href="https://go.leadgid.ru/aff_c?offer_id=1658&aff_id=27131">Перейти</a>
+            </li>
+            <li class="offers__item offer-card">
+              <div class="offer-card__top">
+                <p class="offer-card__name">
+                  <a href="/mfo/platiza">Платиза / Platiza</a>
+                  <!-- <span class="offer-card__comp">Смсфинанс</span> -->
+                </p>
+                <div class="offer-card__img">
+                  <img src="/img/partners/platiza.png" alt="alt" />
+                </div>
+              </div>
+              <div class="offer-card__contain">
+                <p class="offer-card__prop">
+                  <span class="offer-card__prop-text">до 1,5%</span>
+                  <span class="offer-card__prop-name">Ставка в день</span>
+                </p>
+                <p class="offer-card__prop">
+                  <span class="offer-card__prop-text">от 3 000 - до 30 000 ₽</span>
+                  <span class="offer-card__prop-name">Сумма</span>
+                </p>
+                <p class="offer-card__prop">
+                  <span class="offer-card__prop-text">от 5 - до 30 дней</span>
+                  <span class="offer-card__prop-name">Срок</span>
+                </p>
+              </div>
+              <ul class="offer-card__about offer-card__about--closed">
+                <li class="offer-card__about-item">
+                  При обращении нужен только паспорт, есть возможность получить одобрение с плохой кредитной историей.
+                </li>
+                <li class="offer-card__about-item">
+                  Получение займа: банковская карта, qiwi кошелек, платёжные
+                  системы, яндекс.деньги, банковский счет
+                </li>
+                <li class="offer-card__about-item">
+                  Погашение: в конце срока
+                </li>
+                <li class="offer-card__about-item">Пролонгация</li>
+                <li class="offer-card__about-item">Отсрочка</li>
+                <li class="offer-card__about-item">Штрафы</li>
+                <li class="offer-card__about-item">
+                  Место заключения договора: онлайн
+                </li>
+                <li class="offer-card__about-more">Подробнее</li>
+              </ul>
+              <a class="offer-card__go button"
+                href="https://trkleads.ru/click/def1851521f14ce2c9892a3b17d933f4">Перейти</a>
+            </li>
+            <li class="offers__item offer-card">
+              <div class="offer-card__top">
+                <p class="offer-card__name">
+                  <a href="/mfo/webbankir">Веббанкир / Webbankir</a>
+                  <!-- <span class="offer-card__comp">Смсфинанс</span> -->
+                </p>
+                <div class="offer-card__img">
+                  <img src="/img/partners/webbankir.png" alt="alt" />
+                </div>
+              </div>
+              <div class="offer-card__contain">
+                <p class="offer-card__prop">
+                  <span class="offer-card__prop-text">от 1,2 - до 1,5 %</span>
+                  <span class="offer-card__prop-name">Ставка в день</span>
+                </p>
+                <p class="offer-card__prop">
+                  <span class="offer-card__prop-text">от 1 000 - до 15 000 ₽</span>
+                  <span class="offer-card__prop-name">Сумма</span>
+                </p>
+                <p class="offer-card__prop">
+                  <span class="offer-card__prop-text">от 5 - до 30 дней</span>
+                  <span class="offer-card__prop-name">Срок</span>
+                </p>
+              </div>
+              <ul class="offer-card__about offer-card__about--closed">
+                <li class="offer-card__about-item">
+                  Минимальный пакет документов, нужны только ваши паспортные данные
+                </li>
+                <li class="offer-card__about-item">
+                  Получение займа: банковская карта, qiwi кошелек, платёжные
+                  системы, яндекс.деньги, банковский счет
+                </li>
+                <li class="offer-card__about-item">
+                  Погашение: в конце срока
+                </li>
+                <li class="offer-card__about-item">Пролонгация</li>
+                <li class="offer-card__about-item">Отсрочка</li>
+                <li class="offer-card__about-item">Штрафы</li>
+                <li class="offer-card__about-item">
+                  Место заключения договора: онлайн
+                </li>
+                <li class="offer-card__about-more">Подробнее</li>
+              </ul>
+              <a class="offer-card__go button"
+                href="https://trkleads.ru/click/9932f0192c73230486b9163bdb4da161">Перейти</a>
+            </li>
+            <li class="offers__item offer-card">
+              <div class="offer-card__top">
+                <p class="offer-card__name">
+                  <a href="/mfo/turbozaim">Турбозайм / Turbozaim</a>
+                  <!-- <span class="offer-card__comp">Смсфинанс</span> -->
+                </p>
+                <div class="offer-card__img">
+                  <img src="/img/partners/turbozaim.png" alt="alt" />
+                </div>
+              </div>
+              <div class="offer-card__contain">
+                <p class="offer-card__prop">
+                  <span class="offer-card__prop-text">от 0,6 - до 1,6 %</span>
+                  <span class="offer-card__prop-name">Ставка в день</span>
+                </p>
+                <p class="offer-card__prop">
+                  <span class="offer-card__prop-text">от 3 000 - до 15 000 ₽</span>
+                  <span class="offer-card__prop-name">Сумма</span>
+                </p>
+                <p class="offer-card__prop">
+                  <span class="offer-card__prop-text">от 7 - до 30 дней</span>
+                  <span class="offer-card__prop-name">Срок</span>
+                </p>
+              </div>
+              <ul class="offer-card__about offer-card__about--closed">
+                <li class="offer-card__about-item">
+                  Высокий процент одобрения, можно получить деньги даже без кредитной истории.
+                </li>
+                <li class="offer-card__about-item">
+                  Получение займа: банковская карта, qiwi кошелек, платёжные
+                  системы, яндекс.деньги, банковский счет
+                </li>
+                <li class="offer-card__about-item">
+                  Погашение: в конце срока
+                </li>
+                <li class="offer-card__about-item">Пролонгация</li>
+                <li class="offer-card__about-item">Отсрочка</li>
+                <li class="offer-card__about-item">Штрафы</li>
+                <li class="offer-card__about-item">
+                  Место заключения договора: онлайн
+                </li>
+                <li class="offer-card__about-more">Подробнее</li>
+              </ul>
+              <a class="offer-card__go button"
+                href="https://trkleads.ru/click/ca772e9be7f56b9cddc41f4f7b49cef7">Перейти</a>
+            </li>
+            <li class="offers__item offer-card">
+              <div class="offer-card__top">
+                <p class="offer-card__name">
+                  <a href="/mfo/greenmoney">ГринМани / Green Money</a>
+                  <!-- <span class="offer-card__comp">Смсфинанс</span> -->
+                </p>
+                <div class="offer-card__img">
+                  <img src="/img/partners/greenmoney.png" alt="alt" />
+                </div>
+              </div>
+              <div class="offer-card__contain">
+                <p class="offer-card__prop">
+                  <span class="offer-card__prop-text">от 0,95 - до 1,06 %</span>
+                  <span class="offer-card__prop-name">Ставка в день</span>
+                </p>
+                <p class="offer-card__prop">
+                  <span class="offer-card__prop-text">от 3 000 - до 25 000 ₽</span>
+                  <span class="offer-card__prop-name">Сумма</span>
+                </p>
+                <p class="offer-card__prop">
+                  <span class="offer-card__prop-text">от 31 - до 40 дней</span>
+                  <span class="offer-card__prop-name">Срок</span>
+                </p>
+              </div>
+              <ul class="offer-card__about offer-card__about--closed">
+                <li class="offer-card__about-item">
+                  Низкий % ставка, Выдают вне зависимости от места проживания.
+                </li>
+                <li class="offer-card__about-item">
+                  Получение займа: банковская карта, qiwi кошелек, платёжные
+                  системы, яндекс.деньги, банковский счет
+                </li>
+                <li class="offer-card__about-item">
+                  Погашение: в конце срока
+                </li>
+                <li class="offer-card__about-item">Пролонгация</li>
+                <li class="offer-card__about-item">Отсрочка</li>
+                <li class="offer-card__about-item">Штрафы</li>
+                <li class="offer-card__about-item">
+                  Место заключения договора: онлайн
+                </li>
+                <li class="offer-card__about-more">Подробнее</li>
+              </ul>
+              <a class="offer-card__go button"
+                href="https://pxl.leads.su/click/a3ee0d56c78324f801cef67884aeb771">Перейти</a>
+            </li>
+            <li class="offers__item offer-card">
+              <div class="offer-card__top">
+                <p class="offer-card__name">
+                  <a href="/mfo/smartcredit">Смарткредит / SmartCredit</a>
+                  <!-- <span class="offer-card__comp">Смсфинанс</span> -->
+                </p>
+                <div class="offer-card__img">
+                  <img src="/img/partners/smartcredit.png" alt="alt" />
+                </div>
+              </div>
+              <div class="offer-card__contain">
+                <p class="offer-card__prop">
+                  <span class="offer-card__prop-text">от 1,1 - до 1,5 %</span>
+                  <span class="offer-card__prop-name">Ставка в день</span>
+                </p>
+                <p class="offer-card__prop">
+                  <span class="offer-card__prop-text">от 2 000 - до 15 000 ₽</span>
+                  <span class="offer-card__prop-name">Сумма</span>
+                </p>
+                <p class="offer-card__prop">
+                  <span class="offer-card__prop-text">от 5 - до 30 дней</span>
+                  <span class="offer-card__prop-name">Срок</span>
+                </p>
+              </div>
+              <ul class="offer-card__about offer-card__about--closed">
+                <li class="offer-card__about-item">
+                  Компания работает круглосуточно, быстрое рассмотрение заявок.
+                </li>
+                <li class="offer-card__about-item">
+                  Получение займа: банковская карта, qiwi кошелек, платёжные
+                  системы, яндекс.деньги, банковский счет
+                </li>
+                <li class="offer-card__about-item">
+                  Погашение: в конце срока
+                </li>
+                <li class="offer-card__about-item">Пролонгация</li>
+                <li class="offer-card__about-item">Отсрочка</li>
+                <li class="offer-card__about-item">Штрафы</li>
+                <li class="offer-card__about-item">
+                  Место заключения договора: онлайн
+                </li>
+                <li class="offer-card__about-more">Подробнее</li>
+              </ul>
+              <a class="offer-card__go button"
+                href="https://trkleads.ru/click/d5a148511c5469e8296b0071f35d4ca4">Перейти</a>
+            </li>
+            <li class="offers__item offer-card">
+              <div class="offer-card__top">
+                <p class="offer-card__name">
+                  <a href="/mfo/payps">Pay P.S.</a>
+                  <!-- <span class="offer-card__comp">Смсфинанс</span> -->
+                </p>
+                <div class="offer-card__img">
+                  <img src="/img/partners/payps.png" alt="alt" />
+                </div>
+              </div>
+              <div class="offer-card__contain">
+                <p class="offer-card__prop">
+                  <span class="offer-card__prop-text">от 0,00 - 1.5 %</span>
+                  <span class="offer-card__prop-name">Ставка в день</span>
+                </p>
+                <p class="offer-card__prop">
+                  <span class="offer-card__prop-text">от 4 000 - до 30 000 ₽</span>
+                  <span class="offer-card__prop-name">Сумма</span>
+                </p>
+                <p class="offer-card__prop">
+                  <span class="offer-card__prop-text">от 6 - до 30 дней</span>
+                  <span class="offer-card__prop-name">Срок</span>
+                </p>
+              </div>
+              <ul class="offer-card__about offer-card__about--closed">
+                <li class="offer-card__about-item">
+                  Действует акция: первые 5 дней бесплатно.
+                </li>
+                <li class="offer-card__about-item">
+                  Получение займа: банковская карта, qiwi кошелек, платёжные
+                  системы, яндекс.деньги, банковский счет
+                </li>
+                <li class="offer-card__about-item">
+                  Погашение: в конце срока
+                </li>
+                <li class="offer-card__about-item">Пролонгация</li>
+                <li class="offer-card__about-item">Отсрочка</li>
+                <li class="offer-card__about-item">Штрафы</li>
+                <li class="offer-card__about-item">
+                  Место заключения договора: онлайн
+                </li>
+                <li class="offer-card__about-more">Подробнее</li>
+              </ul>
+              <a class="offer-card__go button" href="https://go.leadgid.ru/aff_c?offer_id=1260&aff_id=27131">Перейти</a>
+            </li>
+            <li class="offers__item offer-card">
+              <div class="offer-card__top">
+                <p class="offer-card__name">
+                  <a href="/mfo/migone">MigONE</a>
+                  <!-- <span class="offer-card__comp">Смсфинанс</span> -->
+                </p>
+                <div class="offer-card__img">
+                  <img src="/img/partners/migone.png" alt="alt" />
+                </div>
+              </div>
+              <div class="offer-card__contain">
+                <p class="offer-card__prop">
+                  <span class="offer-card__prop-text">от 0,00 - 2,2 %</span>
+                  <span class="offer-card__prop-name">Ставка в день</span>
+                </p>
+                <p class="offer-card__prop">
+                  <span class="offer-card__prop-text">от 3 000 - до 15 000 ₽</span>
+                  <span class="offer-card__prop-name">Сумма</span>
+                </p>
+                <p class="offer-card__prop">
+                  <span class="offer-card__prop-text">от 3 - до 29 дней</span>
+                  <span class="offer-card__prop-name">Срок</span>
+                </p>
+              </div>
+              <ul class="offer-card__about offer-card__about--closed">
+                <li class="offer-card__about-item">
+                  Действует акция: заем для новых клиентов под 0 %.
+                </li>
+                <li class="offer-card__about-item">
+                  Получение займа: банковская карта, qiwi кошелек, платёжные
+                  системы, яндекс.деньги, банковский счет
+                </li>
+                <li class="offer-card__about-item">
+                  Погашение: в конце срока
+                </li>
+                <li class="offer-card__about-item">Пролонгация</li>
+                <li class="offer-card__about-item">Отсрочка</li>
+                <li class="offer-card__about-item">Штрафы</li>
+                <li class="offer-card__about-item">
+                  Место заключения договора: онлайн
+                </li>
+                <li class="offer-card__about-more">Подробнее</li>
+              </ul>
+              <a class="offer-card__go button"
+                href="https://pxl.leads.su/click/981ce912bed394b479aa70f217aafaec">Перейти</a>
+            </li>
+            <li class="offers__item offer-card">
+              <div class="offer-card__top">
+                <p class="offer-card__name">
+                  <a href="/mfo/migcredit">МигКредит / MigCredit</a>
+                  <!-- <span class="offer-card__comp">Смсфинанс</span> -->
+                </p>
+                <div class="offer-card__img">
+                  <img src="/img/partners/migkredit.png" alt="alt" />
+                </div>
+              </div>
+              <div class="offer-card__contain">
+                <p class="offer-card__prop">
+                  <span class="offer-card__prop-text">от 0,08 - до 1,5 %</span>
+                  <span class="offer-card__prop-name">Ставка в день</span>
+                </p>
+                <p class="offer-card__prop">
+                  <span class="offer-card__prop-text">от 3 000 - до 98 000 ₽</span>
+                  <span class="offer-card__prop-name">Сумма</span>
+                </p>
+                <p class="offer-card__prop">
+                  <span class="offer-card__prop-text">от 3 - до 336 дней</span>
+                  <span class="offer-card__prop-name">Срок</span>
+                </p>
+              </div>
+              <ul class="offer-card__about offer-card__about--closed">
+                <li class="offer-card__about-item">
+                  Главная особенность - большие суммы на длительный срок.
+                </li>
+                <li class="offer-card__about-item">
+                  Получение займа: банковская карта, qiwi кошелек, платёжные
+                  системы, яндекс.деньги, банковский счет
+                </li>
+                <li class="offer-card__about-item">
+                  Погашение: в конце срока
+                </li>
+                <li class="offer-card__about-item">Пролонгация</li>
+                <li class="offer-card__about-item">Отсрочка</li>
+                <li class="offer-card__about-item">Штрафы</li>
+                <li class="offer-card__about-item">
+                  Место заключения договора: онлайн
+                </li>
+                <li class="offer-card__about-more">Подробнее</li>
+              </ul>
+              <a class="offer-card__go button"
+                href="https://trkleads.ru/click/2f0d030493a9dc43f25dc08351cfb15a">Перейти</a>
+            </li>
+            <li class="offers__item offer-card">
+              <div class="offer-card__top">
+                <p class="offer-card__name">
+                  <a href="/mfo/oneclickmoney">OneClickMoney</a>
+                  <!-- <span class="offer-card__comp">Смсфинанс</span> -->
+                </p>
+                <div class="offer-card__img">
+                  <img src="/img/partners/oneclickmoney.png" alt="alt" />
+                </div>
+              </div>
+              <div class="offer-card__contain">
+                <p class="offer-card__prop">
+                  <span class="offer-card__prop-text">от 1,5 - до 2,2 %</span>
+                  <span class="offer-card__prop-name">Ставка в день</span>
+                </p>
+                <p class="offer-card__prop">
+                  <span class="offer-card__prop-text">от 500 - до 30 000 ₽</span>
+                  <span class="offer-card__prop-name">Сумма</span>
+                </p>
+                <p class="offer-card__prop">
+                  <span class="offer-card__prop-text">от 6 - до 21 дней</span>
+                  <span class="offer-card__prop-name">Срок</span>
+                </p>
+              </div>
+              <ul class="offer-card__about offer-card__about--closed">
+                <li class="offer-card__about-item">
+                  Большой выбор способов получения денег, есть возможность получить на не именную карту.
+                </li>
+                <li class="offer-card__about-item">
+                  Получение займа: банковская карта, qiwi кошелек, платёжные
+                  системы, яндекс.деньги, банковский счет
+                </li>
+                <li class="offer-card__about-item">
+                  Погашение: в конце срока
+                </li>
+                <li class="offer-card__about-item">Пролонгация</li>
+                <li class="offer-card__about-item">Отсрочка</li>
+                <li class="offer-card__about-item">Штрафы</li>
+                <li class="offer-card__about-item">
+                  Место заключения договора: онлайн
+                </li>
+                <li class="offer-card__about-more">Подробнее</li>
+              </ul>
+              <a class="offer-card__go button"
+                href="https://pxl.leads.su/click/1c54fee09969043263f0899be6317ee2">Перейти</a>
+            </li>
+            <li class="offers__item offer-card">
+              <div class="offer-card__top">
+                <p class="offer-card__name">
+                  <a href="/mfo/kredito24">Кредито24 / Kredito24</a>
+                  <!-- <span class="offer-card__comp">Смсфинанс</span> -->
+                </p>
+                <div class="offer-card__img">
+                  <img src="/img/partners/kredito24.png" alt="alt" />
+                </div>
+              </div>
+              <div class="offer-card__contain">
+                <p class="offer-card__prop">
+                  <span class="offer-card__prop-text">до 1,5 %</span>
+                  <span class="offer-card__prop-name">Ставка в день</span>
+                </p>
+                <p class="offer-card__prop">
+                  <span class="offer-card__prop-text">от 2 000 - до 15 000 ₽</span>
+                  <span class="offer-card__prop-name">Сумма</span>
+                </p>
+                <p class="offer-card__prop">
+                  <span class="offer-card__prop-text">от 16 - до 30 дней</span>
+                  <span class="offer-card__prop-name">Срок</span>
+                </p>
+              </div>
+              <ul class="offer-card__about offer-card__about--closed">
+                <li class="offer-card__about-item">
+                  Все условия прозрачны. Есть возможность исправит КИ.
+                </li>
+                <li class="offer-card__about-item">
+                  Получение займа: банковская карта, qiwi кошелек, платёжные
+                  системы, яндекс.деньги, банковский счет
+                </li>
+                <li class="offer-card__about-item">
+                  Погашение: в конце срока
+                </li>
+                <li class="offer-card__about-item">Пролонгация</li>
+                <li class="offer-card__about-item">Отсрочка</li>
+                <li class="offer-card__about-item">Штрафы</li>
+                <li class="offer-card__about-item">
+                  Место заключения договора: онлайн
+                </li>
+                <li class="offer-card__about-more">Подробнее</li>
+              </ul>
+              <a class="offer-card__go button"
+                href="https://trkleads.ru/click/d9ffde18b4c4acdc18601f7efdad24b4">Перейти</a>
+            </li>
+            <li class="offers__item offer-card">
+              <div class="offer-card__top">
+                <p class="offer-card__name">
+                  <a href="/mfo/onzaem">Onzaem</a>
+                  <!-- <span class="offer-card__comp">Смсфинанс</span> -->
+                </p>
+                <div class="offer-card__img">
+                  <img src="/img/partners/onzaem.png" alt="alt" />
+                </div>
+              </div>
+              <div class="offer-card__contain">
+                <p class="offer-card__prop">
+                  <span class="offer-card__prop-text">до 1,5 %</span>
+                  <span class="offer-card__prop-name">Ставка в день</span>
+                </p>
+                <p class="offer-card__prop">
+                  <span class="offer-card__prop-text">от 2 000 - до 10 000 ₽</span>
+                  <span class="offer-card__prop-name">Сумма</span>
+                </p>
+                <p class="offer-card__prop">
+                  <span class="offer-card__prop-text">от 5 - до 30 дней</span>
+                  <span class="offer-card__prop-name">Срок</span>
+                </p>
+              </div>
+              <ul class="offer-card__about offer-card__about--closed">
+                <li class="offer-card__about-item">
+                  На рынке не так давно. новым клиентам большие суммы не одобряют.
+                </li>
+                <li class="offer-card__about-item">
+                  Получение займа: банковская карта, qiwi кошелек, платёжные
+                  системы, яндекс.деньги, банковский счет
+                </li>
+                <li class="offer-card__about-item">
+                  Погашение: в конце срока
+                </li>
+                <li class="offer-card__about-item">Пролонгация</li>
+                <li class="offer-card__about-item">Отсрочка</li>
+                <li class="offer-card__about-item">Штрафы</li>
+                <li class="offer-card__about-item">
+                  Место заключения договора: онлайн
+                </li>
+                <li class="offer-card__about-more">Подробнее</li>
+              </ul>
+              <a class="offer-card__go button" href="https://go.leadgid.ru/aff_c?offer_id=3465&aff_id=27131">Перейти</a>
+            </li>
+            <li class="offers__item offer-card">
+              <div class="offer-card__top">
+                <p class="offer-card__name">
+                  <a href="/mfo/webzaim">Веб-займ / Web-zaim</a>
+                  <!-- <span class="offer-card__comp">Смсфинанс</span> -->
+                </p>
+                <div class="offer-card__img">
+                  <img src="/img/partners/webzaim.png" alt="alt" />
+                </div>
+              </div>
+              <div class="offer-card__contain">
+                <p class="offer-card__prop">
+                  <span class="offer-card__prop-text">от 0,6 - до 1,5 %</span>
+                  <span class="offer-card__prop-name">Ставка в день</span>
+                </p>
+                <p class="offer-card__prop">
+                  <span class="offer-card__prop-text">от 1 500 - до 30 000 ₽</span>
+                  <span class="offer-card__prop-name">Сумма</span>
+                </p>
+                <p class="offer-card__prop">
+                  <span class="offer-card__prop-text">от 5 - до 30 дней</span>
+                  <span class="offer-card__prop-name">Срок</span>
+                </p>
+              </div>
+              <ul class="offer-card__about offer-card__about--closed">
+                <li class="offer-card__about-item">
+                  Действует акция: Процентная ставка на 50 % снижена.
+                </li>
+                <li class="offer-card__about-item">
+                  Получение займа: банковская карта, qiwi кошелек, платёжные
+                  системы, яндекс.деньги, банковский счет
+                </li>
+                <li class="offer-card__about-item">
+                  Погашение: в конце срока
+                </li>
+                <li class="offer-card__about-item">Пролонгация</li>
+                <li class="offer-card__about-item">Отсрочка</li>
+                <li class="offer-card__about-item">Штрафы</li>
+                <li class="offer-card__about-item">
+                  Место заключения договора: онлайн
+                </li>
+                <li class="offer-card__about-more">Подробнее</li>
+              </ul>
+              <a class="offer-card__go button"
+                href="https://pxl.leads.su/click/ace8a65167f3375fdec688ca49580d9c">Перейти</a>
+            </li>
+            <li class="offers__item offer-card">
+              <div class="offer-card__top">
+                <p class="offer-card__name">
+                  <a href="/mfo/moneza">Монеза / Moneza</a>
+                  <!-- <span class="offer-card__comp">Смсфинанс</span> -->
+                </p>
+                <div class="offer-card__img">
+                  <img src="/img/partners/moneza.png" alt="alt" />
+                </div>
+              </div>
+              <div class="offer-card__contain">
+                <p class="offer-card__prop">
+                  <span class="offer-card__prop-text">от 0,00 - до 1,5 %</span>
+                  <span class="offer-card__prop-name">Ставка в день</span>
+                </p>
+                <p class="offer-card__prop">
+                  <span class="offer-card__prop-text">от 2 000 - до 30 000 ₽</span>
+                  <span class="offer-card__prop-name">Сумма</span>
+                </p>
+                <p class="offer-card__prop">
+                  <span class="offer-card__prop-text">от 5 - до 30 дней</span>
+                  <span class="offer-card__prop-name">Срок</span>
+                </p>
+              </div>
+              <ul class="offer-card__about offer-card__about--closed">
+                <li class="offer-card__about-item">
+                  Действует акция: Заем под 0% на 30 дней
+                </li>
+                <li class="offer-card__about-item">
+                  Получение займа: банковская карта, qiwi кошелек, платёжные
+                  системы, яндекс.деньги, банковский счет
+                </li>
+                <li class="offer-card__about-item">
+                  Погашение: в конце срока
+                </li>
+                <li class="offer-card__about-item">Пролонгация</li>
+                <li class="offer-card__about-item">Отсрочка</li>
+                <li class="offer-card__about-item">Штрафы</li>
+                <li class="offer-card__about-item">
+                  Место заключения договора: онлайн
+                </li>
+                <li class="offer-card__about-more">Подробнее</li>
+              </ul>
+              <a class="offer-card__go button"
+                href="https://pxl.leads.su/click/9aa65613282ed520a94f7a4185a19da5">Перейти</a>
+            </li>
+            <li class="offers__item offer-card">
+              <div class="offer-card__top">
+                <p class="offer-card__name">
+                  <a href="/mfo/microklad">Микроклад</a>
+                  <!-- <span class="offer-card__comp">Смсфинанс</span> -->
+                </p>
+                <div class="offer-card__img">
+                  <img src="/img/partners/microklad.png" alt="alt" />
+                </div>
+              </div>
+              <div class="offer-card__contain">
+                <p class="offer-card__prop">
+                  <span class="offer-card__prop-text">от 1,00 %</span>
+                  <span class="offer-card__prop-name">Ставка в день</span>
+                </p>
+                <p class="offer-card__prop">
+                  <span class="offer-card__prop-text">от 1 000 - до 30 000 ₽</span>
+                  <span class="offer-card__prop-name">Сумма</span>
+                </p>
+                <p class="offer-card__prop">
+                  <span class="offer-card__prop-text">от 7 - до 30 дней</span>
+                  <span class="offer-card__prop-name">Срок</span>
+                </p>
+              </div>
+              <ul class="offer-card__about offer-card__about--closed">
+                <li class="offer-card__about-item">
+                  Работают по всей России. При каждом последующем обращении процентная ставка снижается.
+                </li>
+                <li class="offer-card__about-item">
+                  Получение займа: банковская карта, qiwi кошелек, платёжные
+                  системы, яндекс.деньги, банковский счет
+                </li>
+                <li class="offer-card__about-item">
+                  Погашение: в конце срока
+                </li>
+                <li class="offer-card__about-item">Пролонгация</li>
+                <li class="offer-card__about-item">Отсрочка</li>
+                <li class="offer-card__about-item">Штрафы</li>
+                <li class="offer-card__about-item">
+                  Место заключения договора: онлайн
+                </li>
+                <li class="offer-card__about-more">Подробнее</li>
+              </ul>
+              <a class="offer-card__go button"
+                href="https://pxl.leads.su/click/d6eddff3f6b13ff93f84fd169682da5b">Перейти</a>
+            </li>
+            <li class="offers__item offer-card">
+              <div class="offer-card__top">
+                <p class="offer-card__name">
+                  <a href="/mfo/online-zaim">ONLINE-ZAIM</a>
+                  <!-- <span class="offer-card__comp">Смсфинанс</span> -->
+                </p>
+                <div class="offer-card__img">
+                  <img src="/img/partners/onlinezaim.png" alt="alt" />
+                </div>
+              </div>
+              <div class="offer-card__contain">
+                <p class="offer-card__prop">
+                  <span class="offer-card__prop-text">от 0,25 - до 1,5 %</span>
+                  <span class="offer-card__prop-name">Ставка в день</span>
+                </p>
+                <p class="offer-card__prop">
+                  <span class="offer-card__prop-text">от 1 000 - до 30 000 ₽</span>
+                  <span class="offer-card__prop-name">Сумма</span>
+                </p>
+                <p class="offer-card__prop">
+                  <span class="offer-card__prop-text">от 6 - до 25 дней</span>
+                  <span class="offer-card__prop-name">Срок</span>
+                </p>
+              </div>
+              <ul class="offer-card__about offer-card__about--closed">
+                <li class="offer-card__about-item">
+                  Первый заем можно взять до 10 000 ₽ со сниженым %.
+                </li>
+                <li class="offer-card__about-item">
+                  Получение займа: банковская карта, qiwi кошелек, платёжные
+                  системы, яндекс.деньги, банковский счет
+                </li>
+                <li class="offer-card__about-item">
+                  Погашение: в конце срока
+                </li>
+                <li class="offer-card__about-item">Пролонгация</li>
+                <li class="offer-card__about-item">Отсрочка</li>
+                <li class="offer-card__about-item">Штрафы</li>
+                <li class="offer-card__about-item">
+                  Место заключения договора: онлайн
+                </li>
+                <li class="offer-card__about-more">Подробнее</li>
+              </ul>
+              <a class="offer-card__go button"
+                href="https://trkleads.ru/click/d0cfdd80c78531a71f105d73c8128dd8">Перейти</a>
+            </li>
+            <li class="offers__item offer-card">
+              <div class="offer-card__top">
+                <p class="offer-card__name">
+                  <a href="/mfo/womoney">Womoney</a>
+                  <!-- <span class="offer-card__comp">Смсфинанс</span> -->
+                </p>
+                <div class="offer-card__img">
+                  <img src="/img/partners/womoney.png" alt="alt" />
+                </div>
+              </div>
+              <div class="offer-card__contain">
+                <p class="offer-card__prop">
+                  <span class="offer-card__prop-text">от 0,25 - до 1,5 %</span>
+                  <span class="offer-card__prop-name">Ставка в день</span>
+                </p>
+                <p class="offer-card__prop">
+                  <span class="offer-card__prop-text">от 1 000 - до 30 000 ₽</span>
+                  <span class="offer-card__prop-name">Сумма</span>
+                </p>
+                <p class="offer-card__prop">
+                  <span class="offer-card__prop-text">от 6 - до 25 дней</span>
+                  <span class="offer-card__prop-name">Срок</span>
+                </p>
+              </div>
+              <ul class="offer-card__about offer-card__about--closed">
+                <li class="offer-card__about-item">
+                  До 10 000 ₽ процент снижен.
+                </li>
+                <li class="offer-card__about-item">
+                  Получение займа: банковская карта, qiwi кошелек, платёжные
+                  системы, яндекс.деньги, банковский счет
+                </li>
+                <li class="offer-card__about-item">
+                  Погашение: в конце срока
+                </li>
+                <li class="offer-card__about-item">Пролонгация</li>
+                <li class="offer-card__about-item">Отсрочка</li>
+                <li class="offer-card__about-item">Штрафы</li>
+                <li class="offer-card__about-item">
+                  Место заключения договора: онлайн
+                </li>
+                <li class="offer-card__about-more">Подробнее</li>
+              </ul>
+              <a class="offer-card__go button"
+                href="https://pxl.leads.su/click/88b9a3ff6465aa2ba9b335368492c274">Перейти</a>
+            </li>
+            <li class="offers__item offer-card">
+              <div class="offer-card__top">
+                <p class="offer-card__name">
+                  <a href="/mfo/zaimon">ZAIMON</a>
+                  <!-- <span class="offer-card__comp">Смсфинанс</span> -->
+                </p>
+                <div class="offer-card__img">
+                  <img src="/img/partners/zaimon.png" alt="alt" />
+                </div>
+              </div>
+              <div class="offer-card__contain">
+                <p class="offer-card__prop">
+                  <span class="offer-card__prop-text">от 1,00 - до 1,5 %</span>
+                  <span class="offer-card__prop-name">Ставка в день</span>
+                </p>
+                <p class="offer-card__prop">
+                  <span class="offer-card__prop-text">от 3 500 - до 30 000 ₽</span>
+                  <span class="offer-card__prop-name">Сумма</span>
+                </p>
+                <p class="offer-card__prop">
+                  <span class="offer-card__prop-text">от 6 - до 25 дней</span>
+                  <span class="offer-card__prop-name">Срок</span>
+                </p>
+              </div>
+              <ul class="offer-card__about offer-card__about--closed">
+                <li class="offer-card__about-item">
+                  Быстрая выдача денег. Работают по всей РФ.
+                </li>
+                <li class="offer-card__about-item">
+                  Получение займа: банковская карта, qiwi кошелек, платёжные
+                  системы, яндекс.деньги, банковский счет
+                </li>
+                <li class="offer-card__about-item">
+                  Погашение: в конце срока
+                </li>
+                <li class="offer-card__about-item">Пролонгация</li>
+                <li class="offer-card__about-item">Отсрочка</li>
+                <li class="offer-card__about-item">Штрафы</li>
+                <li class="offer-card__about-item">
+                  Место заключения договора: онлайн
+                </li>
+                <li class="offer-card__about-more">Подробнее</li>
+              </ul>
+              <a class="offer-card__go button"
+                href="https://pxl.leads.su/click/a0d1dbaec56fe63b8fec6e3a3654eb52">Перейти</a>
+            </li>
+            <li class="offers__item offer-card">
+              <div class="offer-card__top">
+                <p class="offer-card__name">
+                  <a href="/mfo/zaymigo">Займиго / Zaymigo</a>
+                  <!-- <span class="offer-card__comp">Смсфинанс</span> -->
+                </p>
+                <div class="offer-card__img">
+                  <img src="/img/partners/zaymigo.png" alt="alt" />
+                </div>
+              </div>
+              <div class="offer-card__contain">
+                <p class="offer-card__prop">
+                  <span class="offer-card__prop-text">от 0,49 - до 1,5 %</span>
+                  <span class="offer-card__prop-name">Ставка в день</span>
+                </p>
+                <p class="offer-card__prop">
+                  <span class="offer-card__prop-text">от 1 000 - до 30 000 ₽</span>
+                  <span class="offer-card__prop-name">Сумма</span>
+                </p>
+                <p class="offer-card__prop">
+                  <span class="offer-card__prop-text">от 1 - до 140 дней</span>
+                  <span class="offer-card__prop-name">Срок</span>
+                </p>
+              </div>
+              <ul class="offer-card__about offer-card__about--closed">
+                <li class="offer-card__about-item">
+                  Работают по Рф. Есть специальные условия для новых клиентов!
+                </li>
+                <li class="offer-card__about-item">
+                  Получение займа: банковская карта, qiwi кошелек, платёжные
+                  системы, яндекс.деньги, банковский счет
+                </li>
+                <li class="offer-card__about-item">
+                  Погашение: в конце срока
+                </li>
+                <li class="offer-card__about-item">Пролонгация</li>
+                <li class="offer-card__about-item">Отсрочка</li>
+                <li class="offer-card__about-item">Штрафы</li>
+                <li class="offer-card__about-item">
+                  Место заключения договора: онлайн
+                </li>
+                <li class="offer-card__about-more">Подробнее</li>
+              </ul>
+              <a class="offer-card__go button"
+                href="https://trkleads.ru/click/3e9b887188304b82850bec1fb8ea0e84">Перейти</a>
+            </li>
+            <li class="offers__item offer-card">
+              <div class="offer-card__top">
+                <p class="offer-card__name">
+                  <a href="/mfo/fastmoney">Fastmoney / Фастмани</a>
+                  <!-- <span class="offer-card__comp">Смсфинанс</span> -->
+                </p>
+                <div class="offer-card__img">
+                  <img src="/img/partners/fastmoney.png" alt="alt" />
+                </div>
+              </div>
+              <div class="offer-card__contain">
+                <p class="offer-card__prop">
+                  <span class="offer-card__prop-text">до 1,5 %</span>
+                  <span class="offer-card__prop-name">Ставка в день</span>
+                </p>
+                <p class="offer-card__prop">
+                  <span class="offer-card__prop-text">от 3 000 - до 30 000 ₽</span>
+                  <span class="offer-card__prop-name">Сумма</span>
+                </p>
+                <p class="offer-card__prop">
+                  <span class="offer-card__prop-text">от 7 - до 30 дней</span>
+                  <span class="offer-card__prop-name">Срок</span>
+                </p>
+              </div>
+              <ul class="offer-card__about offer-card__about--closed">
+                <li class="offer-card__about-item">
+                  Работают 24/7. Есть возможность исправить Ваш кредитный Рейтинг.
+                </li>
+                <li class="offer-card__about-item">
+                  Получение займа: банковская карта, qiwi кошелек, платёжные
+                  системы, яндекс.деньги, банковский счет
+                </li>
+                <li class="offer-card__about-item">
+                  Погашение: в конце срока
+                </li>
+                <li class="offer-card__about-item">Пролонгация</li>
+                <li class="offer-card__about-item">Отсрочка</li>
+                <li class="offer-card__about-item">Штрафы</li>
+                <li class="offer-card__about-item">
+                  Место заключения договора: онлайн
+                </li>
+                <li class="offer-card__about-more">Подробнее</li>
+              </ul>
+              <a class="offer-card__go button" href="https://go.leadgid.ru/aff_c?offer_id=4029&aff_id=27131">Перейти</a>
+            </li>
+            <li class="offers__item offer-card">
+              <div class="offer-card__top">
+                <p class="offer-card__name">
+                  <a href="/mfo/dozarplati">До зарплаты</a>
+                  <!-- <span class="offer-card__comp">Смсфинанс</span> -->
+                </p>
+                <div class="offer-card__img">
+                  <img src="/img/partners/dozarplati.png" alt="alt" />
+                </div>
+              </div>
+              <div class="offer-card__contain">
+                <p class="offer-card__prop">
+                  <span class="offer-card__prop-text">от 0,5 - до 1,5 %</span>
+                  <span class="offer-card__prop-name">Ставка в день</span>
+                </p>
+                <p class="offer-card__prop">
+                  <span class="offer-card__prop-text">от 2 000 - до 1 000 000 ₽</span>
+                  <span class="offer-card__prop-name">Сумма</span>
+                </p>
+                <p class="offer-card__prop">
+                  <span class="offer-card__prop-text">от 7 - до 365 дней</span>
+                  <span class="offer-card__prop-name">Срок</span>
+                </p>
+              </div>
+              <ul class="offer-card__about offer-card__about--closed">
+                <li class="offer-card__about-item">
+                  Действует акция: под 0 % для новых клиентов.
+                </li>
+                <li class="offer-card__about-item">
+                  Получение займа: банковская карта, qiwi кошелек, платёжные
+                  системы, яндекс.деньги, банковский счет
+                </li>
+                <li class="offer-card__about-item">
+                  Погашение: в конце срока
+                </li>
+                <li class="offer-card__about-item">Пролонгация</li>
+                <li class="offer-card__about-item">Отсрочка</li>
+                <li class="offer-card__about-item">Штрафы</li>
+                <li class="offer-card__about-item">
+                  Место заключения договора: онлайн
+                </li>
+                <li class="offer-card__about-more">Подробнее</li>
+              </ul>
+              <a class="offer-card__go button"
+                href="https://pxl.leads.su/click/4218127ec62113f16fc4fe3a7b9b553c">Перейти</a>
+            </li>
+            <li class="offers__item offer-card">
+              <div class="offer-card__top">
+                <p class="offer-card__name">
+                  <a href="/mfo/zheldorzaim">Желдорзайм</a>
+                  <!-- <span class="offer-card__comp">Смсфинанс</span> -->
+                </p>
+                <div class="offer-card__img">
+                  <img src="/img/partners/zheldorzaim.png" alt="alt" />
+                </div>
+              </div>
+              <div class="offer-card__contain">
+                <p class="offer-card__prop">
+                  <span class="offer-card__prop-text">от 15,50 %</span>
+                  <span class="offer-card__prop-name">Ставка в день</span>
+                </p>
+                <p class="offer-card__prop">
+                  <span class="offer-card__prop-text">от 10 000 - до 50 000 ₽</span>
+                  <span class="offer-card__prop-name">Сумма</span>
+                </p>
+                <p class="offer-card__prop">
+                  <span class="offer-card__prop-text">от 2 - до 8 месяц</span>
+                  <span class="offer-card__prop-name">Срок</span>
+                </p>
+              </div>
+              <ul class="offer-card__about offer-card__about--closed">
+                <li class="offer-card__about-item">
+                  Быстрый заем денег для железнодорожников.
+                </li>
+                <li class="offer-card__about-item">
+                  Получение займа: банковская карта, qiwi кошелек, платёжные
+                  системы, яндекс.деньги, банковский счет
+                </li>
+                <li class="offer-card__about-item">
+                  Погашение: в конце срока
+                </li>
+                <li class="offer-card__about-item">Пролонгация</li>
+                <li class="offer-card__about-item">Отсрочка</li>
+                <li class="offer-card__about-item">Штрафы</li>
+                <li class="offer-card__about-item">
+                  Место заключения договора: онлайн
+                </li>
+                <li class="offer-card__about-more">Подробнее</li>
+              </ul>
+              <a class="offer-card__go button" href="https://go.leadgid.ru/aff_c?offer_id=2815&aff_id=27131">Перейти</a>
+            </li>
+            <li class="offers__item offer-card">
+              <div class="offer-card__top">
+                <p class="offer-card__name">
+                  <a href="/mfo/carmoney">CarMoney / Кармани</a>
+                  <!-- <span class="offer-card__comp">Смсфинанс</span> -->
+                </p>
+                <div class="offer-card__img">
+                  <img src="/img/partners/carmoney.png" alt="alt" />
+                </div>
+              </div>
+              <div class="offer-card__contain">
+                <p class="offer-card__prop">
+                  <span class="offer-card__prop-text">от 2,50 - до 8,5 %</span>
+                  <span class="offer-card__prop-name">Ставка в день</span>
+                </p>
+                <p class="offer-card__prop">
+                  <span class="offer-card__prop-text">от 50 000 - до 1 000 000 ₽</span>
+                  <span class="offer-card__prop-name">Сумма</span>
+                </p>
+                <p class="offer-card__prop">
+                  <span class="offer-card__prop-text">от 24 - до 60 месяцев</span>
+                  <span class="offer-card__prop-name">Срок</span>
+                </p>
+              </div>
+              <ul class="offer-card__about offer-card__about--closed">
+                <li class="offer-card__about-item">
+                  Крупная компания, дают под залог ПТС. Минимум документов, без проверок.
+                </li>
+                <li class="offer-card__about-item">
+                  Получение займа: банковская карта, qiwi кошелек, платёжные
+                  системы, яндекс.деньги, банковский счет
+                </li>
+                <li class="offer-card__about-item">
+                  Погашение: в конце срока
+                </li>
+                <li class="offer-card__about-item">Пролонгация</li>
+                <li class="offer-card__about-item">Отсрочка</li>
+                <li class="offer-card__about-item">Штрафы</li>
+                <li class="offer-card__about-item">
+                  Место заключения договора: онлайн
+                </li>
+                <li class="offer-card__about-more">Подробнее</li>
+              </ul>
+              <a class="offer-card__go button" href="https://go.leadgid.ru/aff_c?offer_id=2729&aff_id=27131">Перейти</a>
+            </li>
+            <li class="offers__item offer-card">
+              <div class="offer-card__top">
+                <p class="offer-card__name">
+                  <a href="/mfo/glavfinans">ГлавФинанс / Glavfinans</a>
+                  <!-- <span class="offer-card__comp">Смсфинанс</span> -->
+                </p>
+                <div class="offer-card__img">
+                  <img src="/img/partners/glavfinans.png" alt="alt" />
+                </div>
+              </div>
+              <div class="offer-card__contain">
+                <p class="offer-card__prop">
+                  <span class="offer-card__prop-text">от 0,65 - до 1,5 %</span>
+                  <span class="offer-card__prop-name">Ставка в день</span>
+                </p>
+                <p class="offer-card__prop">
+                  <span class="offer-card__prop-text">от 3 000 - до 100 000 ₽</span>
+                  <span class="offer-card__prop-name">Сумма</span>
+                </p>
+                <p class="offer-card__prop">
+                  <span class="offer-card__prop-text">от 8 - до 98 дней</span>
+                  <span class="offer-card__prop-name">Срок</span>
+                </p>
+              </div>
+              <ul class="offer-card__about offer-card__about--closed">
+                <li class="offer-card__about-item">
+                  Работают по всей России, выдают на карту, без лишних справок.
+                </li>
+                <li class="offer-card__about-item">
+                  Получение займа: банковская карта, qiwi кошелек, платёжные
+                  системы, яндекс.деньги, банковский счет
+                </li>
+                <li class="offer-card__about-item">
+                  Погашение: в конце срока
+                </li>
+                <li class="offer-card__about-item">Пролонгация</li>
+                <li class="offer-card__about-item">Отсрочка</li>
+                <li class="offer-card__about-item">Штрафы</li>
+                <li class="offer-card__about-item">
+                  Место заключения договора: онлайн
+                </li>
+                <li class="offer-card__about-more">Подробнее</li>
+              </ul>
+              <a class="offer-card__go button"
+                href="https://pxl.leads.su/click/d3a9737991b473de50d32fe95cb8d68e">Перейти</a>
+            </li>
+            <li class="offers__item offer-card">
+              <div class="offer-card__top">
+                <p class="offer-card__name">
+                  <a href="/mfo/minifinance">Минифинанс / Minifinance</a>
+                  <!-- <span class="offer-card__comp">Смсфинанс</span> -->
+                </p>
+                <div class="offer-card__img">
+                  <img src="/img/partners/minifinans.png" alt="alt" />
+                </div>
+              </div>
+              <div class="offer-card__contain">
+                <p class="offer-card__prop">
+                  <span class="offer-card__prop-text">от 1,00 - до 1,5 %</span>
+                  <span class="offer-card__prop-name">Ставка в день</span>
+                </p>
+                <p class="offer-card__prop">
+                  <span class="offer-card__prop-text">от 1 000 - до 30 000 ₽</span>
+                  <span class="offer-card__prop-name">Сумма</span>
+                </p>
+                <p class="offer-card__prop">
+                  <span class="offer-card__prop-text">от 1 - до 365 дней</span>
+                  <span class="offer-card__prop-name">Срок</span>
+                </p>
+              </div>
+              <ul class="offer-card__about offer-card__about--closed">
+                <li class="offer-card__about-item">
+                  Получить можно на карту в несколько кликов, без справок и поручителей.
+                </li>
+                <li class="offer-card__about-item">
+                  Получение займа: банковская карта, qiwi кошелек, платёжные
+                  системы, яндекс.деньги, банковский счет
+                </li>
+                <li class="offer-card__about-item">
+                  Погашение: в конце срока
+                </li>
+                <li class="offer-card__about-item">Пролонгация</li>
+                <li class="offer-card__about-item">Отсрочка</li>
+                <li class="offer-card__about-item">Штрафы</li>
+                <li class="offer-card__about-item">
+                  Место заключения договора: онлайн
+                </li>
+                <li class="offer-card__about-more">Подробнее</li>
+              </ul>
+              <a class="offer-card__go button" href="https://go.leadgid.ru/aff_c?offer_id=2693&aff_id=27131">Перейти</a>
+            </li>
+            <li class="offers__item offer-card">
+              <div class="offer-card__top">
+                <p class="offer-card__name">
+                  <a href="/mfo/srochnodengi">Срочноденьги</a>
+                  <!-- <span class="offer-card__comp">Смсфинанс</span> -->
+                </p>
+                <div class="offer-card__img">
+                  <img src="/img/partners/srochnodengi.png" alt="alt" />
+                </div>
+              </div>
+              <div class="offer-card__contain">
+                <p class="offer-card__prop">
+                  <span class="offer-card__prop-text">до 1,5 %</span>
+                  <span class="offer-card__prop-name">Ставка в день</span>
+                </p>
+                <p class="offer-card__prop">
+                  <span class="offer-card__prop-text">от 1 000 - до 100 000 ₽</span>
+                  <span class="offer-card__prop-name">Сумма</span>
+                </p>
+                <p class="offer-card__prop">
+                  <span class="offer-card__prop-text">от 1 - до 180 дней</span>
+                  <span class="offer-card__prop-name">Срок</span>
+                </p>
+              </div>
+              <ul class="offer-card__about offer-card__about--closed">
+                <li class="offer-card__about-item">
+                  Без справок о доходах. Работают по всей РФ онлайн.
+                </li>
+                <li class="offer-card__about-item">
+                  Получение займа: банковская карта, qiwi кошелек, платёжные
+                  системы, яндекс.деньги, банковский счет
+                </li>
+                <li class="offer-card__about-item">
+                  Погашение: в конце срока
+                </li>
+                <li class="offer-card__about-item">Пролонгация</li>
+                <li class="offer-card__about-item">Отсрочка</li>
+                <li class="offer-card__about-item">Штрафы</li>
+                <li class="offer-card__about-item">
+                  Место заключения договора: онлайн
+                </li>
+                <li class="offer-card__about-more">Подробнее</li>
+              </ul>
+              <a class="offer-card__go button" href="https://go.leadgid.ru/aff_c?offer_id=3235&aff_id=27131">Перейти</a>
+            </li>
+            <li class="offers__item offer-card">
+              <div class="offer-card__top">
+                <p class="offer-card__name">
+                  <a href="/mfo/prunto">Finspin</a>
+                  <!-- <span class="offer-card__comp">Смсфинанс</span> -->
+                </p>
+                <div class="offer-card__img">
+                  <img src="/img/partners/finspin.png" alt="alt" />
+                </div>
+              </div>
+              <div class="offer-card__contain">
+                <p class="offer-card__prop">
+                  <span class="offer-card__prop-text">от 0,9 - до 2 %</span>
+                  <span class="offer-card__prop-name">Ставка в день</span>
+                </p>
+                <p class="offer-card__prop">
+                  <span class="offer-card__prop-text">от 1 000 - до 30 000 ₽</span>
+                  <span class="offer-card__prop-name">Сумма</span>
+                </p>
+                <p class="offer-card__prop">
+                  <span class="offer-card__prop-text">от 6 - до 30 дней</span>
+                  <span class="offer-card__prop-name">Срок</span>
+                </p>
+              </div>
+              <ul class="offer-card__about offer-card__about--closed">
+                <li class="offer-card__about-item">
+                  Сервис по подбору займа и карты.
+                </li>
+                <li class="offer-card__about-item">
+                  Получение займа: банковская карта, qiwi кошелек, платёжные
+                  системы, яндекс.деньги, банковский счет
+                </li>
+                <li class="offer-card__about-item">
+                  Погашение: в конце срока
+                </li>
+                <li class="offer-card__about-item">Пролонгация</li>
+                <li class="offer-card__about-item">Отсрочка</li>
+                <li class="offer-card__about-item">Штрафы</li>
+                <li class="offer-card__about-item">
+                  Место заключения договора: онлайн
+                </li>
+                <li class="offer-card__about-more">Подробнее</li>
+              </ul>
+              <a class="offer-card__go button" href="https://go.leadgid.ru/aff_c?offer_id=3419&aff_id=27131">Перейти</a>
+            </li>
+            <li class="offers__item offer-card">
+              <div class="offer-card__top">
+                <p class="offer-card__name">
+                  <a href="/mfo/optimazaim">OptimaZaim</a>
+                  <!-- <span class="offer-card__comp">Смсфинанс</span> -->
+                </p>
+                <div class="offer-card__img">
+                  <img src="/img/partners/optimazaim.png" alt="alt" />
+                </div>
+              </div>
+              <div class="offer-card__contain">
+                <p class="offer-card__prop">
+                  <span class="offer-card__prop-text">от 0,9 - до 2 %</span>
+                  <span class="offer-card__prop-name">Ставка в день</span>
+                </p>
+                <p class="offer-card__prop">
+                  <span class="offer-card__prop-text">от 1 000 - до 80 000 ₽</span>
+                  <span class="offer-card__prop-name">Сумма</span>
+                </p>
+                <p class="offer-card__prop">
+                  <span class="offer-card__prop-text">от 1 - до 365 дней</span>
+                  <span class="offer-card__prop-name">Срок</span>
+                </p>
+              </div>
+              <ul class="offer-card__about offer-card__about--closed">
+                <li class="offer-card__about-item">
+                  Большая вероятность одобрения. На большие суммы может понадобиться доп. документы
+                </li>
+                <li class="offer-card__about-item">
+                  Получение займа: банковская карта, qiwi кошелек, платёжные
+                  системы, яндекс.деньги, банковский счет
+                </li>
+                <li class="offer-card__about-item">
+                  Погашение: в конце срока
+                </li>
+                <li class="offer-card__about-item">Пролонгация</li>
+                <li class="offer-card__about-item">Отсрочка</li>
+                <li class="offer-card__about-item">Штрафы</li>
+                <li class="offer-card__about-item">
+                  Место заключения договора: онлайн
+                </li>
+                <li class="offer-card__about-more">Подробнее</li>
+              </ul>
+              <a class="offer-card__go button" href="https://go.leadgid.ru/aff_c?offer_id=3207&aff_id=27131">Перейти</a>
+            </li>
+            <li class="offers__item offer-card">
+              <div class="offer-card__top">
+                <p class="offer-card__name">
+                  <a href="/mfo/zaimco">ZaimCo</a>
+                  <!-- <span class="offer-card__comp">Смсфинанс</span> -->
+                </p>
+                <div class="offer-card__img">
+                  <img src="/img/partners/zaimco.png" alt="alt" />
+                </div>
+              </div>
+              <div class="offer-card__contain">
+                <p class="offer-card__prop">
+                  <span class="offer-card__prop-text">от 0,9 - до 2 %</span>
+                  <span class="offer-card__prop-name">Ставка в день</span>
+                </p>
+                <p class="offer-card__prop">
+                  <span class="offer-card__prop-text">от 1 000 - до 80 000 ₽</span>
+                  <span class="offer-card__prop-name">Сумма</span>
+                </p>
+                <p class="offer-card__prop">
+                  <span class="offer-card__prop-text">от 1 - до 365 дней</span>
+                  <span class="offer-card__prop-name">Срок</span>
+                </p>
+              </div>
+              <ul class="offer-card__about offer-card__about--closed">
+                <li class="offer-card__about-item">
+                  Простые этапы для получения. Нужно Регистрироваться на сайте.
+                </li>
+                <li class="offer-card__about-item">
+                  Получение займа: банковская карта, qiwi кошелек, платёжные
+                  системы, яндекс.деньги, банковский счет
+                </li>
+                <li class="offer-card__about-item">
+                  Погашение: в конце срока
+                </li>
+                <li class="offer-card__about-item">Пролонгация</li>
+                <li class="offer-card__about-item">Отсрочка</li>
+                <li class="offer-card__about-item">Штрафы</li>
+                <li class="offer-card__about-item">
+                  Место заключения договора: онлайн
+                </li>
+                <li class="offer-card__about-more">Подробнее</li>
+              </ul>
+              <a class="offer-card__go button" href="https://go.leadgid.ru/aff_c?offer_id=3209&aff_id=27131">Перейти</a>
             </li>
           </ul>
-          <p class="info__text">
-            Есть и другие требования, в зависимости в какую МФО вы обращаетесь
-          </p>
-          <h3 class="info__heading">Основные условия микрозаймов онлайн</h3>
-          <ul class="info__list list">
-            <li class="info__text info__item list__item">
-              Займы онлайн дают деньги сроком от 1 до 45 дней
-            </li>
-            <li class="info__text info__item list__item">
-              Процент рассчитывается индивидуально, в среднем составляет от 2%
-              в день
-            </li>
-            <li class="info__text info__item list__item">
-              Микрозаем онлайн можно взять на любые нужды, суммой от 1000 до
-              30000 рублей
-            </li>
-          </ul>
-          <h3 class="info__heading">Преимущества</h3>
-          <p class="info__text">
-            Мы индивидуально подошли к каждой микрофинансовой компании,
-            отобрали надежные и проверенные МФО.
-          </p>
-          <ul class="info__list list">
-            <li class="info__text info__item list__item">
-              Нет скрытых комиссий
-            </li>
-            <li class="info__text info__item list__item">
-              Удобно просматривать и сравнивать условия
-            </li>
-            <li class="info__text info__item list__item">
-              Гарантирована защита персональных данных
-            </li>
-            <li class="info__text info__item list__item">
-              Максимально просто, интуитивно понятно
-            </li>
-          </ul>
-          <p class="info__text">
-            Выбирайте выгодные условия, оформляйте заявку, получайте деньги,
-            наслаждайтесь процессом получения микрозаймов онлайн!
-          </p>
-        </section>
-      </div>
-      <div class="aside-wrap">
-        <aside>
-          <section class="aside-menu">
-            <h2 class="aside-menu__heading">Подбор займов</h2>
-            <ul class="aside-menu__list">
-              <li class="aside-menu__item"><a href="#">На карту</a></li>
-              <li class="aside-menu__item"><a href="#">На карту</a></li>
-              <li class="aside-menu__item"><a href="#">На карту</a></li>
-              <li class="aside-menu__item"><a href="#">На карту</a></li>
-              <li class="aside-menu__item"><a href="#">На карту</a></li>
-              <li class="aside-menu__item"><a href="#">На карту</a></li>
-              <li class="aside-menu__item"><a href="#">На карту</a></li>
-            </ul>
-          </section>
-        </aside>
-      </div>
+        </div>
+      </section>
+      <section class="info">
+        <h2 class="hidden">
+          Займы онлайн - легкий способ занять деньги срочно через интернет
+        </h2>
+        <p class="info__text">
+          Почти у каждого гражданина РФ рано или поздно бывают экстренные
+          ситуации, когда нужны срочно деньги. В банках процесс оформления
+          занимает много времени. В такой ситуации выручают займы онлайн!
+        </p>
+        <p class="info__text">
+          Мгновенные займы онлайн легко помогут вам преодолеть финансовые
+          трудности. Для оформления вам нужно иметь паспорт, выход в
+          интернет, найти подходящие условия и пару минут для заполнения
+          заявки онлайн.
+        </p>
+        <h3 class="info__heading">
+          Микрозаем онлайн - это круглосуточная выдача денег
+        </h3>
+        <p class="info__text">
+          Наш сервис подобрал самые надежные и популярные займы в РФ,
+          большинство из них работают круглосуточно 24/7, без выходных.
+        </p>
+        <p class="info__text">
+          С нами легко сможете получить займ онлайн срочно, в любое время
+          суток. Достаточно оформить заявку, подождать 15 минут, получить
+          одобрение и в ближайшие часы получить деньги на любую для вас
+          удобную платежную систему (На карту, Золотая корона, Qiwi,
+          contact, Yandex.money или банковский счет).
+        </p>
+        <h3 class="info__heading">
+          Есть три основных требования для получения займа онлайн:
+        </h3>
+        <ul class="info__list list">
+          <li class="info__text info__item list__item">
+            Человек должен проживать в РФ
+          </li>
+          <li class="info__text info__item list__item">
+            Возраст обращения от 18 лет
+          </li>
+          <li class="info__text info__item list__item">
+            Документ, подтверждающий личность (Паспорт)
+          </li>
+        </ul>
+        <p class="info__text">
+          Есть и другие требования, в зависимости в какую МФО вы обращаетесь
+        </p>
+        <h3 class="info__heading">Основные условия микрозаймов онлайн</h3>
+        <ul class="info__list list">
+          <li class="info__text info__item list__item">
+            Займы онлайн дают деньги сроком от 1 до 45 дней
+          </li>
+          <li class="info__text info__item list__item">
+            Процент рассчитывается индивидуально, в среднем составляет от 2%
+            в день
+          </li>
+          <li class="info__text info__item list__item">
+            Микрозаем онлайн можно взять на любые нужды, суммой от 1000 до
+            30000 рублей
+          </li>
+        </ul>
+        <h3 class="info__heading">Преимущества</h3>
+        <p class="info__text">
+          Мы индивидуально подошли к каждой микрофинансовой компании,
+          отобрали надежные и проверенные МФО.
+        </p>
+        <ul class="info__list list">
+          <li class="info__text info__item list__item">
+            Нет скрытых комиссий
+          </li>
+          <li class="info__text info__item list__item">
+            Удобно просматривать и сравнивать условия
+          </li>
+          <li class="info__text info__item list__item">
+            Гарантирована защита персональных данных
+          </li>
+          <li class="info__text info__item list__item">
+            Максимально просто, интуитивно понятно
+          </li>
+        </ul>
+        <p class="info__text">
+          Выбирайте выгодные условия, оформляйте заявку, получайте деньги,
+          наслаждайтесь процессом получения микрозаймов онлайн!
+        </p>
+      </section>
     </div>
-  </main>
+    {{> aside}}
+  </div>
+</main>
 {{/content}}
 
 {{#content "footer"}}
