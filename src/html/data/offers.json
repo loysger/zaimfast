@@ -1,0 +1,56 @@
+{
+  "qiwi": {
+    "title": "qiwi",
+    "name": "Qiwi Кошелек",
+    "img": "/img/offers/get-qiwi.svg",
+    "link": "#"
+  },
+  "card": {
+    "title": "card",
+    "name": "Банковская карта",
+    "img": "/img/offers/cards.svg",
+    "link": "#"
+  },
+  "bank": {
+    "title": "bank",
+    "name": "Банковский счет",
+    "img": "/img/offers/bankblue.svg",
+    "link": "#"
+  },
+  "contact": {
+    "title": "contact",
+    "name": "Contact",
+    "img": "/img/offers/contact.svg",
+    "link": "#"
+  },
+  "yandex": {
+    "title": "yandex",
+    "name": "Yandex.деньги",
+    "img": "/img/offers/get-yandex.svg",
+    "link": "#"
+  },
+  "unistream": {
+    "title": "unistream",
+    "name": "Юнистрим",
+    "img": "/img/offers/logo-unistream.svg",
+    "link": "#"
+  },
+  "crown": {
+    "title": "crown",
+    "name": "Золотая корона",
+    "img": "/img/offers/logo-zk.svg",
+    "link": "#"
+  },
+  "gosuslugi": {
+    "title": "gosuslugi",
+    "name": "Госуслуги",
+    "img": "/img/offers/gosuslugi.svg",
+    "link": "#"
+  },
+  "sber": {
+    "title": "sber",
+    "name": "Сбербанк",
+    "img": "/img/offers/logosber.svg",
+    "link": "#"
+  }
+}
