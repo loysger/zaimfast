@@ -13,13 +13,9 @@ const cssDeclarationSorter = require('css-declaration-sorter');
 const postcssScss = require('postcss-scss');
 const sourcemaps = require('gulp-sourcemaps');
 const handlebars = require('gulp-hb');
-// const mfoData = require('./src/html/data/mfo.json');
-// const posthtml = require('gulp-posthtml');
-// const include = require('posthtml-include');
-// const csso = require('gulp-csso');
-// const uglify = require('gulp-uglify');
-// const htmlmin = require('gulp-htmlmin');
-// const imagemin = require('gulp-imagemin');
+const csso = require('gulp-csso');
+const uglify = require('gulp-uglify');
+const htmlmin = require('gulp-htmlmin');
 
 // BrowserSync
 function browserSync(done) {
@@ -84,7 +80,7 @@ function generateMfo(done) {
             .data('./src/html/data/**/*.{js,json}')
             .data(context)
         )
-        // .pipe(htmlmin({ collapseWhitespace: true }))
+        .pipe(htmlmin({ collapseWhitespace: true }))
         .pipe(
           rename({
             basename: 'index',
@@ -101,7 +97,6 @@ function html() {
   return (
     gulp
       .src(['./src/html/pages/**/*.hbs'])
-      // .pipe(posthtml([include({ root: './src/html/components/' })]))
       .pipe(
         handlebars() // {debug: true}
           .partials('./src/html/partials/components/*.hbs')
@@ -109,7 +104,7 @@ function html() {
           .helpers('./src/html/helpers/*.js')
           .data('./src/html/data/**/*.{js,json}')
       )
-      // .pipe(htmlmin({ collapseWhitespace: true }))
+      .pipe(htmlmin({ collapseWhitespace: true }))
       .pipe(
         rename({
           extname: '.html'
@@ -126,7 +121,7 @@ function js() {
       .src('./src/js/*.js')
       .pipe(plumber())
       .pipe(sourcemaps.init())
-      // .pipe(uglify())
+      .pipe(uglify())
       .pipe(
         rename({
           suffix: '.min'
@@ -147,7 +142,7 @@ function css() {
       .pipe(sourcemaps.init())
       .pipe(sass().on('error', sass.logError))
       .pipe(postcss(postcssPlugins))
-      // .pipe(csso())
+      .pipe(csso())
       .pipe(
         rename({
           suffix: '.min'
@@ -167,14 +162,12 @@ function img() {
 // define complex tasks
 const build = gulp.series(clean, gulp.parallel(img, html, generateMfo, css, js));
 const watch = gulp.parallel(watchFiles, browserSync);
-
 const live = gulp.series(build, watch);
 
 // export tasks
 exports.default = live;
 exports.live = live;
-
-exports.build = build;
 exports.watch = watch;
-
-exports.sort = sortScss;
+exports.build = build;
+exports.clean = clean;
+exports.sortScssRules = sortScss;
