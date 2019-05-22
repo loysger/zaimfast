@@ -4,7 +4,6 @@
 const gulp = require('gulp');
 const rename = require('gulp-rename');
 const sass = require('gulp-sass');
-const plumber = require('gulp-plumber');
 const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
 const del = require('del');
@@ -119,7 +118,6 @@ function js() {
   return (
     gulp
       .src('./src/js/*.js')
-      .pipe(plumber())
       .pipe(sourcemaps.init())
       .pipe(uglify())
       .pipe(
@@ -138,7 +136,6 @@ function css() {
   return (
     gulp
       .src('./src/scss/style.scss')
-      .pipe(plumber())
       .pipe(sourcemaps.init())
       .pipe(sass().on('error', sass.logError))
       .pipe(postcss(postcssPlugins))
