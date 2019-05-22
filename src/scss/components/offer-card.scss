@@ -226,30 +226,17 @@
   }
 }
 
+.offer-card__about-wrapper {
+  width: 100%;
+}
+
 .offer-card__about {
   margin-bottom: 15px;
   font-size: 12px;
 
-  &--closed {
-    li:not(:last-child) {
-      display: none;
-    }
-
-    .no-js & {
-      li:not(:last-child) {
-        display: list-item;
-      }
-
-      li:last-child {
-        display: none;
-      }
-    }
-  }
-
   @include media-desktop {
     width: 100%;
     margin-bottom: 0;
-    /* border-top: 1px solid $border-color;*/
     padding-top: 10px;
     font-size: 14px;
   }

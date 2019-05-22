@@ -1,28 +1,25 @@
 .main-navigation {
-  z-index: 100;
-  position: fixed;
-  top: 0;
-  left: 0;
   width: 100vw;
-  height: 100vh;
   padding: $padding;
   background-color: white;
+  margin-top: -100%;
+
+  &--opened {
+    margin-top: 0;
+    transition: margin-top 0.5s;
+  }
 
   &--closed {
-    display: none;
+    margin-top: -100%;
+    transition: margin-top 0.5s;
   }
 
   .no-js & {
-    display: block;
-    position: relative;
-    height: auto;
+    margin-top: 0;
   }
 
   @include media-desktop {
-    &--closed {
-      display: unset;
-    }
-
+    margin-top: 0;
     display: flex;
     position: relative;
     width: auto;
@@ -34,7 +31,9 @@
 .main-navigation__top {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 15px;
+  align-items: center;
+  width: 100%;
+  margin-top: -20px;
 
   @include media-desktop {
     display: none;
@@ -63,7 +62,11 @@
 }
 
 .main-navigation__item a {
+  width: 100%;
+  display: flex;
+
   @include media-desktop {
+    width: auto;
     font-size: 14px;
     font-weight: 400;
     transition-duration: 0.3s;

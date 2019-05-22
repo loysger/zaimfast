@@ -7,7 +7,7 @@
 
 {{#content "content"}}
 {{> page-header}}
-<main class="page-content page-content--zaymi">
+<main class="page-content page-content--zaymi page-content--aside">
   <div class="page-content__wrap">
     <div class="page-wrap">
       <section class="filters" style="display: none;">
@@ -81,12 +81,14 @@
                     <span class="offer-card__prop-name">Срок</span>
                   </p>
                 </div>
-                <ul class="offer-card__about offer-card__about--closed">
-                  {{#each this.aboutShort}}
-                  <li class="offer-card__about-item">{{this}}</li>
-                  {{/each}}
-                  <li class="offer-card__about-more">Подробнее</li>
-                </ul>
+                <div class="offer-card__about-wrapper">
+                  <ul class="offer-card__about">
+                    {{#each this.aboutShort}}
+                    <li class="offer-card__about-item">{{this}}</li>
+                    {{/each}}
+                  </ul>
+                  <button class="offer-card__about-more button">Подробнее</button>
+                </div>
                 <a class="offer-card__go button" href="{{this.link}}">Перейти</a>
               </li>
             {{/each}}
