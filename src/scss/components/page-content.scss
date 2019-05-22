@@ -34,7 +34,7 @@
 }
 
 .page-content--aside {
-    .page-content__wrap {
+  .page-content__wrap {
     @include media-desktop {
       display: flex;
       max-width: $max-width;
@@ -51,12 +51,36 @@
   .aside-wrap {
     display: flex;
     order: -1;
+    overflow: hidden;
+
+    & aside {
+      margin-top: -110%;
+      width: 100%;
+    }
+
+    &--fold aside {
+      margin-top: -110%;
+      transition: margin-top 0.3s;
+    }
+
+    &--unfold aside {
+      margin-top: 0;
+      transition: margin-top 0.3s;
+    }
+
+    .no-js & aside {
+      margin-top: 0;
+    }
 
     @include media-desktop {
       order: initial;
+      overflow: visible;
+
+      & aside {
+        margin-top: 0;
+      }
     }
   }
-
 }
 
 .page-content--news {

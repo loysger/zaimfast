@@ -62,7 +62,11 @@
 }
 
 .main-navigation__item a {
+  width: 100%;
+  display: flex;
+
   @include media-desktop {
+    width: auto;
     font-size: 14px;
     font-weight: 400;
     transition-duration: 0.3s;
