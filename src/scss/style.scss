@@ -2,6 +2,7 @@
 @import 'normalize.scss';
 @import 'mixin.scss';
 @import 'variables.scss';
+@import 'animation.scss';
 
 html {
   box-sizing: border-box;
@@ -69,7 +70,7 @@ input[type='radio'].visually-hidden {
   display: none;
 }
 
-// iports
+// imports
 @import './components/heading.scss';
 @import './components/button.scss';
 @import './components/slider.scss';

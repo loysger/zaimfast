@@ -9,20 +9,22 @@
         <span class="hidden">Показать меню</span>
       </button>
     </div>
-    <nav class="header__navigation main-navigation main-navigation--closed">
-      <div class="main-navigation__top">
-        <h2 class="heading-2 main-navigation__heading">Меню</h2>
-        <button class="main-navigation__close">
-          <span class="hidden">Закрыть меню</span>
-        </button>
-      </div>
-      <ul class="main-navigation__list">
-        {{#each mainNavigation.links}}
-        <li class="main-navigation__item">
-          <a href="{{href}}" class="heading-3">{{text}}</a>
-        </li>
-        {{/each}}
-      </ul>
-    </nav>
+    <div class="header__navigation--wrapper">
+      <nav class="header__navigation main-navigation">
+        <div class="main-navigation__top">
+          <h2 class="heading-2 main-navigation__heading hidden">Меню</h2>
+          {{!-- <button class="main-navigation__close">
+            <span class="hidden">Закрыть меню</span>
+          </button> --}}
+        </div>
+        <ul class="main-navigation__list">
+          {{#each mainNavigation.links}}
+          <li class="main-navigation__item">
+            <a href="{{href}}" class="heading-3">{{text}}</a>
+          </li>
+          {{/each}}
+        </ul>
+      </nav>
+    </div>
   </div>
 </header>

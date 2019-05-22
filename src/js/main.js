@@ -4,17 +4,27 @@ try {
   (function() {
     var burger = document.querySelector('.header__burger');
     var menu = document.querySelector('.main-navigation');
-    var closeButton = document.querySelector('.main-navigation__close');
+    // var closeButton = document.querySelector('.main-navigation__close');
 
     var closePopUp = function() {
+      menu.classList.remove('main-navigation--opened');
       menu.classList.add('main-navigation--closed');
-      closeButton.removeEventListener('click', closePopUp);
+      burger.classList.add('header__burger--open');
+      burger.classList.remove('header__burger--close');
+      burger.removeEventListener('click', closePopUp);
+      burger.addEventListener('click', openPopUp);
     };
 
-    burger.addEventListener('click', function() {
+    var openPopUp = function() {
+      menu.classList.add('main-navigation--opened');
       menu.classList.remove('main-navigation--closed');
-      closeButton.addEventListener('click', closePopUp);
-    });
+      burger.classList.remove('header__burger--open');
+      burger.classList.add('header__burger--close');
+      burger.removeEventListener('click', openPopUp);
+      burger.addEventListener('click', closePopUp);
+    };
+
+    burger.addEventListener('click', openPopUp);
   })();
 } catch (error) {}
 
@@ -55,7 +65,7 @@ try {
       button.addEventListener('click', function() {
         element.classList.toggle('news-page__text-wrapper--closed');
       });
-    })
+    });
   })();
 } catch (error) {}
 
@@ -68,6 +78,5 @@ try {
       var target = elements[i].querySelector('.' + targetClass);
       target.textContent = i + 1;
     }
-
   })();
 } catch (error) {}
