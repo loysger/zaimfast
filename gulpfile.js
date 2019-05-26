@@ -39,8 +39,11 @@ function browserSyncReload(done) {
 }
 
 // Clean assets
-function clean() {
-  return del('./build');
+function clean(cb) {
+  del('./build');
+  setTimeout(() => {
+    return cb();
+  }, 1000);
 }
 
 // Watch files
