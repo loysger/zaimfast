@@ -9,5 +9,4 @@ build/
 node_modules/
 npm-debug.log*
 Thumbs.db
-# добавил закладки
-# .vscode/
+.vscode/
