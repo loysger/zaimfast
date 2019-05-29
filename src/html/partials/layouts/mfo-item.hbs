@@ -136,11 +136,25 @@
               <td>
                 Выдача денег
               </td>
-              <td>{{conditions.paymentTime}}</td>
+              {{!-- <td>{{conditions.paymentTime}}</td> --}}
+              <td>
+              <ul class="list">
+                {{#each conditions.paymentTime}}
+                <li class="list__item">{{this}}</li>
+                {{/each}}
+              </ul>
+              </td>
             </tr>
             <tr class="zaem-condition__item">
               <td>Варианты погашения</td>
-              <td>{{conditions.repayment}}</td>
+              {{!-- <td>{{conditions.repayment}}</td> --}}
+              <td>
+                <ul class="list">
+                  {{#each conditions.repayment}}
+                    <li class="list__item">{{this}}</li>
+                  {{/each}}
+                </ul>
+              </td>
             </tr>
             <tr class="zaem-condition__item">
               <td>Оплата</td>
