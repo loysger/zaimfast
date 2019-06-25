@@ -21,7 +21,6 @@
             {{#each mfo}}
               <li class="offers__item offer-card offer-card--rating offer-card--{{this.title}} js-set-number">
                 <div class="offer-card__top">
-                  <div class="set-number offer-card__number"></div>
                   {{!-- <p class="offer-card__name">
                     <a href="{{this.innerLink}}">{{this.name}} / {{this.nameEn}}</a>
                   </p> --}}
@@ -42,6 +41,7 @@
                   </p>
                 </div>
                 <a class="offer-card__go button" href="{{this.link}}">Получить</a>
+                <div class="set-number offer-card__number"></div>
               </li>
             {{/each}}
           </ul>
