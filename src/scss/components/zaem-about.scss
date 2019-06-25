@@ -17,7 +17,7 @@
       content: '';
     }
 
-    @include media-desktop {
+    @media (min-width: $desktop) {
       height: auto;
       overflow: unset;
 
@@ -27,7 +27,7 @@
     }
   }
 
-  @include media-desktop {
+  @media (min-width: $desktop) {
     padding: 20px $padding-ds 0;
   }
 }
@@ -50,7 +50,7 @@
   background: none;
   color: $main-color;
 
-  @include media-desktop {
+  @media (min-width: $desktop) {
     .zaem-about--closed & {
       display: none;
     }

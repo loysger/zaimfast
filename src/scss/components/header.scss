@@ -1,11 +1,11 @@
 .header {
-  @include media-desktop {
+  @media (min-width: $desktop) {
     padding: 0 $padding-ds;
   }
 }
 
 .header__container {
-  @include media-desktop {
+  @media (min-width: $desktop) {
     display: flex;
     max-width: $max-width;
     margin: 0 auto;
@@ -22,7 +22,7 @@
   background-color: white;
   z-index: 100;
 
-  @include media-desktop {
+  @media (min-width: $desktop) {
     height: auto;
     margin-right: auto;
     padding: 0;
@@ -111,7 +111,7 @@
     }
   }
 
-  @include media-desktop {
+  @media (min-width: $desktop) {
     display: none;
   }
 }

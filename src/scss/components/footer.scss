@@ -3,13 +3,13 @@
   color: rgb(140, 140, 140);
   font-size: 12px;
 
-  @include media-desktop {
+  @media (min-width: $desktop) {
     padding: 0;
   }
 }
 
 .footer--colored {
-  @include media-desktop {
+  @media (min-width: $desktop) {
     background-color: $bg-color;
   }
 }
@@ -21,7 +21,7 @@
   border-top: 1px solid $border-color;
   border-bottom: 1px solid $border-color;
 
-  @include media-desktop {
+  @media (min-width: $desktop) {
     width: 100%;
     margin: 0;
     padding: 0 $padding-ds;
@@ -33,7 +33,7 @@
   justify-content: space-between;
   padding: 5px 0;
 
-  @include media-desktop {
+  @media (min-width: $desktop) {
     justify-content: center;
     max-width: $max-width;
     margin:  0 auto;
@@ -44,7 +44,7 @@
   display: flex;
   flex-shrink: 0;
 
-  @include media-desktop {
+  @media (min-width: $desktop) {
     margin-right: auto;
   }
 }
@@ -52,32 +52,32 @@
 .footer__menu {
   margin: 30px 0;
 
-  @include media-desktop {
+  @media (min-width: $desktop) {
     padding: 0 $padding-ds;
   }
 }
 
 .footer__menu-container {
-  @include media-desktop {
+  @media (min-width: $desktop) {
     max-width: $max-width;
     margin: 30px auto;
   }
 }
 
 .footer-menu__list {
-  @include media-desktop {
+  @media (min-width: $desktop) {
     width: fit-content;
   }
 }
 
 .footer__bottom {
-  @include media-desktop {
+  @media (min-width: $desktop) {
     padding: 0 $padding-ds;
   }
 }
 
 .footer__bottom-container {
-  @include media-desktop {
+  @media (min-width: $desktop) {
     max-width: $max-width;
     margin: 0 auto;
   }

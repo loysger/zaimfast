@@ -2,13 +2,13 @@
   padding: 30px $padding;
   background-color: $bg-color;
 
-  @include media-desktop {
+  @media (min-width: $desktop) {
     padding: 30px $padding-ds;
   }
 }
 
 .partners__container {
-  @include media-desktop {
+  @media (min-width: $desktop) {
     display: flex;
     flex-wrap: wrap;
     max-width: $max-width;
@@ -19,7 +19,7 @@
 .partners__heading {
   margin-bottom: 20px;
 
-  @include media-desktop {
+  @media (min-width: $desktop) {
     order: -1;
     width: fit-content;
     margin-right: auto;
@@ -34,7 +34,7 @@
   overflow: hidden;
   overflow-x: scroll;
 
-  @include media-desktop {
+  @media (min-width: $desktop) {
     width: 100%;
     margin: 0 0 20px;
     overflow: unset;
@@ -51,7 +51,7 @@
   margin: 0 auto;
   padding: 0 20px;
 
-  @include media-desktop {
+  @media (min-width: $desktop) {
     width: auto;
     max-width: 1080px;
     padding: 0;
@@ -68,7 +68,7 @@
   border: 1px solid $border-color;
   border-radius: 3px;
 
-  @include media-desktop {
+  @media (min-width: $desktop) {
     width: 190px;
     height: 90px;
   }
@@ -91,7 +91,7 @@
     transition-duration: 0.3s;
   }
 
-  @include media-desktop {
+  @media (min-width: $desktop) {
     padding: 15px;
   }
 }
@@ -104,7 +104,7 @@
 }
 
 .partners__more {
-  @include media-desktop {
+  @media (min-width: $desktop) {
     order: -1;
     width: fit-content;
     border: none;

@@ -4,7 +4,7 @@
   overflow-x: scroll;
   border-bottom: 1px solid $border-color;
 
-  @include media-desktop {
+  @media (min-width: $desktop) {
     overflow: unset;
   }
 }
@@ -18,7 +18,7 @@
   flex-shrink: 0;
   margin: 0 10px 2px;
 
-  @include media-desktop {
+  @media (min-width: $desktop) {
     margin: 0 10px;
   }
 }
@@ -43,7 +43,7 @@
     }
   }
 
-  @include media-desktop {
+  @media (min-width: $desktop) {
     font-size: 16px;
   }
 }

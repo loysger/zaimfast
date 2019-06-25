@@ -18,7 +18,7 @@
   font-size: 16px;
   font-weight: 700;
 
-  @include media-desktop {
+  @media (min-width: $desktop) {
     font-size: 18px;
   }
 }
@@ -29,7 +29,7 @@
   font-size: 14px;
   font-weight: 700;
 
-  @include media-desktop {
+  @media (min-width: $desktop) {
     font-size: 16px;
   }
 }

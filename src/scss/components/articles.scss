@@ -1,13 +1,13 @@
 .articles {
   padding: 20px $padding;
 
-  @include media-desktop {
+  @media (min-width: $desktop) {
     padding: 20px $padding-ds;
   }
 }
 
 .articles__container {
-  @include media-desktop {
+  @media (min-width: $desktop) {
     display: flex;
     flex-wrap: wrap;
     max-width: $max-width;
@@ -18,7 +18,7 @@
 .articles__heading {
   margin-bottom: 20px;
 
-  @include media-desktop {
+  @media (min-width: $desktop) {
     order: -1;
     margin-right: auto;
     font-size: 30px;
@@ -26,7 +26,7 @@
 }
 
 .articles__list {
-  @include media-desktop {
+  @media (min-width: $desktop) {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -37,7 +37,7 @@
 .articles__item {
   margin-bottom: 20px;
 
-  @include media-desktop {
+  @media (min-width: $desktop) {
     display: flex;
     width: 220px;
   }
@@ -47,7 +47,7 @@
   display: flex;
   align-items: flex-start;
 
-  @include media-desktop {
+  @media (min-width: $desktop) {
     flex-direction: column;
     flex-wrap: wrap;
     height: auto;
@@ -64,7 +64,7 @@
   overflow: hidden;
   border-radius: 4px;
 
-  @include media-desktop {
+  @media (min-width: $desktop) {
     order: -1;
     width: 220px;
     height: 140px;
@@ -95,13 +95,13 @@
   color: $text-color;
   font-weight: 700;
 
-  @include media-desktop {
+  @media (min-width: $desktop) {
     order: -1;
   }
 }
 
 .articles__more {
-  @include media-desktop {
+  @media (min-width: $desktop) {
     order: -1;
     width: fit-content;
     border: none;

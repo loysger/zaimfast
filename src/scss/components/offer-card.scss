@@ -3,7 +3,7 @@
   border-top: 1px solid $border-color;
   color: $text-color;
 
-  @include media-desktop {
+  @media (min-width: $desktop) {
     display: flex;
     position: relative;
     flex-wrap: wrap;
@@ -46,7 +46,7 @@
   background-color: white;
   color: $text-color;
 
-  @include media-desktop {
+  @media (min-width: $desktop) {
     .offer-card--rating & {
       position: absolute;
       top: 5px;
@@ -67,7 +67,7 @@
   align-items: center;
   justify-content: space-between;
 
-  @include media-desktop {
+  @media (min-width: $desktop) {
     flex-direction: column;
     justify-content: space-between;
     margin-right: 30px;
@@ -98,7 +98,7 @@
   margin-right: auto;
   /* margin-left: 10px;*/
 
-  @include media-desktop {
+  @media (min-width: $desktop) {
     width: 100%;
   }
 
@@ -111,7 +111,7 @@
     /* font-size: 14px;*/
     font-weight: 700;
 
-    @include media-desktop {
+    @media (min-width: $desktop) {
       font-size: 12px;
 
       .offer-card--rating & {
@@ -141,7 +141,7 @@
     object-fit: contain;
   }
 
-  @include media-desktop {
+  @media (min-width: $desktop) {
     order: -1;
     width: 150px;
     height: 50px;
@@ -172,7 +172,7 @@
   padding-bottom: 15px;
   border-bottom: 2px solid $border-color;
 
-  @include media-desktop {
+  @media (min-width: $desktop) {
     flex-grow: 1;
     margin-bottom: 30px;
     padding-right: 125px;
@@ -191,7 +191,7 @@
   flex-direction: column;
   margin: 0;
 
-  @include media-desktop {
+  @media (min-width: $desktop) {
     flex-grow: 1;
 
     &:nth-child(1n) {
@@ -207,7 +207,7 @@
 .offer-card__prop-text {
   font-size: 14px;
 
-  @include media-desktop {
+  @media (min-width: $desktop) {
     .offer-card--rating & {
       font-size: 16px;
     }
@@ -219,7 +219,7 @@
   color: $text-color-a-0_8;
   font-size: 12px;
 
-  @include media-desktop {
+  @media (min-width: $desktop) {
     .offer-card--rating & {
       font-size: 14px;
     }
@@ -234,7 +234,7 @@
   margin-bottom: 15px;
   font-size: 12px;
 
-  @include media-desktop {
+  @media (min-width: $desktop) {
     width: 100%;
     margin-bottom: 0;
     padding-top: 10px;
@@ -253,7 +253,7 @@
   font-size: 14px;
   cursor: pointer;
 
-  @include media-desktop {
+  @media (min-width: $desktop) {
     margin-bottom: 0;
   }
 }
@@ -264,7 +264,7 @@
   background-color: rgb(13, 209, 73);
   color: white;
 
-  @include media-desktop {
+  @media (min-width: $desktop) {
     position: absolute;
     top: 25px;
     right: 20px;

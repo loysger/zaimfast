@@ -3,14 +3,14 @@
   overflow: hidden;
   background-color: rgb(235, 240, 243);
 
-  @include media-desktop {
+  @media (min-width: $desktop) {
     padding: 30px $padding-ds;
     overflow: unset;
   }
 }
 
 .best__container {
-  @include media-desktop {
+  @media (min-width: $desktop) {
     display: flex;
     flex-wrap: wrap;
     max-width: $max-width;
@@ -19,7 +19,7 @@
 }
 
 .best__heading {
-  @include media-desktop {
+  @media (min-width: $desktop) {
     order: -1;
     width: fit-content;
     margin-right: auto;
@@ -44,7 +44,7 @@
     content: '';
   }
 
-  @include media-desktop {
+  @media (min-width: $desktop) {
     flex-wrap: wrap;
     justify-content: space-between;
     width: 100%;
@@ -58,7 +58,7 @@
 }
 
 .best__more {
-  @include media-desktop {
+  @media (min-width: $desktop) {
     order: -1;
     width: fit-content;
     border: none;

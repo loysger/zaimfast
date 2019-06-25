@@ -1,7 +1,7 @@
 .zaem-borrower {
   padding: 0 $padding;
 
-  @include media-desktop {
+  @media (min-width: $desktop) {
     padding-right: $padding-ds;
     padding-bottom: 30px;
     padding-left: $padding-ds;

@@ -1,7 +1,7 @@
 .zaem-condition {
   padding: 20px $padding;
 
-  @include media-desktop {
+  @media (min-width: $desktop) {
     padding: 20px $padding-ds;
   }
 }
@@ -34,7 +34,7 @@
   border-radius: 0 0 4px 4px;
   background-color: rgba($color: $main-color, $alpha: 0.1);
 
-  @include media-desktop {
+  @media (min-width: $desktop) {
     border-radius: 0;
   }
 }
@@ -65,7 +65,7 @@
     content: '';
   }
 
-  @include media-desktop {
+  @media (min-width: $desktop) {
 
     padding: 5px 10px;
     border-radius: 0;
@@ -85,7 +85,7 @@
 .zaem-condition__item--closed td:last-of-type {
   display: none;
 
-  @include media-desktop {
+  @media (min-width: $desktop) {
     display: block;
   }
 }
@@ -94,7 +94,7 @@
   margin-bottom: 5px;
   border-radius: 4px;
 
-  @include media-desktop {
+  @media (min-width: $desktop) {
     margin-bottom: 0;
     border-radius: 0;
   }

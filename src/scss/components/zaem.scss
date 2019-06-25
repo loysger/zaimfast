@@ -1,5 +1,5 @@
 .zaem__calc {
-  @include media-desktop {
+  @media (min-width: $desktop) {
     width: 100%;
   }
 }
@@ -12,7 +12,7 @@
   color: $text-color;
   font-size: 12px;
 
-  @include media-desktop {
+  @media (min-width: $desktop) {
     margin: 0 $padding-ds;
     font-size: 14px;
   }
@@ -25,7 +25,7 @@
   max-width: 728px;
   margin: 0 auto;
 
-  @include media-desktop {
+  @media (min-width: $desktop) {
     max-width: none;
   }
 }

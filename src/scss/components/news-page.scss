@@ -2,7 +2,7 @@
   margin-bottom: -20px;
   padding: 0 $padding;
 
-  @include media-desktop {
+  @media (min-width: $desktop) {
     margin-bottom: 0;
     padding-top: 5px;
     padding-bottom: 20px;
@@ -11,7 +11,7 @@
 }
 
 .news-page__list {
-  @include media-desktop {
+  @media (min-width: $desktop) {
     display: flex;
     position: relative;
     flex-wrap: wrap;
@@ -24,7 +24,7 @@
   font-size: 12px;
   line-height: 1.4;
 
-  @include media-desktop {
+  @media (min-width: $desktop) {
     font-size: 14px;
   }
 }
@@ -52,7 +52,7 @@
     }
   }
 
-  @include media-desktop {
+  @media (min-width: $desktop) {
     &:last-child {
       margin-bottom: 0;
     }
@@ -78,7 +78,7 @@
   color: $main-color;
   cursor: pointer;
 
-  @include media-desktop {
+  @media (min-width: $desktop) {
     display: none;
   }
 }

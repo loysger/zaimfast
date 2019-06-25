@@ -1,7 +1,7 @@
 .calc {
   margin: 15px 0 20px;
 
-  @include media-desktop {
+  @media (min-width: $desktop) {
     display: flex;
     flex-wrap: wrap;
   }
@@ -9,7 +9,7 @@
 
 .calc__heading {
   margin-bottom: 10px;
-  @include media-desktop {
+  @media (min-width: $desktop) {
     width: 100%;
   }
 }
@@ -21,7 +21,7 @@
   font-size: 20px;
   font-weight: 400;
 
-  @include media-desktop {
+  @media (min-width: $desktop) {
     width: 100%;
   }
 }
@@ -32,20 +32,20 @@
   color: $text-color-a-0_8;
   font-size: 12px;
 
-  @include media-desktop {
+  @media (min-width: $desktop) {
     font-size: 14px;
   }
 }
 
 .calc__amount {
-  @include media-desktop {
+  @media (min-width: $desktop) {
     flex-grow: 1;
     margin-right: 30px;
   }
 }
 
 .calc__days {
-  @include media-desktop {
+  @media (min-width: $desktop) {
     flex-grow: 1;
   }
 }
