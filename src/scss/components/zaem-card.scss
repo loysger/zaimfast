@@ -40,12 +40,28 @@
 
 .zaem-card__img {
   display: flex;
+  justify-content: center;
   flex-shrink: 0;
+  width: 100%;
+  height: fit-content;
+  max-height: 110px;
 
   @include media-desktop {
     width: 250px;
     height: 80px;
     margin-bottom: 15px;
+  }
+
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  img {
+    object-fit: contain;
+    height: 100%;
   }
 }
 
@@ -137,7 +153,8 @@
     font-weight: 700;
     transition-duration: 0.3s;
 
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
       border-color: rgb(13, 209, 73);
       background-color: rgb(13, 209, 73);
       color: white;

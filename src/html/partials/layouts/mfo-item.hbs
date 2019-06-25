@@ -13,11 +13,13 @@
         <h2 class="hidden">{{name}}</h2>
         <div class="zaem-card">
           <div class="zaem-card__top">
-            <p class="zaem-card__name">
+            {{!-- <p class="zaem-card__name">
               <a href="{{link}}">{{name}}</a>
-            </p>
+            </p> --}}
             <div class="zaem-card__img">
-              <img src="{{img}}" alt="{{name}}" />
+              <a href="{{link}}" title="{{name}}">
+                <img src="{{img}}" alt="{{name}}"/>
+              </a>
             </div>
           </div>
           <div class="zaem-card__contain">
