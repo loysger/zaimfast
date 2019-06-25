@@ -4,71 +4,7 @@
 @import 'variables.scss';
 @import 'animation.scss';
 
-html {
-  box-sizing: border-box;
-}
-
-*,
-::after,
-::before {
-  box-sizing: inherit;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
-  overflow-x: hidden;
-  font-size: 14px;
-  min-width: 320px;
-
-  .no-js & {
-    &::before {
-      content: 'У вас отключен JavaScript требуеый для нормального функционированияя нашего сайта';
-      display: block;
-      width: 100%;
-      text-align: center;
-      padding: 10px 5px;
-      background-color: #f8fc0098;
-    }
-  }
-}
-
-img {
-  width: 100%;
-  height: auto;
-  font-size: 14px;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.hidden:not(:focus):not(:active),
-input[type='checkbox'].visually-hidden,
-input[type='radio'].visually-hidden {
-  position: absolute;
-  bottom: 0;
-  margin: -1px;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  overflow: hidden;
-  white-space: nowrap;
-  clip: rect(0 0 0 0);
-  clip-path: inset(100%);
-}
-
-.no-display {
-  display: none;
-}
+@import 'custom.scss';
 
 // imports
 @import './components/heading.scss';
