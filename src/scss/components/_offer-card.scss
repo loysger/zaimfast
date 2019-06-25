@@ -179,13 +179,15 @@
 }
 
 .offer-card__contain {
-  display: flex;
   margin: 10px 0;
   padding-bottom: 15px;
+  display: flex;
+  justify-content: space-evenly;
   border-bottom: 2px solid $border-color;
 
   @media (min-width: $desktop) {
     flex-grow: 1;
+    justify-content: space-between;
     margin-bottom: 30px;
     padding-right: 125px;
     padding-bottom: 0;
