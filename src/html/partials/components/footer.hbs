@@ -76,41 +76,13 @@
       <div class="footer__menu-container">
         <nav class="footer-menu">
           <ul class="footer-menu__list">
+            {{#each footerNavigation.links}}
             <li class="footer-menu__item">
-              <a href="#">
-                О проекте
+              <a href="{{href}}">
+                {{text}}
               </a>
             </li>
-            <li class="footer-menu__item">
-              <a href="#">
-                Контакты
-              </a>
-            </li>
-            <li class="footer-menu__item">
-              <a href="#">
-                Партнерская программа
-              </a>
-            </li>
-            <li class="footer-menu__item">
-              <a href="#">
-                Для агентов
-              </a>
-            </li>
-            <li class="footer-menu__item">
-              <a href="#">
-                Политика конфиденциальности
-              </a>
-            </li>
-            <li class="footer-menu__item">
-              <a href="#">
-                Энциклопедия
-              </a>
-            </li>
-            <li class="footer-menu__item">
-              <a href="#">
-                Карта сайта
-              </a>
-            </li>
+            {{/each}}
           </ul>
         </nav>
       </div>
