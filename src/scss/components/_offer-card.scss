@@ -5,7 +5,8 @@
   color: $text-color;
 
   @media (min-width: $desktop) {
-    display: flex;
+    display: grid;
+    grid-template-columns: min-content 1fr;
     position: relative;
     flex-wrap: wrap;
     align-items: center;
@@ -188,7 +189,7 @@
 .offer-card__contain {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-evenly;
   margin: 10px 0;
   padding-bottom: 15px;
   border-bottom: 2px solid $border-color;
@@ -196,8 +197,7 @@
   @media (min-width: $desktop) {
     flex-grow: 1;
     justify-content: space-between;
-    margin-bottom: 30px;
-    padding-right: 125px;
+    padding-right: 110px;
     padding-bottom: 0;
     border: none;
 
@@ -251,6 +251,10 @@
 
 .offer-card__about-wrapper {
   width: 100%;
+
+  @media (min-width: $desktop) {
+    grid-column: -1 / 1;
+  }
 }
 
 .offer-card__about {
