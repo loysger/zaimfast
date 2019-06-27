@@ -6,7 +6,9 @@
 
   @media (min-width: $desktop) {
     display: grid;
-    grid-template-columns: min-content 1fr;
+    grid-template-columns: min-content 1fr 150px;
+    grid-column-gap: 10px;
+    column-gap: 10px;
     position: relative;
     flex-wrap: wrap;
     align-items: center;
@@ -14,7 +16,6 @@
     border-top: none;
     background-color: white;
     transition-duration: 0.3s;
-    /* border-bottom: 1px solid $border-color;*/
 
     &:hover {
       z-index: 2;
@@ -63,8 +64,7 @@
   @media (min-width: $desktop) {
     flex-direction: column;
     justify-content: space-between;
-    margin-right: 30px;
-    margin-bottom: 10px;
+    margin-bottom: 0;
   }
 }
 
@@ -138,14 +138,13 @@
   flex-wrap: wrap;
   justify-content: space-evenly;
   margin: 10px 0;
-  padding-bottom: 15px;
   border-bottom: 2px solid $border-color;
 
   @media (min-width: $desktop) {
     flex-grow: 1;
     justify-content: space-between;
-    padding-right: 110px;
     padding-bottom: 0;
+    margin: 0;
     border: none;
   }
 }
@@ -161,11 +160,8 @@
   min-width: max-content;
 
   @media (min-width: $desktop) {
+    margin: 0;
     flex-grow: 1;
-
-    &:nth-child(1n) {
-      text-align: center;
-    }
   }
 }
 
@@ -194,7 +190,7 @@
   @media (min-width: $desktop) {
     width: 100%;
     margin-bottom: 0;
-    padding-top: 10px;
+    padding-top: 20px;
     font-size: 14px;
   }
 }
@@ -222,13 +218,7 @@
   color: white;
 
   @media (min-width: $desktop) {
-    position: absolute;
-    top: 25px;
-    right: 20px;
-    width: 110px;
-
-    &:active {
-      top: 25px;
-    }
+    grid-column: 3 / 4;
+    grid-row: 1;
   }
 }
