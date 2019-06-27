@@ -1,8 +1,8 @@
 .main-navigation {
   width: 100vw;
+  margin-top: -100%;
   padding: $padding;
   background-color: white;
-  margin-top: -100%;
 
   &--opened {
     margin-top: 0;
@@ -19,19 +19,19 @@
   }
 
   @media (min-width: $desktop) {
-    margin-top: 0;
     display: flex;
     position: relative;
     width: auto;
     height: auto;
+    margin-top: 0;
     padding: 0;
   }
 }
 
 .main-navigation__top {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   width: 100%;
   margin-top: -20px;
 
@@ -62,8 +62,8 @@
 }
 
 .main-navigation__item a {
-  width: 100%;
   display: flex;
+  width: 100%;
 
   @media (min-width: $desktop) {
     width: auto;

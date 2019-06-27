@@ -40,8 +40,8 @@
 
 .zaem-card__img {
   display: flex;
-  justify-content: center;
   flex-shrink: 0;
+  justify-content: center;
   width: 100%;
   height: fit-content;
   max-height: 110px;
@@ -54,14 +54,14 @@
 
   a {
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     overflow: hidden;
   }
 
   img {
-    object-fit: contain;
     height: 100%;
+    object-fit: contain;
   }
 }
 
