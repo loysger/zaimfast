@@ -24,7 +24,7 @@ function browserSync(done) {
     },
     notify: false,
     ghostMode: false,
-    open: true,
+    open: false,
     cors: true,
     ui: false,
     port: 3000
