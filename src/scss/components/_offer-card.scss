@@ -187,7 +187,8 @@
 
 .offer-card__contain {
   display: flex;
-  justify-content: space-evenly;
+  flex-wrap: wrap;
+  justify-content: center;
   margin: 10px 0;
   padding-bottom: 15px;
   border-bottom: 2px solid $border-color;
@@ -210,7 +211,12 @@
 .offer-card__prop {
   display: flex;
   flex-direction: column;
+  align-items: center;
   margin: 0;
+  margin-bottom: 15px;
+  margin-left: 10px;
+  margin-right: 10px;
+  min-width: max-content;
 
   @media (min-width: $desktop) {
     flex-grow: 1;
@@ -219,10 +225,6 @@
       text-align: center;
     }
   }
-}
-
-.offer-card__prop:not(:last-child) {
-  margin-right: 10px;
 }
 
 .offer-card__prop-text {
