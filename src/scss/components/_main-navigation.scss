@@ -1,21 +1,23 @@
 .main-navigation {
-  width: 100vw;
-  margin-top: -100%;
+  position: fixed;
+  margin-left: -100%;
   padding: $padding;
   background-color: white;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.35);
+  z-index: 100;
+  width: 50%;
+  height: 100vh;
+  left: 0;
+  top: 0;
 
   &--opened {
-    margin-top: 0;
-    transition: margin-top 0.5s;
+    margin-left: 0;
+    transition: margin-left 0.5s;
   }
 
   &--closed {
-    margin-top: -100%;
-    transition: margin-top 0.5s;
-  }
-
-  .no-js & {
-    margin-top: 0;
+    margin-left: -100%;
+    transition: margin-left 0.5s;
   }
 
   @media (min-width: $desktop) {
@@ -23,8 +25,10 @@
     position: relative;
     width: auto;
     height: auto;
-    margin-top: 0;
+    margin: 0;
     padding: 0;
+    box-shadow: none;
+    z-index: 0;
   }
 }
 

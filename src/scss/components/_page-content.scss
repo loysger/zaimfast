@@ -50,36 +50,6 @@
 
   .aside-wrap {
     display: flex;
-    order: -1;
-    overflow: hidden;
-
-    & aside {
-      width: 100%;
-      margin-top: -110%;
-    }
-
-    &--fold aside {
-      margin-top: -110%;
-      transition: margin-top 0.3s;
-    }
-
-    &--unfold aside {
-      margin-top: 0;
-      transition: margin-top 0.3s;
-    }
-
-    .no-js & aside {
-      margin-top: 0;
-    }
-
-    @media (min-width: $desktop) {
-      order: initial;
-      overflow: visible;
-
-      & aside {
-        margin-top: 0;
-      }
-    }
   }
 }
 
