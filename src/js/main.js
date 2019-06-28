@@ -4,19 +4,18 @@ try {
   (function() {
     var burger = document.querySelector('.header__burger');
     var menu = document.querySelector('.main-navigation');
-    var aside = document.querySelector('.aside-wrap');
+    var container = document.querySelector('.main-navigation-container');
 
     var closePopUp = function() {
       menu.classList.remove('main-navigation_opened');
       menu.classList.add('main-navigation_closed');
 
+      container.classList.remove('main-navigation-container_opened');
+
       burger.classList.remove('header__burger_close');
       burger.classList.add('header__burger_open');
 
-      if (aside) {
-        aside.classList.remove('aside-wrap_unfold');
-        aside.classList.add('aside-wrap_fold');
-      }
+      container.removeEventListener('click', closePopUp);
 
       burger.removeEventListener('click', closePopUp);
       burger.addEventListener('click', openPopUp);
@@ -26,13 +25,12 @@ try {
       menu.classList.remove('main-navigation_closed');
       menu.classList.add('main-navigation_opened');
 
+      container.classList.add('main-navigation-container_opened');
+
       burger.classList.remove('header__burger_open');
       burger.classList.add('header__burger_close');
 
-      if (aside) {
-        aside.classList.remove('aside-wrap_fold');
-        aside.classList.add('aside-wrap_unfold');
-      }
+      container.addEventListener('click', closePopUp);
 
       burger.removeEventListener('click', openPopUp);
       burger.addEventListener('click', closePopUp);
