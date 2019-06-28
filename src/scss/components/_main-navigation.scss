@@ -5,7 +5,9 @@
   background-color: white;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.35);
   z-index: 100;
-  width: 50%;
+  min-width: fit-content;
+  width: 70%;
+  max-width: calc(100vw - 50px);
   height: 100vh;
   left: 0;
   top: 0;
@@ -23,7 +25,9 @@
   @media (min-width: $desktop) {
     display: flex;
     position: relative;
+    min-width: unset;
     width: auto;
+    max-width: unset;
     height: auto;
     margin: 0;
     padding: 0;
