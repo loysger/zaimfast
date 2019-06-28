@@ -37,7 +37,7 @@
     height: 100%;
   }
 
-  .news-item--first & {
+  .news-item_first & {
     width: 100%;
     height: auto;
     margin-bottom: 10px;
@@ -82,7 +82,7 @@
   }
 }
 
-.news-item--first {
+.news-item_first {
   & .news-item__link {
     display: block;
   }
@@ -96,7 +96,7 @@
   }
 }
 
-.news-item--more {
+.news-item_more {
   display: flex;
   align-items: center;
   justify-content: center;

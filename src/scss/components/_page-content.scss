@@ -13,13 +13,13 @@
   }
 }
 
-.page-content--zaymi {
+.page-content_zaymi {
   @media (min-width: $desktop) {
     background-color: $bg-color;
   }
 }
 
-.page-content--mfo-page {
+.page-content_mfo-page {
   @media (min-width: $desktop) {
     background-color: $bg-color;
   }
@@ -33,7 +33,7 @@
   }
 }
 
-.page-content--aside {
+.page-content_aside {
   .page-content__wrap {
     @media (min-width: $desktop) {
       display: flex;
@@ -53,7 +53,7 @@
   }
 }
 
-.page-content--news {
+.page-content_news {
   @media (min-width: $desktop) {
     background-color: $bg-color;
   }

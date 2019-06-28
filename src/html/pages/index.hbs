@@ -24,7 +24,7 @@
       <h2 class="offer__heading heading-2">Наши предложения</h2>
       <ul class="offer__list">
         {{#each offers}}
-        <li class="offer__item offer__item--{{this.title}}">
+        <li class="offer__item offer__item_{{this.title}}">
           <a href="{{this.link}}" class="offer__link">
             <span class="offer__icon">
               <img src="{{this.img}}" alt="{{this.name}}" width="48" height="48">
@@ -173,7 +173,7 @@
       <div class="partners__list-wrap">
         <ul class="partners__list">
           {{#each partners}}
-          <li class="partners__item partners__item--{{this.title}}">
+          <li class="partners__item partners__item_{{this.title}}">
             <a href="{{this.link}}" class="partners__link">
               <img class="partners__img" src="{{this.img}}" alt="{{this.name}}" />
             </a>
@@ -188,20 +188,20 @@
     <div class="why__container">
       <h2 class="why__heading heading-2">Почему выбирают Zaimfast</h2>
       <ul class="why__list">
-        <li class="why__item why__item--quality">
+        <li class="why__item why__item_quality">
           <b class="why__title">Качество</b>
           <p class="why__text">
             Мы ведем постоянный анализ наших партнеров, каждый день обновляем информацию более 70 предложений о займах
           </p>
         </li>
-        <li class="why__item why__item--accesible">
+        <li class="why__item why__item_accesible">
           <b class="why__title">Доступно</b>
           <p class="why__text">
             Сможете легко отобрать выгодные предложения и выбрать подходящее предложение, что сэкономит Ваше время и
             бюджет
           </p>
         </li>
-        <li class="why__item why__item--fast">
+        <li class="why__item why__item_fast">
           <b class="why__title">Быстро</b>
           <p class="why__text">
             Благодаря интуитивно понятному интерфейсу, легко сможете найту нужную информацию

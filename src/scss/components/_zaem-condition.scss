@@ -77,12 +77,12 @@
   }
 }
 
-.zaem-condition__item--closed td:first-of-type::before {
+.zaem-condition__item_closed td:first-of-type::before {
   border-top: 6px solid white;
   border-bottom: none;
 }
 
-.zaem-condition__item--closed td:last-of-type {
+.zaem-condition__item_closed td:last-of-type {
   display: none;
 
   @media (min-width: $desktop) {
@@ -90,7 +90,7 @@
   }
 }
 
-.zaem-condition__item--closed td:first-of-type {
+.zaem-condition__item_closed td:first-of-type {
   margin-bottom: 5px;
   border-radius: 4px;
 

@@ -1,7 +1,7 @@
 .zaem-about {
   padding: 20px $padding 0;
 
-  &--closed .zaem-about__content {
+  &_closed .zaem-about__content {
     position: relative;
     height: 5.5em;
     overflow: hidden;
@@ -51,7 +51,7 @@
   color: $main-color;
 
   @media (min-width: $desktop) {
-    .zaem-about--closed & {
+    .zaem-about_closed & {
       display: none;
     }
   }

@@ -33,7 +33,7 @@
   margin-top: 20px;
   margin-bottom: 10px;
 
-  &--closed {
+  &_closed {
     & .news-page__text {
       position: relative;
       height: 50px;
@@ -57,7 +57,7 @@
       margin-bottom: 0;
     }
 
-    &--closed {
+    &_closed {
       & .news-page__text {
         position: relative;
         height: fit-content;

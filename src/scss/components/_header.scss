@@ -73,7 +73,7 @@
     outline: none;
   }
 
-  &--close {
+  &_close {
     background-color: transparent;
     transition: background-color 0.5s;
 
@@ -92,7 +92,7 @@
     }
   }
 
-  &--open {
+  &_open {
     background-color: black;
     transition: background-color 1s;
 

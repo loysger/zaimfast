@@ -7,15 +7,15 @@ try {
     var aside = document.querySelector('.aside-wrap');
 
     var closePopUp = function() {
-      menu.classList.remove('main-navigation--opened');
-      menu.classList.add('main-navigation--closed');
+      menu.classList.remove('main-navigation_opened');
+      menu.classList.add('main-navigation_closed');
 
-      burger.classList.remove('header__burger--close');
-      burger.classList.add('header__burger--open');
+      burger.classList.remove('header__burger_close');
+      burger.classList.add('header__burger_open');
 
       if (aside) {
-        aside.classList.remove('aside-wrap--unfold');
-        aside.classList.add('aside-wrap--fold');
+        aside.classList.remove('aside-wrap_unfold');
+        aside.classList.add('aside-wrap_fold');
       }
 
       burger.removeEventListener('click', closePopUp);
@@ -23,15 +23,15 @@ try {
     };
 
     var openPopUp = function() {
-      menu.classList.remove('main-navigation--closed');
-      menu.classList.add('main-navigation--opened');
+      menu.classList.remove('main-navigation_closed');
+      menu.classList.add('main-navigation_opened');
 
-      burger.classList.remove('header__burger--open');
-      burger.classList.add('header__burger--close');
+      burger.classList.remove('header__burger_open');
+      burger.classList.add('header__burger_close');
 
       if (aside) {
-        aside.classList.remove('aside-wrap--fold');
-        aside.classList.add('aside-wrap--unfold');
+        aside.classList.remove('aside-wrap_fold');
+        aside.classList.add('aside-wrap_unfold');
       }
 
       burger.removeEventListener('click', openPopUp);
@@ -48,9 +48,9 @@ try {
     var conditions = table.querySelectorAll('.zaem-condition__item');
 
     conditions.forEach(function(element) {
-      element.classList.add('zaem-condition__item--closed');
+      element.classList.add('zaem-condition__item_closed');
       element.addEventListener('click', function() {
-        element.classList.toggle('zaem-condition__item--closed');
+        element.classList.toggle('zaem-condition__item_closed');
       });
     });
   })();
@@ -61,9 +61,9 @@ try {
     var element = document.querySelector('.zaem-about');
     var button = element.querySelector('.zaem-about__more');
 
-    element.classList.add('zaem-about--closed');
+    element.classList.add('zaem-about_closed');
     button.addEventListener('click', function() {
-      element.classList.toggle('zaem-about--closed');
+      element.classList.toggle('zaem-about_closed');
     });
   })();
 } catch (error) {}
@@ -75,9 +75,9 @@ try {
     elements.forEach(function(element) {
       var button = element.querySelector('.news-page__text-more');
 
-      element.classList.add('news-page__text-wrapper--closed');
+      element.classList.add('news-page__text-wrapper_closed');
       button.addEventListener('click', function() {
-        element.classList.toggle('news-page__text-wrapper--closed');
+        element.classList.toggle('news-page__text-wrapper_closed');
       });
     });
   })();

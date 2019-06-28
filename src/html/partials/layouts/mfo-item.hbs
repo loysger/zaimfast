@@ -6,16 +6,13 @@
 
 {{#content "content"}}
 {{> page-header}}
-<main class="page-content page-content--mfo-page page-content--aside page-content--{{title}}">
+<main class="page-content page-content_mfo-page page-content_aside page-content_{{title}}">
   <div class="page-content__wrap">
     <div class="page-wrap">
       <section class="zaem">
         <h2 class="hidden">{{name}}</h2>
         <div class="zaem-card">
           <div class="zaem-card__top">
-            {{!-- <p class="zaem-card__name">
-              <a href="{{link}}">{{name}}</a>
-            </p> --}}
             <div class="zaem-card__img">
               <a href="{{link}}" title="{{name}}">
                 <img src="{{img}}" alt="{{name}}"/>
@@ -134,11 +131,10 @@
         <h2 class="zaem-condition__heading heading-3">Условия</h2>
         <table class="zaem-condition__table">
           <tbody>
-            <tr class="zaem-condition__item zaem-condition__item--closed">
+            <tr class="zaem-condition__item zaem-condition__item_closed">
               <td>
                 Выдача денег
               </td>
-              {{!-- <td>{{conditions.paymentTime}}</td> --}}
               <td>
               <ul class="list">
                 {{#each conditions.paymentTime}}
@@ -149,7 +145,6 @@
             </tr>
             <tr class="zaem-condition__item">
               <td>Варианты погашения</td>
-              {{!-- <td>{{conditions.repayment}}</td> --}}
               <td>
                 <ul class="list">
                   {{#each conditions.repayment}}

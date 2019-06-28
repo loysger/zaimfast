@@ -10,12 +10,12 @@
   left: 0;
   top: 0;
 
-  &--opened {
+  &_opened {
     margin-left: 0;
     transition: margin-left 0.5s;
   }
 
-  &--closed {
+  &_closed {
     margin-left: -100%;
     transition: margin-left 0.5s;
   }
