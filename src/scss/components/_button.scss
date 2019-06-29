@@ -66,5 +66,15 @@
         }
       }
     }
+
+    &_second {
+      background-color: $main-color;
+      color: white;
+      font-weight: 700;
+
+      &:active {
+        color: white;
+      }
+    }
   }
 }
