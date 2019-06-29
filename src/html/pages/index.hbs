@@ -55,7 +55,7 @@
               </div>
             </div>
             <div class="best-card__img-container">
-              <a href="{{innerLink}}"><img src="{{this.img}}" alt="{{this.name}}" width="286" height="100"/></a>
+              <a href="{{innerLink}}"><img src="{{this.img}}" alt="{{this.name}}" width="286" height="100" /></a>
             </div>
           </div>
           <div class="best-card__content">
@@ -80,37 +80,20 @@
     <div class="articles__container">
       <h2 class="heading-2 articles__heading">Полезные статьи</h2>
       <ul class="articles__list">
+        {{#each articles.news}}
+        {{#if (times "4")}}
         <li class="articles__item">
-          <a href="#" class="articles__link">
+          <a href="{{this.link}}" class="articles__link">
             <div class="articles__img">
-              <img src="/img/content/kreditnayahistoriya.jpg" alt="Как взять займ, с плохой кредитной историей?" />
+              <img src="{{this.imgLink}}" alt="{{this.title}}" />
             </div>
             <p class="articles__news-heading">
-              Как взять займ, с плохой кредитной историей?
+              {{this.title}}
             </p>
           </a>
         </li>
-        <li class="articles__item">
-          <a href="#" class="articles__link">
-            <div class="articles__img">
-              <img src="/img/content/Zajmy-bez-karty-576x356.png"
-                alt="Займ без карты без проверок кредитной истории это реально!" />
-            </div>
-            <p class="articles__news-heading">
-              Займ без карты без проверок кредитной истории это реально!
-            </p>
-          </a>
-        </li>
-        <li class="articles__item">
-          <a href="#" class="articles__link">
-            <div class="articles__img">
-              <img src="/img/content/prosrochka.jpg" alt="3 проверенных способа как улучшить кредитную историю" />
-            </div>
-            <p class="articles__news-heading">
-              3 проверенных способа как улучшить кредитную историю
-            </p>
-          </a>
-        </li>
+        {{/if}}
+        {{/each}}
       </ul>
       <a class="button button_type_link_lg-only articles__more" href="/news">Все статьи</a>
     </div>
