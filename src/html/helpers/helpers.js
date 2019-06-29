@@ -1,7 +1,9 @@
 module.exports = {
-  isSamePage: function(context, options) {
-    console.log(context);
-
-    return true;
+  times: function(times, context) {
+    if (context.data.index <= times - 1) {
+      return true;
+    } else {
+      return false;
+    }
   }
 };
