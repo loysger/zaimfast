@@ -14,11 +14,57 @@
   text-transform: uppercase;
 
   &:hover {
-    box-shadow: 0 14px 8px -11px rgba(0,0,0,.15);
+    box-shadow: 0 14px 8px -11px rgba(0, 0, 0, 0.15);
   }
 
   &:active {
     top: 1px;
-    box-shadow: 0 12px 8px -11px rgba(0,0,0,.15);
+    box-shadow: 0 12px 8px -11px rgba(0, 0, 0, 0.15);
+  }
+
+  &_type {
+    &_link {
+      width: fit-content;
+      border: none;
+      background-color: transparent;
+      color: $main-color;
+      text-transform: capitalize;
+      transition-duration: 0.3;
+
+      &:hover {
+        box-shadow: none;
+        color: darken($color: $main-color, $amount: 5);
+        transition-duration: 0.3;
+      }
+
+      &:active {
+        top: 0;
+        box-shadow: none;
+        color: darken($color: $main-color, $amount: 30);
+      }
+
+      &_lg-only {
+        @media (min-width: $desktop) {
+          width: fit-content;
+          border: none;
+          background-color: transparent;
+          color: $main-color;
+          text-transform: capitalize;
+          transition-duration: 0.3;
+
+          &:hover {
+            box-shadow: none;
+            color: darken($color: $main-color, $amount: 5);
+            transition-duration: 0.3;
+          }
+
+          &:active {
+            top: 0;
+            box-shadow: none;
+            color: darken($color: $main-color, $amount: 30);
+          }
+        }
+      }
+    }
   }
 }

@@ -60,23 +60,5 @@
 .best__more {
   @media (min-width: $desktop) {
     order: -1;
-    width: fit-content;
-    border: none;
-    background-color: transparent;
-    color: $main-color;
-    text-transform: capitalize;
-    transition-duration: 0.3;
-
-    &:hover {
-      box-shadow: none;
-      color: darken($color: $main-color, $amount: 5);
-      transition-duration: 0.3;
-    }
-
-    &:active {
-      top: 0;
-      box-shadow: none;
-      color: darken($color: $main-color, $amount: 30);
-    }
   }
 }
