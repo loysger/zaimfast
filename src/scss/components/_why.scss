@@ -37,18 +37,18 @@
   &::after {
     padding-left: 20px;
     content: '';
+
+    @media (min-width: $desktop) {
+      display: none;
+    }
   }
 
   @media (min-width: $desktop) {
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
     width: 100%;
     margin: 0;
     overflow: unset;
-
-    &::after {
-      display: none;
-    }
   }
 }
 
@@ -67,19 +67,20 @@
   background-size: 70px;
 
   @media (min-width: $desktop) {
+    margin: 0 auto;
     margin-bottom: 20px;
   }
 
   &_quality {
-    background-image: url("/img/kachestvoblue.svg");
+    background-image: url('/img/kachestvoblue.svg');
   }
 
   &_accesible {
-    background-image: url("/img/dostupnoblue.svg");
+    background-image: url('/img/dostupnoblue.svg');
   }
 
   &_fast {
-    background-image: url("/img/speedblue.svg");
+    background-image: url('/img/speedblue.svg');
   }
 }
 
