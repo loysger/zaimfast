@@ -15,6 +15,8 @@
     flex-wrap: wrap;
     max-width: $max-width;
     margin: 0 auto;
+    padding-left: $padding-ds;
+    padding-right: $padding-ds;
   }
 }
 
@@ -42,18 +44,28 @@
     padding-left: 1px;
     background-color: transparent;
     content: '';
+
+    @media (min-width: $desktop) {
+      display: none;
+    }
   }
 
   @media (min-width: $desktop) {
     flex-wrap: wrap;
-    justify-content:  space-around;
+    justify-content: space-between;
     width: 100%;
     margin: 20px 0;
+    padding-top: 20px;
     overflow: unset;
+  }
+}
 
-    &::after {
-      display: none;
-    }
+.best__item {
+  margin: 0 20px;
+
+  @media (min-width: $desktop) {
+    margin: 0 auto;
+    margin-bottom: 20px;
   }
 }
 

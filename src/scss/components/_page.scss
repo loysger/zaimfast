@@ -1,0 +1,8 @@
+.page {
+  &__header {
+    @media (min-width: $desktop) {
+      max-width: $max-width;
+      margin: 0 auto;
+    }
+  }
+}

@@ -23,8 +23,8 @@
 
   @media (min-width: $desktop) {
     width: 100%;
-    margin: 0;
-    padding: 0 $padding-ds;
+    margin: 0 auto;
+    padding: 0;
   }
 }
 
@@ -37,6 +37,8 @@
     justify-content: center;
     max-width: $max-width;
     margin:  0 auto;
+    padding-left: $padding-ds;
+    padding-right: $padding-ds;
   }
 }
 
@@ -54,6 +56,8 @@
 
   @media (min-width: $desktop) {
     padding: 0 $padding-ds;
+    max-width: $max-width;
+    margin:  0 auto;
   }
 }
 
@@ -73,6 +77,8 @@
 .footer__bottom {
   @media (min-width: $desktop) {
     padding: 0 $padding-ds;
+    max-width: $max-width;
+    margin:  0 auto;
   }
 }
 
