@@ -11,11 +11,11 @@
     <div class="page-wrap">
       <section class="zaem">
         <h2 class="hidden">{{name}}</h2>
-        <div class="zaem-card">
+        <div class="zaem-card {{#if this.tarify}}zaem-card_tariffs_closed{{/if}}">
           <div class="zaem-card__top">
             <div class="zaem-card__img">
               <a href="{{link}}" title="{{name}}">
-                <img src="{{img}}" alt="{{name}}"/>
+                <img src="{{img}}" alt="{{name}}" />
               </a>
             </div>
           </div>
@@ -37,6 +37,38 @@
               <span class="zaem-card__prop-name">Переплата</span>
             </p>
           </div>
+          {{#if this.tarify}}
+          <button class="button zaem-card__tariffs-more">Еще тарифы</button>
+          {{/if}}
+          {{#if this.tarify}}
+          <div class="zaem-card__tariffs">
+            <ul>
+              {{#each this.tarify}}
+              <li class="zaem-card__tariffs-item">
+                <p class="zaem-card__prop zaem-card__tariffs-name">
+                  <span class="zaem-card__prop-text">{{name}}</span>
+                </p>
+                <p class="zaem-card__prop">
+                  <span class="zaem-card__prop-text">{{rate}}%</span>
+                  <span class="zaem-card__prop-name">Ставка в день</span>
+                </p>
+                <p class="zaem-card__prop">
+                  <span class="zaem-card__prop-text"><span class="calc-amount-value">3 000</span> ₽</span>
+                  <span class="zaem-card__prop-name">Сумма</span>
+                </p>
+                <p class="zaem-card__prop">
+                  <span class="zaem-card__prop-text"><span class="calc-days-value">10</span> дней</span>
+                  <span class="zaem-card__prop-name">Срок</span>
+                </p>
+                <p class="zaem-card__prop">
+                  <span class="zaem-card__prop-text"><span class="calc-overcharge-value">10</span> ₽</span>
+                  <span class="zaem-card__prop-name">Переплата</span>
+                </p>
+              </li>
+              {{/each}}
+            </ul>
+          </div>
+          {{/if}}
           <div class="zaem__calc calc">
             <h3 class="calc__heading heading-4">Рассчитать заем</h3>
             <div class="calc__amount">
@@ -136,11 +168,11 @@
                 Выдача денег
               </td>
               <td>
-              <ul class="list">
-                {{#each conditions.paymentTime}}
-                <li class="list__item">{{this}}</li>
-                {{/each}}
-              </ul>
+                <ul class="list">
+                  {{#each conditions.paymentTime}}
+                  <li class="list__item">{{this}}</li>
+                  {{/each}}
+                </ul>
               </td>
             </tr>
             <tr class="zaem-condition__item">
@@ -148,7 +180,7 @@
               <td>
                 <ul class="list">
                   {{#each conditions.repayment}}
-                    <li class="list__item">{{this}}</li>
+                  <li class="list__item">{{this}}</li>
                   {{/each}}
                 </ul>
               </td>
