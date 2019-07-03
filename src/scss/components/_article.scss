@@ -1,24 +1,24 @@
 .article {
-  padding-left: $padding;
-  padding-right: $padding;
-  padding-bottom: 20px;
-  background-color: white;
   display: flex;
   flex-direction: column;
+  padding-right: $padding;
+  padding-bottom: 20px;
+  padding-left: $padding;
   overflow-x: hidden;
   border-bottom: 1px solid $border-color;
+  background-color: white;
 
   @media (min-width: $desktop) {
+    padding-right: $padding-ds;
     padding-bottom: 30px;
     padding-left: $padding-ds;
-    padding-right: $padding-ds;
     border-bottom: none;
   }
 
   h1 {
-    color: $text-color;
     margin-top: 25px;
     margin-bottom: 25px;
+    color: $text-color;
   }
 
   h2 {
@@ -36,25 +36,25 @@
 
     li {
       @extend .list__item;
-      font-size: inherit;
       color: inherit;
+      font-size: inherit;
     }
   }
 
   img {
-    transform: translateX(-$padding);
     width: 100vw;
     height: calc(100vw / 2);
     max-height: fit-content;
-    object-fit: cover;
     margin: 0 auto;
     margin-bottom: 15px;
+    object-fit: cover;
+    transform: translateX(-$padding);
 
     @media (min-width: $desktop) {
       width: calc(100% + #{$padding-ds} * 2);
       max-height: 400px;
-      transform: translateX(-$padding-ds);
       margin: 0;
+      transform: translateX(-$padding-ds);
     }
   }
 

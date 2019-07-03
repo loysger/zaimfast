@@ -1,16 +1,16 @@
 .main-navigation {
+  z-index: 100;
   position: fixed;
+  top: 0;
+  left: 0;
+  width: 70%;
+  min-width: fit-content;
+  max-width: calc(100vw - 50px);
+  height: 100vh;
   margin-left: -100%;
   padding: $padding;
   background-color: white;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.35);
-  z-index: 100;
-  min-width: fit-content;
-  width: 70%;
-  max-width: calc(100vw - 50px);
-  height: 100vh;
-  left: 0;
-  top: 0;
 
   &_opened {
     margin-left: 0;
@@ -24,15 +24,15 @@
 
   @media (min-width: $desktop) {
     display: flex;
+    z-index: 0;
     position: relative;
-    min-width: unset;
     width: auto;
+    min-width: unset;
     max-width: unset;
     height: auto;
     margin: 0;
     padding: 0;
     box-shadow: none;
-    z-index: 0;
   }
 }
 

@@ -13,8 +13,8 @@
   @media (min-width: $desktop) {
     max-width: $max-width;
     margin: 0 auto;
-    padding-left: $padding-ds;
     padding-right: $padding-ds;
+    padding-left: $padding-ds;
   }
 }
 
@@ -24,7 +24,7 @@
   @media (min-width: $desktop) {
     font-size: 30px;
     text-align: left;
-    // display: none;
+    /* display: none;*/
   }
 }
 

@@ -86,22 +86,22 @@
 }
 
 .zaem-card__tariffs-name {
-  width: 100px;
-  justify-content: center;
   flex-shrink: 0;
+  justify-content: center;
+  width: 100px;
 
   @media (min-width: $desktop) {
-    width: 200px;
     position: absolute;
-    left: -250px;
     top: 50%;
+    left: -250px;
+    width: 200px;
     transform: translateY(-50%);
   }
 
   .zaem-card__prop-text {
+    width: 100%;
     font-size: 12px;
     text-align: left;
-    width: 100%;
 
     @media (min-width: $desktop) {
       font-size: 14px;
@@ -119,12 +119,12 @@
   @media (min-width: $desktop) {
     position: relative;
     flex-grow: 1;
+    width: calc(100% - 250px);
     margin: 0;
+    margin-left: auto;
     padding: 10px 0;
     padding-left: 15px;
     border-bottom: none;
-    width: calc(100% - 250px);
-    margin-left: auto;
   }
 }
 
@@ -149,8 +149,8 @@
 }
 
 .zaem-card__prop-name {
-  padding-top: 0.7em;
   margin-top: auto;
+  padding-top: 0.7em;
   color: $text-color-a-0_8;
   font-size: 12px;
   text-align: center;
@@ -218,18 +218,18 @@
   position: absolute;
   top: 90px;
   left: calc(9.66vw - #{$padding});
-  font-size: 10px;
-  padding-left: 5px;
-  padding-right: 5px;
   width: 100px;
+  padding-right: 5px;
+  padding-left: 5px;
+  font-size: 10px;
 
   @media (min-width: $desktop) {
-    left: $padding-ds;
     top: 105px;
-    font-size: 12px;
-    padding-left: 14px;
-    padding-right: 14px;
+    left: $padding-ds;
     width: 250px;
+    padding-right: 14px;
+    padding-left: 14px;
+    font-size: 12px;
   }
 
   &:active {
@@ -245,10 +245,10 @@
   &_closed {
     .zaem-card__contain {
       &::before {
-        content: '';
         display: block;
-        width: 100px;
         flex-shrink: 0;
+        width: 100px;
+        content: '';
 
         @media (min-width: $desktop) {
           display: none;
@@ -257,8 +257,8 @@
     }
 
     .zaem-card__tariffs {
-      overflow: hidden;
       max-height: 1px;
+      overflow: hidden;
       opacity: 0;
 
       transition: opacity 0.3s ease-in-out, max-height 0.3s ease-out;
@@ -270,12 +270,12 @@
 
     .zaem-card__tariffs-more {
       @media (min-width: $desktop) {
-        left: $padding-ds;
         top: 105px;
-        font-size: 12px;
-        padding-left: 14px;
-        padding-right: 14px;
+        left: $padding-ds;
         width: 250px;
+        padding-right: 14px;
+        padding-left: 14px;
+        font-size: 12px;
       }
 
       &:active {
@@ -289,10 +289,10 @@
   &_opened {
     .zaem-card__contain {
       &::before {
-        content: '';
         display: block;
-        width: 100px;
         flex-shrink: 0;
+        width: 100px;
+        content: '';
 
         @media (min-width: $desktop) {
           display: none;
@@ -301,8 +301,8 @@
     }
 
     .zaem-card__tariffs {
-      overflow: hidden;
       max-height: 1500px;
+      overflow: hidden;
       opacity: 1;
       transition: max-height 0.5s ease-out, opacity 0.3s ease-in-out;
 

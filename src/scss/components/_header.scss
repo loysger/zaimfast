@@ -70,9 +70,9 @@
   }
 
   &_close {
+    z-index: 110;
     background-color: transparent;
     transition: background-color 0.5s;
-    z-index: 110;
 
     &::before {
       top: 50%;

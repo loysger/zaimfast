@@ -13,8 +13,8 @@
     flex-wrap: wrap;
     max-width: $max-width;
     margin: 0 auto;
-    padding-left: $padding-ds;
     padding-right: $padding-ds;
+    padding-left: $padding-ds;
   }
 }
 
@@ -71,9 +71,9 @@
   border-radius: 3px;
 
   @media (min-width: $desktop) {
+    flex-grow: 1;
     width: 190px;
     height: 90px;
-    flex-grow: 1;
   }
 }
 
