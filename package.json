@@ -39,6 +39,7 @@
     "build": "gulp build",
     "watch": "gulp watch",
     "clean": "gulp clean",
+    "lint:scss": "stylelint ./src/scss/components/*.scss",
     "sortScssRules": "gulp sortScssRules"
   }
 }
