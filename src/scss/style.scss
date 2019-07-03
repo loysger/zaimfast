@@ -1,10 +1,15 @@
 @charset "utf-8";
+
+// #region Служебные импорты <--
 @import 'normalize.scss';
 @import 'variables.scss';
+// #endregion -<<
 
+// #region Кастомные общие правила <--
 @import 'custom.scss';
+// #endregion -<<
 
-// imports
+// #region НЕ специфичные блоки <--
 @import './components/heading.scss';
 @import './components/button.scss';
 @import './components/slider.scss';
@@ -12,7 +17,10 @@
 @import './components/page-content.scss';
 @import './components/main-navigation-container.scss';
 @import './components/page.scss';
+// #endregion -<<
 
+
+// imports
 @import './components/header.scss';
 @import './components/help.scss';
 @import './components/main-navigation.scss';
