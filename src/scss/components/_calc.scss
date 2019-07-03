@@ -5,47 +5,48 @@
     display: flex;
     flex-wrap: wrap;
   }
-}
 
-.calc__heading {
-  margin-bottom: 10px;
-  @media (min-width: $desktop) {
-    width: 100%;
+  &__heading {
+    margin-bottom: 10px;
+
+    @media (min-width: $desktop) {
+      width: 100%;
+    }
   }
-}
 
-.calc__input {
-  padding: 0;
-  border: none;
-  color: $text-color;
-  font-size: 20px;
-  font-weight: 400;
+  &__input {
+    padding: 0;
+    border: none;
+    color: $text-color;
+    font-size: 20px;
+    font-weight: 400;
 
-  @media (min-width: $desktop) {
-    width: 100%;
+    @media (min-width: $desktop) {
+      width: 100%;
+    }
   }
-}
 
-.calc__label {
-  display: block;
-  margin-bottom: 10px;
-  color: $text-color-a-0_8;
-  font-size: 12px;
+  &__label {
+    display: block;
+    margin-bottom: 10px;
+    color: $text-color-a-0_8;
+    font-size: 12px;
 
-  @media (min-width: $desktop) {
-    font-size: 14px;
+    @media (min-width: $desktop) {
+      font-size: 14px;
+    }
   }
-}
 
-.calc__amount {
-  @media (min-width: $desktop) {
-    flex-grow: 1;
-    margin-right: 30px;
+  &__amount {
+    @media (min-width: $desktop) {
+      flex-grow: 1;
+      margin-right: 30px;
+    }
   }
-}
 
-.calc__days {
-  @media (min-width: $desktop) {
-    flex-grow: 1;
+  &__days {
+    @media (min-width: $desktop) {
+      flex-grow: 1;
+    }
   }
 }
