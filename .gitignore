@@ -9,4 +9,7 @@ build/
 node_modules/
 npm-debug.log*
 Thumbs.db
-.vscode/
+.vscode/*
+
+# Exlude
+!.vscode/**/bookmarks.json

@@ -1,0 +1,22 @@
+[
+	{
+		"path": "$ROOTPATH$\\src\\scss\\components\\_filters.scss",
+		"bookmarks": [
+			{
+				"line": 36,
+				"column": 0,
+				"label": "фильтры css"
+			}
+		]
+	},
+	{
+		"path": "$ROOTPATH$\\src\\html\\pages\\zaymi\\index.hbs",
+		"bookmarks": [
+			{
+				"line": 12,
+				"column": 5,
+				"label": "филтры"
+			}
+		]
+	}
+]
