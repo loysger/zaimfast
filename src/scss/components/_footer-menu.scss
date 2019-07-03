@@ -1,17 +1,19 @@
-.footer-menu__list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.footer-menu__item {
-  margin-bottom: 10px;
-
-  &:not(:last-child) {
-    margin-right: 10px;
+.footer-menu {
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
-  &:hover {
-    color: $text-accent-color;
+  &__item {
+    margin-bottom: 10px;
+
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+
+    &:hover {
+      color: $text-accent-color;
+    }
   }
 }
