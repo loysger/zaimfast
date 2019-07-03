@@ -7,70 +7,70 @@
     padding: 30px $padding-ds;
     overflow: unset;
   }
-}
 
-.best__container {
-  @media (min-width: $desktop) {
-    display: flex;
-    flex-wrap: wrap;
-    max-width: $max-width;
-    margin: 0 auto;
-    padding-right: $padding-ds;
-    padding-left: $padding-ds;
-  }
-}
-
-.best__heading {
-  @media (min-width: $desktop) {
-    order: -1;
-    width: fit-content;
-    margin-right: auto;
-    font-size: 30px;
-  }
-}
-
-.best__list {
-  display: flex;
-  position: relative;
-  width: 100vw;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  margin-left: -$padding;
-  overflow-x: scroll;
-  overflow-y: hidden;
-
-  &::after {
-    display: block;
-    padding-left: 1px;
-    background-color: transparent;
-    content: '';
-
+  &__container {
     @media (min-width: $desktop) {
-      display: none;
+      display: flex;
+      flex-wrap: wrap;
+      max-width: $max-width;
+      margin: 0 auto;
+      padding-right: $padding-ds;
+      padding-left: $padding-ds;
     }
   }
 
-  @media (min-width: $desktop) {
-    flex-wrap: wrap;
-    justify-content: space-between;
-    width: 100%;
-    margin: 20px 0;
-    padding-top: 20px;
-    overflow: unset;
+  &__heading {
+    @media (min-width: $desktop) {
+      order: -1;
+      width: fit-content;
+      margin-right: auto;
+      font-size: 30px;
+    }
   }
-}
 
-.best__item {
-  margin: 0 20px;
-
-  @media (min-width: $desktop) {
-    margin: 0 auto;
+  &__list {
+    display: flex;
+    position: relative;
+    width: 100vw;
+    margin-top: 20px;
     margin-bottom: 20px;
-  }
-}
+    margin-left: -$padding;
+    overflow-x: scroll;
+    overflow-y: hidden;
 
-.best__more {
-  @media (min-width: $desktop) {
-    order: -1;
+    @media (min-width: $desktop) {
+      flex-wrap: wrap;
+      justify-content: space-between;
+      width: 100%;
+      margin: 20px 0;
+      padding-top: 20px;
+      overflow: unset;
+    }
+
+    &::after {
+      display: block;
+      padding-left: 1px;
+      background-color: transparent;
+      content: '';
+
+      @media (min-width: $desktop) {
+        display: none;
+      }
+    }
+  }
+
+  &__item {
+    margin: 0 20px;
+
+    @media (min-width: $desktop) {
+      margin: 0 auto;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__more {
+    @media (min-width: $desktop) {
+      order: -1;
+    }
   }
 }
