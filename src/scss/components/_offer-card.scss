@@ -16,108 +16,81 @@
     border-top: none;
     background-color: white;
     transition-duration: 0.3s;
+  }
 
-    &:hover {
+  &:hover {
+    @media (min-width: $desktop) {
       z-index: 2;
       box-shadow: 0 2px 11.84px 4.16px rgba(0, 0, 0, 0.2);
       transition-duration: 0.3s;
     }
+  }
 
-    &:not(:last-child) {
+  &:not(:last-child) {
+    @media (min-width: $desktop) {
       margin-bottom: 10px;
     }
   }
-}
 
-.offer-card__number {
-  box-sizing: content-box;
-  display: flex;
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  flex-shrink: 0;
-  align-items: center;
-  justify-content: center;
-  width: 15px;
-  height: 15px;
-  padding: 2px;
-  border: 2px solid $border-color;
-  border-radius: 50%;
-  background-color: white;
-  color: $text-color;
-  font-size: 12px;
-  font-weight: 600;
-  opacity: 0.75;
-
-  @media (min-width: $desktop) {
-    font-size: 14px;
-  }
-}
-
-.offer-card__top {
-  display: flex;
-  position: relative;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 20px;
-
-  @media (min-width: $desktop) {
-    flex-direction: column;
-    justify-content: space-between;
-    margin-bottom: 0;
-  }
-}
-
-.offer-card__name {
-  display: flex;
-  position: absolute;
-  top: 0;
-  left: 0;
-  flex-direction: column;
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  margin-right: auto;
-  /* margin-left: 10px;*/
-
-  @media (min-width: $desktop) {
-    width: 100%;
-  }
-
-  & a {
-    width: 100%;
-    height: 100%;
-    color: transparent;
-    font-size: 0.1px;
-    /* color: $text-accent-color;*/
-    /* font-size: 14px;*/
-    font-weight: 700;
+  &__number {
+    box-sizing: content-box;
+    display: flex;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    width: 15px;
+    height: 15px;
+    padding: 2px;
+    border: 2px solid $border-color;
+    border-radius: 50%;
+    background-color: white;
+    color: $text-color;
+    font-size: 12px;
+    font-weight: 600;
+    opacity: 0.75;
 
     @media (min-width: $desktop) {
-      font-size: 12px;
+      font-size: 14px;
     }
   }
-}
 
-.offer-card__comp {
-  font-size: 12px;
-}
+  &__top {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
 
-.offer-card__img {
-  display: flex;
-  flex-shrink: 1;
-  width: 100%;
-  height: 14.6vw;
-  min-height: 50px;
-  max-height: 70px;
-
-  @media (min-width: $desktop) {
-    order: -1;
-    width: 150px;
-    height: 50px;
+    @media (min-width: $desktop) {
+      flex-direction: column;
+      justify-content: space-between;
+      margin-bottom: 0;
+    }
   }
 
-  a {
+  &__comp {
+    font-size: 12px;
+  }
+
+  &__img {
+    display: flex;
+    flex-shrink: 1;
+    width: 100%;
+    height: 14.6vw;
+    min-height: 50px;
+    max-height: 70px;
+
+    @media (min-width: $desktop) {
+      order: -1;
+      width: 150px;
+      height: 50px;
+    }
+  }
+
+  &__img-link {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -126,99 +99,99 @@
     overflow: hidden;
   }
 
-  img {
+  &__img-tag {
     width: 100%;
     height: 100%;
     object-fit: contain;
   }
-}
 
-.offer-card__contain {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  margin: 10px 0;
-  border-bottom: 2px solid $border-color;
+  &__contain {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 10px 0;
+    border-bottom: 2px solid $border-color;
 
-  @media (min-width: $desktop) {
-    flex-grow: 1;
-    justify-content: space-between;
+    @media (min-width: $desktop) {
+      flex-grow: 1;
+      justify-content: space-between;
+      margin: 0;
+      padding-bottom: 0;
+      border: none;
+    }
+  }
+
+  &__prop {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: max-content;
     margin: 0;
-    padding-bottom: 0;
-    border: none;
+    margin-right: 10px;
+    margin-bottom: 15px;
+    margin-left: 10px;
+
+    @media (min-width: $desktop) {
+      flex-grow: 1;
+      margin: 0;
+    }
   }
-}
 
-.offer-card__prop {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  min-width: max-content;
-  margin: 0;
-  margin-right: 10px;
-  margin-bottom: 15px;
-  margin-left: 10px;
-
-  @media (min-width: $desktop) {
-    flex-grow: 1;
-    margin: 0;
-  }
-}
-
-.offer-card__prop-text {
-  font-size: 14px;
-}
-
-.offer-card__prop-name {
-  margin-top: 0.7em;
-  color: $text-color-a-0_8;
-  font-size: 12px;
-}
-
-.offer-card__about-wrapper {
-  width: 100%;
-
-  @media (min-width: $desktop) {
-    grid-column: -1 / 1;
-  }
-}
-
-.offer-card__about {
-  margin-bottom: 15px;
-  font-size: 12px;
-
-  @media (min-width: $desktop) {
-    width: 100%;
-    margin-bottom: 0;
-    padding-top: 20px;
+  &__prop-text {
     font-size: 14px;
   }
-}
 
-.offer-card__about-item {
-  margin-bottom: 0.7em;
-}
-
-.offer-card__about-more {
-  margin-top: 15px;
-  margin-bottom: 15px;
-  color: $text-accent-color;
-  font-size: 14px;
-  cursor: pointer;
-
-  @media (min-width: $desktop) {
-    margin-bottom: 0;
+  &__prop-name {
+    margin-top: 0.7em;
+    color: $text-color-a-0_8;
+    font-size: 12px;
   }
-}
 
-.offer-card__go {
-  width: 100%;
-  border-color: rgb(13, 209, 73);
-  background-color: rgb(13, 209, 73);
-  color: white;
+  &__about-wrapper {
+    width: 100%;
 
-  @media (min-width: $desktop) {
-    grid-column: 3 / 4;
-    grid-row: 1;
+    @media (min-width: $desktop) {
+      grid-column: -1 / 1;
+    }
+  }
+
+  &__about {
+    margin-bottom: 15px;
+    font-size: 12px;
+
+    @media (min-width: $desktop) {
+      width: 100%;
+      margin-bottom: 0;
+      padding-top: 20px;
+      font-size: 14px;
+    }
+  }
+
+  &__about-item {
+    margin-bottom: 0.7em;
+  }
+
+  &__about-more {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    color: $text-accent-color;
+    font-size: 14px;
+    cursor: pointer;
+
+    @media (min-width: $desktop) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__go {
+    width: 100%;
+    border-color: rgb(13, 209, 73);
+    background-color: rgb(13, 209, 73);
+    color: white;
+
+    @media (min-width: $desktop) {
+      grid-column: 3 / 4;
+      grid-row: 1;
+    }
   }
 }
