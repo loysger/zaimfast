@@ -11,55 +11,55 @@
   @media (min-width: $desktop) {
     padding-bottom: 30px;
   }
-}
 
-.page-content_zaymi {
-  @media (min-width: $desktop) {
-    background-color: $bg-color;
-  }
-}
-
-.page-content_mfo-page {
-  @media (min-width: $desktop) {
-    background-color: $bg-color;
-  }
-
-  .page-content__wrap {
+  &_zaymi {
     @media (min-width: $desktop) {
-      .page-wrap {
+      background-color: $bg-color;
+    }
+  }
+
+  &_mfo-page {
+    @media (min-width: $desktop) {
+      background-color: $bg-color;
+    }
+
+    .page-wrap {
+      @media (min-width: $desktop) {
         background-color: white;
       }
     }
   }
-}
 
-.page-content_aside {
-  .page-content__wrap {
-    @media (min-width: $desktop) {
-      display: flex;
-      max-width: $max-width;
-      margin: 0 auto;
-      padding: 0 $padding-ds;
-      padding-top: 30px;
+  &_aside {
+    .page-content__wrap {
+      @media (min-width: $desktop) {
+        display: flex;
+        max-width: $max-width;
+        margin: 0 auto;
+        padding: 0 $padding-ds;
+        padding-top: 30px;
+      }
+    }
 
-      .page-wrap {
+    .page-wrap {
+      @media (min-width: $desktop) {
         margin-right: 20px;
+      }
+    }
+
+    .aside-wrap {
+      margin-top: 20px;
+
+      @media (min-width: $desktop) {
+        display: flex;
+        margin-top: 0;
       }
     }
   }
 
-  .aside-wrap {
-    margin-top: 20px;
-
+  &_news {
     @media (min-width: $desktop) {
-      display: flex;
-      margin-top: 0;
+      background-color: $bg-color;
     }
-  }
-}
-
-.page-content_news {
-  @media (min-width: $desktop) {
-    background-color: $bg-color;
   }
 }
