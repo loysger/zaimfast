@@ -1,54 +1,56 @@
-.zaem__calc {
-  @media (min-width: $desktop) {
-    width: 100%;
+.zaem {
+  &__calc {
+    @media (min-width: $desktop) {
+      width: 100%;
+    }
   }
-}
 
-.zaem__table {
-  display: flex;
-  width: auto;
-  margin: 0 $padding;
-  border-collapse: collapse;
-  color: $text-color;
-  font-size: 12px;
+  &__table {
+    display: flex;
+    width: auto;
+    margin: 0 $padding;
+    border-collapse: collapse;
+    color: $text-color;
+    font-size: 12px;
 
-  @media (min-width: $desktop) {
-    margin: 0 $padding-ds;
-    font-size: 14px;
+    @media (min-width: $desktop) {
+      margin: 0 $padding-ds;
+      font-size: 14px;
+    }
+
+    tbody {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      max-width: 728px;
+      margin: 0 auto;
+
+      @media (min-width: $desktop) {
+        max-width: none;
+      }
+    }
+
+    tr {
+      display: flex;
+      width: 100%;
+
+      &:nth-child(2n) {
+        background-color: rgba(0, 0, 0, 0.05);
+      }
+    }
+
+    td {
+      display: flex;
+      flex-grow: 1;
+      flex-shrink: 0;
+      align-items: center;
+      width: 50%;
+      min-height: 20px;
+      padding: 5px 3px;
+
+      &:first-child {
+        font-weight: 700;
+      }
+    }
   }
-}
-
-.zaem__table tbody {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  max-width: 728px;
-  margin: 0 auto;
-
-  @media (min-width: $desktop) {
-    max-width: none;
-  }
-}
-
-.zaem__table tr {
-  display: flex;
-  width: 100%;
-}
-
-.zaem__table tr:nth-child(2n) {
-  background-color: rgba(0, 0, 0, 0.05);
-}
-
-.zaem__table td {
-  display: flex;
-  flex-grow: 1;
-  flex-shrink: 0;
-  align-items: center;
-  width: 50%;
-  min-height: 20px;
-  padding: 5px 3px;
-}
-
-.zaem__table td:first-child {
-  font-weight: 700;
 }
