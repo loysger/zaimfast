@@ -1,13 +1,15 @@
-.offers__caption {
-  margin: 0;
-  padding: 20px 20px;
-  background: $main-color;
-  color: white;
-  font-size: 14px;
-  line-height: 1.5;
-  text-align: center;
+.offers {
+  &__caption {
+    margin: 0;
+    padding: 20px 20px;
+    background: $main-color;
+    color: white;
+    font-size: 14px;
+    line-height: 1.5;
+    text-align: center;
 
-  @media (min-width: $desktop) {
-    padding: 20px 50px;
+    @media (min-width: $desktop) {
+      padding: 20px 50px;
+    }
   }
 }
