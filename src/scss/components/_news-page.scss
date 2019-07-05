@@ -8,77 +8,75 @@
     padding-bottom: 20px;
     background-color: white;
   }
-}
 
-.news-page__list {
-  @media (min-width: $desktop) {
-    display: flex;
-    position: relative;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding-bottom: 46px;
-  }
-}
-
-.news-page__text {
-  font-size: 12px;
-  line-height: 1.4;
-
-  @media (min-width: $desktop) {
-    font-size: 14px;
-  }
-}
-
-.news-page__text-wrapper {
-  margin-top: 20px;
-  margin-bottom: 10px;
-
-  &_closed {
-    & .news-page__text {
+  &__list {
+    @media (min-width: $desktop) {
+      display: flex;
       position: relative;
-      height: 50px;
-      overflow: hidden;
-
-      &::after {
-        display: block;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(to top, white, transparent);
-        content: '';
-      }
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding-bottom: 46px;
     }
   }
 
-  @media (min-width: $desktop) {
+  &__text {
+    font-size: 12px;
+    line-height: 1.4;
+
+    @media (min-width: $desktop) {
+      font-size: 14px;
+    }
+  }
+
+  &__text-wrapper {
+    margin-top: 20px;
+    margin-bottom: 10px;
+
     &:last-child {
-      margin-bottom: 0;
+      @media (min-width: $desktop) {
+        margin-bottom: 0;
+      }
     }
 
     &_closed {
-      & .news-page__text {
+      .news-page__text {
         position: relative;
-        height: fit-content;
+        height: 50px;
         overflow: hidden;
 
+        @media (min-width: $desktop) {
+          position: relative;
+          height: fit-content;
+          overflow: hidden;
+        }
+
         &::after {
-          display: none;
+          display: block;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(to top, white, transparent);
+          content: '';
+
+          @media (min-width: $desktop) {
+            display: none;
+          }
         }
       }
     }
   }
-}
 
-.news-page__text-more {
-  padding: 0;
-  border: none;
-  background: none;
-  color: $main-color;
-  cursor: pointer;
+  &__text-more {
+    padding: 0;
+    border: none;
+    background: none;
+    color: $main-color;
+    cursor: pointer;
 
-  @media (min-width: $desktop) {
-    display: none;
+    @media (min-width: $desktop) {
+      display: none;
+    }
   }
 }
