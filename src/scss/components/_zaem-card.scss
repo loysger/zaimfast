@@ -11,303 +11,301 @@
     padding-top: 25px;
     border-top: none;
   }
-}
 
-.zaem-card__top {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
-  @media (min-width: $desktop) {
-    flex-direction: column-reverse;
-  }
-}
-
-.zaem-card__name {
-  display: flex;
-  flex-direction: column;
-  margin: 0;
-}
-
-.zaem-card__name a {
-  color: $text-accent-color;
-  font-size: 14px;
-  font-weight: 700;
-}
-
-.zaem-card__comp {
-  font-size: 12px;
-}
-
-.zaem-card__img {
-  display: flex;
-  flex-shrink: 0;
-  justify-content: center;
-  width: 100%;
-  height: 60px;
-
-  @media (min-width: $desktop) {
-    width: 250px;
-    height: 80px;
-    margin-bottom: 15px;
+    @media (min-width: $desktop) {
+      flex-direction: column-reverse;
+    }
   }
 
-  a {
+  &__name {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+  }
+
+  &__comp {
+    font-size: 12px;
+  }
+
+  &__img {
+    display: flex;
+    flex-shrink: 0;
+    justify-content: center;
+    width: 100%;
+    height: 60px;
+
+    @media (min-width: $desktop) {
+      width: 250px;
+      height: 80px;
+      margin-bottom: 15px;
+    }
+  }
+
+  &__img-link {
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
   }
 
-  img {
+  &__img-tag {
     height: 100%;
     object-fit: contain;
   }
-}
 
-.zaem-card__contain {
-  display: flex;
-  justify-content: space-around;
-  margin: 10px 0;
-  padding-bottom: 15px;
-  border-bottom: 2px solid $border-color;
+  &__contain {
+    display: flex;
+    justify-content: space-around;
+    margin: 10px 0;
+    padding-bottom: 15px;
+    border-bottom: 2px solid $border-color;
 
-  @media (min-width: $desktop) {
-    flex-grow: 1;
-    margin: 0;
-    padding: 10px 0;
-    padding-left: 15px;
-    border-bottom: none;
-  }
-}
-
-.zaem-card__tariffs {
-  width: 100%;
-}
-
-.zaem-card__tariffs-name {
-  flex-shrink: 0;
-  justify-content: center;
-  width: 100px;
-
-  @media (min-width: $desktop) {
-    position: absolute;
-    top: 50%;
-    left: -250px;
-    width: 200px;
-    transform: translateY(-50%);
+    @media (min-width: $desktop) {
+      flex-grow: 1;
+      margin: 0;
+      padding: 10px 0;
+      padding-left: 15px;
+      border-bottom: none;
+    }
   }
 
-  .zaem-card__prop-text {
+  &__tariffs {
     width: 100%;
+  }
+
+  &__tariffs-name {
+    flex-shrink: 0;
+    justify-content: center;
+    width: 100px;
+
+    @media (min-width: $desktop) {
+      position: absolute;
+      top: 50%;
+      left: -250px;
+      width: 200px;
+      transform: translateY(-50%);
+    }
+
+    .zaem-card__prop-text {
+      width: 100%;
+      font-size: 12px;
+      text-align: left;
+
+      @media (min-width: $desktop) {
+        font-size: 14px;
+      }
+    }
+  }
+
+  &__tariffs-item {
+    display: flex;
+    justify-content: space-around;
+    margin: 10px 0;
+    padding-bottom: 10px;
+    border-bottom: 2px solid $border-color;
+
+    @media (min-width: $desktop) {
+      position: relative;
+      flex-grow: 1;
+      width: calc(100% - 250px);
+      margin: 0;
+      margin-left: auto;
+      padding: 10px 0;
+      padding-left: 15px;
+      border-bottom: none;
+    }
+  }
+
+  &__prop {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+
+    @media (min-width: $desktop) {
+      align-items: center;
+      padding-top: 10px;
+    }
+  }
+
+  &__prop-text {
+    font-size: 14px;
+    text-align: center;
+
+    @media (min-width: $desktop) {
+      font-size: 16px;
+    }
+  }
+
+  &__prop-name {
+    margin-top: auto;
+    padding-top: 0.7em;
+    color: $text-color-a-0_8;
     font-size: 12px;
-    text-align: left;
+    text-align: center;
 
     @media (min-width: $desktop) {
       font-size: 14px;
     }
   }
-}
 
-.zaem-card__tariffs-item {
-  display: flex;
-  justify-content: space-around;
-  margin: 10px 0;
-  padding-bottom: 10px;
-  border-bottom: 2px solid $border-color;
-
-  @media (min-width: $desktop) {
-    position: relative;
-    flex-grow: 1;
-    width: calc(100% - 250px);
-    margin: 0;
-    margin-left: auto;
-    padding: 10px 0;
-    padding-left: 15px;
-    border-bottom: none;
-  }
-}
-
-.zaem-card__prop {
-  display: flex;
-  flex-direction: column;
-  margin: 0;
-
-  @media (min-width: $desktop) {
-    align-items: center;
-    padding-top: 10px;
-  }
-}
-
-.zaem-card__prop-text {
-  font-size: 14px;
-  text-align: center;
-
-  @media (min-width: $desktop) {
-    font-size: 16px;
-  }
-}
-
-.zaem-card__prop-name {
-  margin-top: auto;
-  padding-top: 0.7em;
-  color: $text-color-a-0_8;
-  font-size: 12px;
-  text-align: center;
-
-  @media (min-width: $desktop) {
-    font-size: 14px;
-  }
-}
-
-.zaem-card__about {
-  margin-bottom: 15px;
-  font-size: 12px;
-}
-
-.zaem-card__about-item {
-  margin-bottom: 0.7em;
-}
-
-.zaem-card__about-more {
-  margin-top: 15px;
-  margin-bottom: 15px;
-  color: $text-accent-color;
-  font-size: 14px;
-  cursor: pointer;
-}
-
-.zaem-card__go {
-  width: 100%;
-  border-color: rgb(13, 209, 73);
-  background-color: rgb(13, 209, 73);
-  color: white;
-
-  @media (min-width: $desktop) {
-    width: calc(100% + 60px);
-    margin-right: -30px;
-    margin-left: -30px;
-    border-right: none;
-    border-left: none;
-    border-radius: 0;
-    border-color: $border-color;
-    background-color: white;
-    color: $text-color;
-    font-size: 14px;
-    font-weight: 700;
-    transition-duration: 0.3s;
-
-    &:hover,
-    &:focus {
-      border-color: rgb(13, 209, 73);
-      background-color: rgb(13, 209, 73);
-      color: white;
-      transition-duration: 0.3s;
-    }
-
-    &:active {
-      top: 0;
-      border-color: darken($color: rgb(13, 209, 73), $amount: 5);
-      background-color: darken($color: rgb(13, 209, 73), $amount: 5);
-      transition-duration: 0.3s;
-    }
-  }
-}
-
-.zaem-card__tariffs-more {
-  position: absolute;
-  top: 90px;
-  left: calc(9.66vw - #{$padding});
-  width: 100px;
-  padding-right: 5px;
-  padding-left: 5px;
-  font-size: 10px;
-
-  @media (min-width: $desktop) {
-    top: 105px;
-    left: $padding-ds;
-    width: 250px;
-    padding-right: 14px;
-    padding-left: 14px;
+  &__about {
+    margin-bottom: 15px;
     font-size: 12px;
   }
 
-  &:active {
-    top: 91px;
+  &__about-item {
+    margin-bottom: 0.7em;
+  }
+
+  &__about-more {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    color: $text-accent-color;
+    font-size: 14px;
+    cursor: pointer;
+  }
+
+  &__go {
+    width: 100%;
+    border-color: rgb(13, 209, 73);
+    background-color: rgb(13, 209, 73);
+    color: white;
 
     @media (min-width: $desktop) {
-      top: 106px;
-    }
-  }
-}
-
-.zaem-card_tariffs {
-  &_closed {
-    .zaem-card__contain {
-      &::before {
-        display: block;
-        flex-shrink: 0;
-        width: 100px;
-        content: '';
-
-        @media (min-width: $desktop) {
-          display: none;
-        }
-      }
+      width: calc(100% + 60px);
+      margin-right: -30px;
+      margin-left: -30px;
+      border-right: none;
+      border-left: none;
+      border-radius: 0;
+      border-color: $border-color;
+      background-color: white;
+      color: $text-color;
+      font-size: 14px;
+      font-weight: 700;
+      transition-duration: 0.3s;
     }
 
-    .zaem-card__tariffs {
-      max-height: 1px;
-      overflow: hidden;
-      opacity: 0;
-
-      transition: opacity 0.3s ease-in-out, max-height 0.3s ease-out;
-
+    &:hover,
+    &:focus {
       @media (min-width: $desktop) {
-        margin-top: 18px;
+        border-color: rgb(13, 209, 73);
+        background-color: rgb(13, 209, 73);
+        color: white;
+        transition-duration: 0.3s;
       }
     }
 
-    .zaem-card__tariffs-more {
+    &:active {
       @media (min-width: $desktop) {
-        top: 105px;
-        left: $padding-ds;
-        width: 250px;
-        padding-right: 14px;
-        padding-left: 14px;
-        font-size: 12px;
-      }
-
-      &:active {
-        @media (min-width: $desktop) {
-          top: 106px;
-        }
+        top: 0;
+        border-color: darken($color: rgb(13, 209, 73), $amount: 5);
+        background-color: darken($color: rgb(13, 209, 73), $amount: 5);
+        transition-duration: 0.3s;
       }
     }
   }
 
-  &_opened {
-    .zaem-card__contain {
-      &::before {
-        display: block;
-        flex-shrink: 0;
-        width: 100px;
-        content: '';
+  &__tariffs-more {
+    position: absolute;
+    top: 90px;
+    left: calc(9.66vw - #{$padding});
+    width: 100px;
+    padding-right: 5px;
+    padding-left: 5px;
+    font-size: 10px;
+
+    @media (min-width: $desktop) {
+      top: 105px;
+      left: $padding-ds;
+      width: 250px;
+      padding-right: 14px;
+      padding-left: 14px;
+      font-size: 12px;
+    }
+
+    &:active {
+      top: 91px;
+
+      @media (min-width: $desktop) {
+        top: 106px;
+      }
+    }
+  }
+
+  &_tariffs {
+    &_closed {
+      .zaem-card__contain {
+        &::before {
+          display: block;
+          flex-shrink: 0;
+          width: 100px;
+          content: '';
+
+          @media (min-width: $desktop) {
+            display: none;
+          }
+        }
+      }
+
+      .zaem-card__tariffs {
+        max-height: 1px;
+        overflow: hidden;
+        opacity: 0;
+
+        transition: opacity 0.3s ease-in-out, max-height 0.3s ease-out;
 
         @media (min-width: $desktop) {
-          display: none;
+          margin-top: 18px;
+        }
+      }
+
+      .zaem-card__tariffs-more {
+        @media (min-width: $desktop) {
+          top: 105px;
+          left: $padding-ds;
+          width: 250px;
+          padding-right: 14px;
+          padding-left: 14px;
+          font-size: 12px;
+        }
+
+        &:active {
+          @media (min-width: $desktop) {
+            top: 106px;
+          }
         }
       }
     }
 
-    .zaem-card__tariffs {
-      max-height: 1500px;
-      overflow: hidden;
-      opacity: 1;
-      transition: max-height 0.5s ease-out, opacity 0.3s ease-in-out;
+    &_opened {
+      .zaem-card__contain {
+        &::before {
+          display: block;
+          flex-shrink: 0;
+          width: 100px;
+          content: '';
 
-      @media (min-width: $desktop) {
-        margin-top: 10px;
+          @media (min-width: $desktop) {
+            display: none;
+          }
+        }
+      }
+
+      .zaem-card__tariffs {
+        max-height: 1500px;
+        overflow: hidden;
+        opacity: 1;
+        transition: max-height 0.5s ease-out, opacity 0.3s ease-in-out;
+
+        @media (min-width: $desktop) {
+          margin-top: 10px;
+        }
       }
     }
   }
