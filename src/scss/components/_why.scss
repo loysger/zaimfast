@@ -7,99 +7,98 @@
   @media (min-width: $desktop) {
     padding: 20px $padding-ds;
   }
-}
 
-.why__container {
-  @media (min-width: $desktop) {
-    max-width: $max-width;
-    margin: 0 auto;
-    padding-right: $padding-ds;
-    padding-left: $padding-ds;
-  }
-}
-
-.why__heading {
-  margin-bottom: 20px;
-
-  @media (min-width: $desktop) {
-    font-size: 30px;
-    text-align: left;
-    /* display: none;*/
-  }
-}
-
-.why__list {
-  display: flex;
-  width: 100vw;
-  margin-left: -$padding;
-  overflow-x: scroll;
-
-  &::after {
-    padding-left: 20px;
-    content: '';
-
+  &__container {
     @media (min-width: $desktop) {
-      display: none;
+      max-width: $max-width;
+      margin: 0 auto;
+      padding-right: $padding-ds;
+      padding-left: $padding-ds;
     }
   }
 
-  @media (min-width: $desktop) {
-    flex-wrap: wrap;
-    justify-content: space-between;
-    width: 100%;
-    margin: 0;
-    overflow: unset;
-  }
-}
-
-.why__item {
-  display: flex;
-  flex-direction: column;
-  flex-shrink: 0;
-  align-items: center;
-  margin-left: 20px;
-  padding: 130px 35px 35px;
-  border: 1px solid $border-color;
-  border-radius: 4px;
-  background-color: #fff;
-  background-position: center 40px;
-  background-repeat: no-repeat;
-  background-size: 70px;
-
-  @media (min-width: $desktop) {
-    margin: 0;
+  &__heading {
     margin-bottom: 20px;
+
+    @media (min-width: $desktop) {
+      font-size: 30px;
+      text-align: left;
+    }
   }
 
-  &_quality {
-    background-image: url('/img/kachestvoblue.svg');
+  &__list {
+    display: flex;
+    width: 100vw;
+    margin-left: -$padding;
+    overflow-x: scroll;
+
+    @media (min-width: $desktop) {
+      flex-wrap: wrap;
+      justify-content: space-between;
+      width: 100%;
+      margin: 0;
+      overflow: unset;
+    }
+
+    &::after {
+      padding-left: 20px;
+      content: '';
+
+      @media (min-width: $desktop) {
+        display: none;
+      }
+    }
   }
 
-  &_accesible {
-    background-image: url('/img/dostupnoblue.svg');
+  &__item {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    align-items: center;
+    margin-left: 20px;
+    padding: 130px 35px 35px;
+    border: 1px solid $border-color;
+    border-radius: 4px;
+    background-color: #fff;
+    background-position: center 40px;
+    background-repeat: no-repeat;
+    background-size: 70px;
+
+    @media (min-width: $desktop) {
+      margin: 0;
+      margin-bottom: 20px;
+    }
+
+    &_quality {
+      background-image: url('/img/kachestvoblue.svg');
+    }
+
+    &_accesible {
+      background-image: url('/img/dostupnoblue.svg');
+    }
+
+    &_fast {
+      background-image: url('/img/speedblue.svg');
+    }
   }
 
-  &_fast {
-    background-image: url('/img/speedblue.svg');
+  &__title {
+    margin-bottom: 10px;
+
+    @media (min-width: $desktop) {
+      font-size: 18px;
+    }
   }
-}
 
-.why__title {
-  margin-bottom: 10px;
+  &__text {
+    max-width: 220px;
+    margin: 0;
+    font-size: 12px;
+    line-height: 18px;
+    text-align: center;
 
-  @media (min-width: $desktop) {
-    font-size: 18px;
-  }
-}
-
-.why__text {
-  max-width: 220px;
-  margin: 0;
-  font-size: 12px;
-  line-height: 18px;
-  text-align: center;
-
-  @media (min-width: $desktop) {
-    font-size: 14px;
+    @media (min-width: $desktop) {
+      font-size: 14px;
+    }
   }
 }
