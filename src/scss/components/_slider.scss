@@ -1,30 +1,30 @@
 .slider {
   width: 100%;
   margin: 10px 0;
-}
 
-.slider__lenght {
-  display: flex;
-  position: relative;
-  align-items: center;
-  width: 100%;
-  height: 1px;
-  background-color: rgba(0, 0, 0, 0.3);
-}
+  &__lenght {
+    display: flex;
+    position: relative;
+    align-items: center;
+    width: 100%;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
 
-.slider__depth {
-  position: relative;
-  width: 30%;
-  height: 3px;
-  background-color: rgb(13, 209, 73);
-}
+  &__depth {
+    position: relative;
+    width: 30%;
+    height: 3px;
+    background-color: rgb(13, 209, 73);
+  }
 
-.slider__pin {
-  position: relative;
-  width: 20px;
-  height: 20px;
-  border: 3px solid rgb(13, 209, 73);
-  border-radius: 50%;
-  background-color: white;
-  cursor: pointer;
+  &__pin {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgb(13, 209, 73);
+    border-radius: 50%;
+    background-color: white;
+    cursor: pointer;
+  }
 }
