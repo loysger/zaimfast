@@ -1,37 +1,37 @@
 .list {
   color: $text-color;
-}
 
-.list__item {
-  position: relative;
-  margin-left: 10px;
-  padding-left: 20px;
-  font-size: 12px;
-  line-height: 1.4;
+  &__item {
+    position: relative;
+    margin-left: 10px;
+    padding-left: 20px;
+    font-size: 12px;
+    line-height: 1.4;
 
-  &::before {
-    display: inline-block;
-    position: absolute;
-    top: 8px;
-    left: 0;
-    width: 8px;
-    height: 8px;
-    margin-right: 10px;
-    transform: translateY(-50%);
-    border-radius: 50%;
-    background-color: $main-color;
-    content: '';
-  }
-
-  &:not(:last-child) {
-    margin-bottom: 5px;
-  }
-
-  @media (min-width: $desktop) {
-    font-size: 14px;
+    @media (min-width: $desktop) {
+      font-size: 14px;
+    }
 
     &::before {
-      top: 10px;
+      display: inline-block;
+      position: absolute;
+      top: 8px;
+      left: 0;
+      width: 8px;
+      height: 8px;
+      margin-right: 10px;
+      transform: translateY(-50%);
+      border-radius: 50%;
+      background-color: $main-color;
+      content: '';
+
+      @media (min-width: $desktop) {
+        top: 10px;
+      }
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 5px;
     }
   }
 }
