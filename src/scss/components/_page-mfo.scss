@@ -1,25 +1,28 @@
-.page-mfo__more {
-  width: 100%;
-  padding: 10px 0;
-  border: 0;
-  border-top: 1px solid $border-color;
-  border-bottom: 1px solid $border-color;
-  background: none;
-  background-color: white;
-  transition-duration: 0.3s;
-
-  &:hover {
-    border-color: $main-color;
-    background-color: $main-color;
-    color: white;
-    cursor: pointer;
+.page-mfo {
+  &__more {
+    width: 100%;
+    padding: 10px 0;
+    border: 0;
+    border-top: 1px solid $border-color;
+    border-bottom: 1px solid $border-color;
+    background: none;
+    background-color: white;
     transition-duration: 0.3s;
-  }
 
-  &:focus, &:active {
-    border-color: darken($color: $main-color, $amount: 5);
-    background-color: darken($color: $main-color, $amount: 5);
-    color: white;
-    transition-duration: 0.3s;
+    &:hover {
+      border-color: $main-color;
+      background-color: $main-color;
+      color: white;
+      cursor: pointer;
+      transition-duration: 0.3s;
+    }
+
+    &:focus,
+    &:active {
+      border-color: darken($color: $main-color, $amount: 5);
+      background-color: darken($color: $main-color, $amount: 5);
+      color: white;
+      transition-duration: 0.3s;
+    }
   }
 }
