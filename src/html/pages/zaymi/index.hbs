@@ -58,7 +58,7 @@
           </p>
           <ul class="offers__list">
             {{#each mfo}}
-              <li class="offers__item offer-card">
+              <li class="offers__item offer-card offer-card_pb_none">
                 <div class="offer-card__top">
                   <div class="offer-card__img">
                     <a class="offer-card__img-link" href="{{this.innerLink}}">
@@ -81,14 +81,17 @@
                   </p>
                 </div>
                 <div class="offer-card__about-wrapper">
-                  <ul class="offer-card__about">
+                  <button class="offer-card__about-more" title="Подробнее"></button>
+                  <ul class="offer-card__about offer-card__about_closed">
                     {{#each this.aboutShort}}
                     <li class="offer-card__about-item">{{this}}</li>
                     {{/each}}
+                    <li class="offer-card__about-mobile-btn">
+                      <a class="offer-card__go offer-card__go_type_mobile button" href="{{this.link}}">Перейти</a>
+                    </li>
                   </ul>
-                  <button class="offer-card__about-more button">Подробнее</button>
                 </div>
-                <a class="offer-card__go button" href="{{this.link}}">Перейти</a>
+                <a class="offer-card__go offer-card__go_type_desktop button" href="{{this.link}}">Перейти</a>
               </li>
             {{/each}}
           </ul>

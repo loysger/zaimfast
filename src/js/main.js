@@ -121,3 +121,21 @@ try {
     moreButton.addEventListener('click', openMenu);
   })();
 } catch (error) {}
+
+try {
+  (function() {
+    var blocks = document.querySelectorAll('.offer-card__about');
+    var toggleClass = '.offer-card__about-more';
+
+    blocks.forEach(function(element) {
+      var toggle = element.parentElement.querySelector(toggleClass);
+
+      toggle.addEventListener('click', function(evt) {
+        evt.preventDefault();
+        toggle.classList.toggle('offer-card__about-more_upsidedown');
+        element.classList.toggle('offer-card__about_closed');
+      })
+    })
+
+  })();
+} catch (error) {}
