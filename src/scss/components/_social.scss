@@ -57,17 +57,19 @@
         margin-right: 20px;
       }
     }
+  }
 
-    svg path,
-    svg circle {
+  &__item-svg {
+    path,
+    circle {
       fill: darken($color: $border-color, $amount: 20);
 
-      .social__item:hover,
-      .social__item:focus {
+      .social__item:hover &,
+      .social__item:focus & {
         fill: darken($color: $border-color, $amount: 50);
       }
 
-      .social__item:active {
+      .social__item:active & {
         fill: darken($color: $border-color, $amount: 5);
       }
     }
