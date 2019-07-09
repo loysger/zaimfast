@@ -6,8 +6,10 @@
   "devDependencies": {
     "autoprefixer": "^9.5.1",
     "browser-sync": "^2.26.5",
+    "colors": "^1.3.3",
     "css-declaration-sorter": "^4.0.1",
     "del": "^4.1.1",
+    "doiuse": "^4.2.0",
     "eslint": "^5.16.0",
     "eslint-config-prettier": "^4.3.0",
     "eslint-config-standard": "^12.0.0",
@@ -26,13 +28,14 @@
     "gulp-uglify": "^3.0.2",
     "handlebars-layouts": "^3.1.4",
     "htmlhint": "^0.11.0",
+    "postcss-reporter": "^6.0.1",
     "postcss-scss": "^2.0.0",
     "stylelint": "^10.0.1",
     "stylelint-config-recommended-scss": "^3.3.0",
     "stylelint-scss": "^3.6.1"
   },
   "browserslist": [
-    "last 2 versions"
+    "last 2 versions and > 1% in RU and not dead"
   ],
   "scripts": {
     "live": "gulp live",

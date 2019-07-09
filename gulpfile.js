@@ -6,6 +6,7 @@ const rename = require('gulp-rename');
 const sass = require('gulp-sass');
 const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
+const doiuse = require('doiuse');
 const del = require('del');
 const browsersync = require('browser-sync').create();
 const cssDeclarationSorter = require('css-declaration-sorter');
@@ -15,6 +16,9 @@ const handlebars = require('gulp-hb');
 const csso = require('gulp-csso');
 const uglify = require('gulp-uglify');
 const htmlmin = require('gulp-htmlmin');
+// eslint-disable-next-line no-unused-vars
+const colors = require('colors');
+const reporter = require('postcss-reporter');
 
 // BrowserSync
 function browserSync(done) {
@@ -72,86 +76,126 @@ function generateMfo(done) {
     let context = mfoData[i];
     let fileName = context.title.replace(/ +/g, '-').toLowerCase();
 
-      gulp
-        .src('./src/html/partials/layouts/mfo-item.hbs')
-        .pipe(
-          handlebars() // {debug: true}
-            .partials('./src/html/partials/components/*.hbs')
-            .partials('./src/html/partials/layouts/*.hbs')
-            .helpers('./src/html/helpers/*.js')
-            .data('./src/html/data/**/*.{js,json}')
-            .data(context)
-        )
-        .pipe(htmlmin({ collapseWhitespace: true }))
-        .pipe(
-          rename({
-            basename: 'index',
-            extname: '.html'
-          })
-        )
-        .pipe(gulp.dest('./build/mfo/' + fileName));
-  }
-  done();
-}
-
-// HTML
-function html() {
-  return (
     gulp
-      .src(['./src/html/pages/**/*.hbs'])
+      .src('./src/html/partials/layouts/mfo-item.hbs')
       .pipe(
         handlebars() // {debug: true}
           .partials('./src/html/partials/components/*.hbs')
           .partials('./src/html/partials/layouts/*.hbs')
           .helpers('./src/html/helpers/*.js')
           .data('./src/html/data/**/*.{js,json}')
+          .data(context)
       )
       .pipe(htmlmin({ collapseWhitespace: true }))
       .pipe(
         rename({
+          basename: 'index',
           extname: '.html'
         })
       )
-      .pipe(gulp.dest('./build/'))
-  );
+      .pipe(gulp.dest('./build/mfo/' + fileName));
+  }
+  done();
+}
+
+// HTML
+function html() {
+  return gulp
+    .src(['./src/html/pages/**/*.hbs'])
+    .pipe(
+      handlebars() // {debug: true}
+        .partials('./src/html/partials/components/*.hbs')
+        .partials('./src/html/partials/layouts/*.hbs')
+        .helpers('./src/html/helpers/*.js')
+        .data('./src/html/data/**/*.{js,json}')
+    )
+    .pipe(htmlmin({ collapseWhitespace: true }))
+    .pipe(
+      rename({
+        extname: '.html'
+      })
+    )
+    .pipe(gulp.dest('./build/'));
 }
 
 // JS
 function js() {
-  return (
-    gulp
-      .src('./src/js/*.js')
-      .pipe(sourcemaps.init())
-      .pipe(uglify())
-      .pipe(
-        rename({
-          suffix: '.min'
-        })
-      )
-      .pipe(sourcemaps.write('./maps'))
-      .pipe(gulp.dest('./build/js/'))
-  );
+  return gulp
+    .src('./src/js/*.js')
+    .pipe(sourcemaps.init())
+    .pipe(uglify())
+    .pipe(
+      rename({
+        suffix: '.min'
+      })
+    )
+    .pipe(sourcemaps.write('./maps'))
+    .pipe(gulp.dest('./build/js/'));
 }
 
 // CSS
 function css() {
-  let postcssPlugins = [autoprefixer()];
-  return (
-    gulp
-      .src('./src/scss/style.scss')
-      .pipe(sourcemaps.init())
-      .pipe(sass().on('error', sass.logError))
-      .pipe(postcss(postcssPlugins))
-      .pipe(csso())
-      .pipe(
-        rename({
-          suffix: '.min'
-        })
-      )
-      .pipe(sourcemaps.write('./maps'))
-      .pipe(gulp.dest('./build/css'))
-      .pipe(browsersync.stream())
-  );
+  let postcssPlugins = [
+    autoprefixer(),
+    doiuse({
+      ignore: ['will-change', 'object-fit'], // an optional array of features to ignore
+      onFeatureUsage(info) {
+        const selector = info.usage.parent.selector;
+        const property = `${info.usage.prop}: ${info.usage.value}`;
+        const filteredPrefixes = ['-webkit']; // Префиксы которые начинаются с этих символов не будут выведены в консоль
+
+        let status = info.featureData.caniuseData.status.toUpperCase();
+
+        let isFiltered = function(selectorName) {
+          for (let i = 0; i < filteredPrefixes.length; i++) {
+            if (selectorName.includes(filteredPrefixes[i])) {
+              return true;
+            } else {
+              return false;
+            }
+          }
+        };
+
+        if (info.featureData.missing && !isFiltered(info.usage.prop)) {
+          status = ('NOT SUPPORTED by' + ' ' + info.featureData.missing).red;
+          console.log(
+            `\n${status}:\n\n    ${selector} {\n        ${property};\n    }\n`
+          );
+        } else if (info.featureData.partial) {
+          // status = 'PARTIAL SUPPORT'.yellow;
+        }
+
+        // console.log(
+        //   `\n${status}:\n\n    ${selector} {\n        ${property};\n    }\n`
+        // );
+      }
+    }),
+    reporter({
+      clearAllMessages: true, // If true, not pass any messages into other plugins, or the whatever runner you use, for logging.
+      filter: function(message) {
+        // Provide a filter function. It receives the message object and returns a truthy or falsy value, indicating whether that particular message should be reported or not.
+        if (message.plugin === 'doiuse') {
+          return false;
+        }
+        return true;
+      }
+    })
+  ];
+
+  return gulp
+    .src('./src/scss/style.scss')
+    .pipe(sourcemaps.init())
+    .pipe(sass().on('error', sass.logError))
+    .pipe(postcss(postcssPlugins))
+    .pipe(csso())
+    .pipe(
+      rename({
+        suffix: '.min'
+      })
+    )
+    .pipe(sourcemaps.write('./maps'))
+    .pipe(gulp.dest('./build/css'))
+    .pipe(browsersync.stream());
 }
 
 // img
@@ -160,7 +204,10 @@ function img() {
 }
 
 // define complex tasks
-const build = gulp.series(clean, gulp.parallel(img, html, generateMfo, css, js));
+const build = gulp.series(
+  clean,
+  gulp.parallel(img, html, generateMfo, css, js)
+);
 const watch = gulp.parallel(watchFiles, browserSync);
 const live = gulp.series(build, watch);
 
