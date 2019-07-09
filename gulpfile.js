@@ -13,12 +13,13 @@ const cssDeclarationSorter = require('css-declaration-sorter');
 const postcssScss = require('postcss-scss');
 const sourcemaps = require('gulp-sourcemaps');
 const handlebars = require('gulp-hb');
-const csso = require('gulp-csso');
+// const csso = require('gulp-csso');
 const uglify = require('gulp-uglify');
 const htmlmin = require('gulp-htmlmin');
 // eslint-disable-next-line no-unused-vars
 const colors = require('colors');
 const reporter = require('postcss-reporter');
+const postcssPresetEnv = require('postcss-preset-env');
 
 // BrowserSync
 function browserSync(done) {
@@ -136,6 +137,7 @@ function js() {
 // CSS
 function css() {
   let postcssPlugins = [
+    postcssPresetEnv(),
     autoprefixer(),
     doiuse({
       ignore: ['will-change', 'object-fit'], // an optional array of features to ignore
@@ -187,7 +189,7 @@ function css() {
     .pipe(sourcemaps.init())
     .pipe(sass().on('error', sass.logError))
     .pipe(postcss(postcssPlugins))
-    .pipe(csso())
+    // .pipe(csso())
     .pipe(
       rename({
         suffix: '.min'
