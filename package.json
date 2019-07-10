@@ -36,7 +36,7 @@
     "stylelint-scss": "^3.6.1"
   },
   "browserslist": [
-    "last 2 versions and > 1% in RU and not dead"
+    "defaults"
   ],
   "scripts": {
     "live": "gulp live",

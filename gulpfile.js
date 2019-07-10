@@ -13,7 +13,7 @@ const cssDeclarationSorter = require('css-declaration-sorter');
 const postcssScss = require('postcss-scss');
 const sourcemaps = require('gulp-sourcemaps');
 const handlebars = require('gulp-hb');
-// const csso = require('gulp-csso');
+const csso = require('gulp-csso');
 const uglify = require('gulp-uglify');
 const htmlmin = require('gulp-htmlmin');
 // eslint-disable-next-line no-unused-vars
@@ -68,6 +68,21 @@ function sortScss() {
     .src('./src/scss/components/*.scss')
     .pipe(postcss(postcssPlugins, { parser: postcssScss }))
     .pipe(gulp.dest('./src/scss/components/'));
+}
+
+function doiuseTest() {
+  let postcssPlugins = [
+    doiuse({
+      browsers: 'defaults and since 2016',
+      ignoreFiles: ['**/_normalize.scss']
+    }),
+    reporter({
+      clearAllMessages: true
+    })
+  ];
+  return gulp
+    .src('./src/scss/**/*.scss')
+    .pipe(postcss(postcssPlugins, { parser: postcssScss }));
 }
 
 // Generating mfo pages
@@ -138,66 +153,25 @@ function js() {
 function css() {
   let postcssPlugins = [
     postcssPresetEnv(),
-    autoprefixer(),
-    doiuse({
-      ignore: ['will-change', 'object-fit'], // an optional array of features to ignore
-      onFeatureUsage(info) {
-        const selector = info.usage.parent.selector;
-        const property = `${info.usage.prop}: ${info.usage.value}`;
-        const filteredPrefixes = ['-webkit']; // Префиксы которые начинаются с этих символов не будут выведены в консоль
-
-        let status = info.featureData.caniuseData.status.toUpperCase();
-
-        let isFiltered = function(selectorName) {
-          for (let i = 0; i < filteredPrefixes.length; i++) {
-            if (selectorName.includes(filteredPrefixes[i])) {
-              return true;
-            } else {
-              return false;
-            }
-          }
-        };
-
-        if (info.featureData.missing && !isFiltered(info.usage.prop)) {
-          status = ('NOT SUPPORTED by' + ' ' + info.featureData.missing).red;
-          console.log(
-            `\n${status}:\n\n    ${selector} {\n        ${property};\n    }\n`
-          );
-        } else if (info.featureData.partial) {
-          // status = 'PARTIAL SUPPORT'.yellow;
-        }
-
-        // console.log(
-        //   `\n${status}:\n\n    ${selector} {\n        ${property};\n    }\n`
-        // );
-      }
-    }),
-    reporter({
-      clearAllMessages: true, // If true, not pass any messages into other plugins, or the whatever runner you use, for logging.
-      filter: function(message) {
-        // Provide a filter function. It receives the message object and returns a truthy or falsy value, indicating whether that particular message should be reported or not.
-        if (message.plugin === 'doiuse') {
-          return false;
-        }
-        return true;
-      }
-    })
+    autoprefixer()
   ];
 
-  return gulp
-    .src('./src/scss/style.scss')
-    .pipe(sourcemaps.init())
-    .pipe(sass().on('error', sass.logError))
-    .pipe(postcss(postcssPlugins))
-    // .pipe(csso())
-    .pipe(
-      rename({
-        suffix: '.min'
-      })
-    )
-    .pipe(sourcemaps.write('./maps'))
-    .pipe(gulp.dest('./build/css'))
-    .pipe(browsersync.stream());
+  return (
+    gulp
+      .src('./src/scss/style.scss')
+      .pipe(sourcemaps.init())
+      .pipe(sass().on('error', sass.logError))
+      .pipe(postcss(postcssPlugins))
+      .pipe(csso())
+      .pipe(
+        rename({
+          suffix: '.min'
+        })
+      )
+      .pipe(sourcemaps.write('./maps'))
+      .pipe(gulp.dest('./build/css'))
+      .pipe(browsersync.stream())
+  );
 }
 
 // img
@@ -219,4 +193,5 @@ exports.live = live;
 exports.watch = watch;
 exports.build = build;
 exports.clean = clean;
+exports.doiuseTest = doiuseTest;
 exports.sortScssRules = sortScss;
