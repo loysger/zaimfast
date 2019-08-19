@@ -88,7 +88,7 @@
       }
     ],
     "filter-tags": [
-      "qiwi", "gjodjhdfj"
+      "online", "na-kartu", "na-schet", "contact", "sberbank"
     ]
   },
   "ezaem": {
@@ -169,6 +169,9 @@
         "maxsumm": "30000",
         "maxdays": "30"
       }
+    ],
+    "filter-tags": [
+      "qiwi", "online", "na-kartu", "na-schet", "contact", "sberbank"
     ]
   },
   "zaymer": {
@@ -240,6 +243,9 @@
       "Для граждан с постоянной регистрацией на территории РФ",
       "Наличие паспорта",
       "Мобильный телефон"
+    ],
+    "filter-tags": [
+      "online", "na-kartu", "na-schet", "yandex", "contact", "sberbank", "gosuslugi"
     ]
   },
   "konga": {
@@ -317,6 +323,9 @@
         "maxsumm": "70000",
         "maxdays": "168"
       }
+    ],
+    "filter-tags": [
+      "online", "sberbank"
     ]
   },
   "bistrodengi": {
@@ -404,6 +413,9 @@
         "maxsumm": "100000",
         "maxdays": "180"
       }
+    ],
+    "filter-tags": [
+      "online", "sberbank"
     ]
   },
   "eKapusta": {
@@ -468,6 +480,9 @@
       "Для граждан с постоянной регистрацией на территории РФ",
       "Наличие паспорта",
       "Действующий номер телефона"
+    ],
+    "filter-tags": [
+      "qiwi", "online", "na-kartu", "na-schet", "yandex", "contact", "korona"
     ]
   },
   "platiza": {
@@ -530,6 +545,9 @@
       "Для граждан с постоянной регистрацией на территории РФ",
       "Наличие паспорта",
       "СНИЛС"
+    ],
+    "filter-tags": [
+      "online", "na-kartu", "yandex", "sberbank"
     ]
   },
   "webbankir": {
@@ -595,6 +613,9 @@
       "Наличие паспорта",
       "Мобильный телефон",
       "Именная банковская карта Российского банка"
+    ],
+    "filter-tags": [
+      "online", "na-kartu", "yandex", "contact", "sberbank", "gosuslugi"
     ]
   },
   "turbozaim": {
@@ -672,6 +693,9 @@
         "maxsumm": "50000",
         "maxdays": "168"
       }
+    ],
+    "filter-tags": [
+      "online", "na-kartu", "yandex", "sberbank"
     ]
   },
   "greenmoney": {
@@ -731,6 +755,9 @@
       "Наличие паспорта",
       "Действующий номер телефона",
       "Именная банковская карта"
+    ],
+    "filter-tags": [
+      "online", "na-kartu", "sberbank"
     ]
   },
   "smartcredit": {
@@ -796,6 +823,9 @@
       "Для граждан с постоянной регистрацией на территории РФ",
       "Наличие паспорта",
       "Действующий номер телефона"
+    ],
+    "filter-tags": [
+      "qiwi", "online", "na-kartu", "na-schet", "yandex", "contact", "sberbank"
     ]
   },
   "payps": {
@@ -876,6 +906,9 @@
         "maxsumm": "30000",
         "maxdays": "30"
       }
+    ],
+    "filter-tags": [
+      "online", "na-kartu", "na-schet", "yandex", "contact", "sberbank"
     ]
   },
   "migone": {
@@ -943,6 +976,9 @@
       "Мобильный телефон",
       "Источник постоянного дохода",
       "Электронный почтовый ящик"
+    ],
+    "filter-tags": [
+      "online", "na-kartu", "na-schet", "contact", "unistream", "korona", "sberbank"
     ]
   },
   "migcredit": {
@@ -1022,6 +1058,9 @@
         "maxsumm": "98000",
         "maxdays": "336"
       }
+    ],
+    "filter-tags": [
+      "online", "na-kartu", "contact", "unistream"
     ]
   },
   "oneclickmoney": {
@@ -1087,6 +1126,9 @@
       "Для граждан с постоянной регистрацией на территории РФ",
       "Наличие паспорта",
       "Мобильный телефон"
+    ],
+    "filter-tags": [
+      "qiwi", "online", "na-kartu", "contact", "korona", "sberbank", "gosuslugi"
     ]
   },
   "kredito24": {
@@ -1151,6 +1193,9 @@
       "Электронный почтовый ящик",
       "Постоянный источник дохода",
       "Мобильный телефон"
+    ],
+    "filter-tags": [
+      "online", "na-schet", "sberbank"
     ]
   },
   "onzaem": {
@@ -1210,6 +1255,9 @@
       "Используемый мобильный телефон",
       "Электронный ящик",
       "Постоянный источник дохода"
+    ],
+    "filter-tags": [
+      "online", "na-kartu", "na-schet", "sberbank"
     ]
   },
   "webzaim": {
@@ -1274,6 +1322,9 @@
       "Для лиц старше 21 года",
       "Для граждан с постоянной регистрацией на территории РФ",
       "Наличие паспорта"
+    ],
+    "filter-tags": [
+      "online", "na-kartu", "na-schet", "sberbank"
     ]
   },
   "moneza": {
@@ -1349,6 +1400,9 @@
         "maxsumm": "30000",
         "maxdays": "30"
       }
+    ],
+    "filter-tags": [
+      "qiwi", "online", "na-kartu", "na-schet", "contact", "sberbank"
     ]
   },
   "microklad": {
@@ -1410,6 +1464,9 @@
       "Для лиц старше 21 года",
       "Для граждан с постоянной регистрацией на территории РФ",
       "Наличие паспорта"
+    ],
+    "filter-tags": [
+      "online", "na-kartu", "sberbank"
     ]
   },
   "onlinezaim": {
@@ -1497,6 +1554,9 @@
           "maxsumm": "50000",
           "maxdays": "180"
         }
+    ],
+    "filter-tags": [
+      "online", "na-kartu", "na-schet", "contact"
     ]
   },
   "womoney": {
@@ -1584,6 +1644,9 @@
           "maxsumm": "50000",
           "maxdays": "180"
         }
+    ],
+    "filter-tags": [
+      "online", "na-kartu", "na-schet", "contact"
     ]
   },
   "zaimon": {
@@ -1646,6 +1709,9 @@
       "Для граждан с постоянной регистрацией на территории РФ",
       "Наличие паспорта",
       "Дополнительный документ подтверждабющей личность"
+    ],
+    "filter-tags": [
+      "online", "na-kartu", "na-schet", "yandex", "sberbank"
     ]
   },
   "zaymigo": {
@@ -1711,6 +1777,9 @@
       "Для граждан с постоянной регистрацией на территории РФ",
       "Наличие паспорта",
       "Номер действующего телефона"
+    ],
+    "filter-tags": [
+      "online", "na-kartu", "contact", "korona", "sberbank"
     ]
   },
   "fastmoney": {
@@ -1800,6 +1869,9 @@
           "maxsumm": "50000",
           "maxdays": "150"
         }
+    ],
+    "filter-tags": [
+      "online", "na-kartu", "contact", "sberbank"
     ]
   },
   "dozarplati": {
@@ -1884,6 +1956,9 @@
           "maxsumm": "1000000",
           "maxdays": "365"
         }
+    ],
+    "filter-tags": [
+      "online", "na-kartu", "na-schet", "contact", "korona"
     ]
   },
   "zheldorzaim": {
@@ -1941,6 +2016,9 @@
       "Для граждан с постоянной регистрацией на территории РФ",
       "Наличие паспорта",
       "Данные о месте работы"
+    ],
+    "filter-tags": [
+      "online", "na-kartu", "sberbank"
     ]
   },
   "carmoney": {
@@ -2002,6 +2080,9 @@
       "Для граждан с постоянной регистрацией на территории РФ",
       "Наличие паспорта",
       "Документы на транспортное средство"
+    ],
+    "filter-tags": [
+      "online", "contact"
     ]
   },
   "glavfinans": {
@@ -2064,6 +2145,9 @@
       "Наличие паспорта",
       "Мобильный телефон",
       "ИНН или СНИЛС"
+    ],
+    "filter-tags": [
+      "online", "na-kartu", "contact", "sberbank"
     ]
   },
   "minifinance": {
@@ -2121,6 +2205,9 @@
       "Наличие паспорта",
       "Мобильный телефон",
       "Банковская именная карта"
+    ],
+    "filter-tags": [
+      "online", "na-kartu"
     ]
   },
   "srochnodengi": {
@@ -2184,6 +2271,9 @@
       "Для граждан с постоянной регистрацией на территории РФ",
       "Наличие паспорта",
       "Данные о постоянном месте работы"
+    ],
+    "filter-tags": [
+      "online", "na-kartu"
     ]
   },
   "finspin": {
@@ -2249,6 +2339,9 @@
       "Для лиц старше 21 года",
       "Для граждан с постоянной регистрацией на территории РФ",
       "Наличие паспорта"
+    ],
+    "filter-tags": [
+      "qiwi", "online", "na-kartu", "na-schet", "yandex", "contact", "korona"
     ]
   },
   "optimazaim": {
@@ -2311,6 +2404,9 @@
       "Для лиц старше 18 лет.",
       "Для граждан с постоянной регистрацией на территории РФ",
       "Наличие паспорта, мобильный телефон."
+    ],
+    "filter-tags": [
+      "qiwi", "online", "na-kartu", "na-schet", "yandex", "contact"
     ]
   },
   "zaimco": {
@@ -2375,6 +2471,9 @@
       "Для лиц старше 18 лет",
       "Для граждан с постоянной регистрацией на территории РФ",
       "Наличие паспорта, мобильный телефон, электронный ящик."
+    ],
+    "filter-tags": [
+      "qiwi", "online", "na-kartu", "na-schet", "yandex", "contact"
     ]
   }
 }
