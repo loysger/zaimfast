@@ -88,7 +88,7 @@
       }
     ],
     "filter-tags": [
-      "online", "na-kartu", "na-schet", "contact", "sberbank"
+      "online", "zaymy", "na-kartu", "na-schet", "contact", "sberbank"
     ]
   },
   "ezaem": {
@@ -171,7 +171,7 @@
       }
     ],
     "filter-tags": [
-      "qiwi", "online", "na-kartu", "na-schet", "contact", "sberbank"
+      "qiwi", "online", "zaymy", "na-kartu", "na-schet", "contact", "sberbank"
     ]
   },
   "zaymer": {
@@ -245,7 +245,7 @@
       "Мобильный телефон"
     ],
     "filter-tags": [
-      "online", "na-kartu", "na-schet", "yandex", "contact", "sberbank", "gosuslugi"
+      "online", "zaymy", "na-kartu", "na-schet", "yandex", "contact", "sberbank", "gosuslugi"
     ]
   },
   "konga": {
@@ -325,7 +325,7 @@
       }
     ],
     "filter-tags": [
-      "online", "sberbank"
+      "online", "zaymy", "sberbank"
     ]
   },
   "bistrodengi": {
@@ -415,7 +415,7 @@
       }
     ],
     "filter-tags": [
-      "online", "sberbank"
+      "online", "zaymy", "sberbank"
     ]
   },
   "eKapusta": {
@@ -482,7 +482,7 @@
       "Действующий номер телефона"
     ],
     "filter-tags": [
-      "qiwi", "online", "na-kartu", "na-schet", "yandex", "contact", "korona"
+      "qiwi", "online", "zaymy", "na-kartu", "na-schet", "yandex", "contact", "korona"
     ]
   },
   "platiza": {
@@ -547,7 +547,7 @@
       "СНИЛС"
     ],
     "filter-tags": [
-      "online", "na-kartu", "yandex", "sberbank"
+      "online", "zaymy", "na-kartu", "yandex", "sberbank"
     ]
   },
   "webbankir": {
@@ -615,7 +615,7 @@
       "Именная банковская карта Российского банка"
     ],
     "filter-tags": [
-      "online", "na-kartu", "yandex", "contact", "sberbank", "gosuslugi"
+      "online", "zaymy", "na-kartu", "yandex", "contact", "sberbank", "gosuslugi"
     ]
   },
   "turbozaim": {
@@ -695,7 +695,7 @@
       }
     ],
     "filter-tags": [
-      "online", "na-kartu", "yandex", "sberbank"
+      "online", "zaymy", "na-kartu", "yandex", "sberbank"
     ]
   },
   "greenmoney": {
@@ -757,7 +757,7 @@
       "Именная банковская карта"
     ],
     "filter-tags": [
-      "online", "na-kartu", "sberbank"
+      "online", "zaymy", "na-kartu", "sberbank"
     ]
   },
   "smartcredit": {
@@ -825,7 +825,7 @@
       "Действующий номер телефона"
     ],
     "filter-tags": [
-      "qiwi", "online", "na-kartu", "na-schet", "yandex", "contact", "sberbank"
+      "qiwi", "online", "zaymy", "na-kartu", "na-schet", "yandex", "contact", "sberbank"
     ]
   },
   "payps": {
@@ -908,7 +908,7 @@
       }
     ],
     "filter-tags": [
-      "online", "na-kartu", "na-schet", "yandex", "contact", "sberbank"
+      "online", "zaymy", "na-kartu", "na-schet", "yandex", "contact", "sberbank"
     ]
   },
   "migone": {
@@ -978,7 +978,7 @@
       "Электронный почтовый ящик"
     ],
     "filter-tags": [
-      "online", "na-kartu", "na-schet", "contact", "unistream", "korona", "sberbank"
+      "online", "zaymy", "na-kartu", "na-schet", "contact", "unistream", "korona", "sberbank"
     ]
   },
   "migcredit": {
@@ -1060,7 +1060,7 @@
       }
     ],
     "filter-tags": [
-      "online", "na-kartu", "contact", "unistream"
+      "online", "zaymy", "na-kartu", "contact", "unistream"
     ]
   },
   "oneclickmoney": {
@@ -1128,7 +1128,7 @@
       "Мобильный телефон"
     ],
     "filter-tags": [
-      "qiwi", "online", "na-kartu", "contact", "korona", "sberbank", "gosuslugi"
+      "qiwi", "online", "zaymy", "na-kartu", "contact", "korona", "sberbank", "gosuslugi"
     ]
   },
   "kredito24": {
@@ -1195,7 +1195,7 @@
       "Мобильный телефон"
     ],
     "filter-tags": [
-      "online", "na-schet", "sberbank"
+      "online", "zaymy", "na-schet", "sberbank"
     ]
   },
   "onzaem": {
@@ -1257,7 +1257,7 @@
       "Постоянный источник дохода"
     ],
     "filter-tags": [
-      "online", "na-kartu", "na-schet", "sberbank"
+      "online", "zaymy", "na-kartu", "na-schet", "sberbank"
     ]
   },
   "webzaim": {
@@ -1324,7 +1324,7 @@
       "Наличие паспорта"
     ],
     "filter-tags": [
-      "online", "na-kartu", "na-schet", "sberbank"
+      "online", "zaymy", "na-kartu", "na-schet", "sberbank"
     ]
   },
   "moneza": {
@@ -1402,7 +1402,7 @@
       }
     ],
     "filter-tags": [
-      "qiwi", "online", "na-kartu", "na-schet", "contact", "sberbank"
+      "qiwi", "online", "zaymy", "na-kartu", "na-schet", "contact", "sberbank"
     ]
   },
   "microklad": {
@@ -1466,7 +1466,7 @@
       "Наличие паспорта"
     ],
     "filter-tags": [
-      "online", "na-kartu", "sberbank"
+      "online", "zaymy", "na-kartu", "sberbank"
     ]
   },
   "onlinezaim": {
@@ -1556,7 +1556,7 @@
         }
     ],
     "filter-tags": [
-      "online", "na-kartu", "na-schet", "contact"
+      "online", "zaymy", "na-kartu", "na-schet", "contact"
     ]
   },
   "womoney": {
@@ -1646,7 +1646,7 @@
         }
     ],
     "filter-tags": [
-      "online", "na-kartu", "na-schet", "contact"
+      "online", "zaymy", "na-kartu", "na-schet", "contact"
     ]
   },
   "zaimon": {
@@ -1711,7 +1711,7 @@
       "Дополнительный документ подтверждабющей личность"
     ],
     "filter-tags": [
-      "online", "na-kartu", "na-schet", "yandex", "sberbank"
+      "online", "zaymy", "na-kartu", "na-schet", "yandex", "sberbank"
     ]
   },
   "zaymigo": {
@@ -1779,7 +1779,7 @@
       "Номер действующего телефона"
     ],
     "filter-tags": [
-      "online", "na-kartu", "contact", "korona", "sberbank"
+      "online", "zaymy", "na-kartu", "contact", "korona", "sberbank"
     ]
   },
   "fastmoney": {
@@ -1871,7 +1871,7 @@
         }
     ],
     "filter-tags": [
-      "online", "na-kartu", "contact", "sberbank"
+      "online", "zaymy", "na-kartu", "contact", "sberbank"
     ]
   },
   "dozarplati": {
@@ -1958,7 +1958,7 @@
         }
     ],
     "filter-tags": [
-      "online", "na-kartu", "na-schet", "contact", "korona"
+      "online", "zaymy", "na-kartu", "na-schet", "contact", "korona"
     ]
   },
   "zheldorzaim": {
@@ -2018,7 +2018,7 @@
       "Данные о месте работы"
     ],
     "filter-tags": [
-      "online", "na-kartu", "sberbank"
+      "online", "zaymy", "na-kartu", "sberbank"
     ]
   },
   "carmoney": {
@@ -2082,7 +2082,7 @@
       "Документы на транспортное средство"
     ],
     "filter-tags": [
-      "online", "contact"
+      "online", "zaymy", "contact"
     ]
   },
   "glavfinans": {
@@ -2147,7 +2147,7 @@
       "ИНН или СНИЛС"
     ],
     "filter-tags": [
-      "online", "na-kartu", "contact", "sberbank"
+      "online", "zaymy", "na-kartu", "contact", "sberbank"
     ]
   },
   "minifinance": {
@@ -2207,7 +2207,7 @@
       "Банковская именная карта"
     ],
     "filter-tags": [
-      "online", "na-kartu"
+      "online", "zaymy", "na-kartu"
     ]
   },
   "srochnodengi": {
@@ -2273,7 +2273,7 @@
       "Данные о постоянном месте работы"
     ],
     "filter-tags": [
-      "online", "na-kartu"
+      "online", "zaymy", "na-kartu"
     ]
   },
   "finspin": {
@@ -2341,7 +2341,7 @@
       "Наличие паспорта"
     ],
     "filter-tags": [
-      "qiwi", "online", "na-kartu", "na-schet", "yandex", "contact", "korona"
+      "qiwi", "online", "zaymy", "na-kartu", "na-schet", "yandex", "contact", "korona"
     ]
   },
   "optimazaim": {
@@ -2406,7 +2406,7 @@
       "Наличие паспорта, мобильный телефон."
     ],
     "filter-tags": [
-      "qiwi", "online", "na-kartu", "na-schet", "yandex", "contact"
+      "qiwi", "online", "zaymy", "na-kartu", "na-schet", "yandex", "contact"
     ]
   },
   "zaimco": {
@@ -2473,7 +2473,7 @@
       "Наличие паспорта, мобильный телефон, электронный ящик."
     ],
     "filter-tags": [
-      "qiwi", "online", "na-kartu", "na-schet", "yandex", "contact"
+      "qiwi", "online", "zaymy", "na-kartu", "na-schet", "yandex", "contact"
     ]
   }
 }
