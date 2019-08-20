@@ -5,5 +5,13 @@ module.exports = {
     } else {
       return false;
     }
+  },
+
+  itHas: function(targetArray, seekingValue) {
+    if (targetArray.includes(seekingValue)) {
+      return true;
+    } else {
+      return false;
+    }
   }
 };
