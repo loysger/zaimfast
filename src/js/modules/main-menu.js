@@ -1,49 +1,38 @@
-import Utils from "./utils";
-
 const BURGER = {
   class: 'header__burger',
-  mod: {
-    open: 'header__burger_close',
-    close: 'header__burger_open'
-  }
+  openMod: 'header__burger_cross'
 };
 
 const MENU = {
   class: 'main-navigation',
-  mod: {
-    open: 'main-navigation_opened',
-    close: 'main-navigation_closed'
-  }
+  openMod: 'main-navigation_closed'
 };
 
 const CONTAINER = {
   class: 'main-navigation-container',
-  mod: {
-    open: 'main-navigation-container_opened',
-    close: ''
-  }
+  openMod: 'main-navigation-container_opened'
 };
 
 const openMenu = () => {
   const burgerElement = document.querySelector(`.${BURGER.class}`);
-  Utils.changeClass(burgerElement, BURGER.mod.close, BURGER.mod.open)
+  burgerElement.classList.add(BURGER.openMod);
 
   const menuElement = document.querySelector(`.${MENU.class}`);
-  Utils.changeClass(menuElement, MENU.mod.close, MENU.mod.open)
+  menuElement.classList.remove(MENU.openMod);
 
   const containerElement = document.querySelector(`.${CONTAINER.class}`);
-  Utils.changeClass(containerElement, CONTAINER.mod.close, CONTAINER.mod.open)
+  containerElement.classList.add(CONTAINER.openMod);
 };
 
 const closeMenu = () => {
   const burgerElement = document.querySelector(`.${BURGER.class}`);
-  Utils.changeClass(burgerElement, BURGER.mod.close, BURGER.mod.open, true)
+  burgerElement.classList.remove(BURGER.openMod);
 
   const menuElement = document.querySelector(`.${MENU.class}`);
-  Utils.changeClass(menuElement, MENU.mod.close, MENU.mod.open, true)
+  menuElement.classList.add(MENU.openMod);
 
   const containerElement = document.querySelector(`.${CONTAINER.class}`);
-  Utils.changeClass(containerElement, CONTAINER.mod.close, CONTAINER.mod.open, true)
+  containerElement.classList.remove(CONTAINER.openMod);
 };
 
 export default class MainMenu {
