@@ -14,12 +14,11 @@ const postcssScss = require('postcss-scss');
 const sourcemaps = require('gulp-sourcemaps');
 const handlebars = require('gulp-hb');
 const csso = require('gulp-csso');
-const uglify = require('gulp-uglify');
 const htmlmin = require('gulp-htmlmin');
-// eslint-disable-next-line no-unused-vars
-const colors = require('colors');
 const reporter = require('postcss-reporter');
 const postcssPresetEnv = require('postcss-preset-env');
+const webpack = require('webpack');
+const webpackStream = require('webpack-stream');
 
 // BrowserSync
 function browserSync(done) {
@@ -137,41 +136,31 @@ function html() {
 // JS
 function js() {
   return gulp
-    .src('./src/js/*.js')
+    .src('./src/js/main.js')
+    .pipe(
+      webpackStream(require('./webpack.config.js'), webpack)
+    )
+    .pipe(gulp.dest('./build/js/'));
+}
+
+// CSS
+function css() {
+  let postcssPlugins = [postcssPresetEnv(), autoprefixer()];
+
+  return gulp
+    .src('./src/scss/style.scss')
     .pipe(sourcemaps.init())
-    .pipe(uglify())
+    .pipe(sass().on('error', sass.logError))
+    .pipe(postcss(postcssPlugins))
+    .pipe(csso())
     .pipe(
       rename({
         suffix: '.min'
       })
     )
     .pipe(sourcemaps.write('./maps'))
-    .pipe(gulp.dest('./build/js/'));
-}
-
-// CSS
-function css() {
-  let postcssPlugins = [
-    postcssPresetEnv(),
-    autoprefixer()
-  ];
-
-  return (
-    gulp
-      .src('./src/scss/style.scss')
-      .pipe(sourcemaps.init())
-      .pipe(sass().on('error', sass.logError))
-      .pipe(postcss(postcssPlugins))
-      .pipe(csso())
-      .pipe(
-        rename({
-          suffix: '.min'
-        })
-      )
-      .pipe(sourcemaps.write('./maps'))
-      .pipe(gulp.dest('./build/css'))
-      .pipe(browsersync.stream())
-  );
+    .pipe(gulp.dest('./build/css'))
+    .pipe(browsersync.stream());
 }
 
 // img

@@ -1,5 +1,3 @@
-'use strict';
-
 try {
   (function() {
     var burger = document.querySelector('.header__burger');
