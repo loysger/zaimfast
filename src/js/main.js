@@ -4,20 +4,6 @@ MainMenu.init();
 
 try {
   (function() {
-    var table = document.querySelector('.zaem-condition__table');
-    var conditions = table.querySelectorAll('.zaem-condition__item');
-
-    conditions.forEach(function(element) {
-      element.classList.add('zaem-condition__item_closed');
-      element.addEventListener('click', function() {
-        element.classList.toggle('zaem-condition__item_closed');
-      });
-    });
-  })();
-} catch (error) {}
-
-try {
-  (function() {
     var element = document.querySelector('.zaem-about');
     var button = element.querySelector('.zaem-about__more');
 

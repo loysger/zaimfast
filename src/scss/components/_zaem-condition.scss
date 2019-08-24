@@ -47,7 +47,6 @@
         background-color: $main-color;
         color: white;
         font-weight: 700;
-        cursor: pointer;
 
         @media (min-width: $desktop) {
           padding: 5px 10px;
@@ -64,9 +63,9 @@
           height: 0;
           transform: translateY(-50%);
           border: 6px solid white;
-          border-top: none;
-          border-right-color: transparent;
-          border-left-color: transparent;
+          border-right: none;
+          border-top-color: transparent;
+          border-bottom-color: transparent;
           content: '';
 
           @media (min-width: $desktop) {
@@ -76,31 +75,32 @@
       }
     }
 
-    &_closed {
-      td {
-        &:first-of-type::before {
-          border-top: 6px solid white;
-          border-bottom: none;
-        }
+    // UNUSED
+    // &_closed {
+    //   td {
+    //     &:first-of-type::before {
+    //       border-top: 6px solid white;
+    //       border-bottom: none;
+    //     }
 
-        &:last-of-type {
-          display: none;
+    //     &:last-of-type {
+    //       display: none;
 
-          @media (min-width: $desktop) {
-            display: block;
-          }
-        }
+    //       @media (min-width: $desktop) {
+    //         display: block;
+    //       }
+    //     }
 
-        &:first-of-type {
-          margin-bottom: 5px;
-          border-radius: 4px;
+    //     &:first-of-type {
+    //       margin-bottom: 5px;
+    //       border-radius: 4px;
 
-          @media (min-width: $desktop) {
-            margin-bottom: 0;
-            border-radius: 0;
-          }
-        }
-      }
-    }
+    //       @media (min-width: $desktop) {
+    //         margin-bottom: 0;
+    //         border-radius: 0;
+    //       }
+    //     }
+    //   }
+    // }
   }
 }
