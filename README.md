@@ -2,7 +2,7 @@
 
 ## Обязательные зависимости
 
-- [Node.js](http://nodejs.org)
+- [Node.js 10](http://nodejs.org)
 - [Yarn](https://yarnpkg.com/)
 - [Gulp Command Line Utility](http://gulpjs.com) `npm install gulp-cli -g`
 
