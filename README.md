@@ -1,18 +1,19 @@
 # zaimfast ![Dependency status](https://david-dm.org/loysger/zaimfast.svg)
 
-## Зависимости
+## Обязательные зависимости
 
 - [Node.js](http://nodejs.org)
 - [Yarn](https://yarnpkg.com/)
-- [Gulp Command Line Utility](http://gulpjs.com)
+- [Gulp Command Line Utility](http://gulpjs.com) `npm install gulp-cli -g`
 
 ## Быстрый старт
 
 1. Установить зависимоcти командой в консоли `yarn install`
-2. Запустить локальный сервер и отслеживание изменений `yarn run live`
+2. Запустить локальный сервер и отслеживание изменений `yarn run start`
 
 ## Описание доступных скриптов
 
-- `build` - чистит и запускает сборку в папку *build*
-- `watch` - запускает локальный сервер и отслеживание изменений
-- `live` - `build` + `watch`
+- `start` - быстрый запуск сервера для разработки
+- `build` - выполняет сборку в папку *./build*
+- `prod` - выполняет сборку для продакшена в папку *./production*
+- `test` - комплексное тестирование
