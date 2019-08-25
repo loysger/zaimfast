@@ -4,18 +4,6 @@ MainMenu.init();
 
 try {
   (function() {
-    var element = document.querySelector('.zaem-about');
-    var button = element.querySelector('.zaem-about__more');
-
-    element.classList.add('zaem-about_closed');
-    button.addEventListener('click', function() {
-      element.classList.toggle('zaem-about_closed');
-    });
-  })();
-} catch (error) {}
-
-try {
-  (function() {
     var elements = document.querySelectorAll('.news-page__text-wrapper');
 
     elements.forEach(function(element) {
