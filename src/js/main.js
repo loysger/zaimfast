@@ -4,21 +4,6 @@ MainMenu.init();
 
 try {
   (function() {
-    var elements = document.querySelectorAll('.news-page__text-wrapper');
-
-    elements.forEach(function(element) {
-      var button = element.querySelector('.news-page__text-more');
-
-      element.classList.add('news-page__text-wrapper_closed');
-      button.addEventListener('click', function() {
-        element.classList.toggle('news-page__text-wrapper_closed');
-      });
-    });
-  })();
-} catch (error) {}
-
-try {
-  (function() {
     var elements = document.querySelectorAll('.js-set-number');
     var targetClass = 'set-number';
 
