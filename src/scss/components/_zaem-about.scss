@@ -24,42 +24,43 @@
     color: $main-color;
   }
 
-  &_closed {
-    .zaem-about__content {
-      position: relative;
-      height: 5.5em;
-      overflow: hidden;
+  // UNUSED
+  // &_closed {
+  //   .zaem-about__content {
+  //     position: relative;
+  //     height: 5.5em;
+  //     overflow: hidden;
 
-      @media (min-width: $desktop) {
-        height: auto;
-        overflow: unset;
-      }
+  //     @media (min-width: $desktop) {
+  //       height: auto;
+  //       overflow: unset;
+  //     }
 
-      &::after {
-        display: block;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(
-          to top,
-          white,
-          transparent 50%,
-          transparent
-        );
-        content: '';
+  //     &::after {
+  //       display: block;
+  //       position: absolute;
+  //       bottom: 0;
+  //       left: 0;
+  //       width: 100%;
+  //       height: 100%;
+  //       background: linear-gradient(
+  //         to top,
+  //         white,
+  //         transparent 50%,
+  //         transparent
+  //       );
+  //       content: '';
 
-        @media (min-width: $desktop) {
-          display: none;
-        }
-      }
-    }
+  //       @media (min-width: $desktop) {
+  //         display: none;
+  //       }
+  //     }
+  //   }
 
-    .zaem-about__more {
-      @media (min-width: $desktop) {
-        display: none;
-      }
-    }
-  }
+  //   .zaem-about__more {
+  //     @media (min-width: $desktop) {
+  //       display: none;
+  //     }
+  //   }
+  // }
 }
