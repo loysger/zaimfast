@@ -1,18 +1,8 @@
 import MainMenu from "./modules/main-menu";
+import SetNumber from "./modules/set-number";
 
 MainMenu.init();
-
-try {
-  (function() {
-    var elements = document.querySelectorAll('.js-set-number');
-    var targetClass = 'set-number';
-
-    for (var i = 0; i < elements.length; i++) {
-      var target = elements[i].querySelector('.' + targetClass);
-      target.textContent = i + 1;
-    }
-  })();
-} catch (error) {}
+SetNumber.init();
 
 try {
   (function() {
