@@ -13,4 +13,15 @@
       text-align: left;
     }
   }
+
+  &__h1 {
+    padding: $padding;
+    text-align: left;
+
+    @media (min-width: $desktop) {
+      background-color: white;
+      padding: 35px 30px;
+      font-size: 26px;
+    }
+  }
 }
