@@ -2,6 +2,7 @@
 
 ![Dependency status](https://david-dm.org/loysger/zaimfast.svg)
 [![devDependencies Status](https://david-dm.org/loysger/zaimfast/dev-status.svg)](https://david-dm.org/loysger/zaimfast?type=dev)
+[![Build Status](https://travis-ci.org/loysger/zaimfast.svg?branch=master)](https://travis-ci.org/loysger/zaimfast)
 
 ## Обязательные зависимости
 
