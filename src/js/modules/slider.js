@@ -7,6 +7,9 @@
 //   </div>
 // </div>
 
+import throttle from 'lodash/throttle';
+
+const THROTTLE_TIME = 15;
 export default class Slider {
   constructor(sliderElement) {
     this._element = sliderElement;
@@ -36,10 +39,13 @@ export default class Slider {
 
     switch (evt.type) {
       case 'touchstart':
-        this._touchCood = evt.touches[0].screenX;
+        this._touchCoord = evt.touches[0].screenX;
 
         this._touchStopHandler = this._stopTracking.bind(this);
-        this._touchMovementHandler = this._moveSlider.bind(this);
+        this._touchMovementHandler = throttle(
+          this._moveSlider.bind(this),
+          THROTTLE_TIME
+        );
 
         document.addEventListener('touchend', this._touchStopHandler, {
           once: true
@@ -48,8 +54,13 @@ export default class Slider {
         break;
 
       default:
+        this._mouseCoord = evt.x;
+
         this._mouseUpHandler = this._stopTracking.bind(this);
-        this._mouseMovementHandler = this._moveSlider.bind(this);
+        this._mouseMovementHandler = throttle(
+          this._moveSlider.bind(this),
+          THROTTLE_TIME
+        );
 
         document.addEventListener('mouseup', this._mouseUpHandler, {
           once: true
@@ -79,12 +90,13 @@ export default class Slider {
 
     switch (evt.type) {
       case 'touchmove':
-        shift = evt.touches[0].screenX - this._touchCood;
-        this._touchCood = evt.touches[0].screenX;
+        shift = evt.touches[0].screenX - this._touchCoord;
+        this._touchCoord = evt.touches[0].screenX;
         break;
 
       default:
-        shift = evt.movementX;
+        shift = evt.x - this._mouseCoord;
+        this._mouseCoord = evt.x;
         break;
     }
 
