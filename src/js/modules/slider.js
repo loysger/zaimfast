@@ -7,7 +7,7 @@
 //   </div>
 // </div>
 
-import throttle from 'lodash/throttle';
+import throttle from '../../../node_modules/lodash/throttle';
 
 const THROTTLE_TIME = 15;
 export default class Slider {
