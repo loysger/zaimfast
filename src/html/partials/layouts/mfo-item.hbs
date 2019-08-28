@@ -20,49 +20,49 @@
             </div>
           </div>
           <div class="zaem-card__contain">
+            {{#if this.tarify}}
+            <button class="button zaem-card__tariffs-more">Еще тарифы</button>
+            {{/if}}
             <p class="zaem-card__prop">
               <span class="zaem-card__prop-text">{{ratePerDay}}%</span>
               <span class="zaem-card__prop-name">Ставка в день</span>
             </p>
-            <p class="zaem-card__prop">
+            {{!-- <p class="zaem-card__prop">
               <span class="zaem-card__prop-text"><span class="calc-amount-value">3 000</span> ₽</span>
               <span class="zaem-card__prop-name">Сумма</span>
             </p>
             <p class="zaem-card__prop">
               <span class="zaem-card__prop-text"><span class="calc-days-value">10</span> дней</span>
               <span class="zaem-card__prop-name">Срок</span>
-            </p>
+            </p> --}}
             <p class="zaem-card__prop">
               <span class="zaem-card__prop-text"><span class="calc-overcharge-value">10</span> ₽</span>
               <span class="zaem-card__prop-name">Переплата</span>
             </p>
           </div>
           {{#if this.tarify}}
-          <button class="button zaem-card__tariffs-more">Еще тарифы</button>
-          {{/if}}
-          {{#if this.tarify}}
           <div class="zaem-card__tariffs">
             <ul>
               {{#each this.tarify}}
               <li class="zaem-card__tariffs-item">
-                <p class="zaem-card__prop zaem-card__tariffs-name">
+                <p class="zaem-card__prop zaem-card__prop_tariffs zaem-card__tariffs-name">
                   <span class="zaem-card__prop-text">{{name}}</span>
                 </p>
-                <p class="zaem-card__prop">
+                <p class="zaem-card__prop zaem-card__prop_tariffs">
                   <span class="zaem-card__prop-text">{{rate}}%</span>
-                  <span class="zaem-card__prop-name">Ставка в день</span>
+                  {{!-- <span class="zaem-card__prop-name">Ставка в день</span> --}}
                 </p>
-                <p class="zaem-card__prop">
+                {{!-- <p class="zaem-card__prop">
                   <span class="zaem-card__prop-text"><span class="calc-amount-value">3 000</span> ₽</span>
                   <span class="zaem-card__prop-name">Сумма</span>
                 </p>
                 <p class="zaem-card__prop">
                   <span class="zaem-card__prop-text"><span class="calc-days-value">10</span> дней</span>
                   <span class="zaem-card__prop-name">Срок</span>
-                </p>
-                <p class="zaem-card__prop">
+                </p> --}}
+                <p class="zaem-card__prop zaem-card__prop_tariffs">
                   <span class="zaem-card__prop-text"><span class="calc-overcharge-value">10</span> ₽</span>
-                  <span class="zaem-card__prop-name">Переплата</span>
+                  {{!-- <span class="zaem-card__prop-name">Переплата</span> --}}
                 </p>
               </li>
               {{/each}}
