@@ -13,5 +13,9 @@ module.exports = {
     } else {
       return false;
     }
+  },
+
+  toNumber: function(value) {
+    return parseInt(value.replace(/\s+/g, ''), 10);
   }
 };

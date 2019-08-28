@@ -19,12 +19,12 @@
               </a>
             </div>
           </div>
-          <div class="zaem-card__contain">
+          <div class="zaem-card__contain calc-item" data-rate="{{ratePerDay}}">
             {{#if this.tarify}}
             <button class="button zaem-card__tariffs-more">Еще тарифы</button>
             {{/if}}
             <p class="zaem-card__prop">
-              <span class="zaem-card__prop-text">{{ratePerDay}}%</span>
+              <span class="zaem-card__prop-text">{{ratePerDay}} %</span>
               <span class="zaem-card__prop-name">Ставка в день</span>
             </p>
             {{!-- <p class="zaem-card__prop">
@@ -44,12 +44,12 @@
           <div class="zaem-card__tariffs">
             <ul>
               {{#each this.tarify}}
-              <li class="zaem-card__tariffs-item">
+              <li class="zaem-card__tariffs-item calc-item" data-rate="{{rate}}">
                 <p class="zaem-card__prop zaem-card__prop_tariffs zaem-card__tariffs-name">
                   <span class="zaem-card__prop-text">{{name}}</span>
                 </p>
                 <p class="zaem-card__prop zaem-card__prop_tariffs">
-                  <span class="zaem-card__prop-text">{{rate}}%</span>
+                  <span class="zaem-card__prop-text">{{rate}} %</span>
                   {{!-- <span class="zaem-card__prop-name">Ставка в день</span> --}}
                 </p>
                 {{!-- <p class="zaem-card__prop">
@@ -74,7 +74,7 @@
             <div class="calc__amount">
               <label class="calc__label" for="calc-amount">Введите сумму займа, руб.</label>
               <input class="calc__input" id="calc-amount" name="amount" type="number" value="3000" maxlength="10"
-                minlength="4" min="1000" max="1000000" />
+                minlength="4" min="{{toNumber summFrom}}" max="{{toNumber summTo}}" />
               <div class="calc__slider slider">
                 <div class="slider__conteiner">
                   <div class="slider__lenght">
@@ -87,7 +87,7 @@
             <div class="calc__days">
               <label class="calc__label" for="calc-days">Введите кол-во дней</label>
               <input class="calc__input" id="calc-days" name="days" type="number" value="10" maxlength="3" minlength="1"
-                min="1" max="365" />
+                min="{{limitFrom}}" max="{{limitTo}}" />
               <div class="calc__slider slider">
                 <div class="slider__conteiner">
                   <div class="slider__lenght">
