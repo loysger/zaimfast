@@ -11,7 +11,7 @@ import throttle from '../../../node_modules/lodash/throttle';
 
 const THROTTLE_TIME = 15;
 export default class Slider {
-  constructor(sliderElement, _steps) {
+  constructor(sliderElement, _steps = 0) {
     this._element = sliderElement;
     this._lengthElement = sliderElement.querySelector('.slider__lenght');
     this._pinElement = sliderElement.querySelector('.slider__pin');
@@ -101,8 +101,12 @@ export default class Slider {
     return stepSize;
   }
 
-  _moveSlider(evt) {
+  _setPosition(_percent = 0) {
     const style = this._depthElement.style;
+    style.width = `${_percent}%`;
+  }
+
+  _moveSlider(evt) {
     const maxWidthValue = this._lengthElement.clientWidth;
     const stepSize = this._getStepSize(maxWidthValue);
 
@@ -135,6 +139,6 @@ export default class Slider {
       percent = (widthValue / maxWidthValue) * 100;
     }
 
-    style.width = `${percent}%`;
+    this._setPosition(percent);
   }
 }
