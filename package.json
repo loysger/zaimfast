@@ -52,6 +52,6 @@
     "start": "gulp serve",
     "build": "gulp build",
     "prod": "gulp prod",
-    "test": "stylelint ./src/scss/components/*.scss && htmlhint ./src/html/**/*.hbs"
+    "test": "stylelint ./src/scss/components/*.scss && htmlhint ./src/html/**/*.hbs && eslint ./src/js/**/*.js"
   }
 }

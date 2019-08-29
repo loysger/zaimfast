@@ -11,6 +11,7 @@ export default class Calculator {
     const slidersCollection = calcElem.querySelectorAll(`.${SLIDER_CLASS_NAME}`);
     // console.log(slidersCollection);
 
+    // eslint-disable-next-line no-unused-vars
     const firstSlider = new Slider(slidersCollection[0], 100);
   }
 }
