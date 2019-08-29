@@ -168,7 +168,7 @@ export default class Slider {
         percent = (widthValue / maxWidthValue) * 100;
       }
 
-      this._setPosition(percent);
+      this._setPosition(Math.round(percent));
     }
   }
 }
