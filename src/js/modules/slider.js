@@ -16,9 +16,7 @@ export default class Slider {
     this._lengthElement = sliderElement.querySelector('.slider__lenght');
     this._pinElement = sliderElement.querySelector('.slider__pin');
     this._depthElement = sliderElement.querySelector('.slider__depth');
-
     this._steps = _steps;
-
     this._cache = {};
 
     this._init();
@@ -29,47 +27,45 @@ export default class Slider {
       'mousedown',
       this._startTracking.bind(this)
     );
+    this._cache.mouseUpHandler = this._stopTracking.bind(this);
+    this._cache.mouseMovementHandler = throttle(
+      this._moveSlider.bind(this),
+      THROTTLE_TIME
+    );
 
     // touch
     this._pinElement.addEventListener(
       'touchstart',
       this._startTracking.bind(this)
     );
+    this._cache.touchStopHandler = this._stopTracking.bind(this);
+    this._cache.touchMovementHandler = throttle(
+      this._moveSlider.bind(this),
+      THROTTLE_TIME
+    );
   }
 
   _startTracking(evt) {
     evt.preventDefault();
-    this._depthWidth = this._depthElement.clientWidth;
+    this._cache.depthWidth = this._depthElement.clientWidth;
 
     switch (evt.type) {
       case 'touchstart':
-        this._touchCoord = evt.touches[0].screenX;
+        this._cache.touchCoord = evt.touches[0].screenX;
 
-        this._touchStopHandler = this._stopTracking.bind(this);
-        this._touchMovementHandler = throttle(
-          this._moveSlider.bind(this),
-          THROTTLE_TIME
-        );
-
-        document.addEventListener('touchend', this._touchStopHandler, {
+        document.addEventListener('touchend', this._cache.touchStopHandler, {
           once: true
         });
-        document.addEventListener(`touchmove`, this._touchMovementHandler);
+        document.addEventListener(`touchmove`, this._cache.touchMovementHandler);
         break;
 
       default:
-        this._mouseCoord = evt.x;
+        this._cache.mouseCoord = evt.x;
 
-        this._mouseUpHandler = this._stopTracking.bind(this);
-        this._mouseMovementHandler = throttle(
-          this._moveSlider.bind(this),
-          THROTTLE_TIME
-        );
-
-        document.addEventListener('mouseup', this._mouseUpHandler, {
+        document.addEventListener('mouseup', this._cache.mouseUpHandler, {
           once: true
         });
-        document.addEventListener(`mousemove`, this._mouseMovementHandler);
+        document.addEventListener(`mousemove`, this._cache.mouseMovementHandler);
         break;
     }
   }
@@ -77,11 +73,11 @@ export default class Slider {
   _stopTracking(evt) {
     switch (evt.type) {
       case 'touchend':
-        document.removeEventListener('touchmove', this._touchMovementHandler);
+        document.removeEventListener('touchmove', this._cache.touchMovementHandler);
         break;
 
       default:
-        document.removeEventListener('mousemove', this._mouseMovementHandler);
+        document.removeEventListener('mousemove', this._cache.mouseMovementHandler);
         break;
     }
   }
@@ -108,26 +104,24 @@ export default class Slider {
   _moveSlider(evt) {
     const style = this._depthElement.style;
     const maxWidthValue = this._lengthElement.clientWidth;
-
-    console.log(this._getStepSize(maxWidthValue));
+    const stepSize = this._getStepSize(maxWidthValue);
 
     let shift;
 
     switch (evt.type) {
       case 'touchmove':
-        shift = evt.touches[0].screenX - this._touchCoord;
-        this._touchCoord = evt.touches[0].screenX;
+        shift = evt.touches[0].screenX - this._cache.touchCoord;
+        this._cache.touchCoord = evt.touches[0].screenX;
         break;
 
       default:
-        shift = evt.x - this._mouseCoord;
-        this._mouseCoord = evt.x;
+        shift = evt.x - this._cache.mouseCoord;
+        this._cache.mouseCoord = evt.x;
         break;
     }
 
-    const widthValue = this._depthWidth + shift;
-
-    this._depthWidth = widthValue;
+    const widthValue = this._cache.depthWidth + shift;
+    this._cache.depthWidth = widthValue;
 
     let percent;
 
