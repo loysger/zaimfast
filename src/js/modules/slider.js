@@ -10,6 +10,7 @@
 import throttle from '../../../node_modules/lodash/throttle';
 
 const THROTTLE_TIME = 15;
+const MAX_STEPS = 100;
 export default class Slider {
   constructor(sliderElement, _steps = 0) {
     this._element = sliderElement;
@@ -23,6 +24,8 @@ export default class Slider {
   }
 
   _init() {
+    this._setPosition();
+
     this._pinElement.addEventListener(
       'mousedown',
       this._startTracking.bind(this)
@@ -47,6 +50,7 @@ export default class Slider {
 
   _startTracking(evt) {
     evt.preventDefault();
+    this._cache.travelledDistance = 0;
     this._cache.depthWidth = this._depthElement.clientWidth;
 
     switch (evt.type) {
@@ -56,7 +60,10 @@ export default class Slider {
         document.addEventListener('touchend', this._cache.touchStopHandler, {
           once: true
         });
-        document.addEventListener(`touchmove`, this._cache.touchMovementHandler);
+        document.addEventListener(
+          `touchmove`,
+          this._cache.touchMovementHandler
+        );
         break;
 
       default:
@@ -65,19 +72,30 @@ export default class Slider {
         document.addEventListener('mouseup', this._cache.mouseUpHandler, {
           once: true
         });
-        document.addEventListener(`mousemove`, this._cache.mouseMovementHandler);
+        document.addEventListener(
+          `mousemove`,
+          this._cache.mouseMovementHandler
+        );
         break;
     }
   }
 
   _stopTracking(evt) {
+    this._cache.travelledDistance = 0;
+
     switch (evt.type) {
       case 'touchend':
-        document.removeEventListener('touchmove', this._cache.touchMovementHandler);
+        document.removeEventListener(
+          'touchmove',
+          this._cache.touchMovementHandler
+        );
         break;
 
       default:
-        document.removeEventListener('mousemove', this._cache.mouseMovementHandler);
+        document.removeEventListener(
+          'mousemove',
+          this._cache.mouseMovementHandler
+        );
         break;
     }
   }
@@ -89,7 +107,12 @@ export default class Slider {
 
     let stepSize;
 
-    if (this._steps && typeof this._steps === 'number' && this._steps > 1) {
+    if (
+      this._steps &&
+      typeof this._steps === 'number' &&
+      this._steps > 0 &&
+      this._steps <= MAX_STEPS
+    ) {
       stepSize = maxWidth / this._steps;
     } else {
       stepSize = 1;
@@ -124,21 +147,28 @@ export default class Slider {
         break;
     }
 
-    const widthValue = this._cache.depthWidth + shift;
-    this._cache.depthWidth = widthValue;
+    this._cache.travelledDistance = this._cache.travelledDistance + shift;
 
-    let percent;
+    while (Math.abs(this._cache.travelledDistance) >= stepSize) {
+      const widthValue = this._cache.depthWidth + stepSize * Math.sign(shift);
+      this._cache.depthWidth = widthValue;
+      this._cache.travelledDistance =
+        (Math.abs(this._cache.travelledDistance) - stepSize) *
+        Math.sign(this._cache.travelledDistance);
 
-    if (widthValue <= 0 || widthValue >= maxWidthValue) {
-      if (widthValue <= 0) {
-        percent = 0;
+      let percent;
+
+      if (widthValue <= 0 || widthValue >= maxWidthValue) {
+        if (widthValue <= 0) {
+          percent = 0;
+        } else {
+          percent = 100;
+        }
       } else {
-        percent = 100;
+        percent = (widthValue / maxWidthValue) * 100;
       }
-    } else {
-      percent = (widthValue / maxWidthValue) * 100;
-    }
 
-    this._setPosition(percent);
+      this._setPosition(percent);
+    }
   }
 }
