@@ -11,6 +11,6 @@ export default class Calculator {
     const slidersCollection = calcElem.querySelectorAll(`.${SLIDER_CLASS_NAME}`);
     // console.log(slidersCollection);
 
-    const firstSlider = new Slider(slidersCollection[0]);
+    const firstSlider = new Slider(slidersCollection[0], 4);
   }
 }
