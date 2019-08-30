@@ -12,7 +12,7 @@ import throttle from '../../../node_modules/lodash/throttle';
 const THROTTLE_TIME = 15;
 const MAX_STEPS = 1000;
 export default class Slider {
-  constructor(sliderElement, _steps = 0) {
+  constructor(sliderElement, _steps = 0, _initialStep = 0) {
     this._element = sliderElement;
     this._lengthElement = sliderElement.querySelector('.slider__lenght');
     this._pinElement = sliderElement.querySelector('.slider__pin');
@@ -20,11 +20,12 @@ export default class Slider {
     this._steps = _steps;
     this._cache = {};
 
-    this._init();
+    this._init(_initialStep);
   }
 
-  _init() {
-    this._setPosition();
+  _init(initialStep) {
+    this._cache.maxWidthValue = this._lengthElement.clientWidth;
+    this._moveSlider(0, initialStep);
 
     this._pinElement.addEventListener(
       'mousedown',
@@ -52,6 +53,7 @@ export default class Slider {
     evt.preventDefault();
     this._cache.travelledDistance = 0;
     this._cache.depthWidth = this._depthElement.clientWidth;
+    this._cache.maxWidthValue = this._lengthElement.clientWidth;
 
     switch (evt.type) {
       case 'touchstart':
@@ -81,8 +83,6 @@ export default class Slider {
   }
 
   _stopTracking(evt) {
-    this._cache.travelledDistance = 0;
-
     switch (evt.type) {
       case 'touchend':
         document.removeEventListener(
@@ -98,6 +98,8 @@ export default class Slider {
         );
         break;
     }
+
+    this._currentStep = this._cache.currentStep;
   }
 
   _getStepSize(maxWidth) {
@@ -129,51 +131,51 @@ export default class Slider {
     style.width = `${_percent}%`;
   }
 
-  _moveSlider() {
+  _moveSlider(relStep, _exacStep) {
+    const stepSize = this._getStepSize(this._cache.maxWidthValue);
 
+    if (_exacStep || _exacStep >= 0) {
+      this._currentStep = _exacStep;
+      this._cache.currentStep = _exacStep;
+      const targetPercent =
+        ((_exacStep * stepSize) / this._cache.maxWidthValue) * 100;
+      this._setPosition(targetPercent);
+      this.onMove(_exacStep);
+    } else {
+      const predictedStep = this._currentStep + relStep;
+
+      if (predictedStep > 0 && predictedStep <= this._steps) {
+        const targetPercent =
+          ((predictedStep * stepSize) / this._cache.maxWidthValue) * 100;
+
+        this._setPosition(targetPercent);
+        this.onMove(predictedStep);
+      }
+
+      if (predictedStep === 0) {
+        this._setPosition(0);
+        this.onMove(predictedStep);
+      }
+
+      this._cache.currentStep = predictedStep;
+    }
   }
 
   _moveHandler(evt) {
-    let shift;
-
     switch (evt.type) {
       case 'touchmove':
-        shift = evt.touches[0].screenX - this._cache.touchCoord;
-        this._cache.touchCoord = evt.touches[0].screenX;
+        this._cache.travelledDistance =
+          evt.touches[0].screenX - this._cache.touchCoord;
         break;
 
       default:
-        shift = evt.x - this._cache.mouseCoord;
-        this._cache.mouseCoord = evt.x;
+        this._cache.travelledDistance = evt.x - this._cache.mouseCoord;
         break;
     }
+    const stepSize = this._getStepSize(this._cache.maxWidthValue);
+    const fullStepsDone = Math.floor(this._cache.travelledDistance / stepSize);
 
-    this._cache.travelledDistance = this._cache.travelledDistance + shift;
-
-    const maxWidthValue = this._lengthElement.clientWidth;
-    const stepSize = this._getStepSize(maxWidthValue);
-
-    while (Math.abs(this._cache.travelledDistance) >= stepSize) {
-      const widthValue = this._cache.depthWidth + stepSize * Math.sign(shift);
-      this._cache.depthWidth = widthValue;
-      this._cache.travelledDistance =
-        (Math.abs(this._cache.travelledDistance) - stepSize) *
-        Math.sign(this._cache.travelledDistance);
-
-      let percent;
-
-      if (widthValue <= 0 || widthValue >= maxWidthValue) {
-        if (widthValue <= 0) {
-          percent = 0;
-        } else {
-          percent = 100;
-        }
-      } else {
-        percent = (widthValue / maxWidthValue) * 100;
-      }
-
-      this._setPosition(Math.round(percent));
-    }
+    this._moveSlider(fullStepsDone);
   }
 
   onMove() {}
