@@ -10,7 +10,7 @@
 import throttle from '../../../node_modules/lodash/throttle';
 
 const THROTTLE_TIME = 15;
-const MAX_STEPS = 100;
+const MAX_STEPS = 1000;
 export default class Slider {
   constructor(sliderElement, _steps = 0) {
     this._element = sliderElement;
@@ -32,7 +32,7 @@ export default class Slider {
     );
     this._cache.mouseUpHandler = this._stopTracking.bind(this);
     this._cache.mouseMovementHandler = throttle(
-      this._moveSlider.bind(this),
+      this._moveHandler.bind(this),
       THROTTLE_TIME
     );
 
@@ -43,7 +43,7 @@ export default class Slider {
     );
     this._cache.touchStopHandler = this._stopTracking.bind(this);
     this._cache.touchMovementHandler = throttle(
-      this._moveSlider.bind(this),
+      this._moveHandler.bind(this),
       THROTTLE_TIME
     );
   }
@@ -129,10 +129,11 @@ export default class Slider {
     style.width = `${_percent}%`;
   }
 
-  _moveSlider(evt) {
-    const maxWidthValue = this._lengthElement.clientWidth;
-    const stepSize = this._getStepSize(maxWidthValue);
+  _moveSlider() {
 
+  }
+
+  _moveHandler(evt) {
     let shift;
 
     switch (evt.type) {
@@ -148,6 +149,9 @@ export default class Slider {
     }
 
     this._cache.travelledDistance = this._cache.travelledDistance + shift;
+
+    const maxWidthValue = this._lengthElement.clientWidth;
+    const stepSize = this._getStepSize(maxWidthValue);
 
     while (Math.abs(this._cache.travelledDistance) >= stepSize) {
       const widthValue = this._cache.depthWidth + stepSize * Math.sign(shift);
@@ -171,4 +175,6 @@ export default class Slider {
       this._setPosition(Math.round(percent));
     }
   }
+
+  onMove() {}
 }
