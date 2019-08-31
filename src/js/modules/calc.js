@@ -7,23 +7,34 @@ export default class Calculator {
   constructor(elem) {
     this._elem = elem;
     this._input = elem.querySelector(`.${INPUT_CLASS_NAME}`);
+    this._initValue = this._input.defaultValue;
+    this._max = +this._input.max;
+    this._min = +this._input.min;
+    this._stepSize = +this._input.dataset.stepSize;
+
+    this._cache = {};
 
     this._init();
   }
 
   _init() {
+    const initStep = (this._initValue / this._stepSize) - (this._min / this._stepSize);
+
     this._createSlider((currentStep) => {
-      console.log(currentStep);
-    });
+      this._input.value = this._getStepValue(currentStep);
+    }, initStep);
   }
 
-  _createSlider(onSliderMove) {
+  _createSlider(onSliderMove, _initStep = 0) {
     const slider = this._elem.querySelector(`.${SLIDER_CLASS_NAME}`);
-    const max = +this._input.max;
-    const step = +this._input.dataset.stepSize;
-    const steps = max / step;
+    const steps = (this._max - this._min) / this._stepSize;
 
-    this._slider = new Slider(slider, steps, 0);
+    this._slider = new Slider(slider, steps, _initStep);
     this._slider.onMove = onSliderMove;
+  }
+
+  _getStepValue(step) {
+    const value = this._stepSize * step + this._min;
+    return value;
   }
 }

@@ -144,15 +144,17 @@ export default class Slider {
     } else {
       const predictedStep = this._currentStep + relStep;
 
-      if (predictedStep > 0 && predictedStep <= this._steps) {
+      if (this._cache.prevPredictedStep !== predictedStep && predictedStep > 0 && predictedStep <= this._steps) {
         const targetPercent =
           ((predictedStep * stepSize) / this._cache.maxWidthValue) * 100;
 
+        this._cache.prevPredictedStep = predictedStep;
         this._setPosition(targetPercent);
         this.onMove(predictedStep);
       }
 
-      if (predictedStep === 0) {
+      if (this._cache.prevPredictedStep !== predictedStep && predictedStep === 0) {
+        this._cache.prevPredictedStep = predictedStep;
         this._setPosition(0);
         this.onMove(predictedStep);
       }

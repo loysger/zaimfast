@@ -73,7 +73,7 @@
             <h3 class="calc__heading heading-4">Рассчитать заем</h3>
             <div class="calc__amount">
               <label class="calc__label" for="calc-amount">Введите сумму займа, руб.</label>
-              <input class="calc__input" id="calc-amount" name="amount" type="number" value="3000" maxlength="10"
+              <input class="calc__input" id="calc-amount" name="amount" type="number" value="{{toNumber summFrom}}" maxlength="10"
                 minlength="4" min="{{toNumber summFrom}}" max="{{toNumber summTo}}" data-step-size="500"/>
               <div class="calc__slider slider">
                 <div class="slider__conteiner">
@@ -87,7 +87,7 @@
             </div>
             <div class="calc__days">
               <label class="calc__label" for="calc-days">Введите кол-во дней</label>
-              <input class="calc__input" id="calc-days" name="days" type="number" value="10" maxlength="3" minlength="1"
+              <input class="calc__input" id="calc-days" name="days" type="number" value="{{limitFrom}}" maxlength="3" minlength="1"
                 min="{{limitFrom}}" max="{{limitTo}}" data-step-size="1"/>
               <div class="calc__slider slider">
                 <div class="slider__conteiner">
