@@ -14,6 +14,8 @@ export default class Slider {
     this._lengthElement = sliderElement.querySelector('.slider__lenght');
     this._pinElement = sliderElement.querySelector('.slider__pin');
     this._depthElement = sliderElement.querySelector('.slider__depth');
+    this._hintElement = sliderElement.querySelector('.slider__hint');
+    this._hintContent = sliderElement.querySelector('.slider__hint-content');
     this._steps = _steps;
     this._cache = {};
 
@@ -60,6 +62,8 @@ export default class Slider {
     this._cache.depthWidth = this._depthElement.clientWidth;
     this._cache.maxWidthValue = this._lengthElement.clientWidth;
 
+    this._hintElement.classList.add('slider__hint_true');
+
     switch (evt.type) {
       case 'touchstart':
         this._cache.touchCoord = evt.touches[0].screenX;
@@ -88,6 +92,8 @@ export default class Slider {
   }
 
   _stopTracking(evt) {
+    this._hintElement.classList.remove('slider__hint_true');
+
     switch (evt.type) {
       case 'touchend':
         document.removeEventListener(
@@ -145,7 +151,7 @@ export default class Slider {
       const targetPercent =
         ((_exacStep * stepSize) / this._cache.maxWidthValue) * 100;
       this._setPosition(targetPercent);
-      this.onMove(_exacStep);
+      this.onMove(_exacStep, this._hintContent);
     } else {
       const predictedStep = this._currentStep + relStep;
 
@@ -159,7 +165,7 @@ export default class Slider {
 
         this._cache.prevPredictedStep = predictedStep;
         this._setPosition(targetPercent);
-        this.onMove(predictedStep);
+        this.onMove(predictedStep, this._hintContent);
       }
 
       if (
@@ -168,7 +174,7 @@ export default class Slider {
       ) {
         this._cache.prevPredictedStep = predictedStep;
         this._setPosition(0);
-        this.onMove(predictedStep);
+        this.onMove(predictedStep, this._hintContent);
       }
 
       this._cache.currentStep = predictedStep;

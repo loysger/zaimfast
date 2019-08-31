@@ -18,10 +18,14 @@ export default class Calculator {
   }
 
   _init() {
-    const initStep = (this._initValue / this._stepSize) - (this._min / this._stepSize);
+    const initStep =
+      this._initValue / this._stepSize - this._min / this._stepSize;
 
-    this._createSlider((currentStep) => {
-      this._input.value = this._getStepValue(currentStep);
+    this._createSlider((currentStep, hint) => {
+      const value = this._getStepValue(currentStep);
+      this._input.value = value;
+
+      hint.textContent = value.toLocaleString();
     }, initStep);
   }
 

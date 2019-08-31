@@ -30,6 +30,16 @@
     border-radius: 50%;
     background-color: white;
     cursor: pointer;
+
+    &:active, &:focus {
+      outline: none;
+
+      .slider__hint {
+        visibility: visible;
+        opacity: 1;
+        transition: opacity var(--anim-time), visibility var(--anim-time);
+      }
+    }
   }
 
   &__hint {
