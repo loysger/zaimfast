@@ -7,9 +7,6 @@
 //   </div>
 // </div>
 
-import throttle from '../../../node_modules/lodash/throttle';
-
-const THROTTLE_TIME = 15;
 const MAX_STEPS = 1000;
 export default class Slider {
   constructor(sliderElement, _steps = 0, _initialStep = 0) {
@@ -46,10 +43,7 @@ export default class Slider {
       this._startTracking.bind(this)
     );
     this._cache.mouseUpHandler = this._stopTracking.bind(this);
-    this._cache.mouseMovementHandler = throttle(
-      this._moveHandler.bind(this),
-      THROTTLE_TIME
-    );
+    this._cache.mouseMovementHandler = this._moveHandler.bind(this);
 
     // touch
     this._pinElement.addEventListener(
@@ -57,10 +51,7 @@ export default class Slider {
       this._startTracking.bind(this)
     );
     this._cache.touchStopHandler = this._stopTracking.bind(this);
-    this._cache.touchMovementHandler = throttle(
-      this._moveHandler.bind(this),
-      THROTTLE_TIME
-    );
+    this._cache.touchMovementHandler = this._moveHandler.bind(this);
   }
 
   _startTracking(evt) {
