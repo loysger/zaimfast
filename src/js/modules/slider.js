@@ -23,6 +23,20 @@ export default class Slider {
     this._init(_initialStep);
   }
 
+  set _currentStep(value) {
+    if (value <= 0) {
+      this._currentStep_ = 0;
+    } else if (value >= this._steps) {
+      this._currentStep_ = this._steps;
+    } else {
+      this._currentStep_ = value;
+    }
+  }
+
+  get _currentStep() {
+    return this._currentStep_;
+  }
+
   _init(initialStep) {
     this._cache.maxWidthValue = this._lengthElement.clientWidth;
     this._moveSlider(0, initialStep);
@@ -144,7 +158,11 @@ export default class Slider {
     } else {
       const predictedStep = this._currentStep + relStep;
 
-      if (this._cache.prevPredictedStep !== predictedStep && predictedStep > 0 && predictedStep <= this._steps) {
+      if (
+        this._cache.prevPredictedStep !== predictedStep &&
+        predictedStep > 0 &&
+        predictedStep <= this._steps
+      ) {
         const targetPercent =
           ((predictedStep * stepSize) / this._cache.maxWidthValue) * 100;
 
@@ -153,7 +171,10 @@ export default class Slider {
         this.onMove(predictedStep);
       }
 
-      if (this._cache.prevPredictedStep !== predictedStep && predictedStep === 0) {
+      if (
+        this._cache.prevPredictedStep !== predictedStep &&
+        predictedStep === 0
+      ) {
         this._cache.prevPredictedStep = predictedStep;
         this._setPosition(0);
         this.onMove(predictedStep);
