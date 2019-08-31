@@ -34,8 +34,11 @@
 
   &__hint {
     --bg-color: rgba(255, 255, 255, 1);
+    --anim-time: 0.3s;
 
-    display: none;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity var(--anim-time), visibility var(--anim-time);
     position: relative;
     top: -8px;
     width: 100%;
@@ -90,7 +93,9 @@
     }
 
     &_true {
-      display: block;
+      visibility: visible;
+      opacity: 1;
+      transition: opacity var(--anim-time), visibility var(--anim-time);
     }
   }
 }
