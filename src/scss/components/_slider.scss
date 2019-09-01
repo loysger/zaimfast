@@ -1,14 +1,16 @@
 .slider {
   width: 100%;
-  margin: 10px 0;
+  margin: 5px 0;
 
   &__lenght {
     display: flex;
     position: relative;
     align-items: center;
     width: 100%;
-    height: 1px;
+    height: 25px;
     background-color: rgba(0, 0, 0, 0.3);
+    background-clip: content-box;
+    padding: 12px 10px;
   }
 
   &__depth {

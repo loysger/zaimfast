@@ -40,6 +40,11 @@ export default class Slider {
     this._cache.maxWidthValue = this._lengthElement.clientWidth;
     this._moveSlider(0, initialStep);
 
+    this._lengthElement.addEventListener(
+      'click',
+      this._lengthClickHandler.bind(this)
+    );
+
     this._pinElement.addEventListener(
       'mousedown',
       this._startTracking.bind(this)
@@ -200,6 +205,16 @@ export default class Slider {
     const fullStepsDone = Math.floor(this._cache.travelledDistance / stepSize);
 
     this._moveSlider(fullStepsDone);
+  }
+
+  _lengthClickHandler(evt) {
+    evt.preventDefault();
+    if (evt.target !== this._pinElement) {
+      const coefficient = (evt.offsetX / this._lengthElement.clientWidth) * 100;
+      const targetStep = Math.round(this._steps / 100 * coefficient);
+
+      this._moveSlider(0, targetStep);
+    }
   }
 
   moveSlider(stepToMoveTo) {
