@@ -89,7 +89,11 @@
     ],
     "filter-tags": [
       "online", "zaymy", "na-kartu", "na-schet", "contact", "sberbank"
-    ]
+    ],
+    "meta": {
+      "title": "page title",
+      "description": "page description"
+    }
   },
   "ezaem": {
     "title": "Ezaem",
