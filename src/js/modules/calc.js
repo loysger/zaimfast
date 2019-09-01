@@ -36,7 +36,7 @@ export default class Calculator {
       } else if (evt.target.value > this._max) {
         evt.target.value = this._max;
       } else {
-        // nothing
+        // console.log(clamp(10, 0, 30));
       }
     });
   }
