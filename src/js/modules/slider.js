@@ -81,6 +81,12 @@ export default class Slider {
 
     this._hintElement.classList.add('slider__hint_true');
 
+    // если задебауншеная функция существует отменяем ее для стабильного
+    // отображения хинта
+    if (this._cache.removeHintDebounced) {
+      this._cache.removeHintDebounced.cancel();
+    }
+
     switch (evt.type) {
       case 'touchstart':
         this._cache.touchCoord = evt.touches[0].screenX;
