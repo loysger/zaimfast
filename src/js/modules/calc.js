@@ -1,4 +1,6 @@
 import Slider from './slider';
+import clamp from 'lodash-es/clamp';
+import inRange from 'lodash-es/inRange';
 
 const SLIDER_CLASS_NAME = 'slider';
 const INPUT_CLASS_NAME = 'calc__input';
@@ -29,16 +31,18 @@ export default class Calculator {
     }, initStep);
 
     this._input.addEventListener('change', (evt) => {
-      console.log(evt.target.value);
-
-      if (evt.target.value < this._min) {
-        evt.target.value = this._min;
-      } else if (evt.target.value > this._max) {
-        evt.target.value = this._max;
-      } else {
-        // console.log(clamp(10, 0, 30));
-      }
+      this._checkValue(evt);
     });
+  }
+
+  _checkValue(inputEvent) {
+    const value = +inputEvent.target.value;
+
+    if (!inRange(value, this._min, this._max)) {
+      inputEvent.target.value = clamp(value, this._min, this._max);
+    } else if (value % this._stepSize !== 0) {
+      inputEvent.target.value = value + (this._stepSize - (value % this._stepSize));
+    }
   }
 
   _createSlider(onSliderMove, _initStep = 0) {
