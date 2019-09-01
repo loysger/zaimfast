@@ -10,7 +10,7 @@ export default class Calculator {
     this._initValue = this._input.defaultValue;
     this._max = +this._input.max;
     this._min = +this._input.min;
-    this._stepSize = +this._input.dataset.stepSize;
+    this._stepSize = +this._input.step;
 
     this._cache = {};
 
