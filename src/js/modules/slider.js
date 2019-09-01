@@ -228,7 +228,7 @@ export default class Slider {
 
   _lengthClickHandler(evt) {
     evt.preventDefault();
-    if (evt.target !== this._pinElement) {
+    if (!evt.path.includes(this._pinElement)) {
       const coefficient = (evt.offsetX / this._lengthElement.clientWidth) * 100;
       const targetStep = Math.round((this._steps / 100) * coefficient);
 
