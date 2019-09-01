@@ -87,6 +87,7 @@
       justify-content: center;
       position: absolute;
       width: fit-content;
+      min-width: 26px;
       height: fit-content;
       background-color: var(--bg-color);
       border-radius: 3px;
@@ -102,6 +103,7 @@
       @media (min-width: $desktop) {
         font-size: 16px;
         padding: 8px;
+        min-width: 35px;
       }
     }
 
