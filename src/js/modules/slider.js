@@ -117,7 +117,7 @@ export default class Slider {
   _stopTracking(evt) {
     this._depthElement.style.transition = '';
 
-    const TIMEOUT = 500 // ms
+    const TIMEOUT = 500; // ms
     this._cache.hintTimeout = setTimeout(() => {
       this._hintElement.classList.remove('slider__hint_true');
     }, TIMEOUT);
@@ -226,9 +226,29 @@ export default class Slider {
     this._moveSlider(fullStepsDone);
   }
 
+  // полифил для event.path
+  _composedPath(el) {
+    var path = [];
+
+    while (el) {
+      path.push(el);
+
+      if (el.tagName === 'HTML') {
+        path.push(document);
+        path.push(window);
+
+        return path;
+      }
+
+      el = el.parentElement;
+    }
+  }
+
   _lengthClickHandler(evt) {
     evt.preventDefault();
-    if (!evt.path.includes(this._pinElement)) {
+    const path = evt.path || (evt.composedPath && evt.composedPath()) || this._composedPath(evt.target);
+
+    if (!path.includes(this._pinElement) || !path.includes(this._pinElement)) {
       const coefficient = (evt.offsetX / this._lengthElement.clientWidth) * 100;
       const targetStep = Math.round((this._steps / 100) * coefficient);
 
