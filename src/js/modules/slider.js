@@ -38,6 +38,14 @@ export default class Slider {
     return this._currentStep_;
   }
 
+  set hintContent(content) {
+    this._hintContent.textContent = content;
+  }
+
+  get hintContent() {
+    return this._hintContent.textContent;
+  }
+
   _init(initialStep) {
     this._cache.maxWidthValue = this._lengthElement.clientWidth;
     this._moveSlider(0, initialStep);

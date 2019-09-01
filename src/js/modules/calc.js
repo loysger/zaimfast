@@ -27,8 +27,10 @@ export default class Calculator {
       const value = this._getStepValue(currentStep);
       this._input.value = value;
 
-      hint.textContent = value.toLocaleString();
+      this._slider.hintContent = value.toLocaleString();
     }, initStep);
+
+    this._slider.hintContent = this._input.value.toLocaleString();
 
     this._input.addEventListener('change', (evt) => {
       const value = this._checkValue(evt);
