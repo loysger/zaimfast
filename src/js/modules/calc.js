@@ -31,7 +31,10 @@ export default class Calculator {
     }, initStep);
 
     this._input.addEventListener('change', (evt) => {
-      this._checkValue(evt);
+      const value = this._checkValue(evt);
+
+      const step = value / this._stepSize - this._min / this._stepSize;
+      this._slider.moveSlider(step);
     });
   }
 
@@ -43,6 +46,8 @@ export default class Calculator {
     } else if (value % this._stepSize !== 0) {
       inputEvent.target.value = value + (this._stepSize - (value % this._stepSize));
     }
+
+    return +inputEvent.target.value;
   }
 
   _createSlider(onSliderMove, _initStep = 0) {

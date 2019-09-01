@@ -198,5 +198,9 @@ export default class Slider {
     this._moveSlider(fullStepsDone);
   }
 
+  moveSlider(stepToMoveTo) {
+    this._moveSlider(0, stepToMoveTo);
+  }
+
   onMove() {}
 }
