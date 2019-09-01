@@ -118,7 +118,7 @@ export default class Slider {
     this._depthElement.style.transition = '';
 
     const TIMEOUT = 500 // ms
-    setTimeout(() => {
+    this._cache.hintTimeout = setTimeout(() => {
       this._hintElement.classList.remove('slider__hint_true');
     }, TIMEOUT);
 
@@ -235,6 +235,11 @@ export default class Slider {
       this._moveSlider(0, targetStep);
       this._hintElement.classList.add('slider__hint_true');
       this._removeHintDebounced();
+
+      // если есть таймер на удаления хинта - отменяем его
+      if (this._cache.hintTimeout) {
+        clearTimeout(this._cache.hintTimeout);
+      }
     }
   }
 
