@@ -7,6 +7,8 @@
 //   </div>
 // </div>
 
+import debounce from 'lodash-es/debounce';
+
 const MAX_STEPS = 1000;
 export default class Slider {
   constructor(sliderElement, _steps = 0, _initialStep = 0) {
@@ -101,7 +103,10 @@ export default class Slider {
   _stopTracking(evt) {
     this._depthElement.style.transition = '';
 
-    this._hintElement.classList.remove('slider__hint_true');
+    const TIMEOUT = 500 // ms
+    setTimeout(() => {
+      this._hintElement.classList.remove('slider__hint_true');
+    }, TIMEOUT);
 
     switch (evt.type) {
       case 'touchend':
@@ -211,10 +216,24 @@ export default class Slider {
     evt.preventDefault();
     if (evt.target !== this._pinElement) {
       const coefficient = (evt.offsetX / this._lengthElement.clientWidth) * 100;
-      const targetStep = Math.round(this._steps / 100 * coefficient);
+      const targetStep = Math.round((this._steps / 100) * coefficient);
 
       this._moveSlider(0, targetStep);
+      this._hintElement.classList.add('slider__hint_true');
+      this._removeHintDebounced();
     }
+  }
+
+  _removeHintDebounced() {
+    const TIMEOUT = 1000; // ms
+
+    if (!this._cache.removeHintDebounced) {
+      this._cache.removeHintDebounced = debounce(() => {
+        this._hintElement.classList.remove('slider__hint_true');
+      }, TIMEOUT);
+    }
+
+    return this._cache.removeHintDebounced();
   }
 
   moveSlider(stepToMoveTo) {
