@@ -62,6 +62,8 @@ export default class Slider {
     this._cache.depthWidth = this._depthElement.clientWidth;
     this._cache.maxWidthValue = this._lengthElement.clientWidth;
 
+    this._depthElement.style.transition = 'none 0s ease 0s';
+
     this._hintElement.classList.add('slider__hint_true');
 
     switch (evt.type) {
@@ -92,6 +94,8 @@ export default class Slider {
   }
 
   _stopTracking(evt) {
+    this._depthElement.style.transition = '';
+
     this._hintElement.classList.remove('slider__hint_true');
 
     switch (evt.type) {

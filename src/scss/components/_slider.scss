@@ -16,6 +16,7 @@
     width: 0;
     height: 3px;
     background-color: rgb(13, 209, 73);
+    transition: width 0.3s cubic-bezier(0.25, 0.8, 0.5, 1);
   }
 
   &__pin {
