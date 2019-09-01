@@ -29,7 +29,15 @@ export default class Calculator {
     }, initStep);
 
     this._input.addEventListener('change', (evt) => {
-      console.log(evt);
+      console.log(evt.target.value);
+
+      if (evt.target.value < this._min) {
+        evt.target.value = this._min;
+      } else if (evt.target.value > this._max) {
+        evt.target.value = this._max;
+      } else {
+        // nothing
+      }
     });
   }
 
