@@ -27,6 +27,10 @@ export default class Calculator {
 
       hint.textContent = value.toLocaleString();
     }, initStep);
+
+    this._input.addEventListener('change', (evt) => {
+      console.log(evt);
+    });
   }
 
   _createSlider(onSliderMove, _initStep = 0) {
