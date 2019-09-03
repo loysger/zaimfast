@@ -1,8 +1,10 @@
 {
   "name": "zaimfast",
-  "version": "1.0.0",
   "repository": "git@github.com:loysger/zaimfast.git",
   "private": true,
+  "dependencies": {
+    "lodash-es": "^4.17.15"
+  },
   "devDependencies": {
     "@babel/core": "7.0.0",
     "@babel/preset-env": "^7.5.5",
@@ -30,7 +32,6 @@
     "handlebars-layouts": "^3.1.4",
     "htmlhint": "^0.11.0",
     "husky": "^3.0.4",
-    "lodash": "^4.17.15",
     "postcss-preset-env": "^6.7.0",
     "postcss-reporter": "^6.0.1",
     "postcss-scss": "^2.0.0",
@@ -52,6 +53,8 @@
     "start": "gulp serve",
     "build": "gulp build",
     "prod": "gulp prod",
-    "test": "stylelint ./src/scss/components/*.scss && htmlhint ./src/html/**/*.hbs"
+    "test": "stylelint ./src/scss/components/*.scss && htmlhint ./src/html/**/*.hbs && eslint ./src/js/**/*.js",
+    "clean-all": "rm -rf node_modules && rm -rf build && rm -rf production",
+    "clean": "rm -rf build && rm -rf production"
   }
 }

@@ -1,31 +1,116 @@
 .slider {
   width: 100%;
-  margin: 10px 0;
+  margin: 5px 0;
 
   &__lenght {
     display: flex;
     position: relative;
     align-items: center;
     width: 100%;
-    height: 1px;
+    height: 25px;
     background-color: rgba(0, 0, 0, 0.3);
+    background-clip: content-box;
+    padding: 12px 10px;
   }
 
   &__depth {
     position: relative;
-    width: 30%;
+    width: 0;
     height: 3px;
     background-color: rgb(13, 209, 73);
+    transition: width 0.3s cubic-bezier(0.25, 0.8, 0.5, 1);
   }
 
   &__pin {
-    position: relative;
+    position: absolute;
+    transform: translate(-50%, -50%) scale(1);
+    top: 50%;
+    left: 100%;
     flex-shrink: 0;
-    width: 20px;
-    height: 20px;
+    width: 23px;
+    height: 23px;
     border: 3px solid rgb(13, 209, 73);
     border-radius: 50%;
     background-color: white;
     cursor: pointer;
+
+    transition: box-shadow 0.3s, transform 0.3s;
+
+    &:active, &:focus {
+      outline: none;
+      box-shadow: -2px 1px 5px 0 rgba(0, 0, 0, 0.3);
+      transform: translate(-50%, -50%) scale(1.1);
+
+      transition: box-shadow 0.3s, transform 0.3s;
+    }
+  }
+
+  &__hint {
+    --bg-color: rgba(255, 255, 255, 1);
+    --anim-time: 0.3s;
+
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity var(--anim-time), visibility var(--anim-time);
+    position: relative;
+    top: -8px;
+    width: 100%;
+    height: 100%;
+    filter: drop-shadow(-2px 1px 4px rgba(50, 50, 0, 0.35));
+
+    @media (min-width: $desktop) {
+      top: -12px;
+    }
+
+    &-triangle {
+      display: block;
+      position: absolute;
+      top: -15px;
+      left: 50%;
+      transform: translateX(-50%) rotate(180deg);
+
+      background-color: var(--bg-color);
+
+      width: 100%;
+      height: 10px;
+
+      clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+
+      @media (min-width: $desktop) {
+        top: -10px;
+      }
+    }
+
+    &-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      width: fit-content;
+      min-width: 26px;
+      height: fit-content;
+      background-color: var(--bg-color);
+      border-radius: 3px;
+      padding: 5px;
+      color: $text-color;
+      font-weight: 600;
+      font-size: 14px;
+
+      top: -150%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      @media (min-width: $desktop) {
+        font-size: 16px;
+        padding: 8px;
+        min-width: 35px;
+      }
+    }
+
+    &_true {
+      visibility: visible;
+      opacity: 1;
+      transition: opacity var(--anim-time), visibility var(--anim-time);
+    }
   }
 }
