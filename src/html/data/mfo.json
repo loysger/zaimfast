@@ -62,9 +62,19 @@
     ],
     "tarify": [
       {
+        "name": "Основной",
+        "rate": "1.5",
+        "minsumm" : "100",
+        "maxsumm": "17000",
+        "mindays": "1",
+        "maxdays": "30"
+      },
+      {
         "name": "Первый займ (Беспроцентный)",
         "rate": "0",
+        "minsumm" : "100",
         "maxsumm": "17000",
+        "mindays": "1",
         "maxdays": "30"
       },
       {
