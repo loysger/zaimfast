@@ -8,11 +8,11 @@
     "linkName": "creditplus.ru",
     "innerLink": "/mfo/creditplus",
     "rateFrom": "0.00",
-    "rateTo": "1.5",
+    "rateTo": "1",
     "summFrom": "1 000",
-    "summTo": "30 000",
+    "summTo": "70 000",
     "limitFrom": "5",
-    "limitTo": "30",
+    "limitTo": "288",
     "ratePerDay": "1.5",
     "tel": "8 800-222-23-23",
     "email": "info@creditplus.ru",
@@ -62,38 +62,28 @@
     ],
     "tarify": [
       {
-        "name": "Основной",
-        "rate": "1.5",
-        "minsumm" : "100",
-        "maxsumm": "17000",
-        "mindays": "1",
-        "maxdays": "30"
-      },
-      {
-        "name": "Первый займ (Беспроцентный)",
+        "name": "Заем под 0%",
         "rate": "0",
-        "minsumm" : "100",
-        "maxsumm": "17000",
-        "mindays": "1",
+        "minsumm" : "1000",
+        "maxsumm": "15000",
+        "mindays": "5",
         "maxdays": "30"
       },
       {
-        "name": "Первый займ (На долгий срок)",
-        "rate": "0.55",
-        "maxsumm": "100000",
-        "maxdays": "365"
-      },
-      {
-        "name": "Повторный займ (На долгий срок)",
-        "rate": "0.39",
-        "maxsumm": "100000",
-        "maxdays": "365"
-      },
-      {
-        "name": "Первый займ (На долгий срок)",
-        "rate": "1.5",
+        "name": "Минизаем",
+        "rate": "1",
+        "minsumm" : "3000",
         "maxsumm": "30000",
-        "maxdays": "30"
+        "mindays": "5",
+        "maxdays": "60"
+      },
+      {
+        "name": "Мегазаем",
+        "rate": "0.69",
+        "minsumm" : "15000",
+        "maxsumm": "70000",
+        "mindays": "84",
+        "maxdays": "288"
       }
     ],
     "filter-tags": [
@@ -113,11 +103,11 @@
     "linkName": "www.ezaem.ru",
     "innerLink": "/mfo/ezaem",
     "rateFrom": "0.00",
-    "rateTo": "1.5",
+    "rateTo": "1",
     "summFrom": "2 000",
     "summTo": "30 000",
     "limitFrom": "5",
-    "limitTo": "30",
+    "limitTo": "60",
     "ratePerDay": "1.5",
     "tel": "8 (800) 600 55 00",
     "email": "info@ezaem.ru",
@@ -170,16 +160,20 @@
     ],
     "tarify": [
       {
-        "name": "Первый займ (Беспроцентный)",
-        "rate": "0",
+        "name": "Первый займ",
+        "rate": "1",
+        "minsumm" : "2000",
         "maxsumm": "15000",
+        "mindays": "5",
         "maxdays": "30"
       },
       {
         "name": "Повторный займ",
-        "rate": "1.5",
+        "rate": "1",
+        "minsumm" : "2000",
         "maxsumm": "30000",
-        "maxdays": "30"
+        "mindays": "5",
+        "maxdays": "60"
       }
     ],
     "filter-tags": [
@@ -201,9 +195,9 @@
     "rateFrom": "0.76",
     "rateTo": "1.5",
     "summFrom": "2 000",
-    "summTo": "30 000",
+    "summTo": "100 000",
     "limitFrom": "7",
-    "limitTo": "30",
+    "limitTo": "365",
     "ratePerDay": "0.76",
     "tel": "+7 800 7070 24 7",
     "email": "support@zaymer.ru",
@@ -259,6 +253,24 @@
       "Наличие паспорта",
       "Мобильный телефон"
     ],
+    "tarify": [
+      {
+        "name": "До зарплаты",
+        "rate": "1",
+        "minsumm" : "2000",
+        "maxsumm": "30000",
+        "mindays": "7",
+        "maxdays": "30"
+      },
+      {
+        "name": "Робокредит",
+        "rate": "0.76",
+        "minsumm" : "20000",
+        "maxsumm": "100000",
+        "mindays": "90",
+        "maxdays": "365"
+      }
+    ],
     "filter-tags": [
       "online", "zaymy", "na-kartu", "na-schet", "yandex", "contact", "sberbank", "gosuslugi"
     ],
@@ -269,7 +281,7 @@
   },
   "konga": {
     "title": "konga",
-    "name": "Займер",
+    "name": "Конга",
     "nameEn": "konga",
     "img": "/img/partners/konga.png",
     "link": "https://trkleads.ru/click/c7096eb8ca9111e2029b9d1a91c2a83f",
@@ -331,14 +343,18 @@
     "tarify": [
       {
         "name": "Краткосрочный займ",
-        "rate": "1.5",
+        "rate": "1",
+        "minsumm" : "2000",
         "maxsumm": "20000",
+        "mindays": "10",
         "maxdays": "30"
       },
       {
         "name": "Долгосрочный займ",
         "rate": "0.84",
+        "minsumm" : "10000",
         "maxsumm": "70000",
+        "mindays": "42",
         "maxdays": "168"
       }
     ],
@@ -361,9 +377,9 @@
     "rateFrom": "0.00",
     "rateTo": "1.5",
     "summFrom": "1 000",
-    "summTo": "30 000",
+    "summTo": "1 000 000",
     "limitFrom": "7",
-    "limitTo": "30",
+    "limitTo": "1080",
     "ratePerDay": "1.5",
     "tel": "+7 800 700 43 44",
     "email": "info@bistrodengi.ru",
@@ -412,26 +428,34 @@
     "tarify": [
       {
         "name": "Займ на карту",
-        "rate": "0.9",
+        "rate": "0.87",
+        "minsumm" : "1000",
         "maxsumm": "15000",
+        "mindays": "1",
         "maxdays": "30"
       },
       {
         "name": "Займ на Быстрокарту",
-        "rate": "0.84",
+        "rate": "0.87",
+        "minsumm" : "1000",
         "maxsumm": "100000",
+        "mindays": "42",
         "maxdays": "180"
       },
       {
         "name": "Под залог ПТС",
         "rate": "0.08",
-        "maxsumm": "1000000",
-        "maxdays": "1080"
+        "minsumm" : "2000",
+        "maxsumm": "30000",
+        "mindays": "7",
+        "maxdays": "30"
       },
       {
-        "name": "Потребительский",
-        "rate": "0.84",
+        "name": "Потребительский (Наличными)",
+        "rate": "0.87",
+        "minsumm" : "1000",
         "maxsumm": "100000",
+        "mindays": "1",
         "maxdays": "180"
       }
     ],
@@ -452,7 +476,7 @@
     "linkName": "www.ekapusta.com",
     "innerLink": "/mfo/eKapusta",
     "rateFrom": "0.00",
-    "rateTo": "1.4",
+    "rateTo": "0.9",
     "summFrom": "100",
     "summTo": "30 000",
     "limitFrom": "7",
@@ -505,6 +529,16 @@
       "Наличие паспорта",
       "Действующий номер телефона"
     ],
+    "tarify": [
+    {
+      "name": "Потребительский",
+      "rate": "0.9",
+      "minsumm" : "100",
+      "maxsumm": "30000",
+      "mindays": "7",
+      "maxdays": "21"
+    }
+  ],
     "filter-tags": [
       "qiwi", "online", "zaymy", "na-kartu", "na-schet", "yandex", "contact", "korona"
     ],
@@ -573,6 +607,16 @@
       "Наличие паспорта",
       "СНИЛС"
     ],
+    "tarify": [
+      {
+        "name": "Platiza",
+        "rate": "1",
+        "minsumm" : "100",
+        "maxsumm": "30000",
+        "mindays": "7",
+        "maxdays": "30"
+      }
+    ],
     "filter-tags": [
       "online", "zaymy", "na-kartu", "yandex", "sberbank"
     ],
@@ -589,7 +633,7 @@
     "link": "https://trkleads.ru/click/9932f0192c73230486b9163bdb4da161",
     "linkName": "www.webbankir.com",
     "innerLink": "/mfo/Webbankir",
-    "rateFrom": "1.2",
+    "rateFrom": "1",
     "rateTo": "1.5",
     "summFrom": "1 000",
     "summTo": "15 000",
@@ -644,6 +688,16 @@
       "Мобильный телефон",
       "Именная банковская карта Российского банка"
     ],
+    "tarify": [
+      {
+        "name": "Вэббанкир",
+        "rate": "1",
+        "minsumm" : "1000",
+        "maxsumm": "15000",
+        "mindays": "7",
+        "maxdays": "15"
+      }
+    ],
     "filter-tags": [
       "online", "zaymy", "na-kartu", "yandex", "contact", "sberbank", "gosuslugi"
     ],
@@ -661,11 +715,11 @@
     "linkName": "turbozaim.ru",
     "innerLink": "/mfo/Turbozaim",
     "rateFrom": "0.8",
-    "rateTo": "1.6",
+    "rateTo": "1",
     "summFrom": "3 000",
-    "summTo": "15 000",
+    "summTo": "50 000",
     "limitFrom": "7",
-    "limitTo": "30",
+    "limitTo": "168",
     "ratePerDay": "0.8",
     "tel": "+7 (499) 951-91-80",
     "email": "info@turbozaim.ru",
@@ -716,14 +770,18 @@
     "tarify": [
       {
         "name": "Краткосрочный",
-        "rate": "0.9",
-        "maxsumm": "10000",
+        "rate": "1",
+        "minsumm" : "3000",
+        "maxsumm": "15000",
+        "mindays": "7",
         "maxdays": "31"
       },
       {
-        "name": "Займ на Быстрокарту",
-        "rate": "0.87",
+        "name": "Потребительский заем",
+        "rate": "0.8",
+        "minsumm" : "16000",
         "maxsumm": "50000",
+        "mindays": "42",
         "maxdays": "168"
       }
     ],
@@ -744,10 +802,9 @@
     "linkName": "www.greenmoney.ru",
     "innerLink": "/mfo/greenmoney",
     "rateFrom": "0.95",
-    "rateTo": "1.06",
     "summFrom": "3 000",
     "summTo": "25 000",
-    "limitFrom": "31",
+    "limitFrom": "7",
     "limitTo": "40",
     "ratePerDay": "0.95",
     "tel": "+7 (800) 505-27-31",
@@ -792,6 +849,16 @@
       "Действующий номер телефона",
       "Именная банковская карта"
     ],
+    "tarify": [
+      {
+        "name": "ГринМани",
+        "rate": "0.95",
+        "minsumm" : "3000",
+        "maxsumm": "25000",
+        "mindays": "7",
+        "maxdays": "40"
+      }
+    ],
     "filter-tags": [
       "online", "zaymy", "na-kartu", "sberbank"
     ],
@@ -808,10 +875,10 @@
     "link": "https://trkleads.ru/click/d5a148511c5469e8296b0071f35d4ca4",
     "linkName": "smartcredit.ru",
     "innerLink": "/mfo/smartcredit",
-    "rateFrom": "1.1",
-    "rateTo": "1.5",
+    "rateFrom": "1",
+    "rateTo": "",
     "summFrom": "3 000",
-    "summTo": "15 000",
+    "summTo": "30 000",
     "limitFrom": "5",
     "limitTo": "30",
     "ratePerDay": "1.1",
@@ -862,6 +929,16 @@
       "Для граждан с постоянной регистрацией на территории РФ",
       "Наличие паспорта",
       "Действующий номер телефона"
+    ],
+    "tarify": [
+      {
+        "name": "Основной",
+        "rate": "1",
+        "minsumm" : "3000",
+        "maxsumm": "30000",
+        "mindays": "5",
+        "maxdays": "30"
+      }
     ],
     "filter-tags": [
       "qiwi", "online", "zaymy", "na-kartu", "na-schet", "yandex", "contact", "sberbank"
@@ -937,15 +1014,27 @@
     ],
     "tarify": [
       {
+        "name": "Основной",
+        "rate": "1",
+        "minsumm" : "3000",
+        "maxsumm": "30000",
+        "mindays": "1",
+        "maxdays": "30"
+      },
+      {
         "name": "Минимальный",
-        "rate": "2",
+        "rate": "1",
+        "minsumm" : "1000",
         "maxsumm": "10000",
+        "mindays": "1",
         "maxdays": "15"
       },
       {
         "name": "Онлайн займ",
         "rate": "1.5",
+        "minsumm" : "1000",
         "maxsumm": "30000",
+        "mindays": "1",
         "maxdays": "30"
       }
     ],
@@ -966,7 +1055,7 @@
     "linkName": "www.migone.ru",
     "innerLink": "/mfo/migone",
     "rateFrom": "0.00",
-    "rateTo": "2.2",
+    "rateTo": "1",
     "summFrom": "3 000",
     "summTo": "15 000",
     "limitFrom": "3",
@@ -1021,6 +1110,16 @@
       "Мобильный телефон",
       "Источник постоянного дохода",
       "Электронный почтовый ящик"
+    ],
+    "tarify": [
+      {
+        "name": "Основной",
+        "rate": "1",
+        "minsumm" : "3000",
+        "maxsumm": "15000",
+        "mindays": "3",
+        "maxdays": "29"
+      }
     ],
     "filter-tags": [
       "online", "zaymy", "na-kartu", "na-schet", "contact", "unistream", "korona", "sberbank"
@@ -1095,15 +1194,27 @@
     ],
     "tarify": [
       {
+        "name": "Основной",
+        "rate": "1",
+        "minsumm" : "3000",
+        "maxsumm": "100000",
+        "mindays": "3",
+        "maxdays": "336"
+      },
+      {
         "name": "До зарплаты",
         "rate": "1.13",
-        "maxsumm": "14250",
+        "minsumm" : "3000",
+        "maxsumm": "15000",
+        "mindays": "3",
         "maxdays": "29"
       },
       {
         "name": "Оптимальный",
         "rate": "0.08",
-        "maxsumm": "98000",
+        "minsumm" : "15000",
+        "maxsumm": "100000",
+        "mindays": "70",
         "maxdays": "336"
       }
     ],
