@@ -49,4 +49,9 @@
       flex-grow: 1;
     }
   }
+
+  &__sub {
+    color: $text-color-a-0_5;
+    font-size: 12px;
+  }
 }

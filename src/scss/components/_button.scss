@@ -3,6 +3,7 @@
   position: relative;
   align-items: center;
   justify-content: center;
+  text-align: center;
   width: auto;
   min-height: 38px;
   padding: 0 17px;
@@ -75,6 +76,29 @@
 
       &:active {
         color: white;
+      }
+    }
+
+    &_third {
+      background-color: $main-color-second;
+      border-color: $main-color-second;
+      color: white;
+      font-weight: 700;
+
+      &:active {
+        color: white;
+      }
+    }
+  }
+
+  &_font {
+    &-weight {
+      &-normal {
+        font-weight: normal;
+      }
+
+      &-600 {
+        font-weight: 600;
       }
     }
   }

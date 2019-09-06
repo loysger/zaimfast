@@ -1,0 +1,123 @@
+.tariffs {
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  thead {
+    position: absolute;
+    bottom: 0;
+    margin: -1px;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    clip: rect(0 0 0 0);
+    clip-path: inset(100%);
+
+    @media (min-width: $desktop) {
+      position: unset;
+      bottom: unset;
+      margin: unset;
+      width: unset;
+      height: unset;
+      padding: unset;
+      overflow: unset;
+      white-space: unset;
+      clip: unset;
+      clip-path: unset;
+    }
+  }
+
+  tbody {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    justify-items: center;
+    margin-bottom: 10px;
+  }
+
+  tr {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    box-shadow: 1px 2px 8px 0px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    padding: 20px;
+    padding-top: 30px;
+    padding-bottom: 0;
+    min-height: 190px;
+    gap: 10px;
+    font-size: 16px;
+  }
+
+  td {
+    display: flex;
+
+    &:nth-child(1),
+    &:nth-child(4),
+    &:nth-child(5) {
+      grid-column: span 2;
+    }
+
+    &:nth-child(2),
+    &:nth-child(3),
+    &:nth-child(5) {
+      justify-content: center;
+    }
+  }
+
+  &__head-text {
+    color: $text-color-a-0_5;
+    font-size: 12px;
+
+    &_mobile {
+      width: 100%;
+      height: fit-content;
+      margin-bottom: 10px;
+
+      @media (min-width: $desktop) {
+        display: none;
+      }
+    }
+  }
+
+  &__summ {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__summ-value {
+    font-weight: 600;
+    font-size: 20px;
+    display: flex;
+    margin-bottom: 5px;
+
+    &-sign {
+      font-weight: normal;
+    }
+  }
+
+  &__name {
+    font-size: 12px;
+    color: $text-accent-color;
+  }
+
+  &__cell-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+  }
+
+  &__button {
+    width: 100%;
+
+    .button {
+      width: 100%;
+    }
+  }
+}
