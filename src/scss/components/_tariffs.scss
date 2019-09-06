@@ -99,6 +99,8 @@
 
     &-sign {
       font-weight: normal;
+      font-size: 16px;
+      line-height: normal;
     }
   }
 
@@ -111,6 +113,10 @@
     display: flex;
     flex-wrap: wrap;
     align-content: flex-start;
+  }
+
+  &__value {
+    margin-right: 3px;
   }
 
   &__button {
