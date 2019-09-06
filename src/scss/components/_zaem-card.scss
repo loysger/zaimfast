@@ -21,7 +21,8 @@
     justify-content: space-between;
 
     @media (min-width: $desktop) {
-      flex-direction: column-reverse;
+      flex-direction: column;
+      margin-right: 25px;
     }
   }
 
@@ -43,9 +44,8 @@
     height: 60px;
 
     @media (min-width: $desktop) {
-      width: var(--first-column);
-      height: 80px;
-      margin-bottom: 15px;
+      width: 200px;
+      height: fit-content;
     }
   }
 
@@ -54,6 +54,11 @@
     align-items: center;
     justify-content: center;
     overflow: hidden;
+
+    @media (min-width: $desktop) {
+      flex-direction: column;
+      height: 105px;
+    }
   }
 
   &__img-tag {

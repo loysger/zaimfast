@@ -60,6 +60,40 @@ input[type='radio'].visually-hidden {
   clip-path: inset(100%);
 }
 
+.hidden-only-mobile:not(:focus):not(:active),
+input[type='checkbox'].visually-hidden,
+input[type='radio'].visually-hidden {
+  @media (max-width: $desktop - 1) {
+    position: absolute;
+    bottom: 0;
+    margin: -1px;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    clip: rect(0 0 0 0);
+    clip-path: inset(100%);
+  }
+}
+
+.hidden-only-desktop:not(:focus):not(:active),
+input[type='checkbox'].visually-hidden,
+input[type='radio'].visually-hidden {
+  @media (min-width: $desktop) {
+    position: absolute;
+    bottom: 0;
+    margin: -1px;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    clip: rect(0 0 0 0);
+    clip-path: inset(100%);
+  }
+}
+
 .no-display {
   display: none;
 }

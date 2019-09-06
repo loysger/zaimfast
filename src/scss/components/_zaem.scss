@@ -1,7 +1,7 @@
 .zaem {
   &__calc {
     @media (min-width: $desktop) {
-      width: 100%;
+      width: calc(100% - 225px);
     }
   }
 

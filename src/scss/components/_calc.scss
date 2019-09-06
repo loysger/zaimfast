@@ -4,6 +4,7 @@
   @media (min-width: $desktop) {
     display: flex;
     flex-wrap: wrap;
+    margin: 0;
   }
 
   &__heading {
@@ -54,5 +55,9 @@
     color: $text-color-a-0_5;
     font-size: 12px;
     width: 100%;
+
+    @media (min-width: $desktop) {
+      text-align: right;
+    }
   }
 }
