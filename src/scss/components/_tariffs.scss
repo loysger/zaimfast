@@ -1,0 +1,196 @@
+.tariffs {
+  --desktop-border: 1px solid #{$border-color};
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+
+    @media (min-width: $desktop) {
+      border: 1px solid rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  thead {
+    position: absolute;
+    bottom: 0;
+    margin: -1px;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    clip: rect(0 0 0 0);
+    clip-path: inset(100%);
+
+    @media (min-width: $desktop) {
+      position: unset;
+      bottom: unset;
+      margin: unset;
+      width: unset;
+      height: unset;
+      padding: unset;
+      overflow: unset;
+      white-space: unset;
+      clip: unset;
+      clip-path: unset;
+      border-bottom: var(--desktop-border);
+    }
+
+    tr {
+      @media (min-width: $desktop) {
+        min-height: 40px;
+        padding-top: 0;
+        padding-bottom: 0;
+        font-size: 14px;
+      }
+    }
+
+    td {
+      @media (min-width: $desktop) {
+        &:not(:last-child) {
+          border-right: var(--desktop-border);
+        }
+      }
+    }
+  }
+
+  tbody {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    justify-items: center;
+    margin-bottom: 10px;
+
+    @media (min-width: $desktop) {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 0;
+    }
+  }
+
+  tr {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    box-shadow: 1px 1px 6px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    padding: 20px;
+    padding-top: 30px;
+    padding-bottom: 0;
+    min-height: 190px;
+    gap: 10px;
+    font-size: 16px;
+
+    @media (min-width: $desktop) {
+      grid-template-columns: repeat(5, 1fr);
+      grid-template-rows: repeat(1, 1fr);
+      min-height: 106px;
+      padding: 25px;
+      padding-left: 10px;
+      padding-right: 10px;
+      box-shadow: none;
+      border-radius: 0;
+      gap: 0;
+
+      &:not(:first-child) {
+        border-top: var(--desktop-border);
+      }
+    }
+  }
+
+  td {
+    display: flex;
+
+    @media (min-width: $desktop) {
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    &:nth-child(1),
+    &:nth-child(4),
+    &:nth-child(5) {
+      grid-column: span 2;
+
+      @media (min-width: $desktop) {
+        grid-column: unset;
+      }
+    }
+
+    &:nth-child(2),
+    &:nth-child(3),
+    &:nth-child(5) {
+      justify-content: center;
+    }
+  }
+
+  &__head-text {
+    color: $text-color-a-0_5;
+    font-size: 12px;
+
+    &_mobile {
+      width: 100%;
+      height: fit-content;
+      margin-bottom: 10px;
+
+      @media (min-width: $desktop) {
+        display: none;
+      }
+    }
+  }
+
+  &__summ {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__summ-value {
+    font-weight: 600;
+    font-size: 20px;
+    display: flex;
+    margin-bottom: 5px;
+
+    @media (min-width: $desktop) {
+      justify-content: center;
+    }
+
+    &-sign {
+      font-weight: normal;
+      font-size: 16px;
+      line-height: normal;
+    }
+  }
+
+  &__name {
+    font-size: 12px;
+    color: $text-accent-color;
+
+    @media (min-width: $desktop) {
+      font-size: 13px;
+    }
+  }
+
+  &__cell-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+
+    @media (min-width: $desktop) {
+      flex-wrap: nowrap;
+    }
+  }
+
+  &__value {
+    margin-right: 3px;
+  }
+
+  &__button {
+    width: 100%;
+
+    .button {
+      width: 100%;
+    }
+  }
+}

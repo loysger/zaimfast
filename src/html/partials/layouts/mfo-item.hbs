@@ -11,70 +11,21 @@
     <div class="page-wrap">
       <section class="zaem">
         <h2 class="hidden">{{name}}</h2>
-        <div class="zaem-card {{#if this.tarify}}zaem-card_tariffs_closed{{/if}}">
+        <div class="zaem-card">
           <div class="zaem-card__top">
             <div class="zaem-card__img">
               <a class="zaem-card__img-link" href="{{link}}" title="{{name}}">
                 <img class="zaem-card__img-tag" src="{{img}}" alt="{{name}}" />
+                <span class="zaem-card__img-text hidden-only-mobile">{{name}}</span>
               </a>
             </div>
           </div>
-          <div class="zaem-card__contain calc-item" data-rate="{{ratePerDay}}">
-            {{#if this.tarify}}
-            <button class="button zaem-card__tariffs-more">Еще тарифы</button>
-            {{/if}}
-            <p class="zaem-card__prop">
-              <span class="zaem-card__prop-text">{{ratePerDay}} %</span>
-              <span class="zaem-card__prop-name">Ставка в день</span>
-            </p>
-            {{!-- <p class="zaem-card__prop">
-              <span class="zaem-card__prop-text"><span class="calc-amount-value">3 000</span> ₽</span>
-              <span class="zaem-card__prop-name">Сумма</span>
-            </p>
-            <p class="zaem-card__prop">
-              <span class="zaem-card__prop-text"><span class="calc-days-value">10</span> дней</span>
-              <span class="zaem-card__prop-name">Срок</span>
-            </p> --}}
-            <p class="zaem-card__prop">
-              <span class="zaem-card__prop-text"><span class="calc-overcharge-value">10</span> ₽</span>
-              <span class="zaem-card__prop-name">Переплата</span>
-            </p>
-          </div>
-          {{#if this.tarify}}
-          <div class="zaem-card__tariffs">
-            <ul>
-              {{#each this.tarify}}
-              <li class="zaem-card__tariffs-item calc-item" data-rate="{{rate}}">
-                <p class="zaem-card__prop zaem-card__prop_tariffs zaem-card__tariffs-name">
-                  <span class="zaem-card__prop-text">{{name}}</span>
-                </p>
-                <p class="zaem-card__prop zaem-card__prop_tariffs">
-                  <span class="zaem-card__prop-text">{{rate}} %</span>
-                  {{!-- <span class="zaem-card__prop-name">Ставка в день</span> --}}
-                </p>
-                {{!-- <p class="zaem-card__prop">
-                  <span class="zaem-card__prop-text"><span class="calc-amount-value">3 000</span> ₽</span>
-                  <span class="zaem-card__prop-name">Сумма</span>
-                </p>
-                <p class="zaem-card__prop">
-                  <span class="zaem-card__prop-text"><span class="calc-days-value">10</span> дней</span>
-                  <span class="zaem-card__prop-name">Срок</span>
-                </p> --}}
-                <p class="zaem-card__prop zaem-card__prop_tariffs">
-                  <span class="zaem-card__prop-text"><span class="calc-overcharge-value">10</span> ₽</span>
-                  {{!-- <span class="zaem-card__prop-name">Переплата</span> --}}
-                </p>
-              </li>
-              {{/each}}
-            </ul>
-          </div>
-          {{/if}}
           <div class="zaem__calc calc">
-            <h3 class="calc__heading heading-4">Рассчитать заем</h3>
+            <h3 class="calc__heading heading-4">Посчитать переплату</h3>
             <div class="calc__amount">
               <label class="calc__label" for="calc-amount">Введите сумму займа, руб.</label>
               <input class="calc__input" id="calc-amount" name="amount" type="number" value="{{toNumber summFrom}}"
-                maxlength="10" minlength="4" min="{{toNumber summFrom}}" max="{{toNumber summTo}}" step="500"/>
+                maxlength="10" minlength="4" min="{{toNumber summFrom}}" max="{{toNumber summTo}}" step="500" />
               <div class="calc__slider slider">
                 <div class="slider__conteiner">
                   <div class="slider__lenght">
@@ -93,7 +44,7 @@
             <div class="calc__days">
               <label class="calc__label" for="calc-days">Введите кол-во дней</label>
               <input class="calc__input" id="calc-days" name="days" type="number" value="{{limitFrom}}" maxlength="3"
-                minlength="1" min="{{limitFrom}}" max="{{limitTo}}" step="1"/>
+                minlength="1" min="{{limitFrom}}" max="{{limitTo}}" step="1" />
               <div class="calc__slider slider">
                 <div class="slider__conteiner">
                   <div class="slider__lenght">
@@ -109,8 +60,68 @@
                 </div>
               </div>
             </div>
+            <p class="calc__sub">*примерный расчет по минимальной ставке без учета комиссий</p>
           </div>
-          <a class="zaem-card__go button" href="{{link}}">Оформить</a>
+          <div class="zaem-card__tariffs tariffs">
+            <table>
+              <thead>
+                <tr class="tariffs__head-text">
+                  <td>Сумма</td>
+                  <td>Ставка в день</td>
+                  <td>Срок</td>
+                  <td>Переплата</td>
+                  <td>Заявки</td>
+                </tr>
+              </thead>
+              <tbody>
+                {{#each this.tarify}}
+                <tr>
+                  <td>
+                    <!-- Сумма -->
+                    <div class="tariffs__summ">
+                      <span class="tariffs__head-text tariffs__head-text_mobile">Сумма</span>
+                      <div class="tariffs__summ-value">
+                        <span class="tariffs__value">10000</span>
+                        <span class="tariffs__summ-value-sign">₽</span>
+                      </div>
+                      <span class="tariffs__name">{{name}}</span>
+                    </div>
+                  </td>
+                  <td>
+                    <!-- Ставка в день -->
+                    <div class="tariffs__cell-content tariffs__rate">
+                      <span class="tariffs__head-text tariffs__head-text_mobile">Ставка</span>
+                      <span class="tariffs__value">{{rate}}</span>
+                      <span>%</span>
+                    </div>
+                  </td>
+                  <td>
+                    <!-- Срок -->
+                    <div class="tariffs__cell-content tariffs__days">
+                      <span class="tariffs__head-text tariffs__head-text_mobile">Срок</span>
+                      <span class="tariffs__value">30</span>
+                      <span>дн.</span>
+                    </div>
+                  </td>
+                  <td>
+                    <!-- Переплата -->
+                    <div class="tariffs__cell-content tariffs__overhead">
+                      <span class="tariffs__head-text tariffs__head-text_mobile">Переплата</span>
+                      <span class="tariffs__value">1300</span>
+                      <span>₽</span>
+                    </div>
+                  </td>
+                  <td>
+                    <!-- Заявки -->
+                    <div class="tariffs__button">
+                      <a class="button button_type_third button_font-weight-normal" href="{{../link}}">Подать заявку</a>
+                    </div>
+                  </td>
+                </tr>
+                {{/each}}
+              </tbody>
+            </table>
+          </div>
         </div>
         <table class="zaem__table">
           <tr>
