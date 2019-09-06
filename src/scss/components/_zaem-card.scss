@@ -58,6 +58,7 @@
     @media (min-width: $desktop) {
       flex-direction: column;
       height: 105px;
+      overflow: unset;
     }
   }
 
