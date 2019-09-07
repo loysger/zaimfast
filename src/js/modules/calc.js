@@ -19,6 +19,10 @@ export default class Calculator {
     this._init();
   }
 
+  get initValue() {
+    return this._initValue;
+  }
+
   _init() {
     const initStep =
       this._initValue / this._stepSize - this._min / this._stepSize;
@@ -26,6 +30,7 @@ export default class Calculator {
     this._createSlider((currentStep, hint) => {
       const value = this._getStepValue(currentStep);
       this._input.value = value;
+      this.onValueChange(value);
 
       this._slider.hintContent = value.toLocaleString();
     }, initStep);
@@ -64,4 +69,6 @@ export default class Calculator {
     const value = this._stepSize * step + this._min;
     return value;
   }
+
+  onValueChange() {}
 }
