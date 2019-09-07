@@ -3,7 +3,7 @@
 
   @media (min-width: $desktop) {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     margin: 0;
   }
 
@@ -35,19 +35,6 @@
 
     @media (min-width: $desktop) {
       font-size: 14px;
-    }
-  }
-
-  &__amount {
-    @media (min-width: $desktop) {
-      flex-grow: 1;
-      margin-right: 30px;
-    }
-  }
-
-  &__days {
-    @media (min-width: $desktop) {
-      flex-grow: 1;
     }
   }
 
