@@ -75,13 +75,13 @@
               </thead>
               <tbody>
                 {{#each this.tarify}}
-                <tr>
+                <tr class="tariff" data-rate="{{rate}}" data-minsumm="{{minsumm}}" data-maxsumm="{{maxsumm}}" data-mindays="{{mindays}}" data-maxdays="{{maxdays}}">
                   <td>
                     <!-- Сумма -->
                     <div class="tariffs__summ">
                       <span class="tariffs__head-text tariffs__head-text_mobile">Сумма</span>
                       <div class="tariffs__summ-value">
-                        <span class="tariffs__value">10000</span>
+                        <span class="tariffs__value tariff__summ">10000</span>
                         <span class="tariffs__summ-value-sign">₽</span>
                       </div>
                       <span class="tariffs__name">{{name}}</span>
@@ -99,7 +99,7 @@
                     <!-- Срок -->
                     <div class="tariffs__cell-content tariffs__days">
                       <span class="tariffs__head-text tariffs__head-text_mobile">Срок</span>
-                      <span class="tariffs__value">30</span>
+                      <span class="tariffs__value tariff__days">30</span>
                       <span>дн.</span>
                     </div>
                   </td>
@@ -107,7 +107,7 @@
                     <!-- Переплата -->
                     <div class="tariffs__cell-content tariffs__overhead">
                       <span class="tariffs__head-text tariffs__head-text_mobile">Переплата</span>
-                      <span class="tariffs__value">1300</span>
+                      <span class="tariffs__value tariff__overhead">1300</span>
                       <span>₽</span>
                     </div>
                   </td>
