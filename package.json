@@ -55,7 +55,7 @@
   },
   "lint-staged": {
     "*.hbs": [
-      "js-beautify --type html --file",
+      "js-beautify --type html --replace --file",
       "git add"
     ],
     "*.{js,scss,json}": [
