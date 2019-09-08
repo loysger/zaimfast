@@ -70,6 +70,7 @@
     "test": "stylelint ./src/scss/components/*.scss && htmlhint ./src/html/**/*.hbs && eslint ./src/js/**/*.js",
     "format-all": "yarn prettier --write src/**/*.{js,scss,json} && yarn format:hbs",
     "format:hbs": "yarn js-beautify src/**/*.hbs --type html",
+    "sort-scss": "gulp sort",
     "clean-all": "rm -rf node_modules && rm -rf build && rm -rf production",
     "clean": "rm -rf build && rm -rf production"
   }
