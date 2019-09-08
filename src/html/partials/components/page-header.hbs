@@ -1,7 +1,7 @@
 <header class="page__header header">
   <div class="header__container">
     {{#if h1}}
-    <h1 class="heading-1 hidden">{{h1}}</h1>
+      <h1 class="heading-1 hidden">{{h1}}</h1>
     {{/if}}
     <div class="header__top">
       <a class="header__logo logo" href="/">
@@ -18,9 +18,9 @@
         </div>
         <ul class="main-navigation__list">
           {{#each mainNavigation.links}}
-          <li class="main-navigation__item">
-            <a href="{{href}}" class="heading-3">{{text}}</a>
-          </li>
+            <li class="main-navigation__item">
+              <a href="{{href}}" class="heading-3">{{text}}</a>
+            </li>
           {{/each}}
         </ul>
       </nav>

@@ -1,151 +1,153 @@
 {{#extend "common-page"}}
 
-{{#content "header"}}
-{{> head title="Главная старница"}}
-{{/content}}
+  {{#content "header"}}
+    {{> head title="Главная старница"}}
+  {{/content}}
 
 
-{{#content "content"}}
-{{> page-header}}
-<main>
-  <section class="help">
-    <div class="help__container">
-      <h1 class="hidden">Займы онлайн – все быстрые займы России на нашем портале.</h1>
-      <div class="help__img-container"></div>
-      <p class="help__text">
-        <b class="help__title">Zaimfast</b>
-        это проект, где собраны все проверенные МФО России. С нами легко
-        сможете получить срочно деньги без лишней суеты в ближайшие часы!
-      </p>
-    </div>
-  </section>
-  <section class="offer">
-    <div class="offer__container">
-      <h2 class="offer__heading heading-2">Наши предложения</h2>
-      <ul class="offer__list">
-        {{#each offers}}
-        <li class="offer__item offer__item_{{this.title}}">
-          <a href="{{this.link}}" class="offer__link">
-            <span class="offer__icon">
-              <img class="offer__icon-img" src="{{this.img}}" alt="{{this.name}}" width="48" height="48">
-            </span>
-            <p class="offer__name">{{this.name}}</p>
-          </a>
-        </li>
-        {{/each}}
-      </ul>
-    </div>
-  </section>
-  <section class="best">
-    <div class="best__container">
-      <h2 class="heading-2 best__heading">Лучшие предложения</h2>
-      <ul class="best__list">
-        {{#each mfo}}
-        {{#if (times "4") }}
-        <li class="best__item best__item_{{this.title}} best-card">
-          <div class="best-card__top">
-            <div class="best-card__text">
-              <h3 class="best-card__heading heading-3">
-                {{this.name}}
-              </h3>
-              <div class="best-card__description-container">
-                <p class="best-card__description">
-                  {{this.about}}
-                </p>
-              </div>
-            </div>
-            <div class="best-card__img-container">
-              <a href="{{innerLink}}"><img src="{{this.img}}" alt="{{this.name}}" width="286" height="100" /></a>
-            </div>
+  {{#content "content"}}
+    {{> page-header}}
+    <main>
+      <section class="help">
+        <div class="help__container">
+          <h1 class="hidden">Займы онлайн – все быстрые займы России на нашем портале.</h1>
+          <div class="help__img-container"></div>
+          <p class="help__text">
+            <b class="help__title">Zaimfast</b>
+            это проект, где собраны все проверенные МФО России. С нами легко
+            сможете получить срочно деньги без лишней суеты в ближайшие часы!
+          </p>
+        </div>
+      </section>
+      <section class="offer">
+        <div class="offer__container">
+          <h2 class="offer__heading heading-2">Наши предложения</h2>
+          <ul class="offer__list">
+            {{#each offers}}
+              <li class="offer__item offer__item_{{this.title}}">
+                <a href="{{this.link}}" class="offer__link">
+                  <span class="offer__icon">
+                    <img class="offer__icon-img" src="{{this.img}}" alt="{{this.name}}" width="48" height="48">
+                  </span>
+                  <p class="offer__name">{{this.name}}</p>
+                </a>
+              </li>
+            {{/each}}
+          </ul>
+        </div>
+      </section>
+      <section class="best">
+        <div class="best__container">
+          <h2 class="heading-2 best__heading">Лучшие предложения</h2>
+          <ul class="best__list">
+            {{#each mfo}}
+              {{#if (times "4") }}
+                <li class="best__item best__item_{{this.title}} best-card">
+                  <div class="best-card__top">
+                    <div class="best-card__text">
+                      <h3 class="best-card__heading heading-3">
+                        {{this.name}}
+                      </h3>
+                      <div class="best-card__description-container">
+                        <p class="best-card__description">
+                          {{this.about}}
+                        </p>
+                      </div>
+                    </div>
+                    <div class="best-card__img-container">
+                      <a href="{{innerLink}}"><img src="{{this.img}}" alt="{{this.name}}" width="286"
+                          height="100" /></a>
+                    </div>
+                  </div>
+                  <div class="best-card__content">
+                    <p>
+                      до {{this.summTo}} ₽<br />
+                      <span class="best-card__sub">cумма:</span>
+                    </p>
+                    <p>
+                      до {{this.rateTo}}% <br />
+                      <span class="best-card__sub">в день</span>
+                    </p>
+                  </div>
+                  <a href="{{this.link}}" class="button button_type_second best-card__purchase">Оформить</a>
+                </li>
+              {{/if}}
+            {{/each}}
+          </ul>
+          <a href="/mfo" class="button button_type_link_lg-only best__more">Показать больше</a>
+        </div>
+      </section>
+      <section class="articles">
+        <div class="articles__container">
+          <h2 class="heading-2 articles__heading">Полезные статьи</h2>
+          <ul class="articles__list">
+            {{#each articles.news}}
+              {{#if (times "4")}}
+                <li class="articles__item">
+                  <a href="{{this.link}}" class="articles__link">
+                    <div class="articles__img">
+                      <img src="{{this.imgLink}}" alt="{{this.title}}" />
+                    </div>
+                    <p class="articles__news-heading">
+                      {{this.title}}
+                    </p>
+                  </a>
+                </li>
+              {{/if}}
+            {{/each}}
+          </ul>
+          <a class="button button_type_link_lg-only articles__more" href="/news">Все статьи</a>
+        </div>
+      </section>
+      <section class="partners">
+        <div class="partners__container">
+          <h2 class="heading-2 partners__heading">Наши партнеры</h2>
+          <div class="partners__list-wrap">
+            <ul class="partners__list">
+              {{#each partners}}
+                <li class="partners__item partners__item_{{this.title}}">
+                  <a href="{{this.link}}" class="partners__link">
+                    <img class="partners__img" src="{{this.img}}" alt="{{this.name}}" />
+                  </a>
+                </li>
+              {{/each}}
+            </ul>
           </div>
-          <div class="best-card__content">
-            <p>
-              до {{this.summTo}} ₽<br />
-              <span class="best-card__sub">cумма:</span>
-            </p>
-            <p>
-              до {{this.rateTo}}% <br />
-              <span class="best-card__sub">в день</span>
-            </p>
-          </div>
-          <a href="{{this.link}}" class="button button_type_second best-card__purchase">Оформить</a>
-        </li>
-        {{/if}}
-        {{/each}}
-      </ul>
-      <a href="/mfo" class="button button_type_link_lg-only best__more">Показать больше</a>
-    </div>
-  </section>
-  <section class="articles">
-    <div class="articles__container">
-      <h2 class="heading-2 articles__heading">Полезные статьи</h2>
-      <ul class="articles__list">
-        {{#each articles.news}}
-        {{#if (times "4")}}
-        <li class="articles__item">
-          <a href="{{this.link}}" class="articles__link">
-            <div class="articles__img">
-              <img src="{{this.imgLink}}" alt="{{this.title}}" />
-            </div>
-            <p class="articles__news-heading">
-              {{this.title}}
-            </p>
-          </a>
-        </li>
-        {{/if}}
-        {{/each}}
-      </ul>
-      <a class="button button_type_link_lg-only articles__more" href="/news">Все статьи</a>
-    </div>
-  </section>
-  <section class="partners">
-    <div class="partners__container">
-      <h2 class="heading-2 partners__heading">Наши партнеры</h2>
-      <div class="partners__list-wrap">
-        <ul class="partners__list">
-          {{#each partners}}
-          <li class="partners__item partners__item_{{this.title}}">
-            <a href="{{this.link}}" class="partners__link">
-              <img class="partners__img" src="{{this.img}}" alt="{{this.name}}" />
-            </a>
-          </li>
-          {{/each}}
-        </ul>
-      </div>
-      <a class="button button_type_link_lg-only partners__more" href="/zaymi">Все партнеры</a>
-    </div>
-  </section>
-  <section class="why">
-    <div class="why__container">
-      <h2 class="why__heading heading-2">Почему выбирают Zaimfast</h2>
-      <ul class="why__list">
-        <li class="why__item why__item_quality">
-          <b class="why__title">Качество</b>
-          <p class="why__text">
-            Мы ведем постоянный анализ наших партнеров, каждый день обновляем информацию более 70 предложений о займах
-          </p>
-        </li>
-        <li class="why__item why__item_accesible">
-          <b class="why__title">Доступно</b>
-          <p class="why__text">
-            Сможете легко отобрать выгодные предложения и выбрать подходящее предложение, что сэкономит Ваше время и
-            бюджет
-          </p>
-        </li>
-        <li class="why__item why__item_fast">
-          <b class="why__title">Быстро</b>
-          <p class="why__text">
-            Благодаря интуитивно понятному интерфейсу, легко сможете найту нужную информацию
-          </p>
-        </li>
-      </ul>
-    </div>
-  </section>
-</main>
-{{/content}}
+          <a class="button button_type_link_lg-only partners__more" href="/zaymi">Все партнеры</a>
+        </div>
+      </section>
+      <section class="why">
+        <div class="why__container">
+          <h2 class="why__heading heading-2">Почему выбирают Zaimfast</h2>
+          <ul class="why__list">
+            <li class="why__item why__item_quality">
+              <b class="why__title">Качество</b>
+              <p class="why__text">
+                Мы ведем постоянный анализ наших партнеров, каждый день обновляем информацию более 70 предложений о
+                займах
+              </p>
+            </li>
+            <li class="why__item why__item_accesible">
+              <b class="why__title">Доступно</b>
+              <p class="why__text">
+                Сможете легко отобрать выгодные предложения и выбрать подходящее предложение, что сэкономит Ваше время и
+                бюджет
+              </p>
+            </li>
+            <li class="why__item why__item_fast">
+              <b class="why__title">Быстро</b>
+              <p class="why__text">
+                Благодаря интуитивно понятному интерфейсу, легко сможете найту нужную информацию
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+  {{/content}}
 
-{{#content "footer"}}
-{{> footer}}
-{{/content}}
+  {{#content "footer"}}
+    {{> footer}}
+  {{/content}}
 
 {{/extend}}

@@ -1,244 +1,246 @@
 {{#extend "common-page"}}
 
-{{#content "header"}}
-{{> head title=meta.title description=meta.description}}
-{{/content}}
+  {{#content "header"}}
+    {{> head title=meta.title description=meta.description}}
+  {{/content}}
 
-{{#content "content"}}
-{{> page-header}}
-<main class="page-content page-content_mfo-page page-content_aside page-content_{{title}}">
-  <div class="page-content__wrap">
-    <div class="page-wrap">
-      <section class="zaem">
-        <h2 class="hidden">{{name}}</h2>
-        <div class="zaem-card">
-          <div class="zaem-card__top">
-            <div class="zaem-card__img">
-              <a class="zaem-card__img-link" href="{{link}}" title="{{name}}">
-                <img class="zaem-card__img-tag" src="{{img}}" alt="{{name}}" />
-                <span class="zaem-card__img-text hidden-only-mobile">{{name}}</span>
-              </a>
-            </div>
-          </div>
-          <div class="zaem__calc calc">
-            <h3 class="calc__heading heading-4">Посчитать переплату</h3>
-            <div class="calc__amount">
-              <label class="calc__label" for="calc-amount">Введите сумму займа, руб.</label>
-              <input class="calc__input" id="calc-amount" name="amount" type="number" value="{{toNumber summFrom}}"
-                maxlength="10" minlength="4" min="{{toNumber summFrom}}" max="{{toNumber summTo}}" step="500" />
-              <div class="calc__slider slider">
-                <div class="slider__conteiner">
-                  <div class="slider__lenght">
-                    <div class="slider__depth">
-                      <div class="slider__pin" tabindex="0">
-                        <div class="slider__hint">
-                          <div class="slider__hint-triangle"></div>
-                          <div class="slider__hint-content">15000</div>
+  {{#content "content"}}
+    {{> page-header}}
+    <main class="page-content page-content_mfo-page page-content_aside page-content_{{title}}">
+      <div class="page-content__wrap">
+        <div class="page-wrap">
+          <section class="zaem">
+            <h2 class="hidden">{{name}}</h2>
+            <div class="zaem-card">
+              <div class="zaem-card__top">
+                <div class="zaem-card__img">
+                  <a class="zaem-card__img-link" href="{{link}}" title="{{name}}">
+                    <img class="zaem-card__img-tag" src="{{img}}" alt="{{name}}" />
+                    <span class="zaem-card__img-text hidden-only-mobile">{{name}}</span>
+                  </a>
+                </div>
+              </div>
+              <div class="zaem__calc calc">
+                <h3 class="calc__heading heading-4">Посчитать переплату</h3>
+                <div class="calc__amount">
+                  <label class="calc__label" for="calc-amount">Введите сумму займа, руб.</label>
+                  <input class="calc__input" id="calc-amount" name="amount" type="number" value="{{toNumber summFrom}}"
+                    maxlength="10" minlength="4" min="{{toNumber summFrom}}" max="{{toNumber summTo}}" step="500" />
+                  <div class="calc__slider slider">
+                    <div class="slider__conteiner">
+                      <div class="slider__lenght">
+                        <div class="slider__depth">
+                          <div class="slider__pin" tabindex="0">
+                            <div class="slider__hint">
+                              <div class="slider__hint-triangle"></div>
+                              <div class="slider__hint-content">15000</div>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            </div>
-            <div class="calc__days">
-              <label class="calc__label" for="calc-days">Введите кол-во дней</label>
-              <input class="calc__input" id="calc-days" name="days" type="number" value="{{limitFrom}}" maxlength="3"
-                minlength="1" min="{{limitFrom}}" max="{{limitTo}}" step="1" />
-              <div class="calc__slider slider">
-                <div class="slider__conteiner">
-                  <div class="slider__lenght">
-                    <div class="slider__depth">
-                      <div class="slider__pin" tabindex="0">
-                        <div class="slider__hint">
-                          <div class="slider__hint-triangle"></div>
-                          <div class="slider__hint-content">15000</div>
+                <div class="calc__days">
+                  <label class="calc__label" for="calc-days">Введите кол-во дней</label>
+                  <input class="calc__input" id="calc-days" name="days" type="number" value="{{limitFrom}}"
+                    maxlength="3" minlength="1" min="{{limitFrom}}" max="{{limitTo}}" step="1" />
+                  <div class="calc__slider slider">
+                    <div class="slider__conteiner">
+                      <div class="slider__lenght">
+                        <div class="slider__depth">
+                          <div class="slider__pin" tabindex="0">
+                            <div class="slider__hint">
+                              <div class="slider__hint-triangle"></div>
+                              <div class="slider__hint-content">15000</div>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
+                <p class="calc__sub">*примерный расчет по минимальной ставке без учета комиссий</p>
+              </div>
+              <div class="zaem-card__tariffs tariffs">
+                <table>
+                  <thead>
+                    <tr class="tariffs__head-text">
+                      <td>Сумма</td>
+                      <td>Ставка в день</td>
+                      <td>Срок</td>
+                      <td>Переплата</td>
+                      <td>Заявки</td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {{#each this.tarify}}
+                      <tr class="tariff" data-rate="{{rate}}" data-minsumm="{{minsumm}}" data-maxsumm="{{maxsumm}}"
+                        data-mindays="{{mindays}}" data-maxdays="{{maxdays}}">
+                        <td>
+                          <!-- Сумма -->
+                          <div class="tariffs__summ">
+                            <span class="tariffs__head-text tariffs__head-text_mobile">Сумма</span>
+                            <div class="tariffs__summ-value">
+                              <span class="tariffs__value tariff__summ">10000</span>
+                              <span class="tariffs__summ-value-sign">₽</span>
+                            </div>
+                            <span class="tariffs__name">{{name}}</span>
+                          </div>
+                        </td>
+                        <td>
+                          <!-- Ставка в день -->
+                          <div class="tariffs__cell-content tariffs__rate">
+                            <span class="tariffs__head-text tariffs__head-text_mobile">Ставка</span>
+                            <span class="tariffs__value">{{rate}}</span>
+                            <span>%</span>
+                          </div>
+                        </td>
+                        <td>
+                          <!-- Срок -->
+                          <div class="tariffs__cell-content tariffs__days">
+                            <span class="tariffs__head-text tariffs__head-text_mobile">Срок</span>
+                            <span class="tariffs__value tariff__days">30</span>
+                            <span>дн.</span>
+                          </div>
+                        </td>
+                        <td>
+                          <!-- Переплата -->
+                          <div class="tariffs__cell-content tariffs__overhead">
+                            <span class="tariffs__head-text tariffs__head-text_mobile">Переплата</span>
+                            <span class="tariffs__value tariff__overhead">1300</span>
+                            <span>₽</span>
+                          </div>
+                        </td>
+                        <td>
+                          <!-- Заявки -->
+                          <div class="tariffs__button">
+                            <a class="button button_type_third button_font-weight-normal" href="{{../link}}">Подать
+                              заявку</a>
+                          </div>
+                        </td>
+                      </tr>
+                    {{/each}}
+                  </tbody>
+                </table>
               </div>
             </div>
-            <p class="calc__sub">*примерный расчет по минимальной ставке без учета комиссий</p>
-          </div>
-          <div class="zaem-card__tariffs tariffs">
-            <table>
-              <thead>
-                <tr class="tariffs__head-text">
-                  <td>Сумма</td>
-                  <td>Ставка в день</td>
-                  <td>Срок</td>
-                  <td>Переплата</td>
-                  <td>Заявки</td>
-                </tr>
-              </thead>
+            <table class="zaem__table">
+              <tr>
+                <td>Веб-сайт</td>
+                <td><a href="{{link}}">{{linkName}}</a></td>
+              </tr>
+              <tr>
+                <td>Адрес компании</td>
+                <td><a href="{{mapLink}}">{{adress}}</a></td>
+              </tr>
+              <tr>
+                <td>Номер телефонов горячей линии</td>
+                <td>{{tel}}</td>
+              </tr>
+              <tr>
+                <td>Электронная почта</td>
+                <td>{{email}}</td>
+              </tr>
+              <tr>
+                <td>Часы работы</td>
+                <td>{{workingTime}}</td>
+              </tr>
+              <tr>
+                <td>Номер свидетельства регистрации
+                </td>
+                <td>{{registrationNumber}}</td>
+              </tr>
+              <tr>
+                <td>ОГРН</td>
+                <td>{{OGRN}}</td>
+              </tr>
+              <tr>
+                <td>ИНН</td>
+                <td>{{INN}}</td>
+              </tr>
+              <tr>
+                <td>Дата внесения в реестр</td>
+                <td>{{registartionDate}}</td>
+              </tr>
+            </table>
+          </section>
+          <section class="zaem-about">
+            <h2 class="zaem-about__heading heading-3">О предложении</h2>
+            <div class="zaem-about__content">
+              {{#each about}}
+                <p class="zaem-about__text">{{this}}</p>
+              {{/each}}
+              <div>
+                <h2 class="zaem-about__heading heading-3">
+                  Плюсы {{name}}
+                </h2>
+                <ul class="list">
+                  {{#each advantages}}
+                    <li class="list__item">{{this}}</li>
+                  {{/each}}
+                </ul>
+              </div>
+            </div>
+            {{!-- <button class="zaem-about__more">Показать больше</button> --}}
+          </section>
+          <section class="zaem-condition">
+            <h2 class="zaem-condition__heading heading-3">Условия</h2>
+            <table class="zaem-condition__table">
               <tbody>
-                {{#each this.tarify}}
-                <tr class="tariff" data-rate="{{rate}}" data-minsumm="{{minsumm}}" data-maxsumm="{{maxsumm}}" data-mindays="{{mindays}}" data-maxdays="{{maxdays}}">
+                <tr class="zaem-condition__item">
                   <td>
-                    <!-- Сумма -->
-                    <div class="tariffs__summ">
-                      <span class="tariffs__head-text tariffs__head-text_mobile">Сумма</span>
-                      <div class="tariffs__summ-value">
-                        <span class="tariffs__value tariff__summ">10000</span>
-                        <span class="tariffs__summ-value-sign">₽</span>
-                      </div>
-                      <span class="tariffs__name">{{name}}</span>
-                    </div>
+                    Выдача денег
                   </td>
                   <td>
-                    <!-- Ставка в день -->
-                    <div class="tariffs__cell-content tariffs__rate">
-                      <span class="tariffs__head-text tariffs__head-text_mobile">Ставка</span>
-                      <span class="tariffs__value">{{rate}}</span>
-                      <span>%</span>
-                    </div>
-                  </td>
-                  <td>
-                    <!-- Срок -->
-                    <div class="tariffs__cell-content tariffs__days">
-                      <span class="tariffs__head-text tariffs__head-text_mobile">Срок</span>
-                      <span class="tariffs__value tariff__days">30</span>
-                      <span>дн.</span>
-                    </div>
-                  </td>
-                  <td>
-                    <!-- Переплата -->
-                    <div class="tariffs__cell-content tariffs__overhead">
-                      <span class="tariffs__head-text tariffs__head-text_mobile">Переплата</span>
-                      <span class="tariffs__value tariff__overhead">1300</span>
-                      <span>₽</span>
-                    </div>
-                  </td>
-                  <td>
-                    <!-- Заявки -->
-                    <div class="tariffs__button">
-                      <a class="button button_type_third button_font-weight-normal" href="{{../link}}">Подать заявку</a>
-                    </div>
+                    <ul class="list">
+                      {{#each conditions.paymentTime}}
+                        <li class="list__item">{{this}}</li>
+                      {{/each}}
+                    </ul>
                   </td>
                 </tr>
-                {{/each}}
+                <tr class="zaem-condition__item">
+                  <td>Варианты погашения</td>
+                  <td>
+                    <ul class="list">
+                      {{#each conditions.repayment}}
+                        <li class="list__item">{{this}}</li>
+                      {{/each}}
+                    </ul>
+                  </td>
+                </tr>
+                <tr class="zaem-condition__item">
+                  <td>Оплата</td>
+                  <td>{{conditions.payment}}</td>
+                </tr>
+                <tr class="zaem-condition__item">
+                  <td>Время рассмотрения</td>
+                  <td>{{conditions.reviewTime}}</td>
+                </tr>
+                <tr class="zaem-condition__item">
+                  <td>Продление</td>
+                  <td>{{conditions.prolongation}}</td>
+                </tr>
               </tbody>
             </table>
-          </div>
-        </div>
-        <table class="zaem__table">
-          <tr>
-            <td>Веб-сайт</td>
-            <td><a href="{{link}}">{{linkName}}</a></td>
-          </tr>
-          <tr>
-            <td>Адрес компании</td>
-            <td><a href="{{mapLink}}">{{adress}}</a></td>
-          </tr>
-          <tr>
-            <td>Номер телефонов горячей линии</td>
-            <td>{{tel}}</td>
-          </tr>
-          <tr>
-            <td>Электронная почта</td>
-            <td>{{email}}</td>
-          </tr>
-          <tr>
-            <td>Часы работы</td>
-            <td>{{workingTime}}</td>
-          </tr>
-          <tr>
-            <td>Номер свидетельства регистрации
-            </td>
-            <td>{{registrationNumber}}</td>
-          </tr>
-          <tr>
-            <td>ОГРН</td>
-            <td>{{OGRN}}</td>
-          </tr>
-          <tr>
-            <td>ИНН</td>
-            <td>{{INN}}</td>
-          </tr>
-          <tr>
-            <td>Дата внесения в реестр</td>
-            <td>{{registartionDate}}</td>
-          </tr>
-        </table>
-      </section>
-      <section class="zaem-about">
-        <h2 class="zaem-about__heading heading-3">О предложении</h2>
-        <div class="zaem-about__content">
-          {{#each about}}
-          <p class="zaem-about__text">{{this}}</p>
-          {{/each}}
-          <div>
-            <h2 class="zaem-about__heading heading-3">
-              Плюсы {{name}}
-            </h2>
+          </section>
+          <section class="zaem-borrower">
+            <h2 class="zaem-borrower__heading heading-3">Требования к заемщику</h2>
             <ul class="list">
-              {{#each advantages}}
-              <li class="list__item">{{this}}</li>
+              {{#each borrower}}
+                <li class="list__item">{{this}}</li>
               {{/each}}
             </ul>
-          </div>
+          </section>
         </div>
-        {{!-- <button class="zaem-about__more">Показать больше</button> --}}
-      </section>
-      <section class="zaem-condition">
-        <h2 class="zaem-condition__heading heading-3">Условия</h2>
-        <table class="zaem-condition__table">
-          <tbody>
-            <tr class="zaem-condition__item">
-              <td>
-                Выдача денег
-              </td>
-              <td>
-                <ul class="list">
-                  {{#each conditions.paymentTime}}
-                  <li class="list__item">{{this}}</li>
-                  {{/each}}
-                </ul>
-              </td>
-            </tr>
-            <tr class="zaem-condition__item">
-              <td>Варианты погашения</td>
-              <td>
-                <ul class="list">
-                  {{#each conditions.repayment}}
-                  <li class="list__item">{{this}}</li>
-                  {{/each}}
-                </ul>
-              </td>
-            </tr>
-            <tr class="zaem-condition__item">
-              <td>Оплата</td>
-              <td>{{conditions.payment}}</td>
-            </tr>
-            <tr class="zaem-condition__item">
-              <td>Время рассмотрения</td>
-              <td>{{conditions.reviewTime}}</td>
-            </tr>
-            <tr class="zaem-condition__item">
-              <td>Продление</td>
-              <td>{{conditions.prolongation}}</td>
-            </tr>
-          </tbody>
-        </table>
-      </section>
-      <section class="zaem-borrower">
-        <h2 class="zaem-borrower__heading heading-3">Требования к заемщику</h2>
-        <ul class="list">
-          {{#each borrower}}
-          <li class="list__item">{{this}}</li>
-          {{/each}}
-        </ul>
-      </section>
-    </div>
-    {{> aside}}
-  </div>
-</main>
-{{/content}}
+        {{> aside}}
+      </div>
+    </main>
+  {{/content}}
 
-{{#content "footer"}}
-{{> footer}}
-{{/content}}
+  {{#content "footer"}}
+    {{> footer}}
+  {{/content}}
 
 {{/extend}}

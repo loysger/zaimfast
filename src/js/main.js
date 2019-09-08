@@ -8,5 +8,5 @@ MainMenu.init();
 SetNumber.init();
 OfferCardAbout.init();
 ZaemCardTariffs.init();
-const tarifsCalculator = new TariffsCalculator;
+const tarifsCalculator = new TariffsCalculator();
 tarifsCalculator.init();

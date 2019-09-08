@@ -4,14 +4,14 @@
       <h2 class="aside-menu__heading">Подбор займов</h2>
       <ul class="aside-menu__list">
         {{#each offers}}
-        <li class="aside-menu__item">
-          <a class="aside-offers aside-offers_{{this.title}}" href="{{this.link}}">
-            <div class="aside-offers__img-container">
-              <img src="{{this.img}}" alt="{{this.name}}">
-            </div>
-            <p class="aside-offers__title">{{this.name}}</p>
-          </a>
-        </li>
+          <li class="aside-menu__item">
+            <a class="aside-offers aside-offers_{{this.title}}" href="{{this.link}}">
+              <div class="aside-offers__img-container">
+                <img src="{{this.img}}" alt="{{this.name}}">
+              </div>
+              <p class="aside-offers__title">{{this.name}}</p>
+            </a>
+          </li>
         {{/each}}
       </ul>
     </section>

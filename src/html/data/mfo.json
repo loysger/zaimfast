@@ -64,7 +64,7 @@
       {
         "name": "Заем под 0%",
         "rate": "0",
-        "minsumm" : "1000",
+        "minsumm": "1000",
         "maxsumm": "15000",
         "mindays": "5",
         "maxdays": "30"
@@ -72,7 +72,7 @@
       {
         "name": "Минизаем",
         "rate": "1",
-        "minsumm" : "3000",
+        "minsumm": "3000",
         "maxsumm": "30000",
         "mindays": "5",
         "maxdays": "60"
@@ -80,14 +80,19 @@
       {
         "name": "Мегазаем",
         "rate": "0.69",
-        "minsumm" : "15000",
+        "minsumm": "15000",
         "maxsumm": "70000",
         "mindays": "84",
         "maxdays": "288"
       }
     ],
     "filter-tags": [
-      "online", "zaymy", "na-kartu", "na-schet", "contact", "sberbank"
+      "online",
+      "zaymy",
+      "na-kartu",
+      "na-schet",
+      "contact",
+      "sberbank"
     ],
     "meta": {
       "title": "Кредит Плюс – выгодное и мгновенное получение займа с cashback",
@@ -162,7 +167,7 @@
       {
         "name": "Первый займ",
         "rate": "1",
-        "minsumm" : "2000",
+        "minsumm": "2000",
         "maxsumm": "15000",
         "mindays": "5",
         "maxdays": "30"
@@ -170,14 +175,20 @@
       {
         "name": "Повторный займ",
         "rate": "1",
-        "minsumm" : "2000",
+        "minsumm": "2000",
         "maxsumm": "30000",
         "mindays": "5",
         "maxdays": "60"
       }
     ],
     "filter-tags": [
-      "qiwi", "online", "zaymy", "na-kartu", "na-schet", "contact", "sberbank"
+      "qiwi",
+      "online",
+      "zaymy",
+      "na-kartu",
+      "na-schet",
+      "contact",
+      "sberbank"
     ],
     "meta": {
       "title": "Кредит Плюс – выгодное и мгновенное получение займа с cashback",
@@ -257,7 +268,7 @@
       {
         "name": "До зарплаты",
         "rate": "1",
-        "minsumm" : "2000",
+        "minsumm": "2000",
         "maxsumm": "30000",
         "mindays": "7",
         "maxdays": "30"
@@ -265,14 +276,21 @@
       {
         "name": "Робокредит",
         "rate": "0.76",
-        "minsumm" : "20000",
+        "minsumm": "20000",
         "maxsumm": "100000",
         "mindays": "90",
         "maxdays": "365"
       }
     ],
     "filter-tags": [
-      "online", "zaymy", "na-kartu", "na-schet", "yandex", "contact", "sberbank", "gosuslugi"
+      "online",
+      "zaymy",
+      "na-kartu",
+      "na-schet",
+      "yandex",
+      "contact",
+      "sberbank",
+      "gosuslugi"
     ],
     "meta": {
       "title": "Кредит Плюс – выгодное и мгновенное получение займа с cashback",
@@ -344,7 +362,7 @@
       {
         "name": "Краткосрочный займ",
         "rate": "1",
-        "minsumm" : "2000",
+        "minsumm": "2000",
         "maxsumm": "20000",
         "mindays": "10",
         "maxdays": "30"
@@ -352,15 +370,13 @@
       {
         "name": "Долгосрочный займ",
         "rate": "0.84",
-        "minsumm" : "10000",
+        "minsumm": "10000",
         "maxsumm": "70000",
         "mindays": "42",
         "maxdays": "168"
       }
     ],
-    "filter-tags": [
-      "online", "zaymy", "sberbank"
-    ],
+    "filter-tags": ["online", "zaymy", "sberbank"],
     "meta": {
       "title": "Кредит Плюс – выгодное и мгновенное получение займа с cashback",
       "description": "В МФО Кредит Плюс оформляются займы до 30 000 рублей без отказов. Воспользуйтесь уникальным предложением и возвращайте 10% от суммы займа в Кредит Плюс. В Creditplus каждый следующий займ будет с меньшим процентом."
@@ -429,7 +445,7 @@
       {
         "name": "Займ на карту",
         "rate": "0.87",
-        "minsumm" : "1000",
+        "minsumm": "1000",
         "maxsumm": "15000",
         "mindays": "1",
         "maxdays": "30"
@@ -437,7 +453,7 @@
       {
         "name": "Займ на Быстрокарту",
         "rate": "0.87",
-        "minsumm" : "1000",
+        "minsumm": "1000",
         "maxsumm": "100000",
         "mindays": "42",
         "maxdays": "180"
@@ -445,7 +461,7 @@
       {
         "name": "Под залог ПТС",
         "rate": "0.08",
-        "minsumm" : "2000",
+        "minsumm": "2000",
         "maxsumm": "30000",
         "mindays": "7",
         "maxdays": "30"
@@ -453,15 +469,13 @@
       {
         "name": "Потребительский (Наличными)",
         "rate": "0.87",
-        "minsumm" : "1000",
+        "minsumm": "1000",
         "maxsumm": "100000",
         "mindays": "1",
         "maxdays": "180"
       }
     ],
-    "filter-tags": [
-      "online", "zaymy", "sberbank"
-    ],
+    "filter-tags": ["online", "zaymy", "sberbank"],
     "meta": {
       "title": "Кредит Плюс – выгодное и мгновенное получение займа с cashback",
       "description": "В МФО Кредит Плюс оформляются займы до 30 000 рублей без отказов. Воспользуйтесь уникальным предложением и возвращайте 10% от суммы займа в Кредит Плюс. В Creditplus каждый следующий займ будет с меньшим процентом."
@@ -530,17 +544,24 @@
       "Действующий номер телефона"
     ],
     "tarify": [
-    {
-      "name": "Потребительский",
-      "rate": "0.9",
-      "minsumm" : "100",
-      "maxsumm": "30000",
-      "mindays": "7",
-      "maxdays": "21"
-    }
-  ],
+      {
+        "name": "Потребительский",
+        "rate": "0.9",
+        "minsumm": "100",
+        "maxsumm": "30000",
+        "mindays": "7",
+        "maxdays": "21"
+      }
+    ],
     "filter-tags": [
-      "qiwi", "online", "zaymy", "na-kartu", "na-schet", "yandex", "contact", "korona"
+      "qiwi",
+      "online",
+      "zaymy",
+      "na-kartu",
+      "na-schet",
+      "yandex",
+      "contact",
+      "korona"
     ],
     "meta": {
       "title": "Кредит Плюс – выгодное и мгновенное получение займа с cashback",
@@ -610,15 +631,13 @@
       {
         "name": "Platiza",
         "rate": "1",
-        "minsumm" : "3000",
+        "minsumm": "3000",
         "maxsumm": "30000",
         "mindays": "5",
         "maxdays": "30"
       }
     ],
-    "filter-tags": [
-      "online", "zaymy", "na-kartu", "yandex", "sberbank"
-    ],
+    "filter-tags": ["online", "zaymy", "na-kartu", "yandex", "sberbank"],
     "meta": {
       "title": "Кредит Плюс – выгодное и мгновенное получение займа с cashback",
       "description": "В МФО Кредит Плюс оформляются займы до 30 000 рублей без отказов. Воспользуйтесь уникальным предложением и возвращайте 10% от суммы займа в Кредит Плюс. В Creditplus каждый следующий займ будет с меньшим процентом."
@@ -691,7 +710,7 @@
       {
         "name": "До зарплаты",
         "rate": "1",
-        "minsumm" : "3000",
+        "minsumm": "3000",
         "maxsumm": "15000",
         "mindays": "7",
         "maxdays": "15"
@@ -699,14 +718,20 @@
       {
         "name": "Потребительский",
         "rate": "0.53",
-        "minsumm" : "30000",
+        "minsumm": "30000",
         "maxsumm": "50000",
         "mindays": "30",
         "maxdays": "184"
       }
     ],
     "filter-tags": [
-      "online", "zaymy", "na-kartu", "yandex", "contact", "sberbank", "gosuslugi"
+      "online",
+      "zaymy",
+      "na-kartu",
+      "yandex",
+      "contact",
+      "sberbank",
+      "gosuslugi"
     ],
     "meta": {
       "title": "Кредит Плюс – выгодное и мгновенное получение займа с cashback",
@@ -778,7 +803,7 @@
       {
         "name": "Краткосрочный",
         "rate": "1",
-        "minsumm" : "3000",
+        "minsumm": "3000",
         "maxsumm": "15000",
         "mindays": "7",
         "maxdays": "31"
@@ -786,15 +811,13 @@
       {
         "name": "Потребительский заем",
         "rate": "0.8",
-        "minsumm" : "16000",
+        "minsumm": "16000",
         "maxsumm": "50000",
         "mindays": "42",
         "maxdays": "168"
       }
     ],
-    "filter-tags": [
-      "online", "zaymy", "na-kartu", "yandex", "sberbank"
-    ],
+    "filter-tags": ["online", "zaymy", "na-kartu", "yandex", "sberbank"],
     "meta": {
       "title": "Кредит Плюс – выгодное и мгновенное получение займа с cashback",
       "description": "В МФО Кредит Плюс оформляются займы до 30 000 рублей без отказов. Воспользуйтесь уникальным предложением и возвращайте 10% от суммы займа в Кредит Плюс. В Creditplus каждый следующий займ будет с меньшим процентом."
@@ -860,15 +883,13 @@
       {
         "name": "ГринМани",
         "rate": "0.95",
-        "minsumm" : "3000",
+        "minsumm": "3000",
         "maxsumm": "25000",
         "mindays": "7",
         "maxdays": "40"
       }
     ],
-    "filter-tags": [
-      "online", "zaymy", "na-kartu", "sberbank"
-    ],
+    "filter-tags": ["online", "zaymy", "na-kartu", "sberbank"],
     "meta": {
       "title": "Кредит Плюс – выгодное и мгновенное получение займа с cashback",
       "description": "В МФО Кредит Плюс оформляются займы до 30 000 рублей без отказов. Воспользуйтесь уникальным предложением и возвращайте 10% от суммы займа в Кредит Плюс. В Creditplus каждый следующий займ будет с меньшим процентом."
@@ -941,14 +962,21 @@
       {
         "name": "Smart",
         "rate": "1",
-        "minsumm" : "2000",
+        "minsumm": "2000",
         "maxsumm": "30000",
         "mindays": "5",
         "maxdays": "30"
       }
     ],
     "filter-tags": [
-      "qiwi", "online", "zaymy", "na-kartu", "na-schet", "yandex", "contact", "sberbank"
+      "qiwi",
+      "online",
+      "zaymy",
+      "na-kartu",
+      "na-schet",
+      "yandex",
+      "contact",
+      "sberbank"
     ],
     "meta": {
       "title": "Кредит Плюс – выгодное и мгновенное получение займа с cashback",
@@ -1023,7 +1051,7 @@
       {
         "name": "Основной",
         "rate": "1",
-        "minsumm" : "3000",
+        "minsumm": "3000",
         "maxsumm": "30000",
         "mindays": "1",
         "maxdays": "30"
@@ -1031,7 +1059,7 @@
       {
         "name": "Минимальный",
         "rate": "2",
-        "minsumm" : "1000",
+        "minsumm": "1000",
         "maxsumm": "10000",
         "mindays": "1",
         "maxdays": "15"
@@ -1039,7 +1067,7 @@
       {
         "name": "Онлайн займ",
         "rate": "1.5",
-        "minsumm" : "1000",
+        "minsumm": "1000",
         "maxsumm": "30000",
         "mindays": "1",
         "maxdays": "30"
@@ -1047,7 +1075,7 @@
       {
         "name": "Грейс 5",
         "rate": "1",
-        "minsumm" : "1000",
+        "minsumm": "1000",
         "maxsumm": "15000",
         "mindays": "1",
         "maxdays": "30"
@@ -1055,14 +1083,20 @@
       {
         "name": "Беру Грейс 7",
         "rate": "0.13",
-        "minsumm" : "1000",
+        "minsumm": "1000",
         "maxsumm": "50000",
         "mindays": "60",
         "maxdays": "180"
       }
     ],
     "filter-tags": [
-      "online", "zaymy", "na-kartu", "na-schet", "yandex", "contact", "sberbank"
+      "online",
+      "zaymy",
+      "na-kartu",
+      "na-schet",
+      "yandex",
+      "contact",
+      "sberbank"
     ],
     "meta": {
       "title": "Кредит Плюс – выгодное и мгновенное получение займа с cashback",
@@ -1138,14 +1172,21 @@
       {
         "name": "Займ с единовременным погашением",
         "rate": "0.75",
-        "minsumm" : "3000",
+        "minsumm": "3000",
         "maxsumm": "14250",
         "mindays": "3",
         "maxdays": "29"
       }
     ],
     "filter-tags": [
-      "online", "zaymy", "na-kartu", "na-schet", "contact", "unistream", "korona", "sberbank"
+      "online",
+      "zaymy",
+      "na-kartu",
+      "na-schet",
+      "contact",
+      "unistream",
+      "korona",
+      "sberbank"
     ],
     "meta": {
       "title": "Кредит Плюс – выгодное и мгновенное получение займа с cashback",
@@ -1219,7 +1260,7 @@
       {
         "name": "До зарплаты",
         "rate": "0.76",
-        "minsumm" : "3000",
+        "minsumm": "3000",
         "maxsumm": "14000",
         "mindays": "3",
         "maxdays": "29"
@@ -1227,15 +1268,13 @@
       {
         "name": "Оптимальный",
         "rate": "0.09",
-        "minsumm" : "15000",
+        "minsumm": "15000",
         "maxsumm": "98000",
         "mindays": "70",
         "maxdays": "336"
       }
     ],
-    "filter-tags": [
-      "online", "zaymy", "na-kartu", "contact", "unistream"
-    ],
+    "filter-tags": ["online", "zaymy", "na-kartu", "contact", "unistream"],
     "meta": {
       "title": "Кредит Плюс – выгодное и мгновенное получение займа с cashback",
       "description": "В МФО Кредит Плюс оформляются займы до 30 000 рублей без отказов. Воспользуйтесь уникальным предложением и возвращайте 10% от суммы займа в Кредит Плюс. В Creditplus каждый следующий займ будет с меньшим процентом."
@@ -1307,14 +1346,21 @@
       {
         "name": "OneClickMoney",
         "rate": "1",
-        "minsumm" : "500",
+        "minsumm": "500",
         "maxsumm": "30000",
         "mindays": "6",
         "maxdays": "60"
       }
     ],
     "filter-tags": [
-      "qiwi", "online", "zaymy", "na-kartu", "contact", "korona", "sberbank", "gosuslugi"
+      "qiwi",
+      "online",
+      "zaymy",
+      "na-kartu",
+      "contact",
+      "korona",
+      "sberbank",
+      "gosuslugi"
     ],
     "meta": {
       "title": "Кредит Плюс – выгодное и мгновенное получение займа с cashback",
@@ -1386,15 +1432,13 @@
       {
         "name": "kredito24",
         "rate": "1",
-        "minsumm" : "2000",
+        "minsumm": "2000",
         "maxsumm": "15000",
         "mindays": "16",
         "maxdays": "30"
       }
     ],
-    "filter-tags": [
-      "online", "zaymy", "na-schet", "sberbank"
-    ],
+    "filter-tags": ["online", "zaymy", "na-schet", "sberbank"],
     "meta": {
       "title": "Кредит Плюс – выгодное и мгновенное получение займа с cashback",
       "description": "В МФО Кредит Плюс оформляются займы до 30 000 рублей без отказов. Воспользуйтесь уникальным предложением и возвращайте 10% от суммы займа в Кредит Плюс. В Creditplus каждый следующий займ будет с меньшим процентом."
@@ -1460,15 +1504,13 @@
       {
         "name": "Onzaem",
         "rate": "1",
-        "minsumm" : "3500",
+        "minsumm": "3500",
         "maxsumm": "30000",
         "mindays": "5",
         "maxdays": "30"
       }
     ],
-    "filter-tags": [
-      "online", "zaymy", "na-kartu", "na-schet", "sberbank"
-    ],
+    "filter-tags": ["online", "zaymy", "na-kartu", "na-schet", "sberbank"],
     "meta": {
       "title": "Кредит Плюс – выгодное и мгновенное получение займа с cashback",
       "description": "В МФО Кредит Плюс оформляются займы до 30 000 рублей без отказов. Воспользуйтесь уникальным предложением и возвращайте 10% от суммы займа в Кредит Плюс. В Creditplus каждый следующий займ будет с меньшим процентом."
@@ -1540,7 +1582,7 @@
       {
         "name": "Старт!",
         "rate": "1",
-        "minsumm" : "1500",
+        "minsumm": "1500",
         "maxsumm": "15000",
         "mindays": "16",
         "maxdays": "30"
@@ -1548,15 +1590,13 @@
       {
         "name": "Стандарт+",
         "rate": "0.6",
-        "minsumm" : "15001",
+        "minsumm": "15001",
         "maxsumm": "30000",
         "mindays": "16",
         "maxdays": "30"
       }
     ],
-    "filter-tags": [
-      "online", "zaymy", "na-kartu", "na-schet", "sberbank"
-    ],
+    "filter-tags": ["online", "zaymy", "na-kartu", "na-schet", "sberbank"],
     "meta": {
       "title": "Кредит Плюс – выгодное и мгновенное получение займа с cashback",
       "description": "В МФО Кредит Плюс оформляются займы до 30 000 рублей без отказов. Воспользуйтесь уникальным предложением и возвращайте 10% от суммы займа в Кредит Плюс. В Creditplus каждый следующий займ будет с меньшим процентом."
@@ -1625,14 +1665,20 @@
       {
         "name": "Потребительский займ",
         "rate": "1",
-        "minsumm" : "2000",
+        "minsumm": "2000",
         "maxsumm": "30000",
         "mindays": "5",
         "maxdays": "30"
       }
     ],
     "filter-tags": [
-      "qiwi", "online", "zaymy", "na-kartu", "na-schet", "contact", "sberbank"
+      "qiwi",
+      "online",
+      "zaymy",
+      "na-kartu",
+      "na-schet",
+      "contact",
+      "sberbank"
     ],
     "meta": {
       "title": "Кредит Плюс – выгодное и мгновенное получение займа с cashback",
@@ -1701,15 +1747,13 @@
       {
         "name": "Микроклад",
         "rate": "1",
-        "minsumm" : "1000",
+        "minsumm": "1000",
         "maxsumm": "30000",
         "mindays": "7",
         "maxdays": "30"
       }
     ],
-    "filter-tags": [
-      "online", "zaymy", "na-kartu", "sberbank"
-    ],
+    "filter-tags": ["online", "zaymy", "na-kartu", "sberbank"],
     "meta": {
       "title": "Кредит Плюс – выгодное и мгновенное получение займа с cashback",
       "description": "В МФО Кредит Плюс оформляются займы до 30 000 рублей без отказов. Воспользуйтесь уникальным предложением и возвращайте 10% от суммы займа в Кредит Плюс. В Creditplus каждый следующий займ будет с меньшим процентом."
@@ -1778,7 +1822,7 @@
       {
         "name": "Минимум",
         "rate": "2",
-        "minsumm" : "1000",
+        "minsumm": "1000",
         "maxsumm": "10000",
         "mindays": "1",
         "maxdays": "30"
@@ -1786,23 +1830,21 @@
       {
         "name": "Онлайн займ",
         "rate": "1.5",
-        "minsumm" : "1000",
+        "minsumm": "1000",
         "maxsumm": "30000",
         "mindays": "1",
         "maxdays": "30"
       },
-        {
-          "name": "Грейс 5",
-          "rate": "1.5",
-          "minsumm" : "1000",
+      {
+        "name": "Грейс 5",
+        "rate": "1.5",
+        "minsumm": "1000",
         "maxsumm": "15000",
         "mindays": "1",
         "maxdays": "30"
-        }
+      }
     ],
-    "filter-tags": [
-      "online", "zaymy", "na-kartu", "na-schet", "contact"
-    ],
+    "filter-tags": ["online", "zaymy", "na-kartu", "na-schet", "contact"],
     "meta": {
       "title": "Кредит Плюс – выгодное и мгновенное получение займа с cashback",
       "description": "В МФО Кредит Плюс оформляются займы до 30 000 рублей без отказов. Воспользуйтесь уникальным предложением и возвращайте 10% от суммы займа в Кредит Плюс. В Creditplus каждый следующий займ будет с меньшим процентом."
@@ -1871,7 +1913,7 @@
       {
         "name": "Минимум",
         "rate": "2",
-        "minsumm" : "1000",
+        "minsumm": "1000",
         "maxsumm": "10000",
         "mindays": "1",
         "maxdays": "30"
@@ -1879,23 +1921,21 @@
       {
         "name": "Онлайн займ",
         "rate": "1.5",
-        "minsumm" : "1000",
+        "minsumm": "1000",
         "maxsumm": "30000",
         "mindays": "1",
         "maxdays": "30"
       },
-        {
-          "name": "Грейс 5",
-          "rate": "1.5",
-          "minsumm" : "1000",
+      {
+        "name": "Грейс 5",
+        "rate": "1.5",
+        "minsumm": "1000",
         "maxsumm": "15000",
         "mindays": "1",
         "maxdays": "30"
-        }
+      }
     ],
-    "filter-tags": [
-      "online", "zaymy", "na-kartu", "na-schet", "contact"
-    ],
+    "filter-tags": ["online", "zaymy", "na-kartu", "na-schet", "contact"],
     "meta": {
       "title": "Кредит Плюс – выгодное и мгновенное получение займа с cashback",
       "description": "В МФО Кредит Плюс оформляются займы до 30 000 рублей без отказов. Воспользуйтесь уникальным предложением и возвращайте 10% от суммы займа в Кредит Плюс. В Creditplus каждый следующий займ будет с меньшим процентом."
@@ -1965,7 +2005,7 @@
       {
         "name": "Минимум",
         "rate": "2",
-        "minsumm" : "1000",
+        "minsumm": "1000",
         "maxsumm": "10000",
         "mindays": "1",
         "maxdays": "30"
@@ -1973,22 +2013,27 @@
       {
         "name": "Онлайн займ",
         "rate": "1.5",
-        "minsumm" : "1000",
+        "minsumm": "1000",
         "maxsumm": "30000",
         "mindays": "1",
         "maxdays": "30"
       },
-        {
-          "name": "Грейс 5",
-          "rate": "1.5",
-          "minsumm" : "1000",
+      {
+        "name": "Грейс 5",
+        "rate": "1.5",
+        "minsumm": "1000",
         "maxsumm": "15000",
         "mindays": "1",
         "maxdays": "30"
-        }
+      }
     ],
     "filter-tags": [
-      "online", "zaymy", "na-kartu", "na-schet", "yandex", "sberbank"
+      "online",
+      "zaymy",
+      "na-kartu",
+      "na-schet",
+      "yandex",
+      "sberbank"
     ],
     "meta": {
       "title": "Кредит Плюс – выгодное и мгновенное получение займа с cashback",
@@ -2062,14 +2107,19 @@
       {
         "name": "zaymigo",
         "rate": "0.49",
-        "minsumm" : "4000",
+        "minsumm": "4000",
         "maxsumm": "70000",
         "mindays": "1",
         "maxdays": "140"
       }
     ],
     "filter-tags": [
-      "online", "zaymy", "na-kartu", "contact", "korona", "sberbank"
+      "online",
+      "zaymy",
+      "na-kartu",
+      "contact",
+      "korona",
+      "sberbank"
     ],
     "meta": {
       "title": "Кредит Плюс – выгодное и мгновенное получение займа с cashback",
@@ -2141,47 +2191,45 @@
       {
         "name": "До зарплаты",
         "rate": "1",
-        "minsumm" : "2000",
+        "minsumm": "2000",
         "maxsumm": "20000",
         "mindays": "7",
         "maxdays": "16"
       },
-        {
-          "name": "«Пенсионный» (для новых клиентов)",
-          "rate": "1",
-          "minsumm" : "2000",
+      {
+        "name": "«Пенсионный» (для новых клиентов)",
+        "rate": "1",
+        "minsumm": "2000",
         "maxsumm": "10000",
         "mindays": "7",
         "maxdays": "16"
-        },
-        {
-          "name": "«Пенсионный»",
-          "rate": "1",
-          "minsumm" : "2000",
+      },
+      {
+        "name": "«Пенсионный»",
+        "rate": "1",
+        "minsumm": "2000",
         "maxsumm": "20000",
         "mindays": "7",
         "maxdays": "30"
-        },
-        {
-          "name": "«Заем Выгодный»",
-          "rate": "0.9",
-          "minsumm" : "20000",
+      },
+      {
+        "name": "«Заем Выгодный»",
+        "rate": "0.9",
+        "minsumm": "20000",
         "maxsumm": "30000",
         "mindays": "7",
         "maxdays": "30"
-        },
-        {
-          "name": "«Заем доверие»",
-          "rate": "1",
-          "minsumm" : "20000",
+      },
+      {
+        "name": "«Заем доверие»",
+        "rate": "1",
+        "minsumm": "20000",
         "maxsumm": "30000",
         "mindays": "7",
         "maxdays": "30"
-        }
+      }
     ],
-    "filter-tags": [
-      "online", "zaymy", "na-kartu", "contact", "sberbank"
-    ],
+    "filter-tags": ["online", "zaymy", "na-kartu", "contact", "sberbank"],
     "meta": {
       "title": "Кредит Плюс – выгодное и мгновенное получение займа с cashback",
       "description": "В МФО Кредит Плюс оформляются займы до 30 000 рублей без отказов. Воспользуйтесь уникальным предложением и возвращайте 10% от суммы займа в Кредит Плюс. В Creditplus каждый следующий займ будет с меньшим процентом."
@@ -2253,30 +2301,35 @@
       {
         "name": "Мини",
         "rate": "1",
-        "minsumm" : "2000",
+        "minsumm": "2000",
         "maxsumm": "10000",
         "mindays": "7",
         "maxdays": "16"
       },
-        {
-          "name": "Смарт",
-          "rate": "1",
-          "minsumm" : "2000",
+      {
+        "name": "Смарт",
+        "rate": "1",
+        "minsumm": "2000",
         "maxsumm": "20000",
         "mindays": "7",
         "maxdays": "25"
-        },
-        {
-          "name": "Топ",
-          "rate": "0.5",
-          "minsumm" : "21000",
+      },
+      {
+        "name": "Топ",
+        "rate": "0.5",
+        "minsumm": "21000",
         "maxsumm": "100000",
         "mindays": "60",
         "maxdays": "365"
-        }
+      }
     ],
     "filter-tags": [
-      "online", "zaymy", "na-kartu", "na-schet", "contact", "korona"
+      "online",
+      "zaymy",
+      "na-kartu",
+      "na-schet",
+      "contact",
+      "korona"
     ],
     "meta": {
       "title": "Кредит Плюс – выгодное и мгновенное получение займа с cashback",
@@ -2341,15 +2394,13 @@
       {
         "name": "Потребительский",
         "rate": "1",
-        "minsumm" : "10000",
+        "minsumm": "10000",
         "maxsumm": "50000",
         "mindays": "60",
         "maxdays": "152"
       }
     ],
-    "filter-tags": [
-      "online", "zaymy", "na-kartu", "sberbank"
-    ],
+    "filter-tags": ["online", "zaymy", "na-kartu", "sberbank"],
     "meta": {
       "title": "Кредит Плюс – выгодное и мгновенное получение займа с cashback",
       "description": "В МФО Кредит Плюс оформляются займы до 30 000 рублей без отказов. Воспользуйтесь уникальным предложением и возвращайте 10% от суммы займа в Кредит Плюс. В Creditplus каждый следующий займ будет с меньшим процентом."
@@ -2414,9 +2465,7 @@
       "Наличие паспорта",
       "Документы на транспортное средство"
     ],
-    "filter-tags": [
-      "online", "zaymy", "contact"
-    ],
+    "filter-tags": ["online", "zaymy", "contact"],
     "meta": {
       "title": "Кредит Плюс – выгодное и мгновенное получение займа с cashback",
       "description": "В МФО Кредит Плюс оформляются займы до 30 000 рублей без отказов. Воспользуйтесь уникальным предложением и возвращайте 10% от суммы займа в Кредит Плюс. В Creditplus каждый следующий займ будет с меньшим процентом."
@@ -2482,9 +2531,7 @@
       "Мобильный телефон",
       "ИНН или СНИЛС"
     ],
-    "filter-tags": [
-      "online", "zaymy", "na-kartu", "contact", "sberbank"
-    ],
+    "filter-tags": ["online", "zaymy", "na-kartu", "contact", "sberbank"],
     "meta": {
       "title": "Кредит Плюс – выгодное и мгновенное получение займа с cashback",
       "description": "В МФО Кредит Плюс оформляются займы до 30 000 рублей без отказов. Воспользуйтесь уникальным предложением и возвращайте 10% от суммы займа в Кредит Плюс. В Creditplus каждый следующий займ будет с меньшим процентом."
@@ -2545,9 +2592,7 @@
       "Мобильный телефон",
       "Банковская именная карта"
     ],
-    "filter-tags": [
-      "online", "zaymy", "na-kartu"
-    ],
+    "filter-tags": ["online", "zaymy", "na-kartu"],
     "meta": {
       "title": "Кредит Плюс – выгодное и мгновенное получение займа с cashback",
       "description": "В МФО Кредит Плюс оформляются займы до 30 000 рублей без отказов. Воспользуйтесь уникальным предложением и возвращайте 10% от суммы займа в Кредит Плюс. В Creditplus каждый следующий займ будет с меньшим процентом."
@@ -2614,9 +2659,7 @@
       "Наличие паспорта",
       "Данные о постоянном месте работы"
     ],
-    "filter-tags": [
-      "online", "zaymy", "na-kartu"
-    ],
+    "filter-tags": ["online", "zaymy", "na-kartu"],
     "meta": {
       "title": "Кредит Плюс – выгодное и мгновенное получение займа с cashback",
       "description": "В МФО Кредит Плюс оформляются займы до 30 000 рублей без отказов. Воспользуйтесь уникальным предложением и возвращайте 10% от суммы займа в Кредит Плюс. В Creditplus каждый следующий займ будет с меньшим процентом."
@@ -2686,7 +2729,14 @@
       "Наличие паспорта"
     ],
     "filter-tags": [
-      "qiwi", "online", "zaymy", "na-kartu", "na-schet", "yandex", "contact", "korona"
+      "qiwi",
+      "online",
+      "zaymy",
+      "na-kartu",
+      "na-schet",
+      "yandex",
+      "contact",
+      "korona"
     ],
     "meta": {
       "title": "Кредит Плюс – выгодное и мгновенное получение займа с cashback",
@@ -2754,7 +2804,13 @@
       "Наличие паспорта, мобильный телефон."
     ],
     "filter-tags": [
-      "qiwi", "online", "zaymy", "na-kartu", "na-schet", "yandex", "contact"
+      "qiwi",
+      "online",
+      "zaymy",
+      "na-kartu",
+      "na-schet",
+      "yandex",
+      "contact"
     ],
     "meta": {
       "title": "Кредит Плюс – выгодное и мгновенное получение займа с cashback",
@@ -2824,7 +2880,13 @@
       "Наличие паспорта, мобильный телефон, электронный ящик."
     ],
     "filter-tags": [
-      "qiwi", "online", "zaymy", "na-kartu", "na-schet", "yandex", "contact"
+      "qiwi",
+      "online",
+      "zaymy",
+      "na-kartu",
+      "na-schet",
+      "yandex",
+      "contact"
     ],
     "meta": {
       "title": "Кредит Плюс – выгодное и мгновенное получение займа с cashback",

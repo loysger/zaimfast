@@ -1,16 +1,16 @@
 {{#extend "common-page"}}
 
-{{#content "header"}}
-{{> head title="Мгновенные онлайн займы на Киви кошелек под низкие проценты"description="Онлайн займ на Киви – это способ получить до 30 000 рублей мгновенно. На сайте перечислен список МФО, предоставляющих займы на Киви без отказа и поручителей, с возможностью пролонгации и отсрочки."}}
-{{/content}}
+  {{#content "header"}}
+    {{> head title="Мгновенные онлайн займы на Киви кошелек под низкие проценты"description="Онлайн займ на Киви – это способ получить до 30 000 рублей мгновенно. На сайте перечислен список МФО, предоставляющих займы на Киви без отказа и поручителей, с возможностью пролонгации и отсрочки."}}
+  {{/content}}
 
 
-{{#content "content"}}
-{{> page-header}}
-<main class="page-content page-content_zaymi page-content_aside">
-  <div class="page-content__wrap">
-    <div class="page-wrap">
-      {{!-- <section class="filters" style="display: none;">
+  {{#content "content"}}
+    {{> page-header}}
+    <main class="page-content page-content_zaymi page-content_aside">
+      <div class="page-content__wrap">
+        <div class="page-wrap">
+          {{!-- <section class="filters" style="display: none;">
         <h2 class="hidden">Подобрать условия</h2>
         <fieldset class="filters__fieldset">
           <legend class="filters__name">
@@ -47,170 +47,193 @@
           </div>
         </fieldset>
       </section> --}}
-      <section class="offers">
-        <div class="offers__container">
-          <h1 class="offers__h1 heading-1">Займы на киви кошелек</h1>
-          <p class="offers__caption">
-            Сервис поможет грамотно, без лишних хлопот подобрать онлайн займы на киви кошелек без отказа. Выбирайте условия подходящие для Вас и получите одобрение в кратчайшие сроки!
-          </p>
-          <ul class="offers__list">
-            {{#each mfo}}
-            {{#if (itHas this.filter-tags "qiwi")}}
-              <li class="offers__item offer-card offer-card_pb_none">
-                <div class="offer-card__top">
-                  <div class="offer-card__img">
-                    <a class="offer-card__img-link" href="{{this.innerLink}}">
-                      <img class="offer-card__img-tag" src="{{this.img}}" alt="{{this.name}}" title="{{this.name}}" />
-                    </a>
-                  </div>
-                </div>
-                <div class="offer-card__contain">
-                  <p class="offer-card__prop">
-                    <span class="offer-card__prop-text">от {{this.rateFrom}} - до {{this.rateTo}}%</span>
-                    <span class="offer-card__prop-name">Ставка в день</span>
-                  </p>
-                  <p class="offer-card__prop">
-                    <span class="offer-card__prop-text"> от {{this.summFrom}} - до {{this.summTo}}₽</span>
-                    <span class="offer-card__prop-name">Сумма</span>
-                  </p>
-                  <p class="offer-card__prop">
-                    <span class="offer-card__prop-text">от {{this.limitFrom}} - до {{this.limitTo}} дней</span>
-                    <span class="offer-card__prop-name">Срок</span>
-                  </p>
-                </div>
-                <div class="offer-card__about-wrapper">
-                  <button class="offer-card__about-more" title="Подробнее"></button>
-                  <ul class="offer-card__about offer-card__about_closed">
-                    {{#each this.aboutShort}}
-                    <li class="offer-card__about-item">{{this}}</li>
-                    {{/each}}
-                    <li class="offer-card__about-mobile-btn">
-                      <a class="offer-card__go offer-card__go_type_mobile button" href="{{this.link}}">Перейти</a>
+          <section class="offers">
+            <div class="offers__container">
+              <h1 class="offers__h1 heading-1">Займы на киви кошелек</h1>
+              <p class="offers__caption">
+                Сервис поможет грамотно, без лишних хлопот подобрать онлайн займы на киви кошелек без отказа. Выбирайте
+                условия подходящие для Вас и получите одобрение в кратчайшие сроки!
+              </p>
+              <ul class="offers__list">
+                {{#each mfo}}
+                  {{#if (itHas this.filter-tags "qiwi")}}
+                    <li class="offers__item offer-card offer-card_pb_none">
+                      <div class="offer-card__top">
+                        <div class="offer-card__img">
+                          <a class="offer-card__img-link" href="{{this.innerLink}}">
+                            <img class="offer-card__img-tag" src="{{this.img}}" alt="{{this.name}}"
+                              title="{{this.name}}" />
+                          </a>
+                        </div>
+                      </div>
+                      <div class="offer-card__contain">
+                        <p class="offer-card__prop">
+                          <span class="offer-card__prop-text">от {{this.rateFrom}} - до {{this.rateTo}}%</span>
+                          <span class="offer-card__prop-name">Ставка в день</span>
+                        </p>
+                        <p class="offer-card__prop">
+                          <span class="offer-card__prop-text"> от {{this.summFrom}} - до {{this.summTo}}₽</span>
+                          <span class="offer-card__prop-name">Сумма</span>
+                        </p>
+                        <p class="offer-card__prop">
+                          <span class="offer-card__prop-text">от {{this.limitFrom}} - до {{this.limitTo}} дней</span>
+                          <span class="offer-card__prop-name">Срок</span>
+                        </p>
+                      </div>
+                      <div class="offer-card__about-wrapper">
+                        <button class="offer-card__about-more" title="Подробнее"></button>
+                        <ul class="offer-card__about offer-card__about_closed">
+                          {{#each this.aboutShort}}
+                            <li class="offer-card__about-item">{{this}}</li>
+                          {{/each}}
+                          <li class="offer-card__about-mobile-btn">
+                            <a class="offer-card__go offer-card__go_type_mobile button" href="{{this.link}}">Перейти</a>
+                          </li>
+                        </ul>
+                      </div>
+                      <a class="offer-card__go offer-card__go_type_desktop button" href="{{this.link}}">Перейти</a>
                     </li>
-                  </ul>
-                </div>
-                <a class="offer-card__go offer-card__go_type_desktop button" href="{{this.link}}">Перейти</a>
+                  {{/if}}
+                {{/each}}
+              </ul>
+            </div>
+          </section>
+          <section class="info">
+            <h2 class="info__heading">
+              Преимущества онлайн займа на киви
+            </h2>
+            <p class="info__text">
+              Электронная коммерция значительно расширяет наши возможности, позволяя проводить расчеты, оплачивать
+              товары по всему миру мгновенно и без комиссий. Но когда денег не хватает, классический банковский кредит
+              для этих целей не подходит.
+            </p>
+            <p class="info__text">
+              Получить банковский кредит на любую электронную платежную систему невозможно. Сроки рассмотрения до двух
+              недель значительно сокращают возможность участия в скидках и акциях +проверка кредитной истории, на
+              основании которой банк имеет право отказать в выдаче средств без объяснения причины. Отличная альтернатива
+              классическому потребительскому кредиту онлайн займ. С помощью нашей компании вы сможете без особых усилий
+              оформить займ на киви без привязки карты. Для того чтобы взять займ на киви кошелек срочно, нет
+              необходимости даже быть клиентом банка. Достаточно иметь мобильный телефон, кошелек в системе qiwi и вы
+              гарантированно получите займ на киви без отказа.
+            </p>
+            <h3 class="info__heading">
+              Описание услуги онлайн займ на киви
+            </h3>
+            <p class="info__text">
+              Получить деньги в долг на электронный счет в системе qiwi можно двумя способами:
+            </p>
+            <ul class="info__list list">
+              <li class="info__text info__item list__item">
+                онлайн;
               </li>
-            {{/if}}
-            {{/each}}
-          </ul>
+              <li class="info__text info__item list__item">
+                оставив заявку на кредит в выбранной организации.
+              </li>
+            </ul>
+            <p class="info__text">
+              Взять займ на киви кошелек срочно можно с мобильного телефона, стационарного компьютера или ноутбука с
+              выходом в интернет. Услуга предоставляется физическим лицам, достигшим 18-летнего возраста. Деньги на счет
+              в платежной системе после подтверждения предоставляются с услугой займ на киви:
+            </p>
+            <ul class="info__list list">
+              <li class="info__text info__item list__item">
+                мгновенно;
+              </li>
+              <li class="info__text info__item list__item">
+                без комиссии;
+              </li>
+              <li class="info__text info__item list__item">
+                гарантированно без отказа.
+              </li>
+            </ul>
+            <p class="info__text">
+              Вся процедура занимает не более 20 минут. Подтверждение телефона и перечисление денежных средств
+              происходит в пределах пяти минут.
+            </p>
+            <h3 class="info__heading">
+              Достоинства займа на киви кошелек
+            </h3>
+            <p class="info__text">
+              К достоинствам займа на киви кошелек можно отнести:
+            </p>
+            <ul class="info__list list">
+              <li class="info__text info__item list__item">
+                Простая и удобная операция оформления заявки и получения денег. Пройти всю процедуру можно дома с
+                комфортом при помощи цифрового средства связи. Для прохождения требуется минимальное количество
+                документов. Займ на qiwi кошелек – это отличный вид срочного займа.
+              </li>
+              <li class="info__text info__item list__item">
+                Скорость получения денег. Нет необходимости простаивать в очередях, собирать документы для оформления
+                заявки. Деньги на счет зачисляются практически мгновенно.
+              </li>
+              <li class="info__text info__item list__item">
+                Удобная форма расчетов. Погасить займ или оплатить платежи по кредиту можно в личном кабинете
+                понравившейся МФО любым удобным способом, в том числе средствами электронной коммерции или со счета
+                мобильного телефо
+              </li>
+              <li class="info__text info__item list__item">
+                Безналичная форма получения денег. Нет необходимости в снятии или в дополнительных переводах с
+                комиссией.
+              </li>
+              <li class="info__text info__item list__item">
+                Отсутствие проверок кредитной истории. Это позволяет получить кредит любому гражданину РФ, достигшему
+                18-летнего возраста.
+              </li>
+            </ul>
+            <h3 class="info__heading">Как быстро получить займ на qiwi кошелек без отказа?</h3>
+            <p class="info__text">
+              Чтобы быстро получить займ на qiwi без отказа нужно всего лишь оформить заявку. Для этого потребуется
+              телефон, счет qiwi и паспорт. Операция осуществляется в несколько этапов:
+            </p>
+            <ul class="info__list list">
+              <li class="info__text info__item list__item">
+                Через форму на сайте подходящей микроорганизацции необходимо зарегистрировать личный кабинет.
+              </li>
+              <li class="info__text info__item list__item">
+                Заполнить анкету заемщика. По желанию потребителя можно просто оставить заявку на кредит вместе с
+                заполненной анкетой заемщика и наши специалисты свяжутся с вами.
+              </li>
+              <li class="info__text info__item list__item">
+                Задать параметры кредита или выбрать кредитное предложение самостоятельно в личном кабинете.
+              </li>
+              <li class="info__text info__item list__item">
+                Приложить в удобной форме копии документов.
+              </li>
+              <li class="info__text info__item list__item">
+                Далее все необходимые действия осуществляют специалисты. Рассмотрения заявок проводится без проверки
+                кредитной истории. Поэтому вся процедура занимает менее получаса.
+              </li>
+              <li class="info__text info__item list__item">
+                В случае отсутствия времени онлайн, можно связаться со специалистом по телефонам, указанным на сайте.
+              </li>
+            </ul>
+            <h3 class="info__heading">Преимущества срочных займов на киви кошелек</h3>
+            <ul class="info__list list">
+              <li class="info__text info__item list__item">
+                Доступ в личный кабинет, в котором отображаются самые лучшие доступные предложения.
+              </li>
+              <li class="info__text info__item list__item">
+                Документы, подтверждающие погашение займа, что позволяет улучшить кредитную историю.
+              </li>
+              <li class="info__text info__item list__item">
+                Высокую вероятность одобрения без отказа.
+              </li>
+              <li class="info__text info__item list__item">
+                Различные способы погашения, в том числе электронными деньгами и со счета мобильного телефона.
+              </li>
+              <li class="info__text info__item list__item">
+                Различные способы погашения, в том числе электронными деньгами и со счета мобильного телефона.
+              </li>
+            </ul>
+          </section>
         </div>
-      </section>
-      <section class="info">
-        <h2 class="info__heading">
-          Преимущества онлайн займа на киви
-        </h2>
-        <p class="info__text">
-         Электронная коммерция значительно расширяет наши возможности, позволяя проводить расчеты, оплачивать товары по всему миру мгновенно и без комиссий. Но когда денег не хватает, классический банковский кредит для этих целей не подходит.
-        </p>
-        <p class="info__text">
-         Получить банковский кредит на любую электронную платежную систему невозможно. Сроки рассмотрения до двух недель значительно сокращают возможность участия в скидках и акциях +проверка кредитной истории, на основании которой банк имеет право отказать в выдаче средств без объяснения причины. Отличная альтернатива классическому потребительскому кредиту онлайн займ. С помощью нашей компании вы сможете без особых усилий оформить займ на киви без привязки карты. Для того чтобы взять займ на киви кошелек срочно, нет необходимости даже быть клиентом банка. Достаточно иметь мобильный телефон, кошелек в системе qiwi и вы гарантированно получите займ на киви без отказа.
-        </p>
-        <h3 class="info__heading">
-         Описание услуги онлайн займ на киви
-        </h3>
-        <p class="info__text">
-         Получить деньги в долг на электронный счет в системе qiwi можно двумя способами:
-        </p>
-        <ul class="info__list list">
-          <li class="info__text info__item list__item">
-            онлайн;
-          </li>
-          <li class="info__text info__item list__item">
-            оставив заявку на кредит в выбранной организации.
-          </li>
-        </ul>
-        <p class="info__text">
-          Взять займ на киви кошелек срочно можно с мобильного телефона, стационарного компьютера или ноутбука с выходом в интернет. Услуга предоставляется физическим лицам, достигшим 18-летнего возраста. Деньги на счет в платежной системе после подтверждения предоставляются с услугой займ на киви:
-        </p>
-        <ul class="info__list list">
-          <li class="info__text info__item list__item">
-            мгновенно;
-          </li>
-          <li class="info__text info__item list__item">
-            без комиссии;
-          </li>
-          <li class="info__text info__item list__item">
-            гарантированно без отказа.
-          </li>
-        </ul>
-        <p class="info__text">
-          Вся процедура занимает не более 20 минут. Подтверждение телефона и перечисление денежных средств происходит в пределах пяти минут.
-        </p>
-        <h3 class="info__heading">
-          Достоинства займа на киви кошелек
-        </h3>
-        <p class="info__text">
-          К достоинствам займа на киви кошелек можно отнести:
-        </p>
-        <ul class="info__list list">
-          <li class="info__text info__item list__item">
-          Простая и удобная операция оформления заявки и получения денег. Пройти всю процедуру можно дома с комфортом при помощи цифрового средства связи. Для прохождения требуется минимальное количество документов. Займ на qiwi кошелек – это отличный вид срочного займа.
-          </li>
-          <li class="info__text info__item list__item">
-          Скорость получения денег. Нет необходимости простаивать в очередях, собирать документы для оформления заявки. Деньги на счет зачисляются практически мгновенно.
-          </li>
-          <li class="info__text info__item list__item">
-          Удобная форма расчетов. Погасить займ или оплатить платежи по кредиту можно в личном кабинете понравившейся МФО любым удобным способом, в том числе средствами электронной коммерции или со счета мобильного телефо
-          </li>
-           <li class="info__text info__item list__item">
-           Безналичная форма получения денег. Нет необходимости в снятии или в дополнительных переводах с комиссией.
-          </li>
-           <li class="info__text info__item list__item">
-          Отсутствие проверок кредитной истории. Это позволяет получить кредит любому гражданину РФ, достигшему 18-летнего возраста.
-          </li>
-        </ul>
-        <h3 class="info__heading">Как быстро получить займ на qiwi кошелек без отказа?</h3>
-        <p class="info__text">
-          Чтобы быстро получить займ на qiwi без отказа нужно всего лишь оформить заявку. Для этого потребуется телефон, счет qiwi и паспорт. Операция осуществляется в несколько этапов:
-        </p>
-        <ul class="info__list list">
-          <li class="info__text info__item list__item">
-            Через форму на сайте подходящей микроорганизацции необходимо зарегистрировать личный кабинет.
-          </li>
-          <li class="info__text info__item list__item">
-           Заполнить анкету заемщика. По желанию потребителя можно просто оставить заявку на кредит вместе с заполненной анкетой заемщика и наши специалисты свяжутся с вами.
-          </li>
-          <li class="info__text info__item list__item">
-           Задать параметры кредита или выбрать кредитное предложение самостоятельно в личном кабинете.
-          </li>
-          <li class="info__text info__item list__item">
-          Приложить в удобной форме копии документов.
-          </li>
-          <li class="info__text info__item list__item">
-          Далее все необходимые действия осуществляют специалисты. Рассмотрения заявок проводится без проверки кредитной истории. Поэтому вся процедура занимает менее получаса.
-          </li>
-          <li class="info__text info__item list__item">
-            В случае отсутствия времени онлайн, можно связаться со специалистом по телефонам, указанным на сайте.
-          </li>
-        </ul>
-        <h3 class="info__heading">Преимущества срочных займов на киви кошелек</h3>
-        <ul class="info__list list">
-          <li class="info__text info__item list__item">
-           Доступ в личный кабинет, в котором отображаются самые лучшие доступные предложения.
-          </li>
-          <li class="info__text info__item list__item">
-          Документы, подтверждающие погашение займа, что позволяет улучшить кредитную историю.
-          </li>
-          <li class="info__text info__item list__item">
-            Высокую вероятность одобрения без отказа.
-          </li>
-          <li class="info__text info__item list__item">
-           Различные способы погашения, в том числе электронными деньгами и со счета мобильного телефона.
-          </li>
-          <li class="info__text info__item list__item">
-          Различные способы погашения, в том числе электронными деньгами и со счета мобильного телефона.
-          </li>
-        </ul>
-      </section>
-    </div>
-    {{> aside}}
-  </div>
-</main>
-{{/content}}
+        {{> aside}}
+      </div>
+    </main>
+  {{/content}}
 
-{{#content "footer"}}
-{{> footer}}
-{{/content}}
+  {{#content "footer"}}
+    {{> footer}}
+  {{/content}}
 
 {{/extend}}

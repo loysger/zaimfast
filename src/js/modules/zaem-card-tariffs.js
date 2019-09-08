@@ -1,7 +1,7 @@
 const BLOCK = {
   class: 'zaem-card',
   toggleClass: 'zaem-card_tariffs_closed'
-}
+};
 
 const BUTTON = {
   class: 'zaem-card__tariffs-more',
@@ -9,7 +9,7 @@ const BUTTON = {
     default: 'Еще тарифы',
     alt: 'Свернуть'
   }
-}
+};
 
 const tuggleButtonText = (button) => {
   if (button.textContent === BUTTON.text.default) {
@@ -17,7 +17,7 @@ const tuggleButtonText = (button) => {
   } else {
     button.textContent = BUTTON.text.default;
   }
-}
+};
 
 export default class ZaemCardTariffs {
   static init() {
@@ -25,10 +25,12 @@ export default class ZaemCardTariffs {
 
     body.addEventListener('click', (evt) => {
       if (evt.target.classList.contains(BUTTON.class)) {
-        document.querySelector(`.${BLOCK.class}`).classList.toggle(BLOCK.toggleClass);
+        document
+          .querySelector(`.${BLOCK.class}`)
+          .classList.toggle(BLOCK.toggleClass);
 
         tuggleButtonText(evt.target);
       }
-    })
+    });
   }
 }

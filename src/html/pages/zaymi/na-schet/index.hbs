@@ -1,16 +1,16 @@
 {{#extend "common-page"}}
 
-{{#content "header"}}
-{{> head title="Займы на банковский счет — самые выгодные условия получения денег"description="Займы на банковский счет онлайн оформляются мгновенно. Плохая кредитная история, наличие иждивенцев, отсутствие работы — не повод для отказа в займе. Ознакомьтесь со списком самых лояльных и надежных МФО."}}
-{{/content}}
+  {{#content "header"}}
+    {{> head title="Займы на банковский счет — самые выгодные условия получения денег"description="Займы на банковский счет онлайн оформляются мгновенно. Плохая кредитная история, наличие иждивенцев, отсутствие работы — не повод для отказа в займе. Ознакомьтесь со списком самых лояльных и надежных МФО."}}
+  {{/content}}
 
 
-{{#content "content"}}
-{{> page-header}}
-<main class="page-content page-content_zaymi page-content_aside">
-  <div class="page-content__wrap">
-    <div class="page-wrap">
-      {{!-- <section class="filters" style="display: none;">
+  {{#content "content"}}
+    {{> page-header}}
+    <main class="page-content page-content_zaymi page-content_aside">
+      <div class="page-content__wrap">
+        <div class="page-wrap">
+          {{!-- <section class="filters" style="display: none;">
         <h2 class="hidden">Подобрать условия</h2>
         <fieldset class="filters__fieldset">
           <legend class="filters__name">
@@ -47,141 +47,164 @@
           </div>
         </fieldset>
       </section> --}}
-      <section class="offers">
-        <div class="offers__container">
-          <h1 class="offers__h1 heading-1">Займы на банковский счет</h1>
-          <p class="offers__caption">
-            Микрофинансовые организации при выдаче займов переводят средства заемщикам разными способами. Один из распространенных вариантов - займ на банковский счет. Он привлекает многих людей удобством и оперативностью выполнения операций со средствами. Благодаря этому получить необходимую сумму можно в короткие временные сроки, не сталкиваясь с разными хлопотами. Это выгодно отличает займ в МФО от кредита в банке.
-          </p>
-          <ul class="offers__list">
-            {{#each mfo}}
-            {{#if (itHas this.filter-tags "na-schet")}}
-              <li class="offers__item offer-card offer-card_pb_none">
-                <div class="offer-card__top">
-                  <div class="offer-card__img">
-                    <a class="offer-card__img-link" href="{{this.innerLink}}">
-                      <img class="offer-card__img-tag" src="{{this.img}}" alt="{{this.name}}" title="{{this.name}}" />
-                    </a>
-                  </div>
-                </div>
-                <div class="offer-card__contain">
-                  <p class="offer-card__prop">
-                    <span class="offer-card__prop-text">от {{this.rateFrom}} - до {{this.rateTo}}%</span>
-                    <span class="offer-card__prop-name">Ставка в день</span>
-                  </p>
-                  <p class="offer-card__prop">
-                    <span class="offer-card__prop-text"> от {{this.summFrom}} - до {{this.summTo}}₽</span>
-                    <span class="offer-card__prop-name">Сумма</span>
-                  </p>
-                  <p class="offer-card__prop">
-                    <span class="offer-card__prop-text">от {{this.limitFrom}} - до {{this.limitTo}} дней</span>
-                    <span class="offer-card__prop-name">Срок</span>
-                  </p>
-                </div>
-                <div class="offer-card__about-wrapper">
-                  <button class="offer-card__about-more" title="Подробнее"></button>
-                  <ul class="offer-card__about offer-card__about_closed">
-                    {{#each this.aboutShort}}
-                    <li class="offer-card__about-item">{{this}}</li>
-                    {{/each}}
-                    <li class="offer-card__about-mobile-btn">
-                      <a class="offer-card__go offer-card__go_type_mobile button" href="{{this.link}}">Перейти</a>
+          <section class="offers">
+            <div class="offers__container">
+              <h1 class="offers__h1 heading-1">Займы на банковский счет</h1>
+              <p class="offers__caption">
+                Микрофинансовые организации при выдаче займов переводят средства заемщикам разными способами. Один из
+                распространенных вариантов - займ на банковский счет. Он привлекает многих людей удобством и
+                оперативностью выполнения операций со средствами. Благодаря этому получить необходимую сумму можно в
+                короткие временные сроки, не сталкиваясь с разными хлопотами. Это выгодно отличает займ в МФО от кредита
+                в банке.
+              </p>
+              <ul class="offers__list">
+                {{#each mfo}}
+                  {{#if (itHas this.filter-tags "na-schet")}}
+                    <li class="offers__item offer-card offer-card_pb_none">
+                      <div class="offer-card__top">
+                        <div class="offer-card__img">
+                          <a class="offer-card__img-link" href="{{this.innerLink}}">
+                            <img class="offer-card__img-tag" src="{{this.img}}" alt="{{this.name}}"
+                              title="{{this.name}}" />
+                          </a>
+                        </div>
+                      </div>
+                      <div class="offer-card__contain">
+                        <p class="offer-card__prop">
+                          <span class="offer-card__prop-text">от {{this.rateFrom}} - до {{this.rateTo}}%</span>
+                          <span class="offer-card__prop-name">Ставка в день</span>
+                        </p>
+                        <p class="offer-card__prop">
+                          <span class="offer-card__prop-text"> от {{this.summFrom}} - до {{this.summTo}}₽</span>
+                          <span class="offer-card__prop-name">Сумма</span>
+                        </p>
+                        <p class="offer-card__prop">
+                          <span class="offer-card__prop-text">от {{this.limitFrom}} - до {{this.limitTo}} дней</span>
+                          <span class="offer-card__prop-name">Срок</span>
+                        </p>
+                      </div>
+                      <div class="offer-card__about-wrapper">
+                        <button class="offer-card__about-more" title="Подробнее"></button>
+                        <ul class="offer-card__about offer-card__about_closed">
+                          {{#each this.aboutShort}}
+                            <li class="offer-card__about-item">{{this}}</li>
+                          {{/each}}
+                          <li class="offer-card__about-mobile-btn">
+                            <a class="offer-card__go offer-card__go_type_mobile button" href="{{this.link}}">Перейти</a>
+                          </li>
+                        </ul>
+                      </div>
+                      <a class="offer-card__go offer-card__go_type_desktop button" href="{{this.link}}">Перейти</a>
                     </li>
-                  </ul>
-                </div>
-                <a class="offer-card__go offer-card__go_type_desktop button" href="{{this.link}}">Перейти</a>
+                  {{/if}}
+                {{/each}}
+              </ul>
+            </div>
+          </section>
+          <section class="info">
+            <h2 class="info__heading">
+              Получение средств на счет в банке
+            </h2>
+            <p class="info__text">
+              Сегодня все большее количество людей обращаются в МФО, когда им нужно быстро найти деньги на разные нужды.
+              Займы на банковский счет онлайн становятся все более популярными за счет своих преимуществ:
+            </p>
+            <ul class="info__list list">
+              <li class="info__text info__item list__item">
+                невысокие требования к заемщикам;
               </li>
-            {{/if}}
-            {{/each}}
-          </ul>
+              <li class="info__text info__item list__item">
+                небольшое количество документов;
+              </li>
+              <li class="info__text info__item list__item">
+                возможность оформления через интернет онлайн на сайте без посещения отделений;
+              </li>
+              <li class="info__text info__item list__item">
+                простота получения средств;
+              </li>
+              <li class="info__text info__item list__item">
+                привлекательные условия.
+              </li>
+            </ul>
+            <p class="info__text">
+              Даже при плохой кредитной истории клиенты успешно получают займы, поскольку в микрофинансовых организациях
+              очень лояльно относятся к клиентам.
+            </p>
+            <p class="info__text">
+              Круглосуточные займы на банковский счет выручают в разных жизненных ситуациях. Часто они оформляются при
+              задержке выплаты зарплаты, если требуется совершить покупки, ремонт, отправиться в путешествие, сделать
+              ремонт. И это далеко не полный перечень ситуаций, в которых выгодно получить займы в МФО. В каждом случае
+              клиентов привлекает легкость оформления.
+            </p>
+            <h3 class="info__heading">
+              Оформление онлайн – это быстро и удобно
+            </h3>
+            <p class="info__text">
+              Деятельность микрофинансовых организаций продолжает стремительно развиваться. Сегодня в данном направлении
+              подключаются современные технологии. В основе работы лежит использование интернета. Благодаря глобальной
+              сети появилась возможность намного быстрее выдавать срочные займы на банковский счет. Все необходимые
+              действия осуществляются удаленно. Отпадает надобность посещать отделения компании, ожидать в очередях.
+            </p>
+            <p class="info__text">
+              Простая и понятная технология оформления займа онлайн сводит все усилия клиентов к минимуму. Им
+              потребуется только:
+            </p>
+            <ul class="info__list list">
+              <li class="info__text info__item list__item">
+                зайти на сайт МФО, ознакомиться с предлагаемыми условиями, подобрать оптимальные параметры займа;
+              </li>
+              <li class="info__text info__item list__item">
+                заполнить заявку, правильно указав свои контактные данные, реквизиты и другую информацию;
+              </li>
+              <li class="info__text info__item list__item">
+                дождаться ответа по заявке. Рассмотрение, как правило, занимает всего несколько минут;
+              </li>
+              <li class="info__text info__item list__item">
+                получить средства после оперативного перевода на счет.
+              </li>
+            </ul>
+            <p class="info__text">
+              В случае положительного ответа по заявке на получение займа на банковский счет требуемая денежная сумма
+              оказывается у заемщика достаточно быстро. Это позволяет ему использовать деньги, решая свои временные
+              материальные трудности. После этого клиенту предстоит своевременно погасить задолженность с учетом
+              оговоренных процентных ставок.
+            </p>
+            <h3 class="info__heading">Условия займов</h3>
+            <p class="info__text">
+              Сервис, освещающий деятельность разных МФО, станет верным помощником в выборе наиболее подходящего займа.
+              Он должен устраивать всеми условиями, чтобы при получении средств и последующем погашении задолженности не
+              возникло проблем:
+            </p>
+            <ul class="info__list list">
+              <li class="info__text info__item list__item">
+                Первоначально стоит обратить внимание на максимально возможную сумму, которую предлагается получить.
+              </li>
+              <li class="info__text info__item list__item">
+                В займах отличается их продолжительность. Чаще всего она составляет от нескольких дней до месяца, но
+                данные цифры могут и отличаться.
+              </li>
+              <li class="info__text info__item list__item">
+                Стоимость временного пользования средствами зависит от процентной ставки. Она составляет около одного
+                процента в день, но каждая МФО предлагает свои условия клиентам.
+              </li>
+              <li class="info__text info__item list__item">
+                К дополнительным условиям стоит отнести требования к заемщикам, необходимые документы, технологию
+                оформления, продолжительность рассмотрения заявки.
+              </li>
+            </ul>
+            <p class="info__text">
+              Сравнивая разные программы в МФО, можно выбрать наиболее выгодный займ. Далее останется только подать
+              заявку на сайте и дождаться положительного ответа, чтобы получить средства.
+            </p>
+          </section>
         </div>
-      </section>
-      <section class="info">
-        <h2 class="info__heading">
-          Получение средств на счет в банке
-        </h2>
-        <p class="info__text">
-          Сегодня все большее количество людей обращаются в МФО, когда им нужно быстро найти деньги на разные нужды. Займы на банковский счет онлайн становятся все более популярными за счет своих преимуществ:
-        </p>
-        <ul class="info__list list">
-          <li class="info__text info__item list__item">
-           невысокие требования к заемщикам;
-          </li>
-          <li class="info__text info__item list__item">
-           небольшое количество документов;
-          </li>
-          <li class="info__text info__item list__item">
-           возможность оформления через интернет онлайн на сайте без посещения отделений;
-          </li>
-          <li class="info__text info__item list__item">
-           простота получения средств;
-          </li>
-          <li class="info__text info__item list__item">
-           привлекательные условия.
-          </li>
-        </ul>
-        <p class="info__text">
-          Даже при плохой кредитной истории клиенты успешно получают займы, поскольку в микрофинансовых организациях очень лояльно относятся к клиентам.
-        </p>
-        <p class="info__text">
-          Круглосуточные займы на банковский счет выручают в разных жизненных ситуациях. Часто они оформляются при задержке выплаты зарплаты, если требуется совершить покупки, ремонт, отправиться в путешествие, сделать ремонт. И это далеко не полный перечень ситуаций, в которых выгодно получить займы в МФО. В каждом случае клиентов привлекает легкость оформления.
-        </p>
-        <h3 class="info__heading">
-          Оформление онлайн – это быстро и удобно
-        </h3>
-        <p class="info__text">
-          Деятельность микрофинансовых организаций продолжает стремительно развиваться. Сегодня в данном направлении подключаются современные технологии. В основе работы лежит использование интернета. Благодаря глобальной сети появилась возможность намного быстрее выдавать срочные займы на банковский счет. Все необходимые действия осуществляются удаленно. Отпадает надобность посещать отделения компании, ожидать в очередях.
-        </p>
-        <p class="info__text">
-          Простая и понятная технология оформления займа онлайн сводит все усилия клиентов к минимуму. Им потребуется только:
-        </p>
-        <ul class="info__list list">
-          <li class="info__text info__item list__item">
-          зайти на сайт МФО, ознакомиться с предлагаемыми условиями, подобрать оптимальные параметры займа;
-          </li>
-          <li class="info__text info__item list__item">
-          заполнить заявку, правильно указав свои контактные данные, реквизиты и другую информацию;
-          </li>
-          <li class="info__text info__item list__item">
-          дождаться ответа по заявке. Рассмотрение, как правило, занимает всего несколько минут;
-          </li>
-          <li class="info__text info__item list__item">
-          получить средства после оперативного перевода на счет.
-          </li>
-        </ul>
-        <p class="info__text">
-         В случае положительного ответа по заявке на получение займа на банковский счет требуемая денежная сумма оказывается у заемщика достаточно быстро. Это позволяет ему использовать деньги, решая свои временные материальные трудности. После этого клиенту предстоит своевременно погасить задолженность с учетом оговоренных процентных ставок.
-        </p>
-        <h3 class="info__heading">Условия займов</h3>
-        <p class="info__text">
-          Сервис, освещающий деятельность разных МФО, станет верным помощником в выборе наиболее подходящего займа. Он должен устраивать всеми условиями, чтобы при получении средств и последующем погашении задолженности не возникло проблем:
-        </p>
-        <ul class="info__list list">
-          <li class="info__text info__item list__item">
-          Первоначально стоит обратить внимание на максимально возможную сумму, которую предлагается получить.
-          </li>
-          <li class="info__text info__item list__item">
-          В займах отличается их продолжительность. Чаще всего она составляет от нескольких дней до месяца, но данные цифры могут и отличаться.
-          </li>
-          <li class="info__text info__item list__item">
-          Стоимость временного пользования средствами зависит от процентной ставки. Она составляет около одного процента в день, но каждая МФО предлагает свои условия клиентам.
-          </li>
-          <li class="info__text info__item list__item">
-          К дополнительным условиям стоит отнести требования к заемщикам, необходимые документы, технологию оформления, продолжительность рассмотрения заявки.
-          </li>
-        </ul>
-        <p class="info__text">
-          Сравнивая разные программы в МФО, можно выбрать наиболее выгодный займ. Далее останется только подать заявку на сайте и дождаться положительного ответа, чтобы получить средства.
-        </p>
-      </section>
-    </div>
-    {{> aside}}
-  </div>
-</main>
-{{/content}}
+        {{> aside}}
+      </div>
+    </main>
+  {{/content}}
 
-{{#content "footer"}}
-{{> footer}}
-{{/content}}
+  {{#content "footer"}}
+    {{> footer}}
+  {{/content}}
 
 {{/extend}}

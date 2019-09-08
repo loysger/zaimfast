@@ -1,16 +1,16 @@
 {{#extend "common-page"}}
 
-{{#content "header"}}
-{{> head title="Займы через Госуслуги – деньги в долг для решения ваших финансовых проблем"description="Займы через Госуслуги станут единственным выходом, когда отказывают банки, а знакомые и родственники не в силах вам помочь. МФО с займами через Госуслуги не берут высокие проценты и мгновенно дают деньги в долг без отказа."}}
-{{/content}}
+  {{#content "header"}}
+    {{> head title="Займы через Госуслуги – деньги в долг для решения ваших финансовых проблем"description="Займы через Госуслуги станут единственным выходом, когда отказывают банки, а знакомые и родственники не в силах вам помочь. МФО с займами через Госуслуги не берут высокие проценты и мгновенно дают деньги в долг без отказа."}}
+  {{/content}}
 
 
-{{#content "content"}}
-{{> page-header}}
-<main class="page-content page-content_zaymi page-content_aside">
-  <div class="page-content__wrap">
-    <div class="page-wrap">
-      {{!-- <section class="filters" style="display: none;">
+  {{#content "content"}}
+    {{> page-header}}
+    <main class="page-content page-content_zaymi page-content_aside">
+      <div class="page-content__wrap">
+        <div class="page-wrap">
+          {{!-- <section class="filters" style="display: none;">
         <h2 class="hidden">Подобрать условия</h2>
         <fieldset class="filters__fieldset">
           <legend class="filters__name">
@@ -47,153 +47,176 @@
           </div>
         </fieldset>
       </section> --}}
-      <section class="offers">
-        <div class="offers__container">
-          <h1 class="offers__h1 heading-1">Займы через Госуслуги</h1>
-          <p class="offers__caption">
-           Многие МФО предлагают займ через Госуслуги. Благодаря такой функции максимально облегчается процесс одобрения. Клиент избавляется от заполнения лишней информации, повышается вероятность одобрения! Выбирайте подходящие условия и оформляйте займ круглосуточно.
-          </p>
-          <ul class="offers__list">
-            {{#each mfo}}
-            {{#if (itHas this.filter-tags "gosuslugi")}}
-              <li class="offers__item offer-card offer-card_pb_none">
-                <div class="offer-card__top">
-                  <div class="offer-card__img">
-                    <a class="offer-card__img-link" href="{{this.innerLink}}">
-                      <img class="offer-card__img-tag" src="{{this.img}}" alt="{{this.name}}" title="{{this.name}}" />
-                    </a>
-                  </div>
-                </div>
-                <div class="offer-card__contain">
-                  <p class="offer-card__prop">
-                    <span class="offer-card__prop-text">от {{this.rateFrom}} - до {{this.rateTo}}%</span>
-                    <span class="offer-card__prop-name">Ставка в день</span>
-                  </p>
-                  <p class="offer-card__prop">
-                    <span class="offer-card__prop-text"> от {{this.summFrom}} - до {{this.summTo}}₽</span>
-                    <span class="offer-card__prop-name">Сумма</span>
-                  </p>
-                  <p class="offer-card__prop">
-                    <span class="offer-card__prop-text">от {{this.limitFrom}} - до {{this.limitTo}} дней</span>
-                    <span class="offer-card__prop-name">Срок</span>
-                  </p>
-                </div>
-                <div class="offer-card__about-wrapper">
-                  <button class="offer-card__about-more" title="Подробнее"></button>
-                  <ul class="offer-card__about offer-card__about_closed">
-                    {{#each this.aboutShort}}
-                    <li class="offer-card__about-item">{{this}}</li>
-                    {{/each}}
-                    <li class="offer-card__about-mobile-btn">
-                      <a class="offer-card__go offer-card__go_type_mobile button" href="{{this.link}}">Перейти</a>
+          <section class="offers">
+            <div class="offers__container">
+              <h1 class="offers__h1 heading-1">Займы через Госуслуги</h1>
+              <p class="offers__caption">
+                Многие МФО предлагают займ через Госуслуги. Благодаря такой функции максимально облегчается процесс
+                одобрения. Клиент избавляется от заполнения лишней информации, повышается вероятность одобрения!
+                Выбирайте подходящие условия и оформляйте займ круглосуточно.
+              </p>
+              <ul class="offers__list">
+                {{#each mfo}}
+                  {{#if (itHas this.filter-tags "gosuslugi")}}
+                    <li class="offers__item offer-card offer-card_pb_none">
+                      <div class="offer-card__top">
+                        <div class="offer-card__img">
+                          <a class="offer-card__img-link" href="{{this.innerLink}}">
+                            <img class="offer-card__img-tag" src="{{this.img}}" alt="{{this.name}}"
+                              title="{{this.name}}" />
+                          </a>
+                        </div>
+                      </div>
+                      <div class="offer-card__contain">
+                        <p class="offer-card__prop">
+                          <span class="offer-card__prop-text">от {{this.rateFrom}} - до {{this.rateTo}}%</span>
+                          <span class="offer-card__prop-name">Ставка в день</span>
+                        </p>
+                        <p class="offer-card__prop">
+                          <span class="offer-card__prop-text"> от {{this.summFrom}} - до {{this.summTo}}₽</span>
+                          <span class="offer-card__prop-name">Сумма</span>
+                        </p>
+                        <p class="offer-card__prop">
+                          <span class="offer-card__prop-text">от {{this.limitFrom}} - до {{this.limitTo}} дней</span>
+                          <span class="offer-card__prop-name">Срок</span>
+                        </p>
+                      </div>
+                      <div class="offer-card__about-wrapper">
+                        <button class="offer-card__about-more" title="Подробнее"></button>
+                        <ul class="offer-card__about offer-card__about_closed">
+                          {{#each this.aboutShort}}
+                            <li class="offer-card__about-item">{{this}}</li>
+                          {{/each}}
+                          <li class="offer-card__about-mobile-btn">
+                            <a class="offer-card__go offer-card__go_type_mobile button" href="{{this.link}}">Перейти</a>
+                          </li>
+                        </ul>
+                      </div>
+                      <a class="offer-card__go offer-card__go_type_desktop button" href="{{this.link}}">Перейти</a>
                     </li>
-                  </ul>
-                </div>
-                <a class="offer-card__go offer-card__go_type_desktop button" href="{{this.link}}">Перейти</a>
+                  {{/if}}
+                {{/each}}
+              </ul>
+            </div>
+          </section>
+          <section class="info">
+            <h2 class="info__heading">
+              Условия предоставления займов через госуслуги финансовыми организациями
+            </h2>
+            <p class="info__text">
+              Займы стали популярным и удобным средством получения необходимой суммы средств в кратчайшие сроки.
+              Кредитные продукты первыми стали предлагать банки, сегодня данная сфера банковского сектора очень развита,
+              имеет хорошо отработанную систему проверки будущего клиента, и четко отлаженную схему работы. Вслед за
+              банками появились и микрофинансовые структуры, также предоставляющие деньги под проценты на определенный
+              срок. Однако в их работе есть ряд существенных отличий от банковских продуктов.
+            </p>
+            <p class="info__text">
+              Главными условиями, на которых МФО заимствуют деньги, являются:
+            </p>
+            <ul class="info__list list">
+              <li class="info__text info__item list__item">
+                Короткий период займа;
               </li>
-            {{/if}}
-            {{/each}}
-          </ul>
+              <li class="info__text info__item list__item">
+                Небольшие суммы, предлагаемые потребителям;
+              </li>
+              <li class="info__text info__item list__item">
+                Довольно большие проценты, насчитывающиеся за каждый день кредитования;
+              </li>
+              <li class="info__text info__item list__item">
+                Быстрое одобрение заявки;
+              </li>
+              <li class="info__text info__item list__item">
+                Заключение договора без посещения клиентом офиса.
+              </li>
+            </ul>
+            <h3 class="info__heading">Займ через госуслуги как способ получения средств</h3>
+            <p class="info__text">
+              Действительно, для того, чтобы взять кредит в такой структуре, достаточно просто подобрать фирму, и
+              продукт, подходящий потребителю по условиям. Затем нужно перейти на официальный сайт компании и оформить
+              заявку. В ходе заполнения заявки, следует еще раз внимательно ознакомиться с условиями предлагаемого
+              кредитного продукта, ввести сумму и срок выплат. Также требуется указать, как именно способом деньги будут
+              доставлены клиенту.
+            </p>
+            <p class="info__text">
+              Нынешние условия предполагают несколько вариантов: начиная от банковского счета заемщика, заканчивая
+              переводами через платежные системы. Однако есть и более доступный и простой вариант получения средств
+              кредита – взять займ через госуслуги.
+            </p>
+            <h3 class="info__heading">Особенности оформления займа</h3>
+            <p class="info__text">
+              Для получения займа на карту через Госуслуги, необходимо сначала пройти регистрацию в системе. Вначале
+              нужно перейти на сайт, заполнить и отправить на проверку специальную анкету. После того, как проверка
+              подходит к концу, пользователю следует авторизоваться, сделать это можно через многофункциональный центр,
+              почту или иным способом.
+            </p>
+            <h3 class="info__heading">Этапы получения займа через Госуслуги</h3>
+            <p class="info__text">
+              Любому, кто желает получить кредитные средства, следует выполнить следующий алгоритм действий:
+            </p>
+            <ul class="info__list list">
+              <li class="info__text info__item list__item">
+                Зайти на сайт организации, в которой предпочтительно оформить займ на карту через госуслуги;
+              </li>
+              <li class="info__text info__item list__item">
+                Выбрать кнопку «Войти через госуслуги»;
+              </li>
+              <li class="info__text info__item list__item">
+                Заполнить заявку в коротком варианте без предоставления паспортных данных;
+              </li>
+              <li class="info__text info__item list__item">
+                Обязательно указать сумму кредита, его срок и то, каким образом произойдет зачисление средств. Это может
+                быть перевод на карту, виртуальный кошелек, выплата в отделениях банков и прочее;
+              </li>
+              <li class="info__text info__item list__item">
+                Отправить заявку на рассмотрение и ожидать ответа. СМС с одобрением приходит в течение 10 минут.
+              </li>
+            </ul>
+            <p class="info__text">
+              Использование займов госуслуги облегчает пользователю оформление заявки на кредит, исключает возможность
+              ошибки при заполнении данных. Микрофинансовые организации относятся к заемщикам, имеющим учетную запись на
+              портале, с большим доверием.
+            </p>
+            <h3 class="info__heading">Кто может взять займ через госуслуги?</h3>
+            <p class="info__text">
+              Оформить быстрый кредит через Интернет таким способом может клиент, полностью подходящий под ряд
+              требований:
+            </p>
+            <ul class="info__list list">
+              <li class="info__text info__item list__item">
+                Заемщик должен быть совершеннолетним. На момент оформления кредита возраст клиента должен быть меньше 75
+                лет;
+              </li>
+              <li class="info__text info__item list__item">
+                Обязательно наличие российского гражданства;
+              </li>
+              <li class="info__text info__item list__item">
+                Постоянный доход, с помощью которого клиент сможет закрыть долговые обязательства по кредиту;
+              </li>
+              <li class="info__text info__item list__item">
+                У заемщика должен иметься постоянный номер телефона и адрес электронной почты;
+              </li>
+              <li class="info__text info__item list__item">
+                Паспорт в наличии;
+              </li>
+              <li class="info__text info__item list__item">
+                Отсутствие долговых обязательств по другим кредитам. Сегодня это требование не столь важно, так как
+                часто МФО выдают деньги гражданам уже оформившим подобный займ.
+              </li>
+            </ul>
+            <p class="info__text">
+              Потребителям стоит помнить, что такой кредит МФО выдают, независимо от места постоянной регистрации
+              клиента.
+            </p>
+          </section>
         </div>
-      </section>
-      <section class="info">
-        <h2 class="info__heading">
-          Условия предоставления займов через госуслуги финансовыми организациями
-        </h2>
-        <p class="info__text">
-          Займы стали популярным и удобным средством получения необходимой суммы средств в кратчайшие сроки. Кредитные продукты первыми стали предлагать банки, сегодня данная сфера банковского сектора очень развита, имеет хорошо отработанную систему проверки будущего клиента, и четко отлаженную схему работы. Вслед за банками появились и микрофинансовые структуры, также предоставляющие деньги под проценты на определенный срок. Однако в их работе есть ряд существенных отличий от банковских продуктов.
-        </p>
-        <p class="info__text">
-          Главными условиями, на которых МФО заимствуют деньги, являются:
-        </p>
-        <ul class="info__list list">
-          <li class="info__text info__item list__item">
-           Короткий период займа;
-          </li>
-          <li class="info__text info__item list__item">
-           Небольшие суммы, предлагаемые потребителям;
-          </li>
-          <li class="info__text info__item list__item">
-           Довольно большие проценты, насчитывающиеся за каждый день кредитования;
-          </li>
-          <li class="info__text info__item list__item">
-           Быстрое одобрение заявки;
-          </li>
-          <li class="info__text info__item list__item">
-           Заключение договора без посещения клиентом офиса.
-          </li>
-        </ul>
-        <h3 class="info__heading">Займ через госуслуги как способ получения средств</h3>
-        <p class="info__text">
-         Действительно, для того, чтобы взять кредит в такой структуре, достаточно просто подобрать фирму, и продукт, подходящий потребителю по условиям. Затем нужно перейти на официальный сайт компании и оформить заявку. В ходе заполнения заявки, следует еще раз внимательно ознакомиться с условиями предлагаемого кредитного продукта, ввести сумму и срок выплат. Также требуется указать, как именно способом деньги будут доставлены клиенту.
-        </p>
-        <p class="info__text">
-         Нынешние условия предполагают несколько вариантов: начиная от банковского счета заемщика, заканчивая переводами через платежные системы. Однако есть и более доступный и простой вариант получения средств кредита – взять займ через госуслуги.
-        </p>
-        <h3 class="info__heading">Особенности оформления займа</h3>
-        <p class="info__text">
-         Для получения займа на карту через Госуслуги, необходимо сначала пройти регистрацию в системе. Вначале нужно перейти на сайт, заполнить и отправить на проверку специальную анкету. После того, как проверка подходит к концу, пользователю следует авторизоваться, сделать это можно через многофункциональный центр, почту или иным способом.
-        </p>
-        <h3 class="info__heading">Этапы получения займа через Госуслуги</h3>
-         <p class="info__text">
-         Любому, кто желает получить кредитные средства, следует выполнить следующий алгоритм действий:
-        </p>
-        <ul class="info__list list">
-          <li class="info__text info__item list__item">
-           Зайти на сайт организации, в которой предпочтительно оформить займ на карту через госуслуги;
-          </li>
-          <li class="info__text info__item list__item">
-           Выбрать кнопку «Войти через госуслуги»;
-          </li>
-          <li class="info__text info__item list__item">
-           Заполнить заявку в коротком варианте без предоставления паспортных данных;
-          </li>
-          <li class="info__text info__item list__item">
-           Обязательно указать сумму кредита, его срок и то, каким образом произойдет зачисление средств. Это может быть перевод на карту, виртуальный кошелек, выплата в отделениях банков и прочее;
-          </li>
-          <li class="info__text info__item list__item">
-           Отправить заявку на рассмотрение и ожидать ответа. СМС с одобрением приходит в течение 10 минут.
-          </li>
-        </ul>
-        <p class="info__text">
-         Использование займов госуслуги облегчает пользователю оформление заявки на кредит, исключает возможность ошибки при заполнении данных. Микрофинансовые организации относятся к заемщикам, имеющим учетную запись на портале, с большим доверием.
-        </p>
-        <h3 class="info__heading">Кто может взять займ через госуслуги?</h3>
-        <p class="info__text">
-         Оформить быстрый кредит через Интернет таким способом может клиент, полностью подходящий под ряд требований:
-        </p>
-        <ul class="info__list list">
-          <li class="info__text info__item list__item">
-          Заемщик должен быть совершеннолетним. На момент оформления кредита возраст клиента должен быть меньше 75 лет;
-          </li>
-          <li class="info__text info__item list__item">
-          Обязательно наличие российского гражданства;
-          </li>
-          <li class="info__text info__item list__item">
-          Постоянный доход, с помощью которого клиент сможет закрыть долговые обязательства по кредиту;
-          </li>
-          <li class="info__text info__item list__item">
-          У заемщика должен иметься постоянный номер телефона и адрес электронной почты;
-          </li>
-          <li class="info__text info__item list__item">
-          Паспорт в наличии;
-          </li>
-          <li class="info__text info__item list__item">
-          Отсутствие долговых обязательств по другим кредитам. Сегодня это требование не столь важно, так как часто МФО выдают деньги гражданам уже оформившим подобный займ.
-          </li>
-        </ul>
-        <p class="info__text">
-         Потребителям стоит помнить, что такой кредит МФО выдают, независимо от места постоянной регистрации клиента.
-        </p>
-      </section>
-    </div>
-    {{> aside}}
-  </div>
-</main>
-{{/content}}
+        {{> aside}}
+      </div>
+    </main>
+  {{/content}}
 
-{{#content "footer"}}
-{{> footer}}
-{{/content}}
+  {{#content "footer"}}
+    {{> footer}}
+  {{/content}}
 
 {{/extend}}

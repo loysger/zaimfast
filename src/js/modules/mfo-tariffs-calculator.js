@@ -43,11 +43,11 @@ class Tariff {
   }
 
   _updateOverhead() {
-    const summ = +this._summElem.textContent.replace(/\s/g,'');
+    const summ = +this._summElem.textContent.replace(/\s/g, '');
     const days = +this._daysElem.textContent;
     const rate = +this._data.rate;
 
-    const overHead = Math.round((summ / 100 * rate) * days);
+    const overHead = Math.round((summ / 100) * rate * days);
 
     this._overheadElem.textContent = overHead.toLocaleString();
   }

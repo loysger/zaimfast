@@ -51,7 +51,8 @@ export default class Calculator {
     if (!inRange(value, this._min, this._max)) {
       inputEvent.target.value = clamp(value, this._min, this._max);
     } else if (value % this._stepSize !== 0) {
-      inputEvent.target.value = value + (this._stepSize - (value % this._stepSize));
+      inputEvent.target.value =
+        value + (this._stepSize - (value % this._stepSize));
     }
 
     return +inputEvent.target.value;
