@@ -14,3 +14,4 @@ Thumbs.db
 
 # Exlude
 !.vscode/**/bookmarks.json
+!.vscode/**/settings.json
