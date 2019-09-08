@@ -932,9 +932,9 @@
     ],
     "tarify": [
       {
-        "name": "Основной",
+        "name": "Smart",
         "rate": "1",
-        "minsumm" : "3000",
+        "minsumm" : "2000",
         "maxsumm": "30000",
         "mindays": "5",
         "maxdays": "30"
@@ -1023,7 +1023,7 @@
       },
       {
         "name": "Минимальный",
-        "rate": "1",
+        "rate": "2",
         "minsumm" : "1000",
         "maxsumm": "10000",
         "mindays": "1",
@@ -1036,6 +1036,22 @@
         "maxsumm": "30000",
         "mindays": "1",
         "maxdays": "30"
+      },
+      {
+        "name": "Грейс 5",
+        "rate": "1",
+        "minsumm" : "1000",
+        "maxsumm": "15000",
+        "mindays": "1",
+        "maxdays": "30"
+      },
+      {
+        "name": "Беру Грейс 7",
+        "rate": "0.13",
+        "minsumm" : "1000",
+        "maxsumm": "50000",
+        "mindays": "60",
+        "maxdays": "180"
       }
     ],
     "filter-tags": [
@@ -1057,7 +1073,7 @@
     "rateFrom": "0.00",
     "rateTo": "1",
     "summFrom": "3 000",
-    "summTo": "15 000",
+    "summTo": "14 250",
     "limitFrom": "3",
     "limitTo": "29",
     "ratePerDay": "1.5",
@@ -1113,10 +1129,10 @@
     ],
     "tarify": [
       {
-        "name": "Основной",
-        "rate": "1",
+        "name": "Займ с единовременным погашением",
+        "rate": "0.75",
         "minsumm" : "3000",
-        "maxsumm": "15000",
+        "maxsumm": "14250",
         "mindays": "3",
         "maxdays": "29"
       }
@@ -1194,14 +1210,6 @@
     ],
     "tarify": [
       {
-        "name": "Основной",
-        "rate": "1",
-        "minsumm" : "3000",
-        "maxsumm": "100000",
-        "mindays": "3",
-        "maxdays": "336"
-      },
-      {
         "name": "До зарплаты",
         "rate": "1.13",
         "minsumm" : "3000",
@@ -1234,12 +1242,11 @@
     "link": "https://pxl.leads.su/click/1c54fee09969043263f0899be6317ee2",
     "linkName": "oneclickmoney.ru",
     "innerLink": "/mfo/oneclickmoney",
-    "rateFrom": "1.5",
-    "rateTo": "2.2",
+    "rateFrom": "1",
     "summFrom": "500",
     "summTo": "30 000",
     "limitFrom": "6",
-    "limitTo": "21",
+    "limitTo": "60",
     "ratePerDay": "1.5",
     "tel": "+7 (800) 700-06-07",
     "email": "info@migcredit.ru",
@@ -1289,6 +1296,16 @@
       "Наличие паспорта",
       "Мобильный телефон"
     ],
+    "tarify": [
+      {
+        "name": "OneClickMoney",
+        "rate": "1",
+        "minsumm" : "500",
+        "maxsumm": "30000",
+        "mindays": "6",
+        "maxdays": "60"
+      }
+    ],
     "filter-tags": [
       "qiwi", "online", "zaymy", "na-kartu", "contact", "korona", "sberbank", "gosuslugi"
     ],
@@ -1305,8 +1322,7 @@
     "link": "https://trkleads.ru/click/d9ffde18b4c4acdc18601f7efdad24b4",
     "linkName": "www.kredito24.ru",
     "innerLink": "/mfo/kredito24",
-    "rateFrom": "1.5",
-    "rateTo": "1.8",
+    "rateFrom": "1",
     "summFrom": "2 000",
     "summTo": "15 000",
     "limitFrom": "16",
@@ -1359,6 +1375,16 @@
       "Постоянный источник дохода",
       "Мобильный телефон"
     ],
+    "tarify": [
+      {
+        "name": "kredito24",
+        "rate": "1",
+        "minsumm" : "2000",
+        "maxsumm": "15000",
+        "mindays": "16",
+        "maxdays": "30"
+      }
+    ],
     "filter-tags": [
       "online", "zaymy", "na-schet", "sberbank"
     ],
@@ -1375,10 +1401,9 @@
     "link": "https://go.leadgid.ru/aff_c?offer_id=3465&aff_id=27131",
     "linkName": "www.onzaem.ru",
     "innerLink": "/mfo/onzaem",
-    "rateFrom": "1.2",
-    "rateTo": "1.8",
-    "summFrom": "2 000",
-    "summTo": "10 000",
+    "rateFrom": "1",
+    "summFrom": "3 500",
+    "summTo": "30 000",
     "limitFrom": "5",
     "limitTo": "30",
     "ratePerDay": "1.5",
@@ -1424,6 +1449,16 @@
       "Электронный ящик",
       "Постоянный источник дохода"
     ],
+    "tarify": [
+      {
+        "name": "Onzaem",
+        "rate": "1",
+        "minsumm" : "3500",
+        "maxsumm": "30000",
+        "mindays": "5",
+        "maxdays": "30"
+      }
+    ],
     "filter-tags": [
       "online", "zaymy", "na-kartu", "na-schet", "sberbank"
     ],
@@ -1441,10 +1476,10 @@
     "linkName": "web-zaim.ru",
     "innerLink": "/mfo/webzaim",
     "rateFrom": "0.6",
-    "rateTo": "1.5",
+    "rateTo": "1",
     "summFrom": "1 500",
     "summTo": "30 000",
-    "limitFrom": "5",
+    "limitFrom": "16",
     "limitTo": "30",
     "ratePerDay": "1.5",
     "tel": "8 (800) 770-08-19",
@@ -1494,6 +1529,24 @@
       "Для граждан с постоянной регистрацией на территории РФ",
       "Наличие паспорта"
     ],
+    "tarify": [
+      {
+        "name": "Старт!",
+        "rate": "1",
+        "minsumm" : "1500",
+        "maxsumm": "15000",
+        "mindays": "16",
+        "maxdays": "30"
+      },
+      {
+        "name": "Стандарт+",
+        "rate": "0.6",
+        "minsumm" : "15001",
+        "maxsumm": "30000",
+        "mindays": "16",
+        "maxdays": "30"
+      }
+    ],
     "filter-tags": [
       "online", "zaymy", "na-kartu", "na-schet", "sberbank"
     ],
@@ -1511,7 +1564,7 @@
     "linkName": "www.moneza.ru",
     "innerLink": "/mfo/moneza",
     "rateFrom": "0.0",
-    "rateTo": "1.5",
+    "rateTo": "1",
     "summFrom": "2 000",
     "summTo": "30 000",
     "limitFrom": "5",
@@ -1563,15 +1616,11 @@
     ],
     "tarify": [
       {
-        "name": "Первый беспроцентный",
-        "rate": "0.0",
-        "maxsumm": "15000",
-        "maxdays": "30"
-      },
-      {
-        "name": "Повторный займ",
-        "rate": "1.5",
+        "name": "Потребительский займ",
+        "rate": "1",
+        "minsumm" : "2000",
         "maxsumm": "30000",
+        "mindays": "5",
         "maxdays": "30"
       }
     ],
@@ -1642,6 +1691,16 @@
       "Для граждан с постоянной регистрацией на территории РФ",
       "Наличие паспорта"
     ],
+    "tarify": [
+      {
+        "name": "Микроклад",
+        "rate": "1",
+        "minsumm" : "1000",
+        "maxsumm": "30000",
+        "mindays": "7",
+        "maxdays": "30"
+      }
+    ],
     "filter-tags": [
       "online", "zaymy", "na-kartu", "sberbank"
     ],
@@ -1658,7 +1717,7 @@
     "link": "https://trkleads.ru/click/d0cfdd80c78531a71f105d73c8128dd8",
     "linkName": "online-zaim.ru",
     "innerLink": "/mfo/onlinezaim",
-    "rateFrom": "0.25",
+    "rateFrom": "1",
     "rateTo": "1.5",
     "summFrom": "1 000",
     "summTo": "30 000",
@@ -1713,26 +1772,26 @@
       {
         "name": "Минимум",
         "rate": "2",
+        "minsumm" : "1000",
         "maxsumm": "10000",
+        "mindays": "1",
         "maxdays": "30"
       },
       {
         "name": "Онлайн займ",
         "rate": "1.5",
+        "minsumm" : "1000",
         "maxsumm": "30000",
+        "mindays": "1",
         "maxdays": "30"
       },
         {
           "name": "Грейс 5",
           "rate": "1.5",
-          "maxsumm": "15000",
-          "maxdays": "30"
-        },
-        {
-          "name": "Беру грейс 7",
-          "rate": "0.16",
-          "maxsumm": "50000",
-          "maxdays": "180"
+          "minsumm" : "1000",
+        "maxsumm": "15000",
+        "mindays": "1",
+        "maxdays": "30"
         }
     ],
     "filter-tags": [
@@ -1751,7 +1810,7 @@
     "link": "https://pxl.leads.su/click/88b9a3ff6465aa2ba9b335368492c274",
     "linkName": "womoney.ru",
     "innerLink": "/mfo/womoney",
-    "rateFrom": "0.25",
+    "rateFrom": "1",
     "rateTo": "1.5",
     "summFrom": "1 000",
     "summTo": "30 000",
@@ -1806,26 +1865,26 @@
       {
         "name": "Минимум",
         "rate": "2",
+        "minsumm" : "1000",
         "maxsumm": "10000",
+        "mindays": "1",
         "maxdays": "30"
       },
       {
         "name": "Онлайн займ",
         "rate": "1.5",
+        "minsumm" : "1000",
         "maxsumm": "30000",
+        "mindays": "1",
         "maxdays": "30"
       },
         {
           "name": "Грейс 5",
           "rate": "1.5",
-          "maxsumm": "15000",
-          "maxdays": "30"
-        },
-        {
-          "name": "Беру грейс 7",
-          "rate": "0.16",
-          "maxsumm": "50000",
-          "maxdays": "180"
+          "minsumm" : "1000",
+        "maxsumm": "15000",
+        "mindays": "1",
+        "maxdays": "30"
         }
     ],
     "filter-tags": [
@@ -1896,6 +1955,32 @@
       "Наличие паспорта",
       "Дополнительный документ подтверждабющей личность"
     ],
+    "tarify": [
+      {
+        "name": "Минимум",
+        "rate": "2",
+        "minsumm" : "1000",
+        "maxsumm": "10000",
+        "mindays": "1",
+        "maxdays": "30"
+      },
+      {
+        "name": "Онлайн займ",
+        "rate": "1.5",
+        "minsumm" : "1000",
+        "maxsumm": "30000",
+        "mindays": "1",
+        "maxdays": "30"
+      },
+        {
+          "name": "Грейс 5",
+          "rate": "1.5",
+          "minsumm" : "1000",
+        "maxsumm": "15000",
+        "mindays": "1",
+        "maxdays": "30"
+        }
+    ],
     "filter-tags": [
       "online", "zaymy", "na-kartu", "na-schet", "yandex", "sberbank"
     ],
@@ -1913,9 +1998,9 @@
     "linkName": "zaymigo.com",
     "innerLink": "/mfo/zaymigo",
     "rateFrom": "0.49",
-    "rateTo": "1.5",
-    "summFrom": "1 000",
-    "summTo": "30 000",
+    "rateTo": "1",
+    "summFrom": "4 000",
+    "summTo": "70 000",
     "limitFrom": "1",
     "limitTo": "140",
     "ratePerDay": "0.49",
@@ -1967,6 +2052,16 @@
       "Наличие паспорта",
       "Номер действующего телефона"
     ],
+    "tarify": [
+      {
+        "name": "zaymigo",
+        "rate": "0.49",
+        "minsumm" : "4000",
+        "maxsumm": "70000",
+        "mindays": "1",
+        "maxdays": "140"
+      }
+    ],
     "filter-tags": [
       "online", "zaymy", "na-kartu", "contact", "korona", "sberbank"
     ],
@@ -1983,9 +2078,9 @@
     "link": "https://go.leadgid.ru/aff_c?offer_id=4029&aff_id=27131",
     "linkName": "fastmoney.ru",
     "innerLink": "/mfo/fastmoney",
-    "rateFrom": "1.5",
-    "rateTo": "1.8",
-    "summFrom": "3 000",
+    "rateFrom": "0.9",
+    "rateTo": "1",
+    "summFrom": "2 000",
     "summTo": "30 000",
     "limitFrom": "7",
     "limitTo": "30",
@@ -2039,27 +2134,43 @@
     "tarify": [
       {
         "name": "До зарплаты",
-        "rate": "1.5",
+        "rate": "1",
+        "minsumm" : "2000",
         "maxsumm": "20000",
+        "mindays": "7",
         "maxdays": "16"
       },
         {
-          "name": "Пенсионный",
-          "rate": "1.4",
-          "maxsumm": "10000",
-          "maxdays": "16"
+          "name": "«Пенсионный» (для новых клиентов)",
+          "rate": "1",
+          "minsumm" : "2000",
+        "maxsumm": "10000",
+        "mindays": "7",
+        "maxdays": "16"
         },
         {
-          "name": "«Акция «День рождения»",
-          "rate": "0.5",
-          "maxsumm": "30000",
-          "maxdays": "16"
+          "name": "«Пенсионный»",
+          "rate": "1",
+          "minsumm" : "2000",
+        "maxsumm": "20000",
+        "mindays": "7",
+        "maxdays": "30"
+        },
+        {
+          "name": "«Заем Выгодный»",
+          "rate": "0.9",
+          "minsumm" : "20000",
+        "maxsumm": "30000",
+        "mindays": "7",
+        "maxdays": "30"
         },
         {
           "name": "«Заем доверие»",
-          "rate": "0.9",
-          "maxsumm": "50000",
-          "maxdays": "150"
+          "rate": "1",
+          "minsumm" : "20000",
+        "maxsumm": "30000",
+        "mindays": "7",
+        "maxdays": "30"
         }
     ],
     "filter-tags": [
@@ -2079,9 +2190,9 @@
     "linkName": "www.dozarplati.com",
     "innerLink": "/mfo/dozarplati",
     "rateFrom": "0.0",
-    "rateTo": "1.5",
+    "rateTo": "1",
     "summFrom": "2 000",
-    "summTo": "1 000 000",
+    "summTo": "100 000",
     "limitFrom": "7",
     "limitTo": "365",
     "ratePerDay": "0.5",
@@ -2135,21 +2246,27 @@
     "tarify": [
       {
         "name": "Мини",
-        "rate": "1.0",
+        "rate": "1",
+        "minsumm" : "2000",
         "maxsumm": "10000",
-        "maxdays": "15"
+        "mindays": "7",
+        "maxdays": "16"
       },
         {
           "name": "Смарт",
-          "rate": "1.0",
-          "maxsumm": "20000",
-          "maxdays": "30"
+          "rate": "1",
+          "minsumm" : "2000",
+        "maxsumm": "20000",
+        "mindays": "7",
+        "maxdays": "25"
         },
         {
-          "name": "Под залог ПТС",
-          "rate": "0.26",
-          "maxsumm": "1000000",
-          "maxdays": "365"
+          "name": "Топ",
+          "rate": "0.5",
+          "minsumm" : "21000",
+        "maxsumm": "100000",
+        "mindays": "60",
+        "maxdays": "365"
         }
     ],
     "filter-tags": [
@@ -2168,8 +2285,7 @@
     "link": "https://go.leadgid.ru/aff_c?offer_id=2815&aff_id=27131",
     "linkName": "www.zheldorzaim.ru",
     "innerLink": "/mfo/zheldorzaim",
-    "rateFrom": "0.4",
-    "rateTo": "0.7",
+    "rateFrom": "1",
     "summFrom": "10 000",
     "summTo": "50 000",
     "limitFrom": "60",
@@ -2214,6 +2330,16 @@
       "Для граждан с постоянной регистрацией на территории РФ",
       "Наличие паспорта",
       "Данные о месте работы"
+    ],
+    "tarify": [
+      {
+        "name": "Потребительский",
+        "rate": "1",
+        "minsumm" : "10000",
+        "maxsumm": "50000",
+        "mindays": "60",
+        "maxdays": "152"
+      }
     ],
     "filter-tags": [
       "online", "zaymy", "na-kartu", "sberbank"
