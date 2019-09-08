@@ -77,6 +77,8 @@ export default class Slider {
     this._cache.depthWidth = this._depthElement.clientWidth;
     this._cache.maxWidthValue = this._lengthElement.clientWidth;
 
+    document.body.style.cursor = 'pointer';
+
     this._depthElement.style.transition = 'none 0s ease 0s';
 
     this._hintElement.classList.add('slider__hint_true');
@@ -115,6 +117,7 @@ export default class Slider {
   }
 
   _stopTracking(evt) {
+    document.body.style.cursor = 'auto';
     this._depthElement.style.transition = '';
 
     const TIMEOUT = 500; // ms
