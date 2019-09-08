@@ -1,6 +1,7 @@
 {
   "editorconfig": true,
   "html": {
-    "wrap_line_length": 120
+    "wrap_line_length": 120,
+    "templating": ["handlebars"]
   }
 }
