@@ -1,15 +1,15 @@
 .aside-offers {
   display: flex;
-  width: 100%;
-  border: 1px solid $border-color;
-  padding: 8px;
-  border-radius: 4px;
   justify-content: center;
+  width: 100%;
+  padding: 8px;
+  border: 1px solid $border-color;
+  border-radius: 4px;
 
   @media (min-width: $desktop) {
+    justify-content: flex-start;
     padding: 10px;
     border-radius: 0;
-    justify-content: flex-start;
   }
 
   &:hover,
@@ -18,18 +18,18 @@
   }
 
   &__img-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
     max-width: 50%;
     height: auto;
     max-height: 35px;
     overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 
     @media (min-width: $desktop) {
-      max-height: 25px;
       max-width: 60px;
+      max-height: 25px;
       margin-right: 10px;
     }
 
@@ -41,18 +41,18 @@
   }
 
   &__title {
-    margin: 0;
+    display: flex;
     flex-shrink: 0;
+    align-items: center;
     width: 100%;
     max-width: 50%;
-    display: flex;
-    align-items: center;
-    font-weight: 600;
+    margin: 0;
     font-size: 12px;
+    font-weight: 600;
 
     @media (min-width: $desktop) {
-      font-weight: normal;
       font-size: 14px;
+      font-weight: normal;
     }
   }
 }

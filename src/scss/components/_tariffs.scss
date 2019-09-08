@@ -11,29 +11,29 @@
   }
 
   thead {
+    clip: rect(0 0 0 0);
     position: absolute;
     bottom: 0;
-    margin: -1px;
     width: 1px;
     height: 1px;
+    margin: -1px;
     padding: 0;
     overflow: hidden;
     white-space: nowrap;
-    clip: rect(0 0 0 0);
     clip-path: inset(100%);
 
     @media (min-width: $desktop) {
+      clip: unset;
       position: unset;
       bottom: unset;
-      margin: unset;
       width: unset;
       height: unset;
+      margin: unset;
       padding: unset;
       overflow: unset;
-      white-space: unset;
-      clip: unset;
-      clip-path: unset;
       border-bottom: var(--desktop-border);
+      white-space: unset;
+      clip-path: unset;
     }
 
     tr {
@@ -55,45 +55,45 @@
   }
 
   tbody {
-    width: 100%;
+    gap: 20px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
     justify-content: center;
     justify-items: center;
+    width: 100%;
     margin-bottom: 10px;
 
     @media (min-width: $desktop) {
-      grid-template-columns: repeat(1, 1fr);
       gap: 0;
+      grid-template-columns: repeat(1, 1fr);
       margin-bottom: 0;
     }
   }
 
   tr {
-    width: 100%;
+    gap: 10px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    box-shadow: 2px 1px 8px 1px rgba(0, 0, 0, 0.15);
-    border-radius: 4px;
+    width: 100%;
+    min-height: 190px;
     padding: 20px;
     padding-top: 30px;
     padding-bottom: 0;
-    min-height: 190px;
-    gap: 10px;
+    border-radius: 4px;
+    box-shadow: 2px 1px 8px 1px rgba(0, 0, 0, 0.15);
     font-size: 16px;
 
     @media (min-width: $desktop) {
+      gap: 0;
       grid-template-columns: repeat(5, 1fr);
       grid-template-rows: repeat(1, 1fr);
       min-height: 106px;
       padding: 25px;
-      padding-left: 10px;
       padding-right: 10px;
-      box-shadow: none;
+      padding-left: 10px;
       border-radius: 0;
-      gap: 0;
+      box-shadow: none;
 
       &:not(:first-child) {
         border-top: var(--desktop-border);
@@ -148,25 +148,25 @@
   }
 
   &__summ-value {
-    font-weight: 600;
-    font-size: 20px;
     display: flex;
     margin-bottom: 5px;
+    font-size: 20px;
+    font-weight: 600;
 
     @media (min-width: $desktop) {
       justify-content: center;
     }
 
     &-sign {
-      font-weight: normal;
       font-size: 16px;
+      font-weight: normal;
       line-height: normal;
     }
   }
 
   &__name {
-    font-size: 12px;
     color: $text-accent-color;
+    font-size: 12px;
 
     @media (min-width: $desktop) {
       font-size: 13px;

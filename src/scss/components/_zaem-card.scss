@@ -70,21 +70,21 @@
   &__contain {
     display: flex;
     justify-content: space-around;
+    width: calc(100% + #{$padding} * 2);
     margin: 10px 0;
     margin-left: -$padding;
-    width: calc(100% + #{$padding} * 2);
     padding-bottom: 15px;
     border-bottom: 2px solid $border-color;
 
     @media (min-width: $desktop) {
       flex-grow: 1;
+      width: calc(100% - var(--first-column));
       margin: 0;
+      margin-top: 20px;
+      margin-left: 0;
       padding: 10px 0;
       padding-left: var(--padding-left);
       border-bottom: none;
-      margin-left: 0;
-      margin-top: 20px;
-      width: calc(100% - var(--first-column));
     }
   }
 
