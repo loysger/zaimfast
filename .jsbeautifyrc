@@ -1,0 +1,6 @@
+{
+  "editorconfig": true,
+  "html": {
+    "wrap_line_length": 120
+  }
+}

@@ -1,4 +1,10 @@
 {
   "singleQuote": true,
-  "arrowParens": "always"
+  "arrowParens": "always",
+  "overrides": [
+    {
+      "files": "*.hbs",
+      "options": { "parser": "glimmer" }
+    }
+  ]
 }

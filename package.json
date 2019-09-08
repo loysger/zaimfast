@@ -32,6 +32,7 @@
     "handlebars-layouts": "^3.1.4",
     "htmlhint": "^0.11.0",
     "husky": "^3.0.4",
+    "js-beautify": "1.10.2",
     "postcss-preset-env": "^6.7.0",
     "postcss-reporter": "^6.0.1",
     "postcss-scss": "^2.0.0",
@@ -57,6 +58,7 @@
     "build": "gulp build",
     "prod": "gulp prod",
     "test": "stylelint ./src/scss/components/*.scss && htmlhint ./src/html/**/*.hbs && eslint ./src/js/**/*.js",
+    "format-all": "yarn prettier --write src/**/*.{js,scss,json} && yarn js-beautify src/**/*.hbs --type html",
     "clean-all": "rm -rf node_modules && rm -rf build && rm -rf production",
     "clean": "rm -rf build && rm -rf production"
   }
