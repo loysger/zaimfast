@@ -25,7 +25,8 @@
                 <div class="calc__amount">
                   <label class="calc__label" for="calc-amount">Введите сумму займа, руб.</label>
                   <input class="calc__input" id="calc-amount" name="amount" type="number" value="{{toNumber summFrom}}"
-                    maxlength="10" minlength="4" min="{{toNumber summFrom}}" max="{{toNumber summTo}}" step="500" />
+                    maxlength="10" minlength="4" min="{{toNumber summFrom}}" max="{{toNumber summTo}}"
+                    step="{{#if stepSize}}{{stepSize}}{{else}}100{{/if}}" />
                   <div class="calc__slider slider">
                     <div class="slider__conteiner">
                       <div class="slider__lenght">
