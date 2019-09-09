@@ -12,6 +12,6 @@ npm-debug.log*
 Thumbs.db
 .vscode/*
 
-# Exlude
+# Exclusions
 !.vscode/**/bookmarks.json
 !.vscode/**/settings.json
