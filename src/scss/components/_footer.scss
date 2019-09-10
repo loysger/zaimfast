@@ -5,6 +5,7 @@
 
   @media (min-width: $desktop) {
     padding: 0;
+    font-size: 14px;
   }
 
   &__social-container {
@@ -58,13 +59,17 @@
     @media (min-width: $desktop) {
       max-width: $max-width;
       margin: 30px auto;
+      margin-bottom: 15px;
     }
   }
 
   &__bottom {
+    margin-bottom: 20px;
+
     @media (min-width: $desktop) {
       max-width: $max-width;
       margin: 0 auto;
+      margin-bottom: 20px;
       padding: 0 $padding-ds;
     }
   }

@@ -44,9 +44,11 @@
     @media (min-width: $desktop) {
       display: block;
       width: fit-content;
-      margin-bottom: 10px;
-      font-size: 32px;
-      font-weight: 400;
+      margin-bottom: 5px;
+      font-size: 40px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: capitalize;
     }
   }
 

@@ -24,7 +24,7 @@
 
   &__item {
     &:not(:last-child) {
-      margin-bottom: 15px;
+      margin-bottom: 5px;
 
       @media (min-width: $desktop) {
         margin-bottom: 6px;

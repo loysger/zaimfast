@@ -41,9 +41,15 @@
     grid-auto-rows: auto;
     grid-template-columns: 50% 50%;
     width: 100%;
+    margin-bottom: 50px;
 
     @media (min-width: $desktop) {
       grid-template-columns: 1fr 1fr 1fr;
+      margin-top: 55px;
+      margin-bottom: 55px;
+      max-width: 1000px;
+      margin-left: auto;
+      margin-right: auto;
     }
   }
 
@@ -64,10 +70,23 @@
 
     @media (min-width: $desktop) {
       align-items: stretch;
-      min-height: 80px;
+      min-height: 74px;
       padding: 5px 20px 5px 75px;
       font-size: 16px;
       transition-duration: 0.3s;
+
+      &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 7px;
+        height: 11px;
+        background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA5LjE5IDE2Ljk2Ij4NCgk8cG9seWxpbmUgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjM2IzZTQ0IiBwb2ludHM9IjAuMzUgMTYuNiA4LjQ4IDguNDggMC4zNSAwLjM1Ii8+DQo8L3N2Zz4NCg==)
+          no-repeat 50%;
+        right: 14px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
     }
 
     &:hover {

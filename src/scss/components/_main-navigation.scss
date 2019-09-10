@@ -55,7 +55,7 @@
 
     &:not(:last-child) {
       @media (min-width: $desktop) {
-        margin-right: 20px;
+        margin-right: 25px;
       }
     }
 
@@ -65,7 +65,7 @@
 
       @media (min-width: $desktop) {
         width: auto;
-        font-size: 14px;
+        font-size: 16px;
         font-weight: 400;
         transition-duration: 0.3s;
       }
