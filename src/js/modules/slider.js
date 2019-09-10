@@ -9,7 +9,7 @@
 
 import debounce from 'lodash-es/debounce';
 
-const MAX_STEPS = 1000;
+const MAX_STEPS = 100000;
 export default class Slider {
   constructor(sliderElement, _steps = 0, _initialStep = 0) {
     this._element = sliderElement;
