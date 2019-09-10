@@ -51,9 +51,9 @@
           border: none;
           background-color: transparent;
           color: $main-color;
+          font-size: 14px;
           text-transform: none;
           transition-duration: 0.3;
-          font-size: 14px;
 
           &:hover {
             box-shadow: none;
@@ -71,10 +71,10 @@
     }
 
     &_second {
+      border: 1px solid $main-color;
       background-color: $main-color;
       color: white;
       font-weight: 700;
-      border: 1px solid $main-color;
 
       &:active {
         color: white;

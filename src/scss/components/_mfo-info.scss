@@ -29,15 +29,15 @@
 
   &__top {
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     padding: var(--padding-s);
     border-bottom: var(--border);
 
     a {
       display: inline-flex;
-      justify-content: center;
       align-items: center;
+      justify-content: center;
     }
 
     img {
@@ -51,8 +51,8 @@
   }
 
   &__table {
-    border-collapse: collapse;
     width: 100%;
+    border-collapse: collapse;
   }
 
   &__row {
@@ -61,8 +61,8 @@
     padding: var(--padding-s);
 
     @media (min-width: $desktop) {
-      padding-left: 0;
       padding-right: 0;
+      padding-left: 0;
     }
 
     &:not(:last-child) {

@@ -45,11 +45,11 @@
 
     @media (min-width: $desktop) {
       grid-template-columns: 1fr 1fr 1fr;
-      margin-top: 55px;
-      margin-bottom: 55px;
       max-width: 1000px;
-      margin-left: auto;
+      margin-top: 55px;
       margin-right: auto;
+      margin-bottom: 55px;
+      margin-left: auto;
     }
   }
 
@@ -76,16 +76,16 @@
       transition-duration: 0.3s;
 
       &::after {
-        content: '';
         display: block;
         position: absolute;
+        top: 50%;
+        right: 14px;
         width: 7px;
         height: 11px;
+        transform: translateY(-50%);
         background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA5LjE5IDE2Ljk2Ij4NCgk8cG9seWxpbmUgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjM2IzZTQ0IiBwb2ludHM9IjAuMzUgMTYuNiA4LjQ4IDguNDggMC4zNSAwLjM1Ii8+DQo8L3N2Zz4NCg==)
           no-repeat 50%;
-        right: 14px;
-        top: 50%;
-        transform: translateY(-50%);
+        content: '';
       }
     }
 
