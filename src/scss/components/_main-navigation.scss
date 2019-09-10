@@ -118,7 +118,7 @@
   }
 
   &_closed {
-    @media (min-width: $small-screen) and (max-width: $desktop) {
+    @media (min-width: $small-screen) and (max-width: $desktop - 1) {
       margin-left: -100%;
       transition: margin-left 0.5s;
     }

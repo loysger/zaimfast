@@ -10,16 +10,17 @@
       <div class="page-content__wrap">
         <div class="page-wrap">
           <section class="zaem">
-            <h2 class="hidden">{{name}}</h2>
-            <div class="zaem-card">
-              <div class="zaem-card__top">
-                <div class="zaem-card__img">
-                  <a class="zaem-card__img-link" href="{{link}}" title="{{name}}">
-                    <img class="zaem-card__img-tag" src="{{img}}" alt="{{name}}" />
-                    <span class="zaem-card__img-text hidden-only-mobile">{{name}}</span>
-                  </a>
-                </div>
+            <h1 class="hidden">{{name}}</h1>
+            {{> mfo-info add-class="mfo-info_mobile-top"}}
+            <section class="zaem-about">
+              <h2 class="zaem-about__heading heading-3">О {{name}}</h2>
+              <div class="zaem-about__content">
+                {{#each about}}
+                  <p class="zaem-about__text">{{this}}</p>
+                {{/each}}
               </div>
+            </section>
+            <div class="zaem-card">
               <div class="zaem__calc calc">
                 <h3 class="calc__heading heading-4">Посчитать переплату</h3>
                 <div class="calc__amount">
@@ -126,55 +127,12 @@
                 </table>
               </div>
             </div>
-            <table class="zaem__table">
-              <tr>
-                <td>Веб-сайт</td>
-                <td><a href="{{link}}">{{linkName}}</a></td>
-              </tr>
-              <tr>
-                <td>Адрес компании</td>
-                <td><a href="{{mapLink}}">{{adress}}</a></td>
-              </tr>
-              <tr>
-                <td>Номер телефонов горячей линии</td>
-                <td>{{tel}}</td>
-              </tr>
-              <tr>
-                <td>Электронная почта</td>
-                <td>{{email}}</td>
-              </tr>
-              <tr>
-                <td>Часы работы</td>
-                <td>{{workingTime}}</td>
-              </tr>
-              <tr>
-                <td>Номер свидетельства регистрации
-                </td>
-                <td>{{registrationNumber}}</td>
-              </tr>
-              <tr>
-                <td>ОГРН</td>
-                <td>{{OGRN}}</td>
-              </tr>
-              <tr>
-                <td>ИНН</td>
-                <td>{{INN}}</td>
-              </tr>
-              <tr>
-                <td>Дата внесения в реестр</td>
-                <td>{{registartionDate}}</td>
-              </tr>
-            </table>
           </section>
-          <section class="zaem-about">
-            <h2 class="zaem-about__heading heading-3">О предложении</h2>
+          <div class="zaem-about">
             <div class="zaem-about__content">
-              {{#each about}}
-                <p class="zaem-about__text">{{this}}</p>
-              {{/each}}
               <div>
                 <h2 class="zaem-about__heading heading-3">
-                  Плюсы {{name}}
+                  Плюсы
                 </h2>
                 <ul class="list">
                   {{#each advantages}}
@@ -184,7 +142,7 @@
               </div>
             </div>
             {{!-- <button class="zaem-about__more">Показать больше</button> --}}
-          </section>
+          </div>
           <section class="zaem-condition">
             <h2 class="zaem-condition__heading heading-3">Условия</h2>
             <table class="zaem-condition__table">
@@ -235,7 +193,11 @@
             </ul>
           </section>
         </div>
-        {{> aside}}
+        {{#extend "aside"}}
+          {{#content "mfo-info"}}
+            {{> mfo-info add-class="mfo-info_aside"}}
+          {{/content}}
+        {{/extend}}
       </div>
     </main>
   {{/content}}

@@ -4,26 +4,15 @@
 
   position: relative;
   padding: 15px $padding;
-  border-top: 1px solid $border-color;
+  padding-top: 0;
   color: $text-color;
 
   @media (min-width: $desktop) {
     display: flex;
     flex-wrap: wrap;
     padding: 15px $padding-ds;
-    padding-top: 25px;
+    padding-top: 0;
     border-top: none;
-  }
-
-  &__top {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    @media (min-width: $desktop) {
-      flex-direction: column;
-      margin-right: 25px;
-    }
   }
 
   &__name {

@@ -1,0 +1,104 @@
+.mfo-info {
+  --border: 1px solid #{$border-color};
+  --border-radius: 4px;
+  --padding-s: 12px;
+  --font-size-s: 12px;
+
+  font-size: var(--font-size-s);
+
+  @media (min-width: $desktop) {
+    --font-size-s: 13px;
+  }
+
+  &__container {
+    padding: 0 $padding;
+
+    @media (min-width: $desktop) {
+      padding: 0;
+    }
+  }
+
+  &__content {
+    border: var(--border);
+    border-radius: var(--border-radius);
+
+    @media (min-width: $desktop) {
+      border: none;
+    }
+  }
+
+  &__top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: var(--padding-s);
+    border-bottom: var(--border);
+
+    a {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    img {
+      width: 50%;
+      height: auto;
+
+      @media (min-width: $desktop) {
+        width: 75%;
+      }
+    }
+  }
+
+  &__table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  &__row {
+    display: flex;
+    justify-content: center;
+    padding: var(--padding-s);
+
+    @media (min-width: $desktop) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    &:not(:last-child) {
+      border-bottom: var(--border);
+    }
+  }
+
+  td {
+    &:first-child {
+      width: 50%;
+      max-width: 50%;
+      margin-right: 3px;
+      color: $text-color-a-0_8;
+    }
+
+    &:last-child {
+      width: 50%;
+      max-width: 50%;
+    }
+  }
+
+  &_aside {
+    display: none;
+
+    @media (min-width: $desktop) {
+      display: block;
+      margin-bottom: 25px;
+    }
+  }
+
+  &_mobile-top {
+    display: block;
+    margin-top: 20px;
+
+    @media (min-width: $desktop) {
+      display: none;
+    }
+  }
+}

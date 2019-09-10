@@ -51,8 +51,15 @@
       margin-top: 20px;
 
       @media (min-width: $desktop) {
-        display: flex;
         margin-top: 0;
+        flex-shrink: 0;
+        width: 320px;
+        max-width: 320px;
+
+        aside {
+          background-color: #fff;
+          padding: 30px 20px;
+        }
       }
     }
   }
