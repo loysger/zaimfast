@@ -29,7 +29,13 @@
                   </div>
                   <div class="offer-card__contain">
                     <p class="offer-card__prop">
-                      <span class="offer-card__prop-text">от {{this.rateFrom}} - до {{this.rateTo}}%</span>
+                      <span class="offer-card__prop-text">
+                        {{#if this.rateTo}}
+                          от {{this.rateFrom}} - до {{this.rateTo}}%
+                        {{else}}
+                          {{this.rateFrom}}%
+                        {{/if}}
+                      </span>
                       <span class="offer-card__prop-name">Ставка в день</span>
                     </p>
                     <p class="offer-card__prop">
