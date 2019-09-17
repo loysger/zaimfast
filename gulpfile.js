@@ -202,10 +202,16 @@ function img() {
   return gulp.src('./src/img/**/*').pipe(gulp.dest(`${mode.destination}/img/`));
 }
 
+function favicons() {
+  return gulp
+    .src('./src/static/favicons/*.*')
+    .pipe(gulp.dest(`${mode.destination}/`));
+}
+
 // define complex tasks
 const build = gulp.series(
   clean,
-  gulp.parallel(img, html, generateMfo, css, js)
+  gulp.parallel(img, html, generateMfo, css, js, favicons)
 );
 const watch = gulp.parallel(watchFiles, browserSync);
 
