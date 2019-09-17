@@ -26,6 +26,8 @@
     display: flex;
     justify-content: space-between;
     padding: 5px 0;
+    min-height: 60px;
+    align-items: center;
 
     @media (min-width: $desktop) {
       justify-content: center;
@@ -39,9 +41,13 @@
   &__logo {
     display: flex;
     flex-shrink: 0;
+    width: 140px;
+    height: 30px;
 
     @media (min-width: $desktop) {
       margin-right: auto;
+      height: 60px;
+      width: 180px;
     }
   }
 
