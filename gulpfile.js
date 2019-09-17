@@ -17,6 +17,7 @@ const htmlmin = require('gulp-htmlmin');
 const postcssPresetEnv = require('postcss-preset-env');
 const webpack = require('webpack');
 const webpackStream = require('webpack-stream');
+const imagemin = require('gulp-imagemin');
 
 class Mode {
   constructor() {
@@ -199,6 +200,22 @@ function css() {
 
 // img
 function img() {
+  if (mode.isProduction) {
+    return gulp
+      .src('./src/img/**/*')
+      .pipe(
+        imagemin([
+          imagemin.gifsicle({ interlaced: true }),
+          imagemin.jpegtran({ progressive: true }),
+          imagemin.optipng({ optimizationLevel: 3 }),
+          imagemin.svgo({
+            plugins: [{ removeViewBox: true }, { cleanupIDs: false }]
+          })
+        ])
+      )
+      .pipe(gulp.dest(`${mode.destination}/img/`));
+  }
+
   return gulp.src('./src/img/**/*').pipe(gulp.dest(`${mode.destination}/img/`));
 }
 
