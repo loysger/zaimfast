@@ -1,3 +1,4 @@
+# ЗАБРОШЕНО
 # Zaimfast
 
 ![Dependency status](https://david-dm.org/loysger/zaimfast.svg)
